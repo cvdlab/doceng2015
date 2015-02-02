@@ -6,7 +6,7 @@
 
 ## Advances on cartographics document standards: HIJ
 
-Un documento HIJ (Hierarchical Indoor JSON) presente almeno i seguenti 4 punti di avanzamento rispetto allo stato dell'arte per quanto concerne gli standard di documenti cartografici:
+Un documento **HIJ** (**H**ierarchical **I**ndoor **J**SON) presente almeno i seguenti 4 punti di avanzamento rispetto allo stato dell'arte per quanto concerne gli standard di documenti cartografici:
     
 1. struttura gerachica - con LAR nei nodi consente un completo controllo della topologia
 2. coordinate metriche locali - editing semplificato
@@ -22,3 +22,5 @@ c3d.js
 ## Conclusions
 
 ## Bibliography
+
+
