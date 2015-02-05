@@ -1,26 +1,39 @@
-# Cartographic documents for web modeling and representation of indoor mapping with interactive environments
+#Cartographic documents for web modeling and representation of indoor mapping with interactive environments
 
-## Introduction
+##Introduciton
 
-## State of the art
+##State of the art
+###GeoJSON
+###Experiences on Indoor JSON
 
-## Advances on cartographics document standards: HIJ
-
-Un documento **HIJ** (**H**ierarchical **I**ndoor **J**SON) presenta almeno i seguenti 4 punti di avanzamento rispetto allo stato dell'arte per quanto concerne gli standard di documenti cartografici:
-    
+##Advances on cartographics document standards: HIJSON
+Un documento **HIJSON** (**H**ierarchical **I**ndoor **JSON**) presenta almeno i seguenti 3 punti di avanzamento rispetto allo stato dell'arte per quanto concerne gli standard di documenti cartografici:
+   
 1. struttura gerachica - con LAR nelle foglie consente un completo controllo della topologia
 2. coordinate metriche locali - editing semplificato
 3. estensioni semantiche - è possibile quindi aggiungere classi di oggetti di interesse
-4. calcolo automatico dei percorsi validi
 
-## Implemented web tools
+###Hierarchical structure
+###Metric local coordinate System
+###Semantic extensions
 
-c3d.js
+##LAR: the underlying mathematical structure
 
-## Use case
+##Implemented web tools
+###Architecture
+    HIJSON processing pipeline
 
-## Conclusions
+###Algorithmics
+    Valid paths automatic generation
 
-## Bibliography
+###Applications
+    IoT monitoring
+    Realtime access monitoring
+    Crossfloor user navigation
+##Use case
+C3D.js
+
+##Conclusions
+##Bibliography
 
 
