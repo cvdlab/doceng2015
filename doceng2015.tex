@@ -110,28 +110,7 @@ email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
 
 \maketitle
 \begin{abstract}
-This paper provides a sample of a \LaTeX\ document which conforms,
-somewhat loosely, to the formatting guidelines for
-ACM SIG Proceedings. It is an {\em alternate} style which produces
-a {\em tighter-looking} paper and was designed in response to
-concerns expressed, by authors, over page-budgets.
-It complements the document \emph{Author's (Alternate) Guide to
-Preparing ACM SIG Proceedings Using \LaTeX$2_\epsilon$\ and Bib\TeX}.
-This source file has been written with the intention of being
-compiled under \LaTeX$2_\epsilon$\ and BibTeX.
-
-The developers have tried to include every imaginable sort
-of ``bells and whistles", such as a subtitle, footnotes on
-title, subtitle and authors, as well as in the text, and
-every optional component (e.g. Acknowledgments, Additional
-Authors, Appendices), not to mention examples of
-equations, theorems, tables and figures.
-
-To make best use of this sample document, run it through \LaTeX\
-and BibTeX, and compare this source code with the printed
-output produced by the dvi file. A compiled PDF version
-is available on the web page to help you with the
-`look and feel'.
+PUT THE ABSTRACT HERE
 \end{abstract}
 
 % A category with the (minimum) three required fields
@@ -143,48 +122,138 @@ is available on the web page to help you with the
 
 \keywords{ACM proceedings, \LaTeX, text tagging}
 
-\section{Introduction}
-The \emph{proceedings} are the records of a conference.
-ACM seeks to give these conference by-products a uniform,
-high-quality appearance.  To do this, ACM has some rigid
-requirements for the format of the proceedings documents: there
-is a specified format (balanced  double columns), a specified
-set of fonts (Arial or Helvetica and Times Roman) in
-certain specified sizes (for instance, 9 point for body copy),
-a specified live area (18 $\times$ 23.5 cm [7" $\times$ 9.25"]) centered on
-the page, specified size of margins (1.9 cm [0.75"]) top, (2.54 cm [1"]) bottom
-and (1.9 cm [.75"]) left and right; specified column width
-(8.45 cm [3.33"]) and gutter size (.83 cm [.33"]).
+\section{Introduciton}\label{introduciton}
 
-The good news is, with only a handful of manual
-settings\footnote{Two of these, the {\texttt{\char'134 numberofauthors}}
-and {\texttt{\char'134 alignauthor}} commands, you have
-already used; another, {\texttt{\char'134 balancecolumns}}, will
-be used in your very last run of \LaTeX\ to ensure
-balanced column heights on the last page.}, the \LaTeX\ document
-class file handles all of this for you.
+\ldots{}
 
-The remainder of this document is concerned with showing, in
-the context of an ``actual'' document, the \LaTeX\ commands
-specifically available for denoting the structure of a
-proceedings paper, rather than with giving rigorous descriptions
-or explanations of such commands.
+The remainder of the paper is organized as follows. In Section II is
+provided an overview of the state of the art. Section III is devoted to
+describe the novel cartographic document proposed, while section IV
+introduces the underlying mathematical structure. Section V reports
+about the tools and instruments developed specifically for the web,
+focusing on software architecture, implemented algorithms and real
+applications. Section VI describes one use case of both document format
+and software tools. Finally Section VII proposes some conclusive remarks
+and future developments.
 
-\section{Implemented web tools}
+\section{State of the art}\label{state-of-the-art}
 
-A set of web based instruments has been developed allowing to deal with the HIJSON document previously described. Tools are written in \emph{JavaScript} language, using \emph{Node.js} and in particular \emph{Express.js} as backend framework, and exploiting the power of \emph{WebSocket} protocol through the \emph{Socket.io} library.
+PUT THE STATE OF THE ART HERE
 
-\subsection{Architecture}
+\subsection{GeoJSON}\label{geojson}
 
-The overall architecture of the tools are, as for the vast majority of the web based application, inherently \emph{client/server}. 
+GeoJSON is a format for encoding a variety of geographic data
+structures. GeoJSON supports the following geometry types:
+\texttt{Point}, \texttt{LineString}, \texttt{Polygon},
+\texttt{MultiPoint}, \texttt{MultiLineString}, and
+\texttt{MultiPolygon}. Lists of geometries are represented by a
+\texttt{GeometryCollection}. Geometries with additional properties are
+\texttt{Feature} objects. And lists of features are represented by a
+\texttt{FeatureCollection}.
+\href{GeoJSON\%20spec}{http://geojson.org/geojson-spec.html}
 
-\subsubsection{HIJSON processing pipeline}
+GeoJSON is good for geographic mapping application, but not for indoor
+application. There is a GeoJSON variant suitable for indoor app.
 
-Each time a new HIJSON document is submitted to the server, it is passed through the \textbf{HIJSON processing pipeline}, where it is subjected to a sequence of preliminary trasnformations. 
+\subsection{Experiences on Indoor
+JSON}\label{experiences-on-indoor-json}
 
-The application of the transformation pipeline has a double aim. The first one consists in generating the graph of valid paths between all the interesting HIJSON elements. The second aim is the generation of one \emph{GeoJSON} document for each story of the building described by the HIJSON document. In this way any connected client can be provided with a bidimensional plant for each level of the building that it can visualize through any compliant GeoJSON viewer.
+\texttt{IndoorJSON} is a GeoJSON variant used by indoor.io toolset to
+define indoor maps. IndoorJSON may consist of any number of Features
+and/or FeatureCollections. All Features are interpreted similarly
+regardless of their grouping into nested FeatureCollections. IndoorJSON
+supports all GeoJSON geometry types.
 
-HIJSON processing pipeline (as pictured in figure \ref{fig:pipeline}) is composed by 5 elaboration stages. In the following are detailed operations excecuted by each stage, which are, in the order: \emph{validation}, \emph{parsing}, \emph{graph paths generation}, \emph{2d layers generation}, \emph{marshalling}.
+\section{Advances on cartographics document standards:
+HIJSON}\label{advances-on-cartographics-document-standards-hijson}
+
+\textbf{HIJSON} (\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}) is
+a GeoJSON variant. A HIJSON document reveals at least three major
+enhancements above the actual state of the art in indoor cartographic
+documents:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Hierarchical structure
+\item
+  Metric local coordinate System
+\item
+  Semantic extensions
+\end{enumerate}
+
+\subsubsection{Hierarchical structure}\label{hierarchical-structure}
+
+Unlike other formats like GeoJSON or IndoorJSON, HIJSON organizes its
+elements in a hierarchical structure, where every element represent a
+potential container for other elements. This structure allows a clear
+and logical organization of the elements inside the structure, and at
+the same time make it possible to use a relative, local, metric
+coordinates system.
+
+\subsubsection{Metric local coordinate System}\label{metric-local-coordinate-system}
+
+In GeoJSON all the positions are expressed in geographical coordinates
+(usually WGS84). Although this can be useful for outdoor geographical
+representations, it is not the best solution for indoor descriptions. In
+HIJSON all the coordinates are expressed in a relative system based on
+the hierarchical structure. The shape of all elements is described
+starting from origin, and then two vectors (translation and rotation)
+describe the position relative to the origin of the parent element. By
+this way it is possible to describe the position of a piece of furniture
+by specifying its distance from the origin of the room, that is
+obviously more convenient than describing its geographical coordinates.
+Another advantage is represented by the adoption of a metric reference.
+A recursive process that computes intermediate transformation matrixes
+can then produce a standard GeoJSON representation, that can be
+visualized on any standard viewer.
+
+\subsubsection{Semantic extensions}\label{semantic-extensions}
+
+Every HIJSON Element has a property that describes its class. This
+information allows the adoption of semantic extensions by the software
+that manipulates the HIJSON data. In the Javascript library developed to
+manage HIJSON documents, different classes are instantiated to represent
+HIJSON Nodes, which acts differently by the adoption of polymorphic
+methods. Ino rder to extend the possibilities in representation and
+interaction, it is sufficient to define new classes that reflects new
+categories of HIJSON Elements.
+
+\section{LAR: the underlying mathematical structure}\label{lar-the-underlying-mathematical-structure}
+
+\section{Implemented web tools}\label{implemented-web-tools}
+
+A set of web based instruments has been developed allowing to deal with
+the HIJSON document previously described. Tools are written in
+\emph{JavaScript} language, using \emph{Node.js} and in particular
+\emph{Express.js} as backend framework, and exploiting the power of
+WebSocket protocol through the \emph{Socket.io} library.
+
+\subsection{Architecture}\label{architecture}
+
+The overall architecture of the tools are, as for the vast majority of
+the web based application, inherently \emph{client/server}.
+
+\subsubsection{HIJSON processing pipeline}\label{hijson-processing-pipeline}
+
+Each time a new HIJSON document is submitted to the server, it is passed
+through the \textbf{HIJSON processing pipeline}, where it is subjected
+to a sequence of preliminary transformations.
+
+The application of the transformation pipeline has a double aim. The
+first one consists in generating the graph of valid paths between all
+the interesting HIJSON elements. The second aim is the generation of one
+\emph{GeoJSON} document for each story of the building described by the
+HIJSON document. In this way any connected client can be provided with a
+bidimensional plant for each level of the building that it can visualize
+through any compliant GeoJSON viewer.
+
+HIJSON processing pipeline (as pictured in figure \ldots{}) is composed
+by 6 elaboration stages. In the following are detailed operations
+excecuted by each stage, which are, in the order: \emph{validation},
+\emph{georeferencing}, \emph{parsing}, \emph{graph paths generation},
+\emph{2D layers generation}, \emph{marshalling}.
 
 \begin{figure}
 \centering
@@ -193,316 +262,136 @@ HIJSON processing pipeline (as pictured in figure \ref{fig:pipeline}) is compose
 \label{fig:pipeline}
 \end{figure}
 
-\section{The {\secit Body} of The Paper}
-Typically, the body of a paper is organized
-into a hierarchical structure, with numbered or unnumbered
-headings for sections, subsections, sub-subsections, and even
-smaller sections.  The command \texttt{{\char'134}section} that
-precedes this paragraph is part of such a
-hierarchy.\footnote{This is the second footnote.  It
-starts a series of three footnotes that add nothing
-informational, but just give an idea of how footnotes work
-and look. It is a wordy one, just so you see
-how a longish one plays out.} \LaTeX\ handles the numbering
-and placement of these headings for you, when you use
-the appropriate heading commands around the titles
-of the headings.  If you want a sub-subsection or
-smaller part to be unnumbered in your output, simply append an
-asterisk to the command name.  Examples of both
-numbered and unnumbered headings will appear throughout the
-balance of this sample document.
+1. {[}\textbf{validation}{]} - The first one is a validation stage. In
+order to begin with the effective transformations the input HIJSON
+document must be compliant with the rules defined in (AGGIUNGERE REF TO
+PARAGRAFO REGOLE DI VALIDITA'). In the case the validation stage fails,
+processing aborts and do not continue to following stages. If the stage
+success, the output for the next stage is a validated HIJSON. 2.
+{[}\textbf{georeferencing}{]} - 3. {[}\textbf{parsing}{]} - The parsing
+stage, takes the validated HIJSON as its input, that as illustrated
+before can be thought of as a list of HIJSON Elments, parses them and
+produce an istance of HITREE, which is an object in memory representing
+the tree hierarchical structure of the building described into the
+HIJSON. 4. {[}\textbf{graph paths generation}{]} - The fourth stage is
+in charge of THE generatio of the graph paths. This aim is accomplished
+according to the algorithm described in (AGGIUNGERE RIFERIMENTO A
+\#\#\#\# Automatic generation of valid paths). The graph paths will be
+useful afterwards to coumpute valid paths from couple of point of
+interest on the graph. Once the graph paths has been computed, the input
+HITREE is augmented with paths information, becoming what has been
+called an HTAP (HITREE Augmented with Paths). Augmentation always takes
+place as leaf nodes added as children of a specific (e.g. ``room'')
+level. 5. {[}\textbf{2D layers generation}{]} - The fifth state is the
+generation of geoJSON layer. For each level, the system generates one
+geoJSON layer that will be use for the creation of 2D map. Each layer
+contains the children of `level' node in the HITREE. Every class
+contains a boolean value that is use to choose which class will be a
+part of geoJSON layer. Every element has a geographical coordinates
+calculated by the transformation matrix with regard to the local
+coordinates of the HIJSON element. 6. {[}\textbf{marshalling}{]} -
 
-Because the entire article is contained in
-the \textbf{document} environment, you can indicate the
-start of a new paragraph with a blank line in your
-input file; that is why this sentence forms a separate paragraph.
+\subsubsection{Client}\label{client}
 
-\subsection{Type Changes and {\subsecit Special} Characters}
-We have already seen several typeface changes in this sample.  You
-can indicate italicized words or phrases in your text with
-the command \texttt{{\char'134}emph}; emboldening with the
-command \texttt{{\char'134}textbf}
-and typewriter-style (for instance, for computer code) with
-\texttt{{\char'134}texttt}.  But remember, you do not
-have to indicate typestyle changes when such changes are
-part of the \emph{structural} elements of your
-article; for instance, the heading of this subsection will
-be in a sans serif\footnote{A third footnote, here.
-Let's make this a rather short one to
-see how it looks.} typeface, but that is handled by the
-document class file. Take care with the use
-of\footnote{A fourth, and last, footnote.}
-the curly braces in typeface changes; they mark
-the beginning and end of
-the text that is to be in the different typeface.
+When a client connects to the server, it receives the HIJSON input
+files, the ready-to-use GeoJSON layers and the weighted adjacency matrix
+of the grapth paths. A very short pipeline of processing is performed by
+the client, composed by: 1. {[}\textbf{Parsing}{]} - Like for the
+Server-side processing, the HIJSON Elements in the input files are
+processed and tranformed in HIJSON Nodes, linked together in a
+hierarchical tree structure. 2. {[}\textbf{3D Model generation}{]} -
+Unlike HIJSON Elements (that are simple Javascript objects), HIJSON
+Nodes are instances of specific classes, representing a particular
+category of element in the building. Through a polymorphic method, each
+node generates a Three.js 3D model of its entity, that is used to
+assemble a complete 3D Model of the building. The similarities in HIJSON
+hierarchical structure and Three.js scene graph allow this process to be
+performed with little effort.
 
-You can use whatever symbols, accented characters, or
-non-English characters you need anywhere in your document;
-you can find a complete list of what is
-available in the \emph{\LaTeX\
-User's Guide}\cite{Lamport:LaTeX}.
+\subsection{Algorithmics}\label{algorithmics}
 
-\subsection{Math Equations}
-You may want to display math equations in three distinct styles:
-inline, numbered or non-numbered display.  Each of
-the three are discussed in the next sections.
+\subsubsection{Automatic generation of valid
+paths}\label{automatic-generation-of-valid-paths}
 
-\subsubsection{Inline (In-text) Equations}
-A formula that appears in the running text is called an
-inline or in-text formula.  It is produced by the
-\textbf{math} environment, which can be
-invoked with the usual \texttt{{\char'134}begin. . .{\char'134}end}
-construction or with the short form \texttt{\$. . .\$}. You
-can use any of the symbols and structures,
-from $\alpha$ to $\omega$, available in
-\LaTeX\cite{Lamport:LaTeX}; this section will simply show a
-few examples of in-text equations in context. Notice how
-this equation: \begin{math}\lim_{n\rightarrow \infty}x=0\end{math},
-set here in in-line math style, looks slightly different when
-set in display style.  (See next section).
+One of the core functionalities of the pre-processing server stage is
+the generation of a graph of valid paths trough the entire building,
+that can be used to calculate directions between two given nodes (see
+Crossfloor user navigation paragraph). Taking advantage of the
+hierarchical structure of the representation, the problem is splitted in
+many sub-problems represented by the computation of the sub-graphs
+relative to each room. The sub-graphs are then linked together trough
+doors. The entire process (as shown in figure), is composed by 4 phases:
+1. Computation of the walkable area of the room; 2. Triangulation of the
+walkable area; 3. For each triangle side completely internal to the
+area, its midpoint is used to represent a graph node; 4. Nodes relative
+to the same triangle are then linked together, and the doors are linked
+to the nearest node in the room.
 
-\subsubsection{Display Equations}
-A numbered display equation -- one set off by vertical space
-from the text and centered horizontally -- is produced
-by the \textbf{equation} environment. An unnumbered display
-equation is produced by the \textbf{displaymath} environment.
-
-Again, in either environment, you can use any of the symbols
-and structures available in \LaTeX; this section will just
-give a couple of examples of display equations in context.
-First, consider the equation, shown as an inline equation above:
-\begin{equation}\lim_{n\rightarrow \infty}x=0\end{equation}
-Notice how it is formatted somewhat differently in
-the \textbf{displaymath}
-environment.  Now, we'll enter an unnumbered equation:
-\begin{displaymath}\sum_{i=0}^{\infty} x + 1\end{displaymath}
-and follow it with another numbered equation:
-\begin{equation}\sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f\end{equation}
-just to demonstrate \LaTeX's able handling of numbering.
-
-\subsection{Citations}
-Citations to articles \cite{bowman:reasoning,
-clark:pct, braams:babel, herlihy:methodology},
-conference proceedings \cite{clark:pct} or
-books \cite{salas:calculus, Lamport:LaTeX} listed
-in the Bibliography section of your
-article will occur throughout the text of your article.
-You should use BibTeX to automatically produce this bibliography;
-you simply need to insert one of several citation commands with
-a key of the item cited in the proper location in
-the \texttt{.tex} file \cite{Lamport:LaTeX}.
-The key is a short reference you invent to uniquely
-identify each work; in this sample document, the key is
-the first author's surname and a
-word from the title.  This identifying key is included
-with each item in the \texttt{.bib} file for your article.
-
-The details of the construction of the \texttt{.bib} file
-are beyond the scope of this sample document, but more
-information can be found in the \emph{Author's Guide},
-and exhaustive details in the \emph{\LaTeX\ User's
-Guide}\cite{Lamport:LaTeX}.
-
-This article shows only the plainest form
-of the citation command, using \texttt{{\char'134}cite}.
-This is what is stipulated in the SIGS style specifications.
-No other citation format is endorsed or supported.
-
-\subsection{Tables}
-Because tables cannot be split across pages, the best
-placement for them is typically the top of the page
-nearest their initial cite.  To
-ensure this proper ``floating'' placement of tables, use the
-environment \textbf{table} to enclose the table's contents and
-the table caption.  The contents of the table itself must go
-in the \textbf{tabular} environment, to
-be aligned properly in rows and columns, with the desired
-horizontal and vertical rules.  Again, detailed instructions
-on \textbf{tabular} material
-is found in the \emph{\LaTeX\ User's Guide}.
-
-Immediately following this sentence is the point at which
-Table 1 is included in the input file; compare the
-placement of the table here with the table in the printed
-dvi output of this document.
-
-\begin{table}
-\centering
-\caption{Frequency of Special Characters}
-\begin{tabular}{|c|c|l|} \hline
-Non-English or Math&Frequency&Comments\\ \hline
-\O & 1 in 1,000& For Swedish names\\ \hline
-$\pi$ & 1 in 5& Common in math\\ \hline
-\$ & 4 in 5 & Used in business\\ \hline
-$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-\hline\end{tabular}
-\end{table}
-
-To set a wider table, which takes up the whole width of
-the page's live area, use the environment
-\textbf{table*} to enclose the table's contents and
-the table caption.  As with a single-column table, this wide
-table will ``float" to a location deemed more desirable.
-Immediately following this sentence is the point at which
-Table 2 is included in the input file; again, it is
-instructive to compare the placement of the
-table here with the table in the printed dvi
-output of this document.
-
-
-\begin{table*}
-\centering
-\caption{Some Typical Commands}
-\begin{tabular}{|c|c|l|} \hline
-Command&A Number&Comments\\ \hline
-\texttt{{\char'134}alignauthor} & 100& Author alignment\\ \hline
-\texttt{{\char'134}numberofauthors}& 200& Author enumeration\\ \hline
-\texttt{{\char'134}table}& 300 & For tables\\ \hline
-\texttt{{\char'134}table*}& 400& For wider tables\\ \hline\end{tabular}
-\end{table*}
-% end the environment with {table*}, NOTE not {table}!
-
-\subsection{Figures}
-Like tables, figures cannot be split across pages; the
-best placement for them
-is typically the top or the bottom of the page nearest
-their initial cite.  To ensure this proper ``floating'' placement
-of figures, use the environment
-\textbf{figure} to enclose the figure and its caption.
-
-This sample document contains examples of \textbf{.eps}
-and \textbf{.ps} files to be displayable with \LaTeX.  More
-details on each of these is found in the \emph{Author's Guide}.
-
-\begin{figure}
-\centering
-\epsfig{file=fly.eps}
-\caption{A sample black and white graphic (.eps format).}
-\end{figure}
-
-\begin{figure}
-\centering
-\epsfig{file=fly.eps, height=1in, width=1in}
-\caption{A sample black and white graphic (.eps format)
-that has been resized with the \texttt{epsfig} command.}
-\end{figure}
-
-
-As was the case with tables, you may want a figure
-that spans two columns.  To do this, and still to
-ensure proper ``floating'' placement of tables, use the environment
-\textbf{figure*} to enclose the figure and its caption.
-and don't forget to end the environment with
-{figure*}, not {figure}!
-
-\begin{figure*}
-\centering
-\epsfig{file=flies.eps}
-\caption{A sample black and white graphic (.eps format)
-that needs to span two columns of text.}
+\begin{figure*}[htbp] % figure placement: here, top, bottom, or page
+  \centering
+  \includegraphics[height=0.2\linewidth,width=0.2425\linewidth]{images/graph-generation-1}
+  \includegraphics[height=0.2\linewidth,width=0.2425\linewidth]{images/graph-generation-2}
+  \includegraphics[height=0.2\linewidth,width=0.2425\linewidth]{images/graph-generation-3}
+  \includegraphics[height=0.2\linewidth,width=0.2425\linewidth]{images/graph-generation-4}
+  \caption{Graph paths generation. (a) detection of obstacles; (b) triangulation of walkable area; (c) identification of graph nodes area; (d) junction of nodes.}
+  \label{fig:graph-generation}
 \end{figure*}
 
-Note that either {\textbf{.ps}} or {\textbf{.eps}} formats are
-used; use
-the \texttt{{\char'134}epsfig} or \texttt{{\char'134}psfig}
-commands as appropriate for the different file types.
 
-\begin{figure}
-\centering
-\psfig{file=rosette.ps, height=1in, width=1in,}
-\caption{A sample black and white graphic (.ps format) that has
-been resized with the \texttt{psfig} command.}
-\vskip -6pt
-\end{figure}
+After that, the objects in the room are linked to the graph nodes as
+well, giving the possibility to calculate paths to specific elements of
+interest. Given the nature of this process, the paths calculated may not
+be absolutely optimal, but this strategy ensures a good ratio between
+extension of exploration and number of graph nodes.
 
-\subsection{Theorem-like Constructs}
-Other common constructs that may occur in your article are
-the forms for logical constructs like theorems, axioms,
-corollaries and proofs.  There are
-two forms, one produced by the
-command \texttt{{\char'134}newtheorem} and the
-other by the command \texttt{{\char'134}newdef}; perhaps
-the clearest and easiest way to distinguish them is
-to compare the two in the output of this sample document:
+\subsection{Applications}\label{applications}
 
-This uses the \textbf{theorem} environment, created by
-the\linebreak\texttt{{\char'134}newtheorem} command:
-\newtheorem{theorem}{Theorem}
-\begin{theorem}
-Let $f$ be continuous on $[a,b]$.  If $G$ is
-an antiderivative for $f$ on $[a,b]$, then
-\begin{displaymath}\int^b_af(t)dt = G(b) - G(a).\end{displaymath}
-\end{theorem}
+\subsubsection{IoT monitoring}\label{iot-monitoring}
 
-The other uses the \textbf{definition} environment, created
-by the \texttt{{\char'134}newdef} command:
-\newdef{definition}{Definition}
-\begin{definition}
-If $z$ is irrational, then by $e^z$ we mean the
-unique number which has
-logarithm $z$: \begin{displaymath}{\log e^z = z}\end{displaymath}
-\end{definition}
+Every element in 2D map or in 3D model is interactive and the user can
+ask for information. In every class there is a method that gets
+information and send that to the client. The modularity of \emph{nome
+del software} permits to show particular information with regard to the
+object. There are two groups of objects: simple and smart. If the object
+is smart, it can send data in real time through its sensor (e.g.~if the
+object is a thermostat, the user can see the temperature in the room and
+can turn on, or off, the heating). If the object isn't smart, the system
+can show static information (e.g.~for fire Extinguisher, the system
+shows the last date of checking).
 
-Two lists of constructs that use one of these
-forms is given in the
-\emph{Author's  Guidelines}.
- 
-There is one other similar construct environment, which is
-already set up
-for you; i.e. you must \emph{not} use
-a \texttt{{\char'134}newdef} command to
-create it: the \textbf{proof} environment.  Here
-is a example of its use:
-\begin{proof}
-Suppose on the contrary there exists a real number $L$ such that
-\begin{displaymath}
-\lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
-\end{displaymath}
-Then
-\begin{displaymath}
-l=\lim_{x\rightarrow c} f(x)
-= \lim_{x\rightarrow c}
-\left[ g{x} \cdot \frac{f(x)}{g(x)} \right ]
-= \lim_{x\rightarrow c} g(x) \cdot \lim_{x\rightarrow c}
-\frac{f(x)}{g(x)} = 0\cdot L = 0,
-\end{displaymath}
-which contradicts our assumption that $l\neq 0$.
-\end{proof}
+\subsubsection{Realtime access
+monitoring}\label{realtime-access-monitoring}
 
-Complete rules about using these environments and using the
-two different creation commands are in the
-\emph{Author's Guide}; please consult it for more
-detailed instructions.  If you need to use another construct,
-not listed therein, which you want to have the same
-formatting as the Theorem
-or the Definition\cite{salas:calculus} shown above,
-use the \texttt{{\char'134}newtheorem} or the
-\texttt{{\char'134}newdef} command,
-respectively, to create it.
+The system can be used for access monitoring. On 2D map will be a marker
+for each person in the building, whereas on the 3D model will be a 3D
+model of user. With an appropriate system of indoor localization, every
+person sends its position in real time. The 2D map and the 3D model is
+automatically refreshed. The user can ask for information about person,
+in function of the use of the system.
 
-\subsection*{A {\secit Caveat} for the \TeX\ Expert}
-Because you have just been given permission to
-use the \texttt{{\char'134}newdef} command to create a
-new form, you might think you can
-use \TeX's \texttt{{\char'134}def} to create a
-new command: \emph{Please refrain from doing this!}
-Remember that your \LaTeX\ source code is primarily intended
-to create camera-ready copy, but may be converted
-to other forms -- e.g. HTML. If you inadvertently omit
-some or all of the \texttt{{\char'134}def}s recompilation will
-be, to say the least, problematic.
+\subsubsection{Crossfloor user
+navigation}\label{crossfloor-user-navigation}
 
-\section{Conclusions}
-This paragraph will end the body of this sample document.
-Remember that you might still have Acknowledgments or
-Appendices; brief samples of these
-follow.  There is still the Bibliography to deal with; and
-we will make a disclaimer about that here: with the exception
-of the reference to the \LaTeX\ book, the citations in
-this paper are to articles which have nothing to
-do with the present subject and are used as
-examples only.
-%\end{document}  % This is where a 'short' article might terminate
+With the weighted adjacency matrix, the user can choose two nodes that
+represent respectively the start and the end point. The system
+calculates the optimal path by Dijkstra's algorithm and shows this with
+a polyline in 2D map. To pass through different floors, the path leads
+to stairs or elevators. All the nodes of the same elevator are connected
+among them and their distances is set to 0. Otherwise the connections
+through the stairs are characterized by the nodes of two different
+levels; their weight of this portion of path is set to the distance
+between these nodes. Therefore the subgraph that characterized stairs or
+elevator is complete.
+
+\section{Use case}\label{use-case}
+
+\begin{verbatim}
+C3D.js
+\end{verbatim}
+
+\section{Conclusions}\label{conclusions}
+
+We presented HIJSON a GeoJSON extension for indoor mapping
 
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgments}
