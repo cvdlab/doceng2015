@@ -1,0 +1,3 @@
+Once the image has been built, issue:
+
+$ docker run -it --rm --volume /Users/fe/Desktop/doceng2015/latex:/tmp texlive:full pdflatex doceng2015
