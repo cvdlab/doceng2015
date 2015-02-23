@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  23 FEB 2015 13:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  23 FEB 2015 13:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -355,46 +355,42 @@ Overfull \hbox (12.94438pt too wide) in paragraph at lines 260--261
  []
 
 [2 <./images/pipeline-eps-converted-to.pdf>]
+<images/graph-generation/single/graph-generation-1.png, id=28, 513.92pt x 385.4
+4pt>
+File: images/graph-generation/single/graph-generation-1.png Graphic file (type 
+png)
+ <use images/graph-generation/single/graph-generation-1.png>
+Package pdftex.def Info: images/graph-generation/single/graph-generation-1.png 
+used on input line 332.
+(pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
 
-! LaTeX Error: File `images/graph-generation-1' not found.
+<images/graph-generation/single/graph-generation-2.png, id=30, 513.92pt x 385.4
+4pt>
+File: images/graph-generation/single/graph-generation-2.png Graphic file (type 
+png)
+ <use images/graph-generation/single/graph-generation-2.png>
+Package pdftex.def Info: images/graph-generation/single/graph-generation-2.png 
+used on input line 333.
+(pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.332 ...425\linewidth]{images/graph-generation-1}
-                                                  
-? 
+<images/graph-generation/single/graph-generation-3.png, id=31, 513.92pt x 385.4
+4pt>
+File: images/graph-generation/single/graph-generation-3.png Graphic file (type 
+png)
+ <use images/graph-generation/single/graph-generation-3.png>
+Package pdftex.def Info: images/graph-generation/single/graph-generation-3.png 
+used on input line 334.
+(pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
 
-! LaTeX Error: File `images/graph-generation-2' not found.
+<images/graph-generation/single/graph-generation-4.png, id=32, 513.92pt x 385.4
+4pt>
+File: images/graph-generation/single/graph-generation-4.png Graphic file (type 
+png)
+ <use images/graph-generation/single/graph-generation-4.png>
+Package pdftex.def Info: images/graph-generation/single/graph-generation-4.png 
+used on input line 335.
+(pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.333 ...425\linewidth]{images/graph-generation-2}
-                                                  
-? 
-
-! LaTeX Error: File `images/graph-generation-3' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.334 ...425\linewidth]{images/graph-generation-3}
-                                                  
-? 
-
-! LaTeX Error: File `images/graph-generation-4' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.335 ...425\linewidth]{images/graph-generation-4}
-                                                  
-? 
 No file doceng2015.bbl.
 [3]
 Overfull \hbox (11.79744pt too wide) in paragraph at lines 448--452
@@ -404,32 +400,35 @@ tionalauthors
 
 [4
 
-] (./doceng2015.aux) ) 
+ <./images/graph-generation/single/graph-generation-1.png> <./images/graph-gene
+ration/single/graph-generation-2.png> <./images/graph-generation/single/graph-g
+eneration-3.png> <./images/graph-generation/single/graph-generation-4.png>]
+(./doceng2015.aux) ) 
 Here is how much of TeX's memory you used:
- 2854 strings out of 495028
- 36118 string characters out of 6181497
+ 2860 strings out of 495028
+ 37039 string characters out of 6181497
  98592 words of memory out of 5000000
- 5964 multiletter control sequences out of 15000+600000
+ 5980 multiletter control sequences out of 15000+600000
  57922 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,12n,28p,447b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.en
-c}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
-uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on doceng2015.pdf (4 pages, 560936 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
+vb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on doceng2015.pdf (4 pages, 627400 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
