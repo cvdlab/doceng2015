@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  24 FEB 2015 15:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  24 FEB 2015 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -187,34 +187,67 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-))) (./doceng2015.aux)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen123
+\captionmargin@=\dimen124
+\captionwidth=\dimen125
+\caption@tempdima=\dimen126
+\caption@indent=\dimen127
+\caption@parindent=\dimen128
+\caption@hangindent=\dimen129
+\abovecaptionskip=\skip44
+\belowcaptionskip=\skip45
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2-> \vskip 10pt \setbox \@
+tempboxa \hbox {\textbf {#1: #2}} \ifdim \wd \@tempboxa >\hsize \textbf {#1: #2
+}\par \else \hbox to\hsize {\hfil \box \@tempboxa \hfil } \fi .
+\c@ContinuedFloat=\count109
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count110
+\c@subtable=\count111
+)
+(./doceng2015.aux)
 \openout1 = `doceng2015.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
-\scratchdimen=\dimen123
+\scratchcounter=\count112
+\scratchdimen=\dimen130
 \scratchbox=\box30
-\nofMPsegments=\count110
-\nofMParguments=\count111
+\nofMPsegments=\count113
+\nofMParguments=\count114
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count112
-\MPscratchDim=\dimen124
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen131
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks37
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -264,75 +297,67 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 115.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+LaTeX Font Info:    Try loading font information for U+msb on input line 115.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 111.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 115.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Overfull \hbox (10.71048pt too wide) in paragraph at lines 111--111
+Overfull \hbox (10.71048pt too wide) in paragraph at lines 115--115
  []\eaddfnt lleipuner@researchlabs.org| 
  []
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 112.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 116.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Overfull \hbox (1.26794pt too wide) in paragraph at lines 119--120
+Overfull \hbox (1.26794pt too wide) in paragraph at lines 123--124
 \T1/aer/m/n/9 H.4 [\T1/aer/bx/n/9 Information Sys-tems Ap-pli-ca-tions\T1/aer/m
 /n/9 ]: Mis-cel-la-neous;
  []
 
-! Undefined control sequence.
-l.153 \href
-           {GeoJSON\%20spec}{http://geojson.org/geojson-spec.html}
-? 
 
-Overfull \hbox (113.90916pt too wide) in paragraph at lines 145--154
-\T1/aer/m/n/9 are rep-re-sented by a \T1/aett/m/n/9 Fea-tureC-ol-lec-tion\T1/ae
-r/m/n/9 . GeoJSON%20spechttp://geojson.org/geojson-
- []
-
-
-Overfull \hbox (2.07567pt too wide) in paragraph at lines 161--166
+Overfull \hbox (2.07567pt too wide) in paragraph at lines 157--158
 []\T1/aett/m/n/9 IndoorJSON \T1/aer/m/n/9 is a Geo-J-SON vari-ant used by in-do
 or.io toolset
  []
 
 
-Overfull \hbox (7.02844pt too wide) in paragraph at lines 168--168
+Overfull \hbox (7.02844pt too wide) in paragraph at lines 160--160
 []\secfnt ADVANCES ON CAR-TO-GRAPH-ICS DOC-
  []
 
 
-Underfull \vbox (badness 1910) has occurred while \output is active []
+Underfull \vbox (badness 6332) has occurred while \output is active []
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-! Too many }'s.
-l.225 rules}
-            \label{document-structure-and-validation-rules}
-? 
-[2]
-Overfull \hbox (9.11343pt too wide) in paragraph at lines 311--313
-\T1/aer/m/n/9 ma-jor-ity of the web based ap-pli-ca-tion, in-her-ently \T1/aer/
-m/it/9 client/server\T1/aer/m/n/9 . 
+] [2]
+Overfull \hbox (3.16092pt too wide) in paragraph at lines 221--222
+[]\T1/aer/m/n/9 IN THE FOL-LOWINNG SOME POS-SI-BLE USE OF THE
  []
 
 
-Overfull \hbox (14.18861pt too wide) in paragraph at lines 316--319
+Overfull \hbox (23.9377pt too wide) in paragraph at lines 248--249
+\T1/aer/m/n/9 tools ex-pose an over-all ar-chi-tec-ture that is in-her-ently \T
+1/aer/m/it/9 client/server\T1/aer/m/n/9 . 
+ []
+
+
+Overfull \hbox (14.18861pt too wide) in paragraph at lines 252--253
 \T1/aer/m/n/9 server, it is passed through the \T1/aer/bx/n/9 HI-J-SON pro-cess
 -ing pipeline\T1/aer/m/n/9 ,
  []
@@ -345,139 +370,149 @@ Package epstopdf Info: Source file: <images/pipeline.eps>
 (epstopdf)                    size: 382854 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/pipeline-eps-conver
 ted-to.pdf images/pipeline.eps>
-(epstopdf)             \includegraphics on input line 336.
+(epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
 <images/pipeline-eps-converted-to.pdf, id=22, 1027.84pt x 1027.84pt>
 File: images/pipeline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/pipeline-eps-converted-to.pdf>
 Package pdftex.def Info: images/pipeline-eps-converted-to.pdf used on input lin
-e 336.
+e 256.
 (pdftex.def)             Requested size: 252.94438pt x 252.94499pt.
 
-Overfull \hbox (12.94438pt too wide) in paragraph at lines 336--337
+Overfull \hbox (12.94438pt too wide) in paragraph at lines 256--257
  [][] 
  []
 
+[3 <./images/pipeline-eps-converted-to.pdf>]
+Overfull \hbox (6.51636pt too wide) in paragraph at lines 269--271
+[]\T1/aett/m/it/9 graph paths gen-er-a-tion \T1/aer/m/n/9 - The fourth stage is
+ in charge
+ []
 
-Overfull \hbox (9.05788pt too wide) in paragraph at lines 388--388
+
+Overfull \hbox (4.60751pt too wide) in paragraph at lines 286--287
+[]\T1/aett/m/it/9 3D Model gen-er-a-tion \T1/aer/m/n/9 - Un-like HI-J-SON El-e-
+ments (that
+ []
+
+
+Overfull \hbox (9.05788pt too wide) in paragraph at lines 289--289
 []\secfnt Algorithmics: au-to-matic gen-er-a-tion of valid
  []
 
 
-Overfull \hbox (20.94724pt too wide) in paragraph at lines 391--393
+Overfull \hbox (20.94724pt too wide) in paragraph at lines 291--293
 \T1/aer/m/n/9 EVEN-TU-ALI AP-PRO-FONDI-MENTI DI AL-TRI STADI DELLA
  []
 
-[3 <./images/pipeline-eps-converted-to.pdf>]
-<images/graph-generation/single/graph-generation-1.png, id=31, 513.92pt x 385.4
+
+Overfull \hbox (3.57916pt too wide) in paragraph at lines 303--304
+[]\T1/aer/m/n/9 element nodes: HI-J-SON El-e-ment (whose HI-J-SON Class
+ []
+
+[4]
+<images/graph-generation/single/graph-generation-1.png, id=35, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-1.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-1.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-1.png 
-used on input line 442.
-(pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
+used on input line 338.
+(pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-2.png, id=33, 513.92pt x 385.4
+<images/graph-generation/single/graph-generation-2.png, id=37, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-2.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-2.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-2.png 
-used on input line 443.
-(pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
+used on input line 344.
+(pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-3.png, id=34, 513.92pt x 385.4
+<images/graph-generation/single/graph-generation-3.png, id=38, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-3.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-3.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-3.png 
-used on input line 444.
-(pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
+used on input line 350.
+(pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-4.png, id=35, 513.92pt x 385.4
+<images/graph-generation/single/graph-generation-4.png, id=39, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-4.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-4.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-4.png 
-used on input line 445.
-(pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
+used on input line 356.
+(pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-Overfull \hbox (6.52948pt too wide) in paragraph at lines 452--458
+Overfull \hbox (6.52948pt too wide) in paragraph at lines 368--369
 []\T1/aer/m/n/9 Every HI-J-SON El-ment is as-signed to a spe-cific class, i.e. 
 cat-
  []
 
-
-LaTeX Warning: File `images/extended-classes.eps' not found on input line 461.
-
-Package epstopdf Info: Source file: <images/extended-classes.eps>
-(epstopdf)             Output file: <images/extended-classes-eps-converted-to.p
-df>
-(epstopdf)             Command: <repstopdf --outfile=images/extended-classes-ep
-s-converted-to.pdf images/extended-classes.eps>
-(epstopdf)             \includegraphics on input line 461.
+Package epstopdf Info: Source file: <images/element-class-node.eps>
+(epstopdf)                    date: 2015-02-24 16:11:51
+(epstopdf)                    size: 723285 bytes
+(epstopdf)             Output file: <images/element-class-node-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2015-02-24 16:12:22
+(epstopdf)                    size: 198103 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/element-class-node-
+eps-converted-to.pdf images/element-class-node.eps>
+(epstopdf)             \includegraphics on input line 372.
 Package epstopdf Info: Output file is already uptodate.
 
-! Package pdftex.def Error: File `images/extended-classes-eps-converted-to.pdf'
- not found.
+<images/element-class-node-eps-converted-to.pdf, id=40, 1027.84pt x 1027.84pt>
+File: images/element-class-node-eps-converted-to.pdf Graphic file (type pdf)
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.461 ...mages/extended-classes.eps, height=3.5in}
-                                                  
-? 
+<use images/element-class-node-eps-converted-to.pdf>
+Package pdftex.def Info: images/element-class-node-eps-converted-to.pdf used on
+ input line 372.
+(pdftex.def)             Requested size: 108.40472pt x 108.405pt.
 
-Overfull \hbox (12.95929pt too wide) in paragraph at lines 461--462
- [][] 
- []
-
-[4]
 No file doceng2015.bbl.
-
-Overfull \hbox (11.79744pt too wide) in paragraph at lines 573--577
+[5 <./images/element-class-node-eps-converted-to.pdf>]
+Overfull \hbox (11.79744pt too wide) in paragraph at lines 447--451
 \T1/aer/m/n/9 just add the names and in-for-ma-tion in the \T1/aett/m/n/9 \addi
 tionalauthors
  []
 
-[5 <./images/graph-generation/single/graph-generation-1.png> <./images/graph-ge
-neration/single/graph-generation-2.png> <./images/graph-generation/single/graph
--generation-3.png> <./images/graph-generation/single/graph-generation-4.png>]
-(./doceng2015.aux)
+[6
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ <./images/graph-generation/single/graph-generation-1.png> <./images/graph-gene
+ration/single/graph-generation-2.png> <./images/graph-generation/single/graph-g
+eneration-3.png> <./images/graph-generation/single/graph-generation-4.png>]
+(./doceng2015.aux) ) 
 Here is how much of TeX's memory you used:
- 2868 strings out of 495028
- 37279 string characters out of 6181497
- 98592 words of memory out of 5000000
- 5987 multiletter control sequences out of 15000+600000
- 57922 words of font info for 79 fonts, out of 8000000 for 9000
+ 3989 strings out of 495028
+ 57530 string characters out of 6181497
+ 120216 words of memory out of 5000000
+ 7091 multiletter control sequences out of 15000+600000
+ 61832 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,12n,28p,447b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on doceng2015.pdf (5 pages, 635477 bytes).
+ 41i,12n,38p,2080b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmri8a.pfb>
+Output written on doceng2015.pdf (6 pages, 846807 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
