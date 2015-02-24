@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  23 FEB 2015 13:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  24 FEB 2015 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,13 +321,18 @@ Underfull \vbox (badness 1910) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (9.11343pt too wide) in paragraph at lines 235--237
+! Too many }'s.
+l.225 rules}
+            \label{document-structure-and-validation-rules}
+? 
+[2]
+Overfull \hbox (9.11343pt too wide) in paragraph at lines 311--313
 \T1/aer/m/n/9 ma-jor-ity of the web based ap-pli-ca-tion, in-her-ently \T1/aer/
 m/it/9 client/server\T1/aer/m/n/9 . 
  []
 
 
-Overfull \hbox (14.18861pt too wide) in paragraph at lines 240--243
+Overfull \hbox (14.18861pt too wide) in paragraph at lines 316--319
 \T1/aer/m/n/9 server, it is passed through the \T1/aer/bx/n/9 HI-J-SON pro-cess
 -ing pipeline\T1/aer/m/n/9 ,
  []
@@ -340,95 +345,139 @@ Package epstopdf Info: Source file: <images/pipeline.eps>
 (epstopdf)                    size: 382854 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/pipeline-eps-conver
 ted-to.pdf images/pipeline.eps>
-(epstopdf)             \includegraphics on input line 260.
+(epstopdf)             \includegraphics on input line 336.
 Package epstopdf Info: Output file is already uptodate.
-<images/pipeline-eps-converted-to.pdf, id=19, 1027.84pt x 1027.84pt>
+<images/pipeline-eps-converted-to.pdf, id=22, 1027.84pt x 1027.84pt>
 File: images/pipeline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/pipeline-eps-converted-to.pdf>
 Package pdftex.def Info: images/pipeline-eps-converted-to.pdf used on input lin
-e 260.
+e 336.
 (pdftex.def)             Requested size: 252.94438pt x 252.94499pt.
 
-Overfull \hbox (12.94438pt too wide) in paragraph at lines 260--261
+Overfull \hbox (12.94438pt too wide) in paragraph at lines 336--337
  [][] 
  []
 
-[2 <./images/pipeline-eps-converted-to.pdf>]
-<images/graph-generation/single/graph-generation-1.png, id=28, 513.92pt x 385.4
+
+Overfull \hbox (9.05788pt too wide) in paragraph at lines 388--388
+[]\secfnt Algorithmics: au-to-matic gen-er-a-tion of valid
+ []
+
+
+Overfull \hbox (20.94724pt too wide) in paragraph at lines 391--393
+\T1/aer/m/n/9 EVEN-TU-ALI AP-PRO-FONDI-MENTI DI AL-TRI STADI DELLA
+ []
+
+[3 <./images/pipeline-eps-converted-to.pdf>]
+<images/graph-generation/single/graph-generation-1.png, id=31, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-1.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-1.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-1.png 
-used on input line 332.
+used on input line 442.
 (pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
 
-<images/graph-generation/single/graph-generation-2.png, id=30, 513.92pt x 385.4
+<images/graph-generation/single/graph-generation-2.png, id=33, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-2.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-2.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-2.png 
-used on input line 333.
+used on input line 443.
 (pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
 
-<images/graph-generation/single/graph-generation-3.png, id=31, 513.92pt x 385.4
+<images/graph-generation/single/graph-generation-3.png, id=34, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-3.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-3.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-3.png 
-used on input line 334.
+used on input line 444.
 (pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
 
-<images/graph-generation/single/graph-generation-4.png, id=32, 513.92pt x 385.4
+<images/graph-generation/single/graph-generation-4.png, id=35, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-4.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-4.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-4.png 
-used on input line 335.
+used on input line 445.
 (pdftex.def)             Requested size: 122.2141pt x 100.79428pt.
 
+Overfull \hbox (6.52948pt too wide) in paragraph at lines 452--458
+[]\T1/aer/m/n/9 Every HI-J-SON El-ment is as-signed to a spe-cific class, i.e. 
+cat-
+ []
+
+
+LaTeX Warning: File `images/extended-classes.eps' not found on input line 461.
+
+Package epstopdf Info: Source file: <images/extended-classes.eps>
+(epstopdf)             Output file: <images/extended-classes-eps-converted-to.p
+df>
+(epstopdf)             Command: <repstopdf --outfile=images/extended-classes-ep
+s-converted-to.pdf images/extended-classes.eps>
+(epstopdf)             \includegraphics on input line 461.
+Package epstopdf Info: Output file is already uptodate.
+
+! Package pdftex.def Error: File `images/extended-classes-eps-converted-to.pdf'
+ not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.461 ...mages/extended-classes.eps, height=3.5in}
+                                                  
+? 
+
+Overfull \hbox (12.95929pt too wide) in paragraph at lines 461--462
+ [][] 
+ []
+
+[4]
 No file doceng2015.bbl.
-[3]
-Overfull \hbox (11.79744pt too wide) in paragraph at lines 448--452
+
+Overfull \hbox (11.79744pt too wide) in paragraph at lines 573--577
 \T1/aer/m/n/9 just add the names and in-for-ma-tion in the \T1/aett/m/n/9 \addi
 tionalauthors
  []
 
-[4
+[5 <./images/graph-generation/single/graph-generation-1.png> <./images/graph-ge
+neration/single/graph-generation-2.png> <./images/graph-generation/single/graph
+-generation-3.png> <./images/graph-generation/single/graph-generation-4.png>]
+(./doceng2015.aux)
 
- <./images/graph-generation/single/graph-generation-1.png> <./images/graph-gene
-ration/single/graph-generation-2.png> <./images/graph-generation/single/graph-g
-eneration-3.png> <./images/graph-generation/single/graph-generation-4.png>]
-(./doceng2015.aux) ) 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2860 strings out of 495028
- 37039 string characters out of 6181497
+ 2868 strings out of 495028
+ 37279 string characters out of 6181497
  98592 words of memory out of 5000000
- 5980 multiletter control sequences out of 15000+600000
+ 5987 multiletter control sequences out of 15000+600000
  57922 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,12n,28p,447b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
-vb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on doceng2015.pdf (4 pages, 627400 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmri8a.pfb>
+Output written on doceng2015.pdf (5 pages, 635477 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

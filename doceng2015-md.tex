@@ -68,11 +68,21 @@ environments}\label{cartographic-documents-for-web-modeling-and-representation-o
 
 \section{Abstract}\label{abstract}
 
-\section{Introduciton}\label{introduciton}
+\section{Introduction}\label{introduction}
+
+CARATTERISTICHE E SPUNTI:
+
+\begin{itemize}
+\item
+  CONNESSIONE CON I SENSORI PER LA RILEVAZIONE DELLA POSIZIONE DEI
+  VISITATORI
+\item
+\item
+\end{itemize}
 
 \ldots{}
 
-The remainder of the paper is organized as follows. In Section II is
+The remainder of this document is organized as follows. In Section II is
 provided an overview of the state of the art. Section III is devoted to
 describe the novel cartographic document proposed, while section IV
 introduces the underlying mathematical structure. Section V reports
@@ -110,8 +120,8 @@ and/or FeatureCollections. All Features are interpreted similarly
 regardless of their grouping into nested FeatureCollections. IndoorJSON
 supports all GeoJSON geometry types.
 
-\section{Advances on cartographics document standards:
-HIJSON}\label{advances-on-cartographics-document-standards-hijson}
+\section{Advances on cartographics document
+standards}\label{advances-on-cartographics-document-standards}
 
 \textbf{HIJSON} (\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}) is
 a GeoJSON variant. A HIJSON document reveals at least three major
@@ -163,14 +173,88 @@ information allows the adoption of semantic extensions by the software
 that manipulates the HIJSON data. In the Javascript library developed to
 manage HIJSON documents, different classes are instantiated to represent
 HIJSON Nodes, which acts differently by the adoption of polymorphic
-methods. Ino rder to extend the possibilities in representation and
+methods. In order to extend the possibilities in representation and
 interaction, it is sufficient to define new classes that reflects new
 categories of HIJSON Elements.
 
-\section{LAR: the underlying mathematical
-structure}\label{lar-the-underlying-mathematical-structure}
+\section{Document structure and validation
+rules}\label{document-structure-and-validation-rules}
 
-\section{Implemented web tools}\label{implemented-web-tools}
+A single HIJSON document is composed of different parts: -
+configuration: a JSON object containing parameters and settings useful
+for the building representation. In particular three points of the local
+reference system are mapped to three couples of geographical
+coordinates. This information allows the computation of the
+transformation matrix used to translate the local coordinates to global
+ones. - one or more data collections: each of these lists is given in
+the form of a GeoJSON FeatureCollection, containing a number of HIJSON
+Elements. Since HIJSON Elements adhere to the GeoJSON format, each
+collection can be accepted by a GeoJSON validator. HIJSON introduces
+some additional rules that allow the adoption of this format for indoor
+representation. Below is given a sample of HIJSON Element, with the
+description of the main differences from a standard GeoJSON Feature.
+
+\begin{verbatim}
+{
+    "type": "Feature",
+    "id": "room_0.1",
+    "geometry": 
+    {
+        "type": "Polygon",
+        "coordinates": 
+        [ 
+           [ [0, 0], [11, 0], [11, 19], [0, 19] ]
+        ]    
+    },
+    "properties": 
+    {
+        "class": "room",
+        "parent": "level_0",
+        "description": "Office of Mr. Smith",
+        "tVector": [10, 20, 0],
+        "rVector": [0, 0, 90]
+    }
+}
+\end{verbatim}
+
+The first additional requisite above the GeoJSON format rules is the
+necessity of a unique ID, necessary for the referencing by possible
+child elements. The Geometry types allowed are \texttt{Point},
+\texttt{LineString} and \texttt{Polygon}. Each geometry type is used to
+represent particular categories of elements (e.g.~Polygons for levels
+and rooms, LineString for walls and doors, Point for furniture, etc.).
+The geometry coordinates are expressed in meters, and for convention
+starting at the bottom-left of the element. Unlike GeoJSON, where all
+the properties are optional, in HIJSON some attributes are mandatories:
+- \texttt{class}: represent the element category, used to instantiate
+the appropriate semantic class; - \texttt{parent}: contains parent's id
+of the nodes. The reason of the unique id depends on this property. The
+HITREE is created on the base of parent property; - \texttt{tVector} and
+\texttt{rVector}: represent the translation and rotation relative to the
+parent element. The measure unit for translation is meter and for
+rotation is grades.
+
+The definition of other properties is mandatory on the base of the class
+of the element: For example the classes that defines internal or
+external walls require a \texttt{connections} array, containing the IDs
+of the adiacent areas. This information is used by the connector
+children of the elmenet, like doors, to identify the areas linked
+together. These connector elements, like doors, are identified bay a
+boolean \texttt{connector} property set to true.
+
+Optional fields can be added to improve the precision of the
+representation. Given the nature of the GeoJSON format from which HIJSON
+derives, the elements are represented by their 2D shape, like on a
+planimetry. To assign a value to the height of the object, intended as
+third dimension, the property \texttt{height} can be used.
+
+A \texttt{description} property can provide additional information about
+the element.
+
+Additional optional fields can be freely added, to enrich and extend the
+expressvity of the representation.
+
+\section{HIJSON Web Toolkit}\label{hijson-web-toolkit}
 
 A set of web based instruments has been developed allowing to deal with
 the HIJSON document previously described. Tools are written in
@@ -178,10 +262,77 @@ the HIJSON document previously described. Tools are written in
 \emph{Express.js} as backend framework, and exploiting the power of
 WebSocket protocol through the \emph{Socket.io} library.
 
+\subsection{LAR: the underlying mathematical
+structure}\label{lar-the-underlying-mathematical-structure}
+
+\subsection{Applications}\label{applications}
+
+\subsubsection{IoT monitoring}\label{iot-monitoring}
+
+Every element in 2D map or in 3D model is interactive and the user can
+ask for information. In every class there is a method that gets
+information and send that to the client. The modularity of \emph{nome
+del software} permits to show particular information with regard to the
+object. There are two groups of objects: simple and smart. If the object
+is smart, it can send data in real time through its sensor (e.g.~if the
+object is a thermostat, the user can see the temperature in the room and
+can turn on/off the heating). If the object isn't smart, the system can
+show static information (e.g.~for fire Extinguisher, the system shows
+the last date of checking).
+
+\subsubsection{Realtime multi-person
+tracking}\label{realtime-multi-person-tracking}
+
+The system can be used for access monitoring. On 2D map will be a marker
+for each person in the building, whereas on the 3D model will be a 3D
+model of user. With an appropriate system of indoor localization, every
+person sends its position in real time. The 2D map and the 3D model is
+automatically refreshed. The user can ask for information about person,
+in function of the use of the system.
+
+The comunication of the current position happens with the socket.io
+library. Every user sends an object like this:
+
+\begin{verbatim}
+currentPosition = {
+    coordinates: [x, y],
+    levelId: level-ID  
+}
+\end{verbatim}
+
+For every change of the coordinates or level, will be generated an
+\emph{emit} event, in according to the socket.io library, that sends to
+the server the new current position. The server sends to the connected
+client the updated current position of the users connected. In
+client-side, when is hit \emph{on} event of socket.io library, will be a
+refresh of the marker in 2D map and the 3D model in the 3D
+representation. With Observer pattern implemented in socket.io library,
+it's possibile to have a realtime multi-person tracking. This system
+permits to be indipendent from the tool that getting position of the
+users: the only requisite is to send the position like the current
+position object described above.
+
+AGGIUNGERE SINTETICA DESCRIZIONE DEL PROTOCOLLO WEBSOCKET UTILIZZATO
+SPECIFICANDO LE EFFETTIVE CAPACITA' DELLO STRUMENTO.
+
+\subsubsection{Crossfloor user
+navigation}\label{crossfloor-user-navigation}
+
+With the weighted adjacency matrix, the user can choose two nodes that
+represent respectively the start and the end point. The system
+calculates the optimal path by Dijkstra's algorithm and shows this with
+a polyline in 2D map. To pass through different floors, the path leads
+to stairs or elevators. All the nodes of the same elevator are connected
+among them and their distances is set to 0. Otherwise the connections
+through the stairs are characterized by the nodes of two different
+levels; their weight of this portion of path is set to the distance
+between these nodes. Therefore the subgraph that characterized stairs or
+elevator is complete.
+
 \subsection{Architecture}\label{architecture}
 
-The overall architecture of the tools are, as for the vast majority of
-the web based application, inherently \emph{client/server}.
+Like the vast majority of the web based application, the tools expose an
+overall architecture that is inherently \emph{client/server}.
 
 \subsubsection{HIJSON processing
 pipeline}\label{hijson-processing-pipeline}
@@ -198,47 +349,78 @@ HIJSON document. In this way any connected client can be provided with a
 bidimensional plant for each level of the building that it can visualize
 through any compliant GeoJSON viewer.
 
-HIJSON processing pipeline (as pictured in figure \ldots{}) is composed
-by 6 elaboration stages. In the following are detailed operations
-excecuted by each stage, which are, in the order: \emph{validation},
-\emph{georeferencing}, \emph{parsing}, \emph{graph paths generation},
-\emph{2D layers generation}, \emph{marshalling}.
+HIJSON processing pipeline (as pictured in figure AGGIUNGERE
+RIFERIMENTO) is composed by 6 elaboration stages. In the following are
+detailed operations excecuted by each stage, which are, in the order:
+\emph{validation}, \emph{georeferencing}, \emph{parsing}, \emph{graph
+paths generation}, \emph{2D layers generation}, \emph{marshalling}.
 
-\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/pipeline.png};
-1. {[}\textbf{validation}{]} - The first one is a validation stage. In
-order to begin with the effective transformations the input HIJSON
-document must be compliant with the rules defined in (AGGIUNGERE REF TO
-PARAGRAFO REGOLE DI VALIDITA'). In the case the validation stage fails,
-processing aborts and do not continue to following stages. If the stage
-success, the output for the next stage is a validated HIJSON. 2.
-{[}\textbf{georeferencing}{]} - 3. {[}\textbf{parsing}{]} - The parsing
-stage, takes the validated HIJSON as its input, that as illustrated
-before can be thought of as a list of HIJSON Elments, parses them and
-produce an istance of HITREE, which is an object in memory representing
-the tree hierarchical structure of the building described into the
-HIJSON. 4. {[}\textbf{graph paths generation}{]} - The fourth stage is
-in charge of THE generatio of the graph paths. This aim is accomplished
-according to the algorithm described in (AGGIUNGERE RIFERIMENTO A
-\#\#\#\# Automatic generation of valid paths). The graph paths will be
-useful afterwards to coumpute valid paths from couple of point of
-interest on the graph. Once the graph paths has been computed, the input
-HITREE is augmented with paths information, becoming what has been
-called an HTAP (HITREE Augmented with Paths). Augmentation always takes
-place as leaf nodes added as children of a specific (e.g. ``room'')
-level. 5. {[}\textbf{2D layers generation}{]} - The fifth state is the
-generation of geoJSON layer. For each level, the system generates one
-geoJSON layer that will be use for the creation of 2D map. Each layer
-contains the children of `level' node in the HITREE. Every class
-contains a boolean value that is use to choose which class will be a
-part of geoJSON layer. Every element has a geographical coordinates
-calculated by the transformation matrix with regard to the local
-coordinates of the HIJSON element. 6. {[}\textbf{marshalling}{]} -
+\begin{figure}[htbp]
+\centering
+\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/pipeline.png}
+\caption{``HIJSON processing pipeline''}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  {[}\textbf{validation}{]} - The first one is the validation stage. In
+  order to begin with the effective transformations the input HIJSON
+  document must be compliant with the rules defined in (AGGIUNGERE REF
+  TO PARAGRAFO REGOLE DI VALIDITA'). In the case the validation stage
+  fails, processing aborts and do not continue to following stages. If
+  the stage success, the output for the next stage is a validated
+  HIJSON.
+\item
+  {[}\textbf{georeferencing}{]} - In the second stage, in order to allow
+  for continuous outdoor/indoor navigation, the system needs to compute
+  the georeferencing matrix, a linear operator able to transform local
+  coordinates into global coordinates (referred to world coordinate
+  system as latitude and longitude misures) and viceversa. This task is
+  accomplished by solving a linear system obtained from information
+  contained in HIJSON configuration part and precisely from the
+  correnspondance of three real word points to three points included
+  into the HIJSON document.
+\item
+  {[}\textbf{parsing}{]} - The parsing stage, takes the validated and
+  georeferenced HIJSON as its input, that as illustrated before can be
+  thought of as a list of HIJSON Elments, parses them and produce an
+  istance of HITREE. The HITREE is an object in memory representing the
+  tree hierarchical structure of the building described by the HIJSON
+  document.
+\item
+  {[}\textbf{graph paths generation}{]} - The fourth stage is in charge
+  of the generation of the graph paths. This aim is accomplished
+  according to the algorithm described in (AGGIUNGERE RIFERIMENTO A
+  \#\#\#\# Automatic generation of valid paths). The graph paths will be
+  useful afterwards to coumpute valid paths from couple of point of
+  interest on the graph. Once the graph paths has been computed, the
+  input HITREE is augmented with paths information, becoming what has
+  been called an HTAP (HITREE Augmented with Paths). Augmentation always
+  takes place as leaf nodes added as children of a specific (e.g.
+  ``room'') level.
+\item
+  {[}\textbf{2D layers generation}{]} - The fifth stage is the
+  generation of GeoJSON layer. For each level, the system generates one
+  geoJSON layer that will be use for the creation of 2D map. Each layer
+  contains the children of `level' node in the HITREE. Every class
+  contains a boolean value that is used to choose which class will be a
+  part of geoJSON layer. Every element has a geographical coordinates
+  calculated by the transformation matrix with regard to the local
+  coordinates of the HIJSON element.
+\item
+  {[}\textbf{marshalling}{]} - The last stage is responsible of execute
+  a serialization of the the transformed data. Tasks like breaking
+  dependency-loops and stringification are performed, and the output is
+  stored ready to be served to any requiring client.
+\end{enumerate}
 
 \subsubsection{Client}\label{client}
 
 When a client connects to the server, it receives the HIJSON input
 files, the ready-to-use GeoJSON layers and the weighted adjacency matrix
-of the grapth paths. A very short pipeline of processing is performed by
+of the graph paths. A very short pipeline of processing is performed by
 the client, composed by: 1. {[}\textbf{Parsing}{]} - Like for the
 Server-side processing, the HIJSON Elements in the input files are
 processed and tranformed in HIJSON Nodes, linked together in a
@@ -251,103 +433,145 @@ assemble a complete 3D Model of the building. The similarities in HIJSON
 hierarchical structure and Three.js scene graph allow this process to be
 performed with little effort.
 
-\subsection{Algorithmics}\label{algorithmics}
+\subsection{Algorithmics: automatic generation of valid
+paths}\label{algorithmics-automatic-generation-of-valid-paths}
 
-\subsubsection{Automatic generation of valid
-paths}\label{automatic-generation-of-valid-paths}
+(IN QUESTA SEZIONE SI POSSONO AGGIUNGERE EVENTUALI APPROFONDIMENTI DI
+ALTRI STADI DELLA PIPELINE)
 
-One of the core functionalities of the pre-processing server stage is
-the generation of a graph of valid paths trough the entire building,
-that can be used to calculate directions between two given nodes (see
-Crossfloor user navigation paragraph). Taking advantage of the
-hierarchical structure of the representation, the problem is splitted in
-many sub-problems represented by the computation of the sub-graphs
-relative to each room. The sub-graphs are then linked together trough
-doors. The entire process (as shown in figure), is composed by 4 phases:
-1. Computation of the walkable area of the room; 2. Triangulation of the
-walkable area; 3. For each triangle side completely internal to the
-area, its midpoint is used to represent a graph node; 4. Nodes relative
-to the same triangle are then linked together, and the doors are linked
-to the nearest node in the room.
+The fourth stage of the processing pipeline is responsible for the
+generation of a graph of valid paths through the entire model
+represented by the intput HIJSON document. The graph generated according
+to the algorithm described in the following, although not optimal,
+ensures a complete coverage of the surface while limiting the numebr of
+generated nodes. Resulting graph is weigthed on the edges with nodes
+distances and each node represents alternatively:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  standard path node, i.e.~a junction node or possibly an endpoint of a
+  path;
+\item
+  connection node, used as subproblem composing element in the divide et
+  impera approch adopted (as described below).
+\item
+  element nodes ie. HIJSON Element (whose HIJSON Class explicitly grants
+  his presence in the graph), typically an endpoint of a path;
+\end{enumerate}
+
+Such a graph allows for directions calculations between any two given
+nodes. Directions are actually computed clientside applying the
+Dijkstra's shortes route algorithm on the graph.
+
+\subsubsection{Graph paths generation}\label{graph-paths-generation}
+
+Taking advantage of the hierarchical structure of the HIJSON document,
+and according to the divide et impera approach, the problem of the graph
+paths generation is splitted in several sub-problems which consist in
+the computation of the sub-graphs relative to each room, or more
+generally ambience. The sub-graphs are then linked together through the
+connection nodes (which in most cases represents doors). The resolution
+of each sub-problem (as depicted in figure METTERE RIFERIMENTO ALLA
+FIGURA), is composed by 4 phases: 1. Computation of the walkable area of
+the ambience: this task is accomplished subtracting area of the possibly
+encumbrances to the area of the ambience; the result is tipically a
+surface with holes; 2. Triangulation of the walkable area: the computed
+surface is triangulated taking into account the presence of holes; 3.
+Identification of graph nodes: for each triangle side completely
+internal to the area, its midpoint is selected as standard path node; 4.
+Junction of nodes: nodes relative to the same triangle are then linked
+together; both element nodes and connection nodes (i.e.~doors) are
+linked to the nearest node in the ambience (i.e.~room).
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/graph-generation-1.png}
-\caption{``Graph generation: 1. detection of obstacles''}
+\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/graph-generation/single/graph-generation-1.png}
+\caption{``Graph generation: 1. computation of the walkable area''}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/graph-generation-2.png}
+\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/graph-generation/single/graph-generation-2.png}
 \caption{``Graph generation: 2. triangulation of walkable area''}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/graph-generation-3.png}
+\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/graph-generation/single/graph-generation-3.png}
 \caption{``Graph generation: 3. identification of graph nodes area''}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/graph-generation-4.png}
-\caption{``Graph generation: 4. junction of of nodes area''}
+\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/graph-generation/single/graph-generation-4.png}
+\caption{``Graph generation: 4. junction of nodes''}
 \end{figure}
 
-After that, the objects in the room are linked to the graph nodes as
-well, giving the possibility to calculate paths to specific elements of
-interest. Given the nature of this process, the paths calculated may not
-be absolutely optimal, but this strategy ensures a good ratio between
-extension of exploration and number of graph nodes.
+\subsection{HIJSON Class definition}\label{hijson-class-definition}
 
-\subsection{Applications}\label{applications}
+Every HIJSON Elment is assigned to a specific class, i.e.~category,
+through the ``class'' property. This information can be used by an
+application, in this case the Web Toolkit, to instantiate specific
+classes with differentt behaviours. These HIJSON Classes, when
+instantiated, produce an HIJSON Node, that is the building block of the
+HITREE.
 
-\subsubsection{IoT monitoring}\label{iot-monitoring}
+\begin{figure}[htbp]
+\centering
+\includegraphics{https://raw.githubusercontent.com/cvdlab/doceng2015/master/images/extended-classes.png}
+\caption{``Semantic classes''}
+\end{figure}
 
-Every element in 2D map or in 3D model is interactive and the user can
-ask for information. In every class there is a method that gets
-information and send that to the client. The modularity of \emph{nome
-del software} permits to show particular information with regard to the
-object. There are two groups of objects: simple and smart. If the object
-is smart, it can send data in real time through its sensor (e.g.~if the
-object is a thermostat, the user can see the temperature in the room and
-can turn on, or off, the heating). If the object isn't smart, the system
-can show static information (e.g.~for fire Extinguisher, the system
-shows the last date of checking).
+The HIJSON Web Toolkit provides a number of HIJSON Classes that are used
+to characterize the representation and behaviour of some basic indoor
+elements. In order to extend the possibilities in terms of
+differentiation it is possible to add new classes that reflect new
+categories of elements. Below is described the structure of a HIJSON
+Class.
 
-\subsubsection{Realtime access
-monitoring}\label{realtime-access-monitoring}
+Each class extends a base Feature Class, that provides basic and common
+properties across all the elements. In particular the basic constructor
+copies all the the properties from the HIJSON Element to the just
+created HIJSON Node. In every sub-class, some methods and properties are
+defined to specify the behaviour of the element, for example: - style:
+this property is used by the client to apply specific visualization
+rules in the 2D Leaflet map. - render: this method returns a Object3D
+used for rendering of 3D model.\\- getInfo: a method that return a React
+Component, which populates the DOM with a specific UI for retrieving
+information and interact with the object. - visible\_2D: a boolean value
+that indicates the - in\_graph: a boolean value that indicates if the
+HIJSON element will be represent with a node in a graph.
 
-The system can be used for access monitoring. On 2D map will be a marker
-for each person in the building, whereas on the 3D model will be a 3D
-model of user. With an appropriate system of indoor localization, every
-person sends its position in real time. The 2D map and the 3D model is
-automatically refreshed. The user can ask for information about person,
-in function of the use of the system.
+If a method or property is non overrided by the sub-class, the defaults
+defined in the Feature super-class are adopted (default 2D style, empty
+3D Object, static informations etc.).
 
-\subsubsection{Crossfloor user
-navigation}\label{crossfloor-user-navigation}
+The definition of classes permits to extend the software in function of
+user's necessity.
 
-With the weighted adjacency matrix, the user can choose two nodes that
-represent respectively the start and the end point. The system
-calculates the optimal path by Dijkstra's algorithm and shows this with
-a polyline in 2D map. To pass through different floors, the path leads
-to stairs or elevators. All the nodes of the same elevator are connected
-among them and their distances is set to 0. Otherwise the connections
-through the stairs are characterized by the nodes of two different
-levels; their weight of this portion of path is set to the distance
-between these nodes. Therefore the subgraph that characterized stairs or
-elevator is complete.
+\subsubsection{Example of use}\label{example-of-use}
 
-\section{Use case}\label{use-case}
-
-\begin{verbatim}
-C3D.js
-\end{verbatim}
-
-\section{Conclusions}\label{conclusions}
-
-We presented HIJSON a GeoJSON extension for indoor mapping
+The HIJSON Web Toolkit takes advantage of the semantic classes boh in
+the server-side processing and the client-side visualization. During the
+server-side processing pipeline the information retreived from the
+``visible\_2D'' and ``in\_graph'' properties are used to evaluate the
+inclusion of the element in the GeoJSON layers or in the graph of paths.
+In client-side there are essentially two representation: 2D and 3D. In
+2D map will be a representation by calling a polymorphism method that
+respect the style defined in the class. The style is a simple object
+that contains the graphical properties of the class. For 3D model, the
+``render'' method returns a Object3D in according three.js library. If
+the method is not defined in the class, then will be used a ``render''
+method of the superclass by default: returns an empty object3D. For the
+IoT monitoring, in every class is defined a method, `getInfo'. It
+returns a React component that contains a general information of the
+object(by calling to superclass method) and custom element of the
+object. By default, the superclass method return general information,
+like the position and name of the object. \# Conclusions We presented
+HIJSON a GeoJSON extension for indoor mapping TRA GLI SVILUPPI FUTURI: -
+GENERAZIONE GRAFICA IN AMBIENTE CAD DEL DOCUMENTO HIJSON
 
 \section{Bibliography}\label{bibliography}
 

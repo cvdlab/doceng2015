@@ -164,8 +164,8 @@ and/or FeatureCollections. All Features are interpreted similarly
 regardless of their grouping into nested FeatureCollections. IndoorJSON
 supports all GeoJSON geometry types.
 
-\section{Advances on cartographics document standards:
-HIJSON}\label{advances-on-cartographics-document-standards-hijson}
+\section{Advances on cartographics document
+standards}\label{advances-on-cartographics-document-standards}
 
 \textbf{HIJSON} (\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}) is
 a GeoJSON variant. A HIJSON document reveals at least three major
@@ -221,6 +221,82 @@ interaction, it is sufficient to define new classes that reflects new
 categories of HIJSON Elements.
 
 \section{LAR: the underlying mathematical structure}\label{lar-the-underlying-mathematical-structure}
+
+rules}\label{document-structure-and-validation-rules}
+
+A single HIJSON document is composed of different parts: -
+configuration: a JSON object containing parameters and settings useful
+for the building representation. In particular three points of the local
+reference system are mapped to three couples of geographical
+coordinates. This information allows the computation of the
+transformation matrix used to translate the local coordinates to global
+ones. - one or more data collections: each of these lists is given in
+the form of a GeoJSON FeatureCollection, containing a number of HIJSON
+Elements. Since HIJSON Elements adhere to the GeoJSON format, each
+collection can be accepted by a GeoJSON validator. HIJSON introduces
+some additional rules that allow the adoption of this format for indoor
+representation. Below is given a sample of HIJSON Element, with the
+description of the main differences from a standard GeoJSON Feature.
+
+\begin{verbatim}
+{
+    "type": "Feature",
+    "id": "room_0.1",
+    "geometry": 
+    {
+        "type": "Polygon",
+        "coordinates": 
+        [ 
+           [ [0, 0], [11, 0], [11, 19], [0, 19] ]
+        ]    
+    },
+    "properties": 
+    {
+        "class": "room",
+        "parent": "level_0",
+        "description": "Office of Mr. Smith",
+        "tVector": [10, 20, 0],
+        "rVector": [0, 0, 90]
+    }
+}
+\end{verbatim}
+
+The first additional requisite above the GeoJSON format rules is the
+necessity of a unique ID, necessary for the referencing by possible
+child elements. The Geometry types allowed are \texttt{Point},
+\texttt{LineString} and \texttt{Polygon}. Each geometry type is used to
+represent particular categories of elements (e.g.~Polygons for levels
+and rooms, LineString for walls and doors, Point for furniture, etc.).
+The geometry coordinates are expressed in meters, and for convention
+starting at the bottom-left of the element. Unlike GeoJSON, where all
+the properties are optional, in HIJSON some attributes are mandatories:
+- \texttt{class}: represent the element category, used to instantiate
+the appropriate semantic class; - \texttt{parent}: contains parent's id
+of the nodes. The reason of the unique id depends on this property. The
+HITREE is created on the base of parent property; - \texttt{tVector} and
+\texttt{rVector}: represent the translation and rotation relative to the
+parent element. The measure unit for translation is meter and for
+rotation is grades.
+
+The definition of other properties is mandatory on the base of the class
+of the element: For example the classes that defines internal or
+external walls require a \texttt{connections} array, containing the IDs
+of the adiacent areas. This information is used by the connector
+children of the elmenet, like doors, to identify the areas linked
+together. These connector elements, like doors, are identified bay a
+boolean \texttt{connector} property set to true.
+
+Optional fields can be added to improve the precision of the
+representation. Given the nature of the GeoJSON format from which HIJSON
+derives, the elements are represented by their 2D shape, like on a
+planimetry. To assign a value to the height of the object, intended as
+third dimension, the property \texttt{height} can be used.
+
+A \texttt{description} property can provide additional information about
+the element.
+
+Additional optional fields can be freely added, to enrich and extend the
+expressvity of the representation.
 
 \section{Implemented web tools}\label{implemented-web-tools}
 
@@ -308,24 +384,58 @@ assemble a complete 3D Model of the building. The similarities in HIJSON
 hierarchical structure and Three.js scene graph allow this process to be
 performed with little effort.
 
-\subsection{Algorithmics}\label{algorithmics}
+\subsection{Algorithmics: automatic generation of valid
+paths}\label{algorithmics-automatic-generation-of-valid-paths}
 
-\subsubsection{Automatic generation of valid
-paths}\label{automatic-generation-of-valid-paths}
 
-One of the core functionalities of the pre-processing server stage is
-the generation of a graph of valid paths trough the entire building,
-that can be used to calculate directions between two given nodes (see
-Crossfloor user navigation paragraph). Taking advantage of the
-hierarchical structure of the representation, the problem is splitted in
-many sub-problems represented by the computation of the sub-graphs
-relative to each room. The sub-graphs are then linked together trough
-doors. The entire process (as shown in figure), is composed by 4 phases:
-1. Computation of the walkable area of the room; 2. Triangulation of the
-walkable area; 3. For each triangle side completely internal to the
-area, its midpoint is used to represent a graph node; 4. Nodes relative
-to the same triangle are then linked together, and the doors are linked
-to the nearest node in the room.
+(IN QUESTA SEZIONE SI POSSONO AGGIUNGERE EVENTUALI APPROFONDIMENTI DI
+ALTRI STADI DELLA PIPELINE)
+
+The fourth stage of the processing pipeline is responsible for the
+generation of a graph of valid paths through the entire model
+represented by the intput HIJSON document. The graph generated according
+to the algorithm described in the following, although not optimal,
+ensures a complete coverage of the surface while limiting the numebr of
+generated nodes. Resulting graph is weigthed on the edges with nodes
+distances and each node represents alternatively:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  standard path node, i.e.~a junction node or possibly an endpoint of a
+  path;
+\item
+  connection node, used as subproblem composing element in the divide et
+  impera approch adopted (as described below).
+\item
+  element nodes ie. HIJSON Element (whose HIJSON Class explicitly grants
+  his presence in the graph), typically an endpoint of a path;
+\end{enumerate}
+
+Such a graph allows for directions calculations between any two given
+nodes. Directions are actually computed clientside applying the
+Dijkstra's shortes route algorithm on the graph.
+
+\subsubsection{Graph paths generation}\label{graph-paths-generation}
+
+Taking advantage of the hierarchical structure of the HIJSON document,
+and according to the divide et impera approach, the problem of the graph
+paths generation is splitted in several sub-problems which consist in
+the computation of the sub-graphs relative to each room, or more
+generally ambience. The sub-graphs are then linked together through the
+connection nodes (which in most cases represents doors). The resolution
+of each sub-problem (as depicted in figure METTERE RIFERIMENTO ALLA
+FIGURA), is composed by 4 phases: 1. Computation of the walkable area of
+the ambience: this task is accomplished subtracting area of the possibly
+encumbrances to the area of the ambience; the result is tipically a
+surface with holes; 2. Triangulation of the walkable area: the computed
+surface is triangulated taking into account the presence of holes; 3.
+Identification of graph nodes: for each triangle side completely
+internal to the area, its midpoint is selected as standard path node; 4.
+Junction of nodes: nodes relative to the same triangle are then linked
+together; both element nodes and connection nodes (i.e.~doors) are
+linked to the nearest node in the ambience (i.e.~room).
 
 \begin{figure*}[htbp] % figure placement: here, top, bottom, or page
   \centering
@@ -337,61 +447,76 @@ to the nearest node in the room.
   \label{fig:graph-generation}
 \end{figure*}
 
+\subsection{HIJSON Class definition}\label{hijson-class-definition}
 
-After that, the objects in the room are linked to the graph nodes as
-well, giving the possibility to calculate paths to specific elements of
-interest. Given the nature of this process, the paths calculated may not
-be absolutely optimal, but this strategy ensures a good ratio between
-extension of exploration and number of graph nodes.
+Every HIJSON Elment is assigned to a specific class, i.e.~category,
+through the ``class'' property. This information can be used by an
+application, in this case the Web Toolkit, to instantiate specific
+classes with differentt behaviours. These HIJSON Classes, when
+instantiated, produce an HIJSON Node, that is the building block of the
+HITREE.
 
-\subsection{Applications}\label{applications}
+\begin{figure}
+\centering
+\epsfig{file=images/extended-classes.eps, height=3.5in}
+\caption{Semantic classes}
+\label{fig:semantic-classes}
+\end{figure}
 
-\subsubsection{IoT monitoring}\label{iot-monitoring}
+The HIJSON Web Toolkit provides a number of HIJSON Classes that are used
+to characterize the representation and behaviour of some basic indoor
+elements. In order to extend the possibilities in terms of
+differentiation it is possible to add new classes that reflect new
+categories of elements. Below is described the structure of a HIJSON
+Class.
 
-Every element in 2D map or in 3D model is interactive and the user can
-ask for information. In every class there is a method that gets
-information and send that to the client. The modularity of \emph{nome
-del software} permits to show particular information with regard to the
-object. There are two groups of objects: simple and smart. If the object
-is smart, it can send data in real time through its sensor (e.g.~if the
-object is a thermostat, the user can see the temperature in the room and
-can turn on, or off, the heating). If the object isn't smart, the system
-can show static information (e.g.~for fire Extinguisher, the system
-shows the last date of checking).
+Each class extends a base Feature Class, that provides basic and common
+properties across all the elements. In particular the basic constructor
+copies all the the properties from the HIJSON Element to the just
+created HIJSON Node. In every sub-class, some methods and properties are
+defined to specify the behaviour of the element, for example: - style:
+this property is used by the client to apply specific visualization
+rules in the 2D Leaflet map. - render: this method returns a Object3D
+used for rendering of 3D model.\\- getInfo: a method that return a React
+Component, which populates the DOM with a specific UI for retrieving
+information and interact with the object. - visible\_2D: a boolean value
+that indicates the - in\_graph: a boolean value that indicates if the
+HIJSON element will be represent with a node in a graph.
 
-\subsubsection{Realtime access
-monitoring}\label{realtime-access-monitoring}
+If a method or property is non overrided by the sub-class, the defaults
+defined in the Feature super-class are adopted (default 2D style, empty
+3D Object, static informations etc.).
 
-The system can be used for access monitoring. On 2D map will be a marker
-for each person in the building, whereas on the 3D model will be a 3D
-model of user. With an appropriate system of indoor localization, every
-person sends its position in real time. The 2D map and the 3D model is
-automatically refreshed. The user can ask for information about person,
-in function of the use of the system.
+The definition of classes permits to extend the software in function of
+user's necessity.
 
-\subsubsection{Crossfloor user
-navigation}\label{crossfloor-user-navigation}
+\subsubsection{Example of use}\label{example-of-use}
 
-With the weighted adjacency matrix, the user can choose two nodes that
-represent respectively the start and the end point. The system
-calculates the optimal path by Dijkstra's algorithm and shows this with
-a polyline in 2D map. To pass through different floors, the path leads
-to stairs or elevators. All the nodes of the same elevator are connected
-among them and their distances is set to 0. Otherwise the connections
-through the stairs are characterized by the nodes of two different
-levels; their weight of this portion of path is set to the distance
-between these nodes. Therefore the subgraph that characterized stairs or
-elevator is complete.
-
-\section{Use case}\label{use-case}
-
-\begin{verbatim}
-C3D.js
-\end{verbatim}
+The HIJSON Web Toolkit takes advantage of the semantic classes boh in
+the server-side processing and the client-side visualization. During the
+server-side processing pipeline the information retreived from the
+``visible\_2D'' and ``in\_graph'' properties are used to evaluate the
+inclusion of the element in the GeoJSON layers or in the graph of paths.
+In client-side there are essentially two representation: 2D and 3D. In
+2D map will be a representation by calling a polymorphism method that
+respect the style defined in the class. The style is a simple object
+that contains the graphical properties of the class. For 3D model, the
+``render'' method returns a Object3D in according three.js library. If
+the method is not defined in the class, then will be used a ``render''
+method of the superclass by default: returns an empty object3D. For the
+IoT monitoring, in every class is defined a method, `getInfo'. It
+returns a React component that contains a general information of the
+object(by calling to superclass method) and custom element of the
+object. By default, the superclass method return general information,
+like the position and name of the object. \# Conclusions We presented
+HIJSON a GeoJSON extension for indoor mapping TRA GLI SVILUPPI FUTURI: -
+GENERAZIONE GRAFICA IN AMBIENTE CAD DEL DOCUMENTO HIJSON
 
 \section{Conclusions}\label{conclusions}
 
 We presented HIJSON a GeoJSON extension for indoor mapping
+TRA GLI SVILUPPI FUTURI:
+- GENERAZIONE GRAFICA IN AMBIENTE CAD DEL DOCUMENTO HIJSON
 
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgments}
