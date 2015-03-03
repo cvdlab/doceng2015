@@ -43,10 +43,7 @@
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{8} %  in this sample file, there are a *total*
-% of EIGHT authors. SIX appear on the 'first-page' (for formatting
-% reasons) and the remaining two appear in the \additionalauthors section.
-%
+\numberofauthors{5}
 \author{
 % You can go ahead and credit any number of authors here,
 % e.g. one 'row of three' or two rows (consisting of one row of three
@@ -93,12 +90,6 @@ one who did all the really hard work.}\\
        \affaddr{Moffett Field}\\
        \affaddr{California 94035}\\
        \email{fogartys@amesres.org}
-% 6th. author
-\alignauthor Charles Palmer\\
-       \affaddr{Palmer Research Laboratories}\\
-       \affaddr{8600 Datapoint Drive}\\
-       \affaddr{San Antonio, Texas 78229}\\
-       \email{cpalmer@prl.com}
 }
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
@@ -154,142 +145,114 @@ and future developments.
 
 Researches about the cartographic representation of indoor environments
 are numerous and at the same time heterogeneos regarding to the
-strategies applied. The information sources used are different,
-depending on the approach, the produced solution can be more or less
-precise. In some cases the information is obtained with automatic or
-semi-automatic processes from files that describe the architectural
-structure of a building such as BIM (Link a BIM) and/or IFC(Link a IFC)
-\cite{6816739}, in others image processing is used to extract topological
-information from floor plan images \cite{6878152}. As a last approach,
-descriptive parameters will be redefined from zero, as the current
-representive stategies concerning a use beyond the mere consultation are
-considered inappropriate. A recurring topic among the use of
-carthograhic information is the indoor navigation \cite{6878152,6418876,6816739}.
+strategies applied. Different sources of information are used and accuracy of the 
+produced solution depends on the adopted approach. In some cases the information 
+is obtained with automatic or semi-automatic processing of files that describe the 
+architectural structure of a building, such as BIM (Link a BIM) and/or IFC (Link a IFC)
+\cite{6816739}. Image processing is also used to extract topological
+information from floor plan images \cite{6878152}. In other works,
+building informations and descriptive parameters are redefined from scratch \cite{6418876}. 
+This choice is driven by the unsuitableness of the current representive formats: 
+images contain poor information and CAD files are not designed for this kind of use. 
+A recurring topic among the use of carthograhic information is indoor navigation \cite{6878152,6418876,6816739}.
 The proposed approaches are very different in this case too,
-and based on different strategies with some basic elements in common. A
-recurrent solution is based on the representation of the routing
-information as a graph having a node for each PoIs and an edge for each
-connection between them. In some cases the edges are weighted in
+and based on several strategies with some basic elements in common. An
+often adopted solution is based on the representation of the routing
+information as a graph, having a node for each room and an edge for each
+couple of connected rooms. In some cases the edges are weighted in
 function of euclidean distance. The detail level of the graph and hence
-the effective practicalbility of the calculates paths, can vary
+the effective practicalbility of the calculated paths, can vary
 depending on the technique and the design choices applied, but in
-general most of the proposed solutions (all those calculate paths)
-retrieve information from architectual structure. An inevitably theme
-connected to the navigation is the location of users. All the related
+general most of the proposed solutions
+retrieve information only from architectual structure. A topic related to the navigation is the location of users. All the considered
 works agree on the inadequacy of GNSS in indoors contexts, due to the
-segnificant redaction in the signal quality. To locate the exact
-position within a building, the currently most used techniques are based
+segnificant reduction in signal quality. To locate the exact
+position of a user inside a building, the currently most used techniques are based
 on fingerprinting and triangulation of radio signals (WiFi, Bluetooth,
 etc.) flanked by more original solutions based on, for example, image
-recognition \cite{6815564}. The proposed solutions for the movements tracking
-range from the creation of ad hoc deviced \cite{6878152} to the use of
-sensors alredy present in many smartphones for inertial tracking \cite{6815564}.
+recognition \cite{6815564}. User tracking issue is faced with solutions that
+range from the clever utilization of inertial tracking sensors embedded in many smartphones \cite{6815564} to the adoption of ad hoc devices \cite{6878152}.
 
 The actual ``de-facto'' standard in terms of geospatial data
-representation is the GeoJSON format, which can be easely used for any
+representation is the GeoJSON format, which can be easily used for any
 type of geographical annotation. In some cases it has been slightly
 adapted to be used in indoor environments (IndoorJSON).
 
-\subsection{GeoJSON}\label{geojson}
+\subsection{The GeoJSON format}\label{the-geojson-format}
 
 GeoJSON is a geospatial data interchange format based on JSON, suitable
 for a geometrical encoding of various geographic data structures. As
-opposed to GIS format, GeoJSON is an open standard.
+opposed to GIS format, GeoJSON is an open standard. Positions need to be expressed in geographical coordinates (usually WGS84).
 
-GeoJSON supports the following geometry types: \texttt{Point},
+GeoJSON supports the following geometry primitives: \texttt{Point},
 \texttt{LineString}, \texttt{Polygon}, \texttt{MultiPoint},
 \texttt{MultiLineString}, and \texttt{MultiPolygon}. Lists of geometries
 are represented by a \texttt{GeometryCollection}. Geometries with
-additional properties are \texttt{Feature} objects. Lists of features
+additional properties are \texttt{Feature} objects. Lists of \texttt{Feature}
 are represented by a \texttt{FeatureCollection}.
 
-A single Feature is composed essentially by two mandatory parts:
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  \texttt{geometry}: this attribute describes the objects' geometry,
-  accordingly to the previously defined types.
-\item
-  \texttt{properties}: contains additional information about the
-  feature.
-\end{itemize}
+A single \texttt{Feature} is composed essentially by two mandatory fields:
+\texttt{geometry}, which describes the objects' geometry accordingly to the 
+previously defined primitives, and \texttt{properties} which contains additional 
+information about the \texttt{Feature}.
 
 It is possible to define complex shapes through the composition of
-simple GeoJSON objects. Mainly due to its semplicity, GeoJSON is widly
-used and a strongly integrated in several applications and services.
+simple GeoJSON objects. Mainly due to its semplicity, GeoJSON is widely
+used and deeply integrated in several applications and services.
 
-\subsection{Experiences on Indoor
-JSON}\label{experiences-on-indoor-json}
+\subsection{The IndoorJSON format}\label{experiences-on-indoor-json}
 
-\texttt{IndoorJSON} is a GeoJSON variant used by indoor.io toolset to
-define indoor maps. IndoorJSON may consist of any number of Features
-and/or FeatureCollections. All Features are interpreted similarly
-regardless of their grouping into nested FeatureCollections. IndoorJSON
+IndoorJSON is a GeoJSON variant defined and used by \emph{indoor.io},
+a Finnish company devoted to indoor environment mapping. IndoorJSON is compliant with GeoJSON syntax, and it may consist of any number of \texttt{Features}
+and/or \texttt{FeatureCollections}. All \texttt{Features} are interpreted similarly
+regardless of their grouping into nested \texttt{FeatureCollections}. IndoorJSON
 supports all GeoJSON geometry types.
-
-IndoorJSON is a variant of GeoJSON for indoor cartographics. With the
-addition of some attributes, indoorJSON permit to define indoor maps.
-The geometry definition of the features respect the GeoJSON specs.
 
 Some particular properties are used to correctly define indoor elements:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  \texttt{level}: is used to describe which level contains the feature
+  \texttt{level}: described which level contains the feature;
 \item
-  \texttt{geomType}: a string that is used to identify the object's
-  category and use some additional properties during the visualization
+  \texttt{geomType}: identifies the object's
+  category, useful during the visualization
   process.
 \end{itemize}
 
-There are some additional properties, not mandatories, but useful for
+There are some additional not mandatories properties useful for
 the indoor representation:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  \texttt{accessible}: describe if an element is walkable or not;
+  \texttt{accessible}: describes if an element is walkable or not;
 \item
   \texttt{connector}: defines if the element is a connection between two
   levels;
 \item
-  \texttt{direction}: describe the direction of the connection (both
+  \texttt{direction}: describes the direction of the connection (both
   ways, only up, only down);
 \end{itemize}
 
-The feature properties are defined accordingly to the geometry. An
-IndoorJSON file can be validated by a GeoJSON validator.
+A syntax validator is provided by \emph{indoor.io}, but the commercial nature of this project limits the number of tools available to deal with this format.
 
-\section{Advances on cartographics documents}\label{advances-on-cartographics-document}
+\section{Advances on cartographics documents}\label{advances-on-cartographics-documents}
 
 \textbf{HIJSON} (\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}) is
-a GeoJSON variant. A HIJSON document reveals at least three major
-enhancements above the actual state of the art in indoor cartographic
-documents:
+based on GeoJSON. It reveals at least three major enhancements above 
+the currently most adopted indoor cartographic document formats: it exposes a 
+\emph{hierarchical structure}, uses \emph{metric local coordinate system} and accepts 
+\emph{semantic extensions}.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Hierarchical structure
-\item
-  Metric local coordinate System
-\item
-  Semantic extensions
-\end{enumerate}
+\subsection{Hierarchical structure}\label{hierarchical-structure}
 
-\subsubsection{Hierarchical structure}\label{hierarchical-structure}
-
-Unlike other formats like GeoJSON or IndoorJSON, HIJSON organizes its
-elements in a hierarchical structure, where every element represent a
-potential container for other elements. This structure allows a clear
+HIJSON organizes its elements in a hierarchical structure, where every element represent a
+potential container for other elements, unlike other formats like GeoJSON or IndoorJSON where all the elements are disposed in a linear structure. This structure enables a clear
 and logical organization of the elements inside the structure, and at
-the same time make it possible to use a relative, local, metric
-coordinates system.
+the same time make it possible to use a relative, local, metric coordinates system.
 
-\subsubsection{Metric local coordinate System}\label{metric-local-coordinate-system}
+\subsection{Metric local coordinate System}\label{metric-local-coordinate-system}
 
 In GeoJSON all the positions are expressed in geographical coordinates
 (usually WGS84). Although this can be useful for outdoor geographical
@@ -306,7 +269,7 @@ A recursive process that computes intermediate transformation matrixes
 can then produce a standard GeoJSON representation, that can be
 visualized on any standard viewer.
 
-\subsubsection{Semantic extensions}\label{semantic-extensions}
+\subsection{Semantic extensions}\label{semantic-extensions}
 
 Every HIJSON Element has a property that describes its class. This
 information allows the adoption of semantic extensions by the software
@@ -681,6 +644,13 @@ described in the following seciton.
 
 \subsection{Applications}\label{applications}
 
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=\textwidth]{images/web-framework.png}
+\caption{``HIJSON Web Framework UI''}
+\label{fig:web-framework-ui}
+\end{figure*}
+
 The Framework has been designed focus on two different possible kind of
 users: the \emph{Explorer} and the \emph{Supervisor}. They have
 different requirements and are likely equipped with different devices:
@@ -690,18 +660,24 @@ needs to be routed across the building.
 
 \subsubsection{IoT monitoring}\label{iot-monitoring}
 
-Every element in 2D map or in 3D model is interactive and the user can
-ask for information. In every class there is a method that gets
-information and send that to the client. The modularity of \emph{nome
-del software} permits to show particular information with regard to the
-object. There are two groups of objects: simple and smart. If the object
-is smart, it can send data in real time through its sensor (e.g.~if the
-object is a thermostat, the user can see the temperature in the room and
-can turn on/off the heating). If the object isn't smart, the system can
-show static information (e.g.~for fire Extinguisher, the system shows
-the last date of checking).
+Every element in the HIJSON environment is capable of showing information about itself, 
+so it can be analyzed by the user. The modularity of the HIJSON Toolkit permits to show
+ particular information or UI about a specific object, using polymorphic behaviours of the
+different HIJSON Nodes. If an object is connected to the network and it is capable of
+interaction, the user can benefit of its functions through the system (e.g. if the object
+is a thermostat, the user can see the temperature in the room and can turn on/off the heating).
+If the object isn't interactive, the system can show static information (e.g. for fire
+Extinguisher, the system shows the last date of checking).
 
 \subsubsection{Realtime multi-person tracking}\label{realtime-multi-person-tracking}
+
+A typical task performed by a \emph{Supervisor} can be the monitoring of users locations 
+inside the building. This operation can be required for various reasons, e.g. security or 
+logistics. The devices that equips the \emph{Explorers} can be used to track their position 
+in realtime, giving the \emph{Supervisors} the whole picture of the presences inside the 
+building in every moment.
+
+--- da controllare cosa tenere rispetto a quanto già scritto dopo ---
 
 The system can be used for access monitoring. On 2D map will be a marker
 for each person in the building, whereas on the 3D model will be a 3D
@@ -732,18 +708,18 @@ permits to be indipendent from the tool that gets the position of the
 users: the only requisite is to send the position like the object
 described above.
 
+--- fine controllo ---
+
 \subsubsection{Crossfloor user navigation}\label{crossfloor-user-navigation}
 
-With the weighted adjacency matrix, the user can choose two nodes that
-represent respectively the start and the end point. The system
-calculates the optimal path by Dijkstra's algorithm and shows this with
-a polyline in 2D map. To pass through diffeqrent floors, the path leads
-to stairs or elevators. All the nodes of the same elevator are connected
-among them and their distances is set to 0. Otherwise the connections
-through the stairs are characterized by the nodes of two different
-levels; their weight of this portion of path is set to the distance
-between these nodes. Therefore the subgraph that characterized stairs or
-elevator is complete.
+As shown in the algorithmics section, the HIJSON Toolkit provides a particular strategy 
+to assemlbe a graph of possible paths inside the building. This graph, represented also 
+in the form of a weighted adjacency matrix, can be easely used to compute paths between 
+two nodes inside the building. To achieve this result, the matrix, which edges are weighted 
+according to the distance between two nodes, is used as input in an applicaiton of the 
+Dijkstra's algorithm. The result is the shortest path between two selected nodes of the graph. 
+Thanks to the crossfloor connections of nodes representing stairs or elevators, the paths
+ calculated can also start and end on different stories. 
 
 \subsection{Architecture}\label{architecture}
 
