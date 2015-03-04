@@ -235,41 +235,75 @@ the indoor representation:
   ways, only up, only down);
 \end{itemize}
 
-A syntax validator is provided by \emph{indoor.io}, but the commercial nature of this project limits the number of tools available to deal with this format.
+A syntax validator is provided by \emph{indoor.io}, but the commercial nature of 
+this project limits the number of tools available to deal with this format.
 
-\section{Advances on cartographics documents}\label{advances-on-cartographics-documents}
+\section{Advances on cartographic document formats}\label{advances-on-cartographic-document-format}
 
-\textbf{HIJSON} (\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}) is
-based on GeoJSON. It reveals at least three major enhancements above 
-the currently most adopted indoor cartographic document formats: it exposes a 
-\emph{hierarchical structure}, uses \emph{metric local coordinate system} and accepts 
-\emph{semantic extensions}.
+The focus of this work is the definition of a novel format of cartographic 
+documents along with the software ecosystem rooted on it. A simple but effective 
+algorithm to find indoor valid routes is also provided.
+The \textbf{HIJSON} (\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}, this is the 
+name chosen for the format) and the accompanying software framework aim to realize 
+a mapping of indoor real spaces with a virtual interactive web environment.
+The HIJSON is based upon ideas and design principles collected 
+from previous formats and identifies three critical 
+improvements with respect to them: it exposes a \emph{hierarchical structure}, 
+uses \emph{metric local coordinate system} and accepts \emph{semantic extensions}.
 
 \subsection{Hierarchical structure}\label{hierarchical-structure}
 
-HIJSON organizes its elements in a hierarchical structure, where every element represent a
-potential container for other elements, unlike other formats like GeoJSON or IndoorJSON where all the elements are disposed in a linear structure. This structure enables a clear
-and logical organization of the elements inside the structure, and at
-the same time make it possible to use a relative, local, metric coordinates system.
+The HIJSON format allows for hierarchical description of indoor spaces. 
+The introduction of a hierarchical structure establishes a parent-child relation 
+between entities of the model, reflecting a container-contained relationship. 
+This direclty implies a neater representation than the plain linear structure adopted 
+by GeoJSON, being a perfect analogy of objects contained (i.e. placed) into spaces.
 
-\subsection{Metric local coordinate System}\label{metric-local-coordinate-system}
+In addition, more organized arrangement is allowed by logical (or even physical) 
+grouping: concepts like building wings, sections, stories, departemens, etc. can be 
+introduced to reflect into the document structure logical or physical real divisions, 
+categories or relashionships.
 
-In GeoJSON all the positions are expressed in geographical coordinates
-(usually WGS84). Although this can be useful for outdoor geographical
-representations, it is not the best solution for indoor descriptions. In
-HIJSON all the coordinates are expressed in a relative system based on
-the hierarchical structure. The shape of all elements is described
-starting from origin, and then two vectors (translation and rotation)
-describe the position relative to the origin of the parent element. By
-this way it is possible to describe the position of a piece of furniture
-by specifying its distance from the origin of the room, that is
-obviously more convenient than describing its geographical coordinates.
-Another advantage is represented by the adoption of a metric reference.
-A recursive process that computes intermediate transformation matrixes
-can then produce a standard GeoJSON representation, that can be
-visualized on any standard viewer.
+--------------------------
+LA PARTE SULLA TOPOLOGIA VA INTRODOTTA QUI E RIPRESA IN UNA SUCCESSIVA SEZIONE APPOSITA
+--------------------------
+
+Hierarchical structures are common in computer graphics since they are used as 
+scenegraphs. This accordance of underlying structures really simplify 3D render 
+algorithms of HIJSON documented environments.
+
+Furthermore the container-contained relation enables to use local reference system.
+
+\subsection{Metric local coordinate system}\label{metric-local-coordinate-system}
+
+
+------- \textbf{revisionare} --------
+
+Supported by the hierarchical underlying structure, the HJSON document format allows 
+for the use of local coordinate system. This means that the shape of all elements can 
+be conveninet modelled in local coordinate and than placed in the right position 
+with respect to the position of the the parent (or container) element using a 
+translation and a rotaction vector.
+
+Another sostantial advantage is represented by the adoption of a metric reference, 
+The adoption of a metric local reference system contribute to simplify the compilation 
+of the document, however it is, manual or aided by sofwtare tool.
+
+
+Although both GeoJSON and IndoorJSON expresses all the positions in geographical 
+coordinates can be useful for outdoor geographical
+representations, it is not the best solution for indoor descriptions.
+
+Nevertheless countinuos outdoor-indoor navigation is guaranteed via ...
+
+------- \textbf{fine revisione} --------
+
 
 \subsection{Semantic extensions}\label{semantic-extensions}
+
+
+------- \textbf{revisionare} --------
+
 
 Every HIJSON Element has a property that describes its class. This
 information allows the adoption of semantic extensions by the software
@@ -280,9 +314,35 @@ methods. In order to extend the possibilities in representation and
 interaction, it is sufficient to define new classes that reflects new
 categories of HIJSON Elements.
 
-\section{Document structure and validation rules}\label{document-structure-and-validation-rules}
+------- \textbf{fine revisione} --------
 
-A single HIJSON document is composed of different parts:
+\section{HIJSON syntax}\label{hijson-syntax}
+
+Below there is an example of an input file ready to be processed by the HIJSON pipeline:
+
+\begin{verbatim}
+{
+    "config": {
+        ...
+    },
+    "data": [
+                ...
+                {
+                    "id": "architecture",
+                    "type": "FeatureCollection",
+                    "features": [...] 
+                },
+                {
+                    "id": "furniture_1",
+                    "type": "FeatureCollection",
+                    "features": [...] 
+                },
+                ...
+    ]
+}
+\end{verbatim}
+
+The HIJSON document is composed of different parts:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
@@ -299,33 +359,45 @@ A single HIJSON document is composed of different parts:
   Elements. Since HIJSON Elements adhere to the GeoJSON format, each
   collection can be accepted by a GeoJSON validator. HIJSON introduces
   some additional rules that allow the adoption of this format for
-  indoor representation. Below is given a sample of HIJSON Element, with
+  indoor representation. In the next paragraph is given a sample of HIJSON Element, with
   the description of the main differences from a standard GeoJSON
   Feature.
 \end{itemize}
 
+Below there is an example of data collection, with the definition of an HIJSON Element:
+
 \begin{verbatim}
 {
-    "type": "Feature",
-    "id": "room_0.1",
-    "geometry": 
-    {
-        "type": "Polygon",
-        "coordinates": 
-        [ 
-           [ [0, 0], [11, 0], [11, 19], [0, 19] ]
-        ]    
-    },
-    "properties": 
-    {
-        "class": "room",
-        "parent": "level_0",
-        "description": "Office of Mr. Smith",
-        "tVector": [10, 20, 0],
-        "rVector": [0, 0, 90]
-    }
+    "id": "architecture",
+    "type": "FeatureCollection",
+    "features": 
+    [
+        ...
+        {
+            "type": "Feature",
+            "id": "room_0.1",
+            "geometry": 
+            {
+                "type": "Polygon",
+                "coordinates": 
+                [ 
+                   [ [0, 0], [11, 0], [11, 19], [0, 19] ]
+                ]    
+            },
+            "properties": 
+            {
+                "class": "room",
+                "parent": "level_0",
+                "description": "Office of Mr. Smith",
+                "tVector": [10, 20, 0],
+                "rVector": [0, 0, 90]
+        },
+        ...
+    ]
 }
 \end{verbatim}
+
+\subsection{HIJSON Element description}
 
 The first additional requisite above the GeoJSON format rules is the
 necessity of a unique ID, necessary for the referencing by possible
@@ -352,13 +424,13 @@ the properties are optional, in HIJSON some attributes are mandatories:
   translation is meter and for rotation is grades.
 \end{itemize}
 
-The definition of other properties is mandatory on the base of the class
+The definition of other properties is mandatory depending on the class
 of the element: For example the classes that defines internal or
 external walls require a \texttt{connections} array, containing the IDs
 of the adiacent areas. This information is used by the connector
-children of the elmenet, like doors, to identify the areas linked
-together. These connector elements, like doors, are identified bay a
-boolean \texttt{connector} property set to true.
+children of the element, like doors, to identify the areas linked
+together. These connector elements are identified by a
+boolean \texttt{connector} property.
 
 Optional fields can be added to improve the precision of the
 representation. Given the nature of the GeoJSON format from which HIJSON
@@ -366,10 +438,10 @@ derives, the elements are represented by their 2D shape, like on a
 planimetry. To assign a value to the height of the object, intended as
 third dimension, the property \texttt{height} can be used.
 
-A \texttt{description} property can provide additional information about
+A \texttt{description} property can provide further information about
 the element.
 
-Additional optional fields can be freely added, to enrich and extend the
+Additional optional fields can be added without restrictions, in order to enrich and extend the
 expressvity of the representation.
 
 \section{HIJSON Toolkit}\label{hijson-toolkit}
