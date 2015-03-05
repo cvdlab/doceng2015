@@ -12,7 +12,7 @@
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{Cartographic documents for web modeling and representation of indoor mapping with interactive environments}
+\title{Cartographic documents for web modeling of indoor mapping with interactive environments}
 \subtitle{[Extended Abstract]
 \titlenote{A full version of this paper is available as
 \emph{Author's Guide to Preparing ACM SIG Proceedings Using
@@ -55,41 +55,46 @@
 % affiliation/address with \affaddr, and tag the
 % e-mail address with \email.
 %
-% 1st. author
 \alignauthor
-Ben Trovato\titlenote{Dr.~Trovato insisted his name be first.}\\
-       \affaddr{Institute for Clarity in Documentation}\\
-       \affaddr{1932 Wallamaloo Lane}\\
-       \affaddr{Wallamaloo, New Zealand}\\
-       \email{trovato@corporation.com}
-% 2nd. author
+Marco Virgadamo\\
+       \affaddr{Dipartimento di Ingegneria}\\
+       \affaddr{Universit\`a Roma Tre}\\
+       \affaddr{Rome, Italy}\\
+       \email{dvr@dia.uniroma3.it}
 \alignauthor
-G.K.M. Tobin\titlenote{The secretary disavows
-any knowledge of this author's actions.}\\
-       \affaddr{Institute for Clarity in Documentation}\\
-       \affaddr{P.O. Box 1212}\\
-       \affaddr{Dublin, Ohio 43017-6221}\\
-       \email{webmaster@marysville-ohio.com}
-% 3rd. author
-\alignauthor Lars Th{\o}rv{\"a}ld\titlenote{This author is the
-one who did all the really hard work.}\\
-       \affaddr{The Th{\o}rv{\"a}ld Group}\\
-       \affaddr{1 Th{\o}rv{\"a}ld Circle}\\
-       \affaddr{Hekla, Iceland}\\
-       \email{larst@affiliation.org}
+Marco Sportillo\\
+       \affaddr{Dipartimento di Ingegneria}\\
+       \affaddr{Universit\`a Roma Tre}\\
+       \affaddr{Rome, Italy}\\
+       \email{dvr@dia.uniroma3.it}
+\alignauthor 
+Federico Spini\\
+       \affaddr{Dipartimento di Ingegneria}\\
+       \affaddr{Universit\`a Roma Tre}\\
+       \affaddr{Rome, Italy}\\
+       \email{dvr@dia.uniroma3.it}
 \and  % use '\and' if you need 'another row' of author names
-% 4th. author
-\alignauthor Lawrence P. Leipuner\\
-       \affaddr{Brookhaven Laboratories}\\
-       \affaddr{Brookhaven National Lab}\\
-       \affaddr{P.O. Box 5000}\\
-       \email{lleipuner@researchlabs.org}
+\alignauthor 
+Alberto Paoluzzi\\
+       \affaddr{Dip. di Matematica e Fisica}\\
+       \affaddr{Universit\`a Roma Tre}\\
+       \affaddr{Rome, Italy}\\
+       \email{dvr@dia.uniroma3.it}
+\alignauthor 
+Enrico Marino\\
+       \affaddr{Dipartimento di Ingegneria}\\
+       \affaddr{Universit\`a Roma Tre}\\
+       \affaddr{Rome, Italy}\\
+       \email{dvr@dia.uniroma3.it}
+\alignauthor 
+Antonio Bottaro\\
+       \affaddr{SOGEI S.p.a.}\\
+       \affaddr{Ricerca e Sviluppo}\\
+       \affaddr{Rome, Italy}\\
+       \email{dvr@dia.uniroma3.it}
+% 2nd. author
+% 3rd. author
 % 5th. author
-\alignauthor Sean Fogarty\\
-       \affaddr{NASA Ames Research Center}\\
-       \affaddr{Moffett Field}\\
-       \affaddr{California 94035}\\
-       \email{fogartys@amesres.org}
 }
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
@@ -273,6 +278,39 @@ scenegraphs. This accordance of underlying structures really simplify 3D render
 algorithms of HIJSON documented environments.
 
 Furthermore the container-contained relation enables to use local reference system.
+
+\subsection{Hyperlinked geometric models}\label{optional-lar}
+
+A HIJSON document may further import external geometric models---either of the buildings itself or the interior furniture or devices---that are topologically complete (in the sense of solid modeling~\cite{Requicha:1980:RRS:356827.356833}) and very compact. 
+Such models coming from a source outside the document are acquired by linking JSON files that contain a Linear Algebraic Representation (LAR) of topology and geometry, to be expanded for visualization or interaction at any useful level of detail. 
+
+The LAR scheme~\cite{Dicarlo:2014:TNL:2543138.2543294} is characterised by a very large domain, including architecture, building and construction~\cite{paoluzziMS:2014}, 2D and 3D engineering meshes, non-manifold geometric and solid models and meshes, and high-resolution 3D images~\cite{cadanda:2015}. This scheme uses the set of \emph{Combinatorial Cellular Complexes} (CCC) as mathematical domain
+\cite{Basak:2010}, and various compressed representations of \emph{sparse matrices} \cite{gemmexp} as codomain. 
+
+Since LAR provides a complete representation of the topology of the represented space,
+the matrix  $[\partial_d]$ of the boundary operator shall be used to compute the coordinate representation $[c]$ of the \emph{boundary} chain of \emph{any subset} $c$ of cells, though \emph{a single} operation of SpMV multiplication \cite{gemmexp} between the \texttt{CSR} (Compressed Sparse Row) representation of $[\partial]$ and the \texttt{CSC} (Compressed Sparse Column) representation of the $[c]$ chain, resulting in very efficient computations on modern hardware, even mobile.
+
+
+\begin{figure*}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.5\linewidth]{images/minimum} 
+   \hfill
+   \includegraphics[width=0.4\linewidth]{images/boundary} 
+   \caption{A toy example of the LAR scheme: (a) the bare minimum of data with \emph{complete} information about topology; (b) the extracted boundary; (c) the extraction method $[e] = [\partial][f]$ giving the coordinate representation (in the discrete basis of the 2-cells) ofthe boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial]$ times the coordinate representation $[f]$ of the 2-cells (faces).}
+   \label{fig:minimum}
+\end{figure*}
+
+
+The expansion of a LAR model, to be considered as a general-purpose graphic primitive, may be executed on either  the server or the supervisor client of the HIJSON Web Toolkit architecture (see Section~\ref{server-architecture}), or even on the explorer client, depending on the size and the locality of the model to be expanded.
+
+
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=\linewidth]{images/sogei} 
+   \caption{Office building: (a) the schematic plan; (b) the simplified 3D model generated for testing on the field the in-door mapping project described in this paper.}
+   \label{fig:sogei}
+\end{figure}
 
 \subsection{Metric local coordinate system}\label{metric-local-coordinate-system}
 

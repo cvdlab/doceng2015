@@ -1,40 +1,41 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  4 MAR 2015 12:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  5 MAR 2015 12:19
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **doceng2015.tex
 (./doceng2015.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (./sig-alternate.cls
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count79
@@ -45,10 +46,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \epsfxsize=\dimen104
 \epsfysize=\dimen105
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
@@ -56,24 +57,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip41
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen106
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen107
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count80
@@ -144,7 +145,7 @@ Questions on the style, SIGS policies, etc. to Adrienne Griscti griscti@acm.org
 \titleboxnoteflag=\count100
 Document Class: sig-alternate 2012/05/23 - V2.5 - based on acmproc.cls V1.3 <No
 v. 30 '99>
-(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -176,22 +177,22 @@ LaTeX Info: Redefining \cite on input line 1211.
 \acmcopyr=\toks33
 \boilerplate=\toks34
 \copyrightetc=\toks35
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )
 LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
-(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen123
@@ -215,7 +216,7 @@ Package caption Info: \@makecaption = \long macro:#1#2-> \vskip 10pt \setbox \@
 tempboxa \hbox {\textbf {#1: #2}} \ifdim \wd \@tempboxa >\hsize \textbf {#1: #2
 }\par \else \hbox to\hsize {\hfil \box \@tempboxa \hfil } \fi .
 \c@ContinuedFloat=\count109
-) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count110
 \c@subtable=\count111
@@ -239,7 +240,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen130
@@ -252,15 +253,15 @@ LaTeX Font Info:    ... okay on input line 7.
 \MPnumerator=\count116
 \makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks37
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -269,22 +270,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -296,239 +297,266 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 106.
+LaTeX Font Info:    Try loading font information for U+msa on input line 111.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 106.
+LaTeX Font Info:    Try loading font information for U+msb on input line 111.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 106.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 111.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Overfull \hbox (10.71048pt too wide) in paragraph at lines 106--106
- []\eaddfnt lleipuner@researchlabs.org| 
- []
+LaTeX Font Info:    Try loading font information for T1+aett on input line 112.
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 107.
 
-(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Overfull \hbox (1.26794pt too wide) in paragraph at lines 114--115
+Overfull \hbox (1.26794pt too wide) in paragraph at lines 119--120
 \T1/aer/m/n/9 H.4 [\T1/aer/bx/n/9 Information Sys-tems Ap-pli-ca-tions\T1/aer/m
 /n/9 ]: Mis-cel-la-neous;
  []
 
 
-Overfull \hbox (7.85475pt too wide) in paragraph at lines 146--175
+Overfull \hbox (7.85475pt too wide) in paragraph at lines 151--180
 \T1/aer/m/n/9 ero-ge-neos re-gard-ing to the strate-gies ap-plied. Dif-fer-ent 
 sources
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Overfull \hbox (12.43544pt too wide) in paragraph at lines 187--193
+Overfull \hbox (12.43544pt too wide) in paragraph at lines 192--198
 []\T1/aer/m/n/9 GeoJSON sup-ports the fol-low-ing ge-om-e-try prim-i-tives: \T1
 /aett/m/n/9 Point\T1/aer/m/n/9 ,
  []
 
-[2]
-Overfull \hbox (2.536pt too wide) in paragraph at lines 297--298
+
+Overfull \hbox (1.42838pt too wide) in paragraph at lines 290--292
+[]\T1/aer/m/n/9 Since LAR pro-vides a com-plete rep-re-sen-ta-tion of the topol
+-
+ []
+
+<images/minimum.pdf, id=19, 1071.00125pt x 629.35126pt>
+File: images/minimum.pdf Graphic file (type pdf)
+
+<use images/minimum.pdf>
+Package pdftex.def Info: images/minimum.pdf used on input line 296.
+(pdftex.def)             Requested size: 252.0pt x 148.08002pt.
+
+<images/boundary.pdf, id=20, 500.54443pt x 360.70639pt>
+File: images/boundary.pdf Graphic file (type pdf)
+
+<use images/boundary.pdf>
+Package pdftex.def Info: images/boundary.pdf used on input line 298.
+(pdftex.def)             Requested size: 201.59692pt x 145.2762pt.
+ [2]
+<images/sogei.pdf, id=25, 1399.2275pt x 681.54625pt>
+File: images/sogei.pdf Graphic file (type pdf)
+ <use images/sogei.pdf>
+Package pdftex.def Info: images/sogei.pdf used on input line 310.
+(pdftex.def)             Requested size: 240.0pt x 116.90128pt.
+
+Overfull \hbox (2.536pt too wide) in paragraph at lines 335--336
 []\T1/aer/m/n/9 Nevertheless countin-uos outdoor-indoor nav-i-ga-tion is guar-
  []
 
-
-Overfull \hbox (28.80785pt too wide) in paragraph at lines 398--398
+[3 <./images/minimum.pdf> <./images/boundary.pdf> <./images/sogei.pdf>]
+Overfull \hbox (28.80785pt too wide) in paragraph at lines 436--436
 []                   \T1/aett/m/n/9 [ [0, 0], [11, 0], [11, 19], [0, 19] ][] 
  []
 
 
-Overfull \hbox (9.94414pt too wide) in paragraph at lines 398--398
+Overfull \hbox (9.94414pt too wide) in paragraph at lines 436--436
 []                \T1/aett/m/n/9 "description": "Office of Mr. Smith",[] 
  []
 
-[3]
 Package epstopdf Info: Source file: <images/pipeline.eps>
-(epstopdf)                    date: 2015-02-27 14:57:41
+(epstopdf)                    date: 2015-03-05 06:21:13
 (epstopdf)                    size: 922226 bytes
 (epstopdf)             Output file: <images/pipeline-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-02-27 16:49:09
+(epstopdf)                    date: 2015-03-05 06:21:13
 (epstopdf)                    size: 390583 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/pipeline-eps-conver
 ted-to.pdf images/pipeline.eps>
-(epstopdf)             \includegraphics on input line 488.
+(epstopdf)             \includegraphics on input line 526.
 Package epstopdf Info: Output file is already uptodate.
- <images/pipeline-eps-converted-to.pdf, id=25, 1027.84pt x 1027.84pt>
+<images/pipeline-eps-converted-to.pdf, id=59, 1027.84pt x 1027.84pt>
 File: images/pipeline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/pipeline-eps-converted-to.pdf>
 Package pdftex.def Info: images/pipeline-eps-converted-to.pdf used on input lin
-e 488.
+e 526.
 (pdftex.def)             Requested size: 201.59642pt x 201.59692pt.
-
-Overfull \hbox (6.51636pt too wide) in paragraph at lines 522--533
+ [4]
+Overfull \hbox (6.51636pt too wide) in paragraph at lines 560--571
 []\T1/aett/m/it/9 graph paths gen-er-a-tion \T1/aer/m/n/9 - The fourth stage is
  in charge
  []
 
-[4 <./images/pipeline-eps-converted-to.pdf>]
-<images/graph-generation/single/graph-generation-1.png, id=35, 513.92pt x 385.4
+[5 <./images/pipeline-eps-converted-to.pdf>]
+<images/graph-generation/single/graph-generation-1.png, id=72, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-1.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-1.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-1.png 
-used on input line 610.
+used on input line 648.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-2.png, id=37, 513.92pt x 385.4
+<images/graph-generation/single/graph-generation-2.png, id=74, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-2.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-2.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-2.png 
-used on input line 616.
+used on input line 654.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-3.png, id=38, 513.92pt x 385.4
+<images/graph-generation/single/graph-generation-3.png, id=75, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-3.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-3.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-3.png 
-used on input line 622.
+used on input line 660.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-4.png, id=39, 513.92pt x 385.4
+<images/graph-generation/single/graph-generation-4.png, id=76, 513.92pt x 385.4
 4pt>
 File: images/graph-generation/single/graph-generation-4.png Graphic file (type 
 png)
  <use images/graph-generation/single/graph-generation-4.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-4.png 
-used on input line 628.
+used on input line 666.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 Package epstopdf Info: Source file: <images/element-class-node.eps>
-(epstopdf)                    date: 2015-02-26 22:48:44
+(epstopdf)                    date: 2015-03-05 06:21:13
 (epstopdf)                    size: 277834 bytes
 (epstopdf)             Output file: <images/element-class-node-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2015-02-27 16:49:03
+(epstopdf)                    date: 2015-03-05 06:21:13
 (epstopdf)                    size: 91144 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/element-class-node-
 eps-converted-to.pdf images/element-class-node.eps>
-(epstopdf)             \includegraphics on input line 647.
+(epstopdf)             \includegraphics on input line 685.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/element-class-node-eps-converted-to.pdf, id=40, 1027.84pt x 200.75pt>
+<images/element-class-node-eps-converted-to.pdf, id=77, 1027.84pt x 200.75pt>
 File: images/element-class-node-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/element-class-node-eps-converted-to.pdf>
 Package pdftex.def Info: images/element-class-node-eps-converted-to.pdf used on
- input line 647.
+ input line 685.
 (pdftex.def)             Requested size: 221.76123pt x 43.3105pt.
 
-Overfull \hbox (5.52234pt too wide) in paragraph at lines 686--690
+Overfull \hbox (5.52234pt too wide) in paragraph at lines 724--728
 []\T1/aer/m/n/9 User's needs for new in-door el-e-ments, dif-fer-ent sen-sor eq
 uip-
  []
 
 
-Overfull \hbox (3.57864pt too wide) in paragraph at lines 705--710
+Overfull \hbox (3.57864pt too wide) in paragraph at lines 743--748
 []\T1/aer/m/n/9 Being sup-ported by the web as bear-ing plat-form, the frame-
  []
 
-[5 <./images/element-class-node-eps-converted-to.pdf>]
-<images/web-framework.png, id=49, 1692.3225pt x 1063.975pt>
+<images/web-framework.png, id=78, 1692.3225pt x 1063.975pt>
 File: images/web-framework.png Graphic file (type png)
 
 <use images/web-framework.png>
-Package pdftex.def Info: images/web-framework.png used on input line 721.
+Package pdftex.def Info: images/web-framework.png used on input line 759.
 (pdftex.def)             Requested size: 504.0pt x 316.85713pt.
+ [6 <./images/element-class-node-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/architecture.eps>
-(epstopdf)                    date: 2015-03-03 09:48:43
+(epstopdf)                    date: 2015-03-05 06:21:13
 (epstopdf)                    size: 804097 bytes
 (epstopdf)             Output file: <images/architecture-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-03 11:42:26
+(epstopdf)                    date: 2015-03-05 06:21:13
 (epstopdf)                    size: 167052 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/architecture-eps-co
 nverted-to.pdf images/architecture.eps>
-(epstopdf)             \includegraphics on input line 815.
+(epstopdf)             \includegraphics on input line 853.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/architecture-eps-converted-to.pdf, id=50, 833.1125pt x 230.8625pt>
+<images/architecture-eps-converted-to.pdf, id=87, 833.1125pt x 230.8625pt>
 File: images/architecture-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/architecture-eps-converted-to.pdf>
 Package pdftex.def Info: images/architecture-eps-converted-to.pdf used on input
- line 815.
+ line 853.
 (pdftex.def)             Requested size: 504.0pt x 139.66342pt.
- [6 <./images/graph-generation/single/graph-generation-1.png> <./images/graph-g
-eneration/single/graph-generation-2.png> <./images/graph-generation/single/grap
-h-generation-3.png> <./images/graph-generation/single/graph-generation-4.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (1.29799pt too wide) in paragraph at lines 838--848
+Overfull \hbox (1.29799pt too wide) in paragraph at lines 876--886
 \T1/aer/m/n/9 NI-CAZIONE A LIV-ELLO API DEL BROWSER CON SEN-
  []
 
 
-Overfull \hbox (3.72096pt too wide) in paragraph at lines 838--848
+Overfull \hbox (3.72096pt too wide) in paragraph at lines 876--886
 \T1/aer/m/n/9 SORIS-TICA PER LA RIL-E-VAZIONE DELLA PO-SIZIONE. 
  []
 
-[7 <./images/web-framework.png> <./images/architecture-eps-converted-to.pdf>]
-Overfull \hbox (3.40073pt too wide) in paragraph at lines 849--853
+
+Overfull \hbox (3.40073pt too wide) in paragraph at lines 887--891
 []\T1/aer/m/n/9 Every time the \T1/aett/m/n/9 sensor adapter \T1/aer/m/n/9 ob-s
 erve a per-cep-ti-ble mod-
  []
 
-(./doceng2015.bbl) [8] (./doceng2015.aux)
+[7 <./images/graph-generation/single/graph-generation-1.png> <./images/graph-ge
+neration/single/graph-generation-2.png> <./images/graph-generation/single/graph
+-generation-3.png> <./images/graph-generation/single/graph-generation-4.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(./doceng2015.bbl [8 <./images/web-framework.png> <./images/architecture-eps-co
+nverted-to.pdf>]) [9
+
+] (./doceng2015.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4008 strings out of 495028
- 57962 string characters out of 6181497
- 122276 words of memory out of 5000000
- 7106 multiletter control sequences out of 15000+600000
+ 4032 strings out of 493117
+ 58839 string characters out of 6135432
+ 126104 words of memory out of 5000000
+ 7380 multiletter control sequences out of 15000+600000
  61832 words of font info for 88 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 41i,12n,38p,451b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
-mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on doceng2015.pdf (8 pages, 1120044 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 41i,10n,38p,552b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on doceng2015.pdf (9 pages, 6297144 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 160 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

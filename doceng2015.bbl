@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{6815564}
 B.~Al~Delail, L.~Weruaga, M.~Zemerly, and J.~Ng.
@@ -6,6 +6,11 @@ B.~Al~Delail, L.~Weruaga, M.~Zemerly, and J.~Ng.
   reality and inertial tracking.
 \newblock In {\em Electronics, Circuits, and Systems (ICECS), 2013 IEEE 20th
   International Conference on}, pages 929--932, Dec 2013.
+
+\bibitem{Basak:2010}
+T.~Basak.
+\newblock Combinatorial cell complexes and {Poincar\'e} duality.
+\newblock {\em Geometriae Dedicata}, 147(1):357--387, 2010.
 
 \bibitem{6999103}
 W.~Bian, Y.~Guo, and Q.~Qiu.
@@ -21,6 +26,26 @@ M.~Boysen, C.~de~Haas, H.~Lu, X.~Xie, and A.~Pilvinyte.
 \newblock In {\em Data Engineering (ICDE), 2014 IEEE 30th International
   Conference on}, pages 1194--1197, March 2014.
 
+\bibitem{gemmexp}
+A.~Bulu\c{c} and J.~R. Gilbert.
+\newblock Parallel sparse matrix-matrix multiplication and indexing:
+  Implementation and experiments.
+\newblock {\em {SIAM} Journal of Scientific Computing (SISC)}, 34(4):170 --
+  191, 2012.
+
+\bibitem{cadanda:2015}
+A.~DiCarlo, M.~Jirik, and A.~Paoluzzi.
+\newblock Cad models from medical images using the linear algebraic
+  representation.
+\newblock In {\em CAD'15}, London, UK, June 22-25 2015.
+\newblock Accepted for publication in Computer-Aided Design and Applications,
+  Taylor \& Francis.
+
+\bibitem{Dicarlo:2014:TNL:2543138.2543294}
+A.~Dicarlo, A.~Paoluzzi, and V.~Shapiro.
+\newblock Linear algebraic representation for topological structures.
+\newblock {\em Comput. Aided Des.}, 46:269--274, Jan. 2014.
+
 \bibitem{6878152}
 L.~Faramondi, F.~Inderst, S.~Panzieri, and F.~Pascucci.
 \newblock Hybrid map building for personal indoor navigation systems.
@@ -33,5 +58,19 @@ D.~Gotlib, M.~Gnat, and J.~Marciniak.
   modeling for navigation applications.
 \newblock In {\em Indoor Positioning and Indoor Navigation (IPIN), 2012
   International Conference on}, pages 1--7, Nov 2012.
+
+\bibitem{paoluzziMS:2014}
+A.~Paoluzzi, E.~Marino, and F.~Spini.
+\newblock Lar-abc, a representation of architectural geometry: From concept of
+  spaces, to design of building fabric, to construction simulation.
+\newblock In Ph.Block, J.Knippers, W.Wang, and N.Mitra, editors, {\em Advances
+  in Architectural Geometry}, LNCS (Lecture Notes in Computer Science).
+  Springer, 2014.
+\newblock To appear.
+
+\bibitem{Requicha:1980:RRS:356827.356833}
+A.~G. Requicha.
+\newblock Representations for rigid solids: Theory, methods, and systems.
+\newblock {\em {ACM} Comput. Surv.}, 12(4):437--464, Dec. 1980.
 
 \end{thebibliography}
