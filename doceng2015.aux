@@ -12,6 +12,12 @@
 \newlabel{introduction}{{1}{\thepage }}
 \@writefile{toc}{\contentsline {section}{\numberline {2}State of the art}{\thepage }}
 \newlabel{state-of-the-art}{{2}{\thepage }}
+\citation{Requicha:1980:RRS:356827.356833}
+\citation{Dicarlo:2014:TNL:2543138.2543294}
+\citation{paoluzziMS:2014}
+\citation{cadanda:2015}
+\citation{Basak:2010}
+\citation{gemmexp}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}The GeoJSON format}{\thepage }}
 \newlabel{the-geojson-format}{{2.1}{\thepage }}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}The IndoorJSON format}{\thepage }}
@@ -20,46 +26,34 @@
 \newlabel{advances-on-cartographic-document-format}{{3}{\thepage }}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Hierarchical structure}{\thepage }}
 \newlabel{hierarchical-structure}{{3.1}{\thepage }}
-\citation{Requicha:1980:RRS:356827.356833}
-\citation{Dicarlo:2014:TNL:2543138.2543294}
-\citation{paoluzziMS:2014}
-\citation{cadanda:2015}
-\citation{Basak:2010}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Hyperlinked geometric models}{\thepage }}
+\newlabel{optional-lar}{{3.2}{\thepage }}
 \citation{gemmexp}
-\citation{gemmexp}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Metric local coordinate system}{\thepage }}
-\newlabel{metric-local-coordinate-system}{{3.2}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Semantic extensions}{\thepage }}
-\newlabel{semantic-extensions}{{3.3}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Hyperlinked geometric models}{\thepage }}
-\newlabel{optional-lar}{{3.4}{\thepage }}
 \newlabel{fig:sogei-a}{{2a}{\thepage }}
 \newlabel{sub@fig:sogei-a}{{a}{\thepage }}
 \newlabel{fig:sogei-b}{{2b}{\thepage }}
 \newlabel{sub@fig:sogei-b}{{b}{\thepage }}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Office building: (a) the schematic plan; (b) the simplified 3D model generated for testing on the field the in-door mapping project described in this paper. \relax }}{\thepage }}
 \newlabel{fig:sogei}{{2}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Metric local coordinate system}{\thepage }}
+\newlabel{metric-local-coordinate-system}{{3.3}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Semantic extensions}{\thepage }}
+\newlabel{semantic-extensions}{{3.4}{\thepage }}
 \@writefile{toc}{\contentsline {section}{\numberline {4}HIJSON syntax}{\thepage }}
 \newlabel{hijson-syntax}{{4}{\thepage }}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A toy example of the LAR scheme: (a) the bare minimum of data with \emph  {complete} information about topology; (b) the extracted boundary; (c) the extraction method $[e] = [\partial ][f]$ giving the coordinate representation (in the discrete basis of the 1-cells) ofthe boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial ]$ times the coordinate representation $[f]$ of the 2-cells (faces), in the discrete basis of the 2-cells.\relax }}{\thepage }}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:lar-example-a}{{1a}{\thepage }}
-\newlabel{sub@fig:lar-example-a}{{a}{\thepage }}
-\newlabel{fig:lar-example-a}{{1b}{\thepage }}
-\newlabel{sub@fig:lar-example-a}{{b}{\thepage }}
-\newlabel{fig:lar-example-b}{{1c}{\thepage }}
-\newlabel{sub@fig:lar-example-b}{{c}{\thepage }}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A toy example of the LAR scheme: (a) the bare minimum of data with \emph  {complete} information about topology: vertices {\relax \fontsize  {7}{8\p@ }\selectfont  \texttt  {V = [[[5, 0], [[7, 1], [[9, 0], [[13, 2], [[15, 4], [[17, 8], [[14, 9], [[13, 10], [[11, 11], [[9, 10], [[5, 9], [[7, 9], [[3, 8], [[0, 6], [[2, 3], [[2, 1], [[8, 3], [[10, 2], [[13, 4], [[14, 6], [[13, 7], [[12, 10], [[11, 9], [[9, 7], [[7, 7], [[4, 7], [[2, 6], [[3, 5],[[4, 2],[[6, 3],[[11, 4],[[12, 6], [[12, 7], [[10, 5], [[8, 5], [[7, 6], [[5, 5]]}} and faces {\relax \fontsize  {7}{8\p@ }\selectfont  \texttt  {FV = [[[0, [1, [16, [28, 29], [[0, [15, 28], [[1, [2, 17], [[1, [16, [17, 33], [[2, [3, 17], [[3, [4, [18, 19], [[3, [17, [18, 30], [[4, [5, 19], [[5, [6, 19], [[6, [7, [20, [21, [22, 32], [[6, [19, 20], [[7, [8, 21], [[8, [9, [21, 22], [[9, [11, [23, 24], [[9, [22, 23], [[10, [11, [24, 25], [[10, [12, 25], [[12, [13, [25, 26], [[13, [14, 27], [[13, [26, 27], [[14, [15, 28], [[14, [27, [28, [29, 36], [[16, [29, 34], [[16, [33, 34], [[17, [30, 33], [[18, [19, 31], [[12, [30, 31], [[19, [20, [31, 32], [[22, [23, [32, 33], [[23, [24, [34, 35], [[23, [33, 34], [[24, [25, [27, 36], [[24, [35, 36], [[25, [26, 27], [[29, [34, 35], [[29, [35, 36], [[30, [31, [32, 33]]}}; (b) the extracted boundary; (c) the extraction method $[e] = [\partial ][f]$ giving the coordinate representation (in the discrete basis of the 2-cells) ofthe boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial ]$ times the coordinate representation $[f]$ of the 2-cells (faces)\relax }}{\thepage }}
 \newlabel{fig:minimum}{{1}{\thepage }}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}HIJSON Element description}{\thepage }}
 \@writefile{toc}{\contentsline {section}{\numberline {5}HIJSON Toolkit}{\thepage }}
 \newlabel{hijson-toolkit}{{5}{\thepage }}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}HIJSON processing pipeline}{\thepage }}
 \newlabel{hijson-processing-pipeline}{{5.1}{\thepage }}
+\citation{6999103}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces ``HIJSON processing pipeline''\relax }}{\thepage }}
 \newlabel{fig:pipeline}{{3}{\thepage }}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Algorithmics: automatic generation of valid paths}{\thepage }}
 \newlabel{algorithmics-automatic-generation-of-valid-paths}{{5.1.1}{\thepage }}
-\citation{6999103}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}HIJSON Class definition}{\thepage }}
 \newlabel{hijson-class-definition}{{5.2}{\thepage }}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces ``HIJSON Element/Class/Node relashionship''\relax }}{\thepage }}
@@ -70,6 +64,8 @@
 \newlabel{applications}{{6.1}{\thepage }}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}IoT monitoring}{\thepage }}
 \newlabel{iot-monitoring}{{6.1.1}{\thepage }}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Realtime multi-person tracking}{\thepage }}
+\newlabel{realtime-multi-person-tracking}{{6.1.2}{\thepage }}
 \newlabel{fig:graph-generation-a}{{4a}{\thepage }}
 \newlabel{sub@fig:graph-generation-a}{{a}{\thepage }}
 \newlabel{fig:graph-generation-b}{{4b}{\thepage }}
@@ -80,8 +76,6 @@
 \newlabel{sub@fig:graph-generation-d}{{d}{\thepage }}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Graph paths generation: (a) detection of obstacles and computation of walkable area; (b) triangulation of walkable area; (c) identification of graph nodes area; (d) junction of nodes. \relax }}{\thepage }}
 \newlabel{fig:graph-generation}{{4}{\thepage }}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Realtime multi-person tracking}{\thepage }}
-\newlabel{realtime-multi-person-tracking}{{6.1.2}{\thepage }}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.3}Crossfloor user navigation}{\thepage }}
 \newlabel{crossfloor-user-navigation}{{6.1.3}{\thepage }}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Architecture}{\thepage }}
