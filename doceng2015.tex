@@ -43,7 +43,7 @@
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{5}
+\numberofauthors{6}
 \author{
 % You can go ahead and credit any number of authors here,
 % e.g. one 'row of three' or two rows (consisting of one row of three
@@ -92,26 +92,9 @@ Antonio Bottaro\\
        \affaddr{Ricerca e Sviluppo}\\
        \affaddr{Rome, Italy}\\
        \email{dvr@dia.uniroma3.it}
-% 2nd. author
-% 3rd. author
-% 5th. author
 }
-% There's nothing stopping you putting the seventh, eighth, etc.
-% author on the opening page (as the 'third row') but we ask,
-% for aesthetic reasons that you place these 'additional authors'
-% in the \additional authors block, viz.
-\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
-email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
-(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
-\date{30 July 1999}
-% Just remember to make sure that the TOTAL number of authors
-% is the number that will appear on the first page PLUS the
-% number that will appear in the \additionalauthors section.
 
-\maketitle
-\begin{abstract}
-PUT THE ABSTRACT HERE
-\end{abstract}
+\maketitle \begin{abstract} This paper introduces HIJSON, a novel indoor cartographic document format. A software framework is also presented, that relies on HIJSON documents and is entirely based on web technologies. With respect to current cartographic formats, HIJSON brings four major enhancements: (a) exposes a hierarchical structure, (b) may import external geometric models; (c) uses local metric  coordinate systems and (d) accepts semantic extensions. The HIJSON format is designed to describe any  geometry of the \emph{indoor space} of complex buildings, capturing their hierarchical structure, a complete representation of their topology, and all the objects (either smart or not) contained inside. The textual representation allows the software framework to offer a web environment in which the user is presented with either 2D or 3D models of the indoor ambient to navigate. Such virtually rebuilt environment, accessible via web browsers from any kind of device, can be regarded as the platform where several applications may coexist: IoT monitoring; realtime multi-person tracking; crossfloor user navigation, since a simple but effective algorithm to find valid routes is also delivered. The semantic extensions supported by the HIJSON framework architecture encapsulate the  details about communication protocols, rendering style, and exchanged and displayed information, allowing the HIJSON format to be extended with any sort of models of objects, sensors or behaviors. \end{abstract}
 
 % A category with the (minimum) three required fields
 \category{H.4}{Information Systems Applications}{Miscellaneous}
@@ -120,7 +103,7 @@ PUT THE ABSTRACT HERE
 
 \terms{Theory}
 
-\keywords{ACM proceedings, \LaTeX, text tagging}
+\keywords{indoor cartography, indoor navigation, IoT monitoring, multiperson-tracking}
 
 \section{Introduction}\label{introduction}
 
@@ -138,80 +121,83 @@ CARATTERISTICHE E SPUNTI:
 
 The remainder of this document is organized as follows. In Section II is
 provided an overview of the state of the art. Section III is devoted to
-describe the novel cartographic document proposed, while section IV
-introduces the underlying mathematical structure. Section V reports
-about the tools and instruments developed specifically for the web,
-focusing on software architecture, implemented algorithms and real
-applications. Section VI describes one use case of both document format
-and software tools. Finally Section VII proposes some conclusive remarks
-and future developments.
+describe the novel cartographic document proposed, while section IV introduces
+the underlying mathematical structure. Section V reports about the tools and
+instruments developed specifically for the web, focusing on software
+architecture, implemented algorithms and real applications. Section VI
+describes one use case of both document format and software tools. Finally
+Section VII proposes some conclusive remarks and future developments.
 
 \section{State of the art}\label{state-of-the-art}
 
-Researches about the cartographic representation of indoor environments
-are numerous and at the same time heterogeneos regarding to the
-strategies applied. Different sources of information are used and accuracy of the 
-produced solution depends on the adopted approach. In some cases the information 
-is obtained with automatic or semi-automatic processing of files that describe the 
-architectural structure of a building, such as BIM (Link a BIM) and/or IFC (Link a IFC)
-\cite{6816739}. Image processing is also used to extract topological
-information from floor plan images \cite{6878152}. In other works,
-building informations and descriptive parameters are redefined from scratch \cite{6418876}. 
-This choice is driven by the unsuitableness of the current representive formats: 
-images contain poor information and CAD files are not designed for this kind of use. 
-A recurring topic among the use of carthograhic information is indoor navigation \cite{6878152,6418876,6816739}.
-The proposed approaches are very different in this case too,
-and based on several strategies with some basic elements in common. An
-often adopted solution is based on the representation of the routing
-information as a graph, having a node for each room and an edge for each
-couple of connected rooms. In some cases the edges are weighted in
-function of euclidean distance. The detail level of the graph and hence
-the effective practicalbility of the calculated paths, can vary
-depending on the technique and the design choices applied, but in
-general most of the proposed solutions
-retrieve information only from architectual structure. A topic related to the navigation is the location of users. All the considered
-works agree on the inadequacy of GNSS in indoors contexts, due to the
-segnificant reduction in signal quality. To locate the exact
-position of a user inside a building, the currently most used techniques are based
-on fingerprinting and triangulation of radio signals (WiFi, Bluetooth,
-etc.) flanked by more original solutions based on, for example, image
-recognition \cite{6815564}. User tracking issue is faced with solutions that
-range from the clever utilization of inertial tracking sensors embedded in many smartphones \cite{6815564} to the adoption of ad hoc devices \cite{6878152}.
+Researches about the cartographic representation of indoor environments are
+numerous and at the same time heterogeneos regarding to the strategies
+applied. Different sources of information are used and accuracy of the
+produced solution depends on the adopted approach. In some cases the
+information  is obtained with automatic or semi-automatic processing of files
+that describe the  architectural structure of a building, such as BIM (Link a
+BIM) and/or IFC (Link a IFC) \cite{6816739}. Image processing is also used to
+extract topological information from floor plan images \cite{6878152}. In
+other works, building informations and descriptive parameters are redefined
+from scratch \cite{6418876}.  This choice is driven by the unsuitableness of
+the current representive formats:  images contain poor information and CAD
+files are not designed for this kind of use. A recurring topic among the use
+of carthograhic information is indoor navigation
+\cite{6878152,6418876,6816739}. The proposed approaches are very different in
+this case too, and based on several strategies with some basic elements in
+common. An often adopted solution is based on the representation of the
+routing information as a graph, having a node for each room and an edge for
+each couple of connected rooms. In some cases the edges are weighted in
+function of euclidean distance. The detail level of the graph and hence the
+effective practicalbility of the calculated paths, can vary depending on the
+technique and the design choices applied, but in general most of the proposed
+solutions retrieve information only from architectual structure. A topic
+related to the navigation is the location of users. All the considered works
+agree on the inadequacy of GNSS in indoors contexts, due to the segnificant
+reduction in signal quality. To locate the exact position of a user inside a
+building, the currently most used techniques are based on fingerprinting and
+triangulation of radio signals (WiFi, Bluetooth, etc.) flanked by more
+original solutions based on, for example, image recognition \cite{6815564}.
+User tracking issue is faced with solutions that range from the clever
+utilization of inertial tracking sensors embedded in many smartphones
+\cite{6815564} to the adoption of ad hoc devices \cite{6878152}.
 
-The actual ``de-facto'' standard in terms of geospatial data
-representation is the GeoJSON format, which can be easily used for any
-type of geographical annotation. In some cases it has been slightly
-adapted to be used in indoor environments (IndoorJSON).
+The actual ``de-facto'' standard in terms of geospatial data representation is
+the GeoJSON format, which can be easily used for any type of geographical
+annotation. In some cases it has been slightly adapted to be used in indoor
+environments (IndoorJSON).
 
 \subsection{The GeoJSON format}\label{the-geojson-format}
 
-GeoJSON is a geospatial data interchange format based on JSON, suitable
-for a geometrical encoding of various geographic data structures. As
-opposed to GIS format, GeoJSON is an open standard. Positions need to be expressed in geographical coordinates (usually WGS84).
+GeoJSON is a geospatial data interchange format based on JSON, suitable for a
+geometrical encoding of various geographic data structures. As opposed to GIS
+format, GeoJSON is an open standard. Positions need to be expressed in
+geographical coordinates (usually WGS84).
 
 GeoJSON supports the following geometry primitives: \texttt{Point},
 \texttt{LineString}, \texttt{Polygon}, \texttt{MultiPoint},
-\texttt{MultiLineString}, and \texttt{MultiPolygon}. Lists of geometries
-are represented by a \texttt{GeometryCollection}. Geometries with
-additional properties are \texttt{Feature} objects. Lists of \texttt{Feature}
-are represented by a \texttt{FeatureCollection}.
+\texttt{MultiLineString}, and \texttt{MultiPolygon}. Lists of geometries are
+represented by a \texttt{GeometryCollection}. Geometries with additional
+properties are \texttt{Feature} objects. Lists of \texttt{Feature} are
+represented by a \texttt{FeatureCollection}.
 
 A single \texttt{Feature} is composed essentially by two mandatory fields:
-\texttt{geometry}, which describes the objects' geometry accordingly to the 
-previously defined primitives, and \texttt{properties} which contains additional 
-information about the \texttt{Feature}.
+\texttt{geometry}, which describes the objects' geometry accordingly to the
+previously defined primitives, and \texttt{properties} which contains
+additional  information about the \texttt{Feature}.
 
-It is possible to define complex shapes through the composition of
-simple GeoJSON objects. Mainly due to its semplicity, GeoJSON is widely
-used and deeply integrated in several applications and services.
+It is possible to define complex shapes through the composition of simple
+GeoJSON objects. Mainly due to its semplicity, GeoJSON is widely used and
+deeply integrated in several applications and services.
 
 \subsection{The IndoorJSON format}\label{experiences-on-indoor-json}
 
-IndoorJSON is a GeoJSON variant defined and used by \emph{indoor.io},
-a Finnish company devoted to indoor environment mapping. IndoorJSON is compliant with GeoJSON syntax, and it may consist of any number of \texttt{Features}
-and/or \texttt{FeatureCollections}. All \texttt{Features} are interpreted similarly
-regardless of their grouping into nested \texttt{FeatureCollections}. IndoorJSON
-supports all GeoJSON geometry types.
+IndoorJSON is a GeoJSON variant defined and used by \emph{indoor.io}, a
+Finnish company devoted to indoor environment mapping. IndoorJSON is compliant
+with GeoJSON syntax, and it may consist of any number of \texttt{Features}
+and/or \texttt{FeatureCollections}. All \texttt{Features} are interpreted
+similarly regardless of their grouping into nested
+\texttt{FeatureCollections}. IndoorJSON supports all GeoJSON geometry types.
 
 Some particular properties are used to correctly define indoor elements:
 
@@ -240,44 +226,45 @@ the indoor representation:
   ways, only up, only down);
 \end{itemize}
 
-A syntax validator is provided by \emph{indoor.io}, but the commercial nature of 
-this project limits the number of tools available to deal with this format.
+A syntax validator is provided by \emph{indoor.io}, but the commercial nature
+of  this project limits the number of tools available to deal with this
+format.
 
 \section{Advances on cartographic document formats}\label{advances-on-cartographic-document-format}
 
-The focus of this work is the definition of a novel format of cartographic 
-documents along with the software ecosystem rooted on it. A simple but effective 
-algorithm to find indoor valid routes is also provided.
-The \textbf{HIJSON} (\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}, this is the 
-name chosen for the format) and the accompanying software framework aim to realize 
-a mapping of indoor real spaces with a virtual interactive web environment.
-The HIJSON is based upon ideas and design principles collected 
-from previous formats and identifies three critical 
-improvements with respect to them: it exposes a \emph{hierarchical structure}, 
-uses \emph{metric local coordinate system} and accepts \emph{semantic extensions}.
+The focus of this work is the definition of a novel format of cartographic
+documents along with the software ecosystem rooted on it. A simple but
+effective  algorithm to find indoor valid routes is also provided. The
+\textbf{HIJSON} (\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}, this is
+the name chosen for the format) and the accompanying software framework aim
+to realize a mapping of indoor real spaces with a virtual interactive web
+environment. The HIJSON is based upon ideas and design principles collected
+from previous formats and identifies three critical improvements with respect
+to them: it exposes a \emph{hierarchical structure}, uses \emph{metric local
+coordinate system} and accepts \emph{semantic extensions}. Furthermore, geometrical 
+and topological data are conveniently imported and represented via LAR, an advanced 
+representation scheme, allowing to deal with \emph{hyperlinked geometric models}.
 
 \subsection{Hierarchical structure}\label{hierarchical-structure}
 
-The HIJSON format allows for hierarchical description of indoor spaces. 
-The introduction of a hierarchical structure establishes a parent-child relation 
-between entities of the model, reflecting a container-contained relationship. 
-This direclty implies a neater representation than the plain linear structure adopted 
-by GeoJSON, being a perfect analogy of objects contained (i.e. placed) into spaces.
+The HIJSON format allows for hierarchical description of indoor spaces.  The
+introduction of a hierarchical structure establishes a parent-child relation
+between entities of the model, reflecting a container-contained relationship.
+This direclty implies a neater representation than the plain linear structure
+adopted  by GeoJSON, being a perfect analogy of objects contained (i.e.
+placed) into spaces.
 
-In addition, more organized arrangement is allowed by logical (or even physical) 
-grouping: concepts like building wings, sections, stories, departemens, etc. can be 
-introduced to reflect into the document structure logical or physical real divisions, 
-categories or relashionships.
+In addition, more organized arrangement is allowed by logical (or even
+physical)  grouping: concepts like building wings, sections, stories,
+departemens, etc. can be  introduced to reflect into the document structure
+logical or physical real divisions,  categories or relashionships.
 
---------------------------
-LA PARTE SULLA TOPOLOGIA VA INTRODOTTA QUI E RIPRESA IN UNA SUCCESSIVA SEZIONE APPOSITA
---------------------------
-
-Hierarchical structures are common in computer graphics since they are used as 
-scenegraphs. This accordance of underlying structures really simplify 3D render 
-algorithms of HIJSON documented environments.
+Hierarchical structures are common in computer graphics since they are used as
+scenegraphs. This accordance of underlying structures really simplify 3D
+render algorithms of HIJSON documented environments.
 
 Furthermore the container-contained relation enables to use local reference system.
+
 
 \subsection{Hyperlinked geometric models}\label{optional-lar}
 
@@ -314,45 +301,109 @@ The expansion of a LAR model, to be considered as a general-purpose graphic prim
 
 \subsection{Metric local coordinate system}\label{metric-local-coordinate-system}
 
-
-------- \textbf{revisionare} --------
-
 Supported by the hierarchical underlying structure, the HJSON document format allows 
 for the use of local coordinate system. This means that the shape of all elements can 
-be conveninet modelled in local coordinate and than placed in the right position 
-with respect to the position of the the parent (or container) element using a 
+be convenient modelled in local coordinate and than placed in the right position 
+with respect to the position of the parent (or container) element applying a 
 translation and a rotaction vector.
 
-Another sostantial advantage is represented by the adoption of a metric reference, 
-The adoption of a metric local reference system contribute to simplify the compilation 
-of the document, however it is, manual or aided by sofwtare tool.
+Another substantial advantage is represented by the adoption of a metric reference, 
+consequently simplifying the compilation of the document, however it is, 
+manual or aided by software tools.
 
-
-Although both GeoJSON and IndoorJSON expresses all the positions in geographical 
-coordinates can be useful for outdoor geographical
-representations, it is not the best solution for indoor descriptions.
-
-Nevertheless countinuos outdoor-indoor navigation is guaranteed via ...
-
-------- \textbf{fine revisione} --------
-
+The HIJSON document format is specially designed to guarantee the user to be routed seamlessly 
+from outdoor to indoor and vice versa. Even though indoor geometries are inputted in a metric 
+local continuous outdoor-indoor navigation is ensured via the definition of a processing pipeline
+detailed in the following.
 
 \subsection{Semantic extensions}\label{semantic-extensions}
 
+Semantic extensions make the HIJSON format extendible and customizable, that is, able to 
+adequately respond to any object representation need. To define a semantic extension means to allow the HIJSON document to model an object previously not covered, or even to modify the behaviour of a comprised one. Semantic extensions are to be defined both as HIJSON format syntyax and as HIJSON Toolk source code. In particular it is necessary to define respectively a new HIJSON Element and a new HIJSON Class, as specified below.
 
-------- \textbf{revisionare} --------
+\subsection{Hyperlinked geometric models}\label{optional-lar}
 
+A HIJSON document may further import external geometric models --- either of the
+buildings itself or the interior furniture or devices --- that are topologically
+complete (in the sense of solid
+modeling~\cite{Requicha:1980:RRS:356827.356833}) and very compact.  Such
+models coming from a source outside the document are acquired by linking JSON
+files that contain a Linear Algebraic Representation (LAR) of topology and
+geometry, to be expanded for visualization or interaction at any useful level
+of detail.
 
-Every HIJSON Element has a property that describes its class. This
-information allows the adoption of semantic extensions by the software
-that manipulates the HIJSON data. In the Javascript library developed to
-manage HIJSON documents, different classes are instantiated to represent
-HIJSON Nodes, which acts differently by the adoption of polymorphic
-methods. In order to extend the possibilities in representation and
-interaction, it is sufficient to define new classes that reflects new
-categories of HIJSON Elements.
+The LAR scheme~\cite{Dicarlo:2014:TNL:2543138.2543294} is characterised by a
+very large domain, including architecture, building and
+construction~\cite{paoluzziMS:2014}, 2D and 3D engineering meshes, non-
+manifold geometric and solid models and meshes, and high-resolution 3D
+images~\cite{cadanda:2015}. This scheme uses the set of \emph{Combinatorial
+Cellular Complexes} (CCC) as mathematical domain \cite{Basak:2010}, and
+various compressed representations of \emph{sparse matrices} \cite{gemmexp} as
+codomain.
 
-------- \textbf{fine revisione} --------
+Since LAR provides a complete representation of the topology of the
+represented space, the matrix  $[\partial_d]$ of the boundary operator shall
+be used to compute the coordinate representation $[c]$ of the \emph{boundary}
+chain of \emph{any subset} $c$ of cells, though \emph{a single} operation of
+SpMV multiplication \cite{gemmexp} between the \texttt{CSR} (Compressed Sparse
+Row) representation of $[\partial]$ and the \texttt{CSC} (Compressed Sparse
+Column) representation of the $[c]$ chain, resulting in very efficient
+computations on modern hardware, even mobile.
+
+%\begin{figure*}[h!tb]
+%  \centering
+%  \begin{subfigure}[b]{0.31\textwidth}
+%  \centering
+%    \includegraphics[width=\textwidth]{images/minimum-a} 
+%    \caption{}
+%    \label{fig:lar-example-a}
+%  \end{subfigure}
+%  ~
+%  \begin{subfigure}[b]{0.32\textwidth}
+%  \centering
+%    \includegraphics[width=\textwidth]{images/minimum-b} 
+%    \caption{}
+%    \label{fig:lar-example-a}
+%  \end{subfigure}
+%  ~
+%  \begin{subfigure}[b]{0.33\textwidth}
+%    \centering
+%    \includegraphics[width=\textwidth]{images/boundary}
+%    \caption{}
+%    \label{fig:lar-example-b}
+%  \end{subfigure}
+%  
+%  \caption{A toy example of the LAR scheme: (a) the bare minimum of data with \emph{complete} information about topology: vertices {\scriptsize\texttt{V = [[[5, 0], [[7, 1], [[9, 0], [[13, 2], [[15, 4], [[17, 8], [[14, 9], [[13, 10], [[11, 11], [[9, 10], [[5, 9], [[7, 9], [[3, 8], [[0, 6], [[2, 3], [[2, 1], [[8, 3], [[10, 2], [[13, 4], [[14, 6], [[13, 7], [[12, 10], [[11, 9], [[9, 7], [[7, 7], [[4, 7], [[2, 6], [[3, 5],[[4, 2],[[6, 3],[[11, 4],[[12, 6], [[12, 7], [[10, 5], [[8, 5], [[7, 6], [[5, 5]]}} and faces {\scriptsize\texttt{FV = [[[0, [1, [16, [28, 29], [[0, [15, 28], [[1, [2, 17], [[1, [16, [17, 33], [[2, [3, 17], [[3, [4, [18, 19], [[3, [17, [18, 30], [[4, [5, 19], [[5, [6, 19], [[6, [7, [20, [21, [22, 32], [[6, [19, 20], [[7, [8, 21], [[8, [9, [21, 22], [[9, [11, [23, 24], [[9, [22, 23], [[10, [11, [24, 25], [[10, [12, 25], [[12, [13, [25, 26], [[13, [14, 27], [[13, [26, 27], [[14, [15, 28], [[14, [27, [28, [29, 36], [[16, [29, 34], [[16, [33, 34], [[17, [30, 33], [[18, [19, 31], [[12, [30, 31], [[19, [20, [31, 32], [[22, [23, [32, 33], [[23, [24, [34, 35], [[23, [33, 34], [[24, [25, [27, 36], [[24, [35, 36], [[25, [26, 27], [[29, [34, 35], [[29, [35, 36], [[30, [31, [32, 33]]}}; (b) the extracted boundary; (c) the extraction method $[e] = [\partial][f]$ giving the coordinate representation (in the discrete basis of the 2-cells) ofthe boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial]$ times the coordinate representation $[f]$ of the 2-cells (faces)}
+%  \label{fig:minimum}
+%\end{figure*}
+
+The expansion of a LAR model, to be considered as a general-purpose graphic
+primitive, may be executed on either  the server or the supervisor client of
+the HIJSON Web Toolkit architecture (see Section~\ref{server-architecture}),
+or even on the explorer client, depending on the size and the locality of the
+model to be expanded.
+
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}[b]{0.48\linewidth}
+    \includegraphics[width=\textwidth]{images/sogei-a} 
+    \caption{}
+    \label{fig:sogei-a}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[b]{0.48\linewidth}
+    \includegraphics[width=\textwidth]{images/sogei-b}
+    \caption{}
+    \label{fig:sogei-b}
+  \end{subfigure}
+  
+  \caption{Office building: 
+      (a) the schematic plan; 
+      (b) the simplified 3D model generated for testing on the field 
+        the in-door mapping project described in this paper.
+  }
+  \label{fig:sogei}
+\end{figure}
 
 \section{HIJSON syntax}\label{hijson-syntax}
 
@@ -360,23 +411,24 @@ Below there is an example of an input file ready to be processed by the HIJSON p
 
 \begin{verbatim}
 {
-    "config": {
-        ...
+  "config": {
+    ...
+  },
+  "data": 
+  [
+    ...
+    {
+      "id": "architecture",
+      "type": "FeatureCollection",
+      "features": [...] 
     },
-    "data": [
-                ...
-                {
-                    "id": "architecture",
-                    "type": "FeatureCollection",
-                    "features": [...] 
-                },
-                {
-                    "id": "furniture_1",
-                    "type": "FeatureCollection",
-                    "features": [...] 
-                },
-                ...
-    ]
+    {
+      "id": "furniture_1",
+      "type": "FeatureCollection",
+      "features": [...] 
+    },
+    ...
+  ]
 }
 \end{verbatim}
 
@@ -384,54 +436,52 @@ The HIJSON document is composed of different parts:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
-\item
+\item  
   configuration: a JSON object containing parameters and settings useful
-  for the building representation. In particular three points of the
-  local reference system are mapped to three couples of geographical
-  coordinates. This information allows the computation of the
-  transformation matrix used to translate the local coordinates to
-  global ones.
+  for the building representation. In particular three points of the local
+  reference system are mapped to three couples of geographical coordinates.
+  This information allows the computation of the transformation matrix used to
+  translate the local coordinates to global ones.
 \item
-  one or more data collections: each of these lists is given in the form
-  of a GeoJSON FeatureCollection, containing a number of HIJSON
-  Elements. Since HIJSON Elements adhere to the GeoJSON format, each
-  collection can be accepted by a GeoJSON validator. HIJSON introduces
-  some additional rules that allow the adoption of this format for
-  indoor representation. In the next paragraph is given a sample of HIJSON Element, with
-  the description of the main differences from a standard GeoJSON
-  Feature.
+  one or more data collections: each of these lists is given in the form   of
+  a GeoJSON FeatureCollection, containing a number of HIJSON   Elements. Since
+  HIJSON Elements adhere to the GeoJSON format, each   collection can be
+  accepted by a GeoJSON validator. HIJSON introduces   some additional rules
+  that allow the adoption of this format for   indoor representation. In the
+  next paragraph is given a sample of HIJSON Element, with   the description of
+  the main differences from a standard GeoJSON   Feature. 
 \end{itemize}
 
 Below there is an example of data collection, with the definition of an HIJSON Element:
 
 \begin{verbatim}
 {
-    "id": "architecture",
-    "type": "FeatureCollection",
-    "features": 
-    [
-        ...
-        {
-            "type": "Feature",
-            "id": "room_0.1",
-            "geometry": 
-            {
-                "type": "Polygon",
-                "coordinates": 
-                [ 
-                   [ [0, 0], [11, 0], [11, 19], [0, 19] ]
-                ]    
-            },
-            "properties": 
-            {
-                "class": "room",
-                "parent": "level_0",
-                "description": "Office of Mr. Smith",
-                "tVector": [10, 20, 0],
-                "rVector": [0, 0, 90]
-        },
-        ...
-    ]
+  "id": "architecture",
+  "type": "FeatureCollection",
+  "features": 
+  [
+    ...
+    {
+      "type": "Feature",
+      "id": "room_0.1",
+      "geometry": 
+      {
+        "type": "Polygon",
+        "coordinates": 
+        [ 
+          [ [0, 0], [11, 0], [11, 19], [0, 19] ]
+        ]
+      },
+      "properties": 
+      {
+        "class": "room",
+        "parent": "level_0",
+        "description": "Office of Mr. Smith",
+        "tVector": [10, 20, 0],
+        "rVector": [0, 0, 90]
+    },
+    ...
+  ]
 }
 \end{verbatim}
 
@@ -479,8 +529,8 @@ third dimension, the property \texttt{height} can be used.
 A \texttt{description} property can provide further information about
 the element.
 
-Additional optional fields can be added without restrictions, in order to enrich and extend the
-expressvity of the representation.
+Additional optional fields can be added without restrictions, in order 
+to enrich and extend the expressvity of the representation.
 
 \section{HIJSON Toolkit}\label{hijson-toolkit}
 
@@ -668,7 +718,12 @@ FIGURA), is composed by 4 phases:
     \label{fig:graph-generation-d}
   \end{subfigure}
   
-  \caption{Graph paths generation: (a) detection of obstacles and computation of walkable area; (b) triangulation of walkable area; (c) identification of graph nodes area; (d) junction of nodes.}
+  \caption{Graph paths generation: 
+    (a) detection of obstacles and computation of walkable area; 
+    (b) triangulation of walkable area; 
+    (c) identification of graph nodes area; 
+    (d) junction of nodes.
+  }
   \label{fig:graph-generation}
 \end{figure*}
 
@@ -680,7 +735,7 @@ behaviours encapsulate the specificities relative to comminucation
 procols with the sensors as well as user interaction peculirities. The
 interface for these behaviours is the HIJSON Class.
 
-\begin{figure}[!htbp]
+\begin{figure}[!h]
 \centering
 \epsfig{file=images/element-class-node.eps, width=0.44\textwidth}
 \caption{``HIJSON Element/Class/Node relashionship''}
@@ -754,7 +809,7 @@ described in the following seciton.
 
 \subsection{Applications}\label{applications}
 
-\begin{figure*}[ht]
+\begin{figure*}[!hb]
 \centering
 \includegraphics[width=\textwidth]{images/web-framework.png}
 \caption{``HIJSON Web Framework UI''}
@@ -770,22 +825,25 @@ needs to be routed across the building.
 
 \subsubsection{IoT monitoring}\label{iot-monitoring}
 
-Every element in the HIJSON environment is capable of showing information about itself, 
-so it can be analyzed by the user. The modularity of the HIJSON Toolkit permits to show
- particular information or UI about a specific object, using polymorphic behaviours of the
-different HIJSON Nodes. If an object is connected to the network and it is capable of
-interaction, the user can benefit of its functions through the system (e.g. if the object
-is a thermostat, the user can see the temperature in the room and can turn on/off the heating).
-If the object isn't interactive, the system can show static information (e.g. for fire
-Extinguisher, the system shows the last date of checking).
+Every element in the HIJSON environment is capable of showing information
+about itself,  so it can be analyzed by the user. The modularity of the HIJSON
+Toolkit permits to show  particular information or UI about a specific object,
+using polymorphic behaviours of the different HIJSON Nodes. If an object is
+connected to the network and it is capable of interaction, the user can
+benefit of its functions through the system (e.g. if the object is a
+thermostat, the user can see the temperature in the room and can turn on/off
+the heating). If the object isn't interactive, the system can show static
+information (e.g. for fire Extinguisher, the system shows the last date of
+checking).
 
 \subsubsection{Realtime multi-person tracking}\label{realtime-multi-person-tracking}
 
-A typical task performed by a \emph{Supervisor} can be the monitoring of users locations 
-inside the building. This operation can be required for various reasons, e.g. security or 
-logistics. The devices that equips the \emph{Explorers} can be used to track their position 
-in realtime, giving the \emph{Supervisors} the whole picture of the presences inside the 
-building in every moment.
+A typical task performed by a \emph{Supervisor} can be the monitoring of users
+locations  inside the building. This operation can be required for various
+reasons, e.g. security or  logistics. The devices that equips the
+\emph{Explorers} can be used to track their position  in realtime, giving the
+\emph{Supervisors} the whole picture of the presences inside the  building in
+every moment.
 
 --- da controllare cosa tenere rispetto a quanto già scritto dopo ---
 
@@ -822,33 +880,35 @@ described above.
 
 \subsubsection{Crossfloor user navigation}\label{crossfloor-user-navigation}
 
-As shown in the algorithmics section, the HIJSON Toolkit provides a particular strategy 
-to assemlbe a graph of possible paths inside the building. This graph, represented also 
-in the form of a weighted adjacency matrix, can be easely used to compute paths between 
-two nodes inside the building. To achieve this result, the matrix, which edges are weighted 
-according to the distance between two nodes, is used as input in an applicaiton of the 
-Dijkstra's algorithm. The result is the shortest path between two selected nodes of the graph. 
-Thanks to the crossfloor connections of nodes representing stairs or elevators, the paths
- calculated can also start and end on different stories. 
+As shown in the algorithmics section, the HIJSON Toolkit provides a particular
+strategy  to assemlbe a graph of possible paths inside the building. This
+graph, represented also  in the form of a weighted adjacency matrix, can be
+easely used to compute paths between  two nodes inside the building. To
+achieve this result, the matrix, which edges are weighted  according to the
+distance between two nodes, is used as input in an applicaiton of the
+Dijkstra's algorithm. The result is the shortest path between two selected
+nodes of the graph.  Thanks to the crossfloor connections of nodes
+representing stairs or elevators, the paths  calculated can also start and end
+on different stories.
 
 \subsection{Architecture}\label{architecture}
 
-Like the vast majority of the web based application, the Framework
-exposes an overall architecture that is inherently \emph{client/server}.
-In particular, two different type of possible client are identifiable:
-the \emph{Supervisor} client and the \emph{Explorer} client. Both of
-them connect to the same server.
+Like the vast majority of the web based application, the Framework exposes an
+overall architecture that is inherently \emph{client/server}. In particular,
+two different type of possible client are identifiable: the \emph{Supervisor}
+client and the \emph{Explorer} client. Both of them connect to the same
+server.
 
 The indoor space described by the HIJSON document provided as input is
-processed by the server (cfr. PROCESSING PIPELINE). After that any
-connecting \emph{Explorer} client, presumably through a mobile device,
-will be provided with the information to perform crossfloor navigation
-of the building, while reporting user position to the server. The server
-will feed any connecting \emph{Supervisor} client with users positions,
-along with data from sensor-equipped things present in the environment,
-realizing the IoT monitoring and the realtime multi-person tracking.
+processed by the server (cfr. PROCESSING PIPELINE). After that any connecting
+\emph{Explorer} client, presumably through a mobile device, will be provided
+with the information to perform crossfloor navigation of the building, while
+reporting user position to the server. The server will feed any connecting
+\emph{Supervisor} client with users positions, along with data from sensor-
+equipped things present in the environment, realizing the IoT monitoring and
+the realtime multi-person tracking.
 
-\begin{figure*}[!htbp]
+\begin{figure*}[t]
 \centering
 \epsfig{file=images/architecture.eps, width=\textwidth}
 \caption{``HIJSON Web Toolkit architecture''}
@@ -933,6 +993,9 @@ client.
 We presented HIJSON a GeoJSON extension for indoor mapping TRA GLI
 SVILUPPI FUTURI: - GENERAZIONE GRAFICA IN AMBIENTE CAD DEL DOCUMENTO
 HIJSON
+
+REPOSITORY PUBBLICO DI ESTENSIONI SEMANTICHE: POTREBBE MAPPARE TUTTE
+GLI SMART OBJECT CON CONTRIBUTI DALLA COMUNITÀ. 
 
 %
 % The following two commands are all you need in the
