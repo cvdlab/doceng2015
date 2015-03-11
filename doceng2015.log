@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  9 MAR 2015 09:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  10 MAR 2015 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -222,12 +222,6 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 )
 (./doceng2015.aux
 
-LaTeX Warning: Label `optional-lar' multiply defined.
-
-
-LaTeX Warning: Label `fig:sogei' multiply defined.
-
-
 LaTeX Warning: Label `fig:pipeline' multiply defined.
 
 )
@@ -323,13 +317,66 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 97.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Overfull \hbox (1.26794pt too wide) in paragraph at lines 102--103
-\T1/aer/m/n/9 H.4 [\T1/aer/bx/n/9 Information Sys-tems Ap-pli-ca-tions\T1/aer/m
-/n/9 ]: Mis-cel-la-neous;
+Overfull \hbox (40.96182pt too wide) in paragraph at lines 97--97
+ []\eaddfnt mar.virgadamo@stud.uniroma3.it 
  []
 
 
-Overfull \hbox (7.85475pt too wide) in paragraph at lines 133--164
+Overfull \hbox (26.76569pt too wide) in paragraph at lines 97--97
+ []\eaddfnt mar.sportillo@stud.uniroma3.it 
+ []
+
+! Undefined control sequence.
+l.103 \ccsdesc
+              [500]{Information systems~Web applications}
+? 
+! Undefined control sequence.
+l.104 \ccsdesc
+              [100]{Information systems~Web data description languages}
+? 
+! Undefined control sequence.
+l.105 \ccsdesc
+              [300]{Applied computing~Format and notation}
+? 
+! Undefined control sequence.
+l.106 \ccsdesc
+              [100]{Applied computing~Cartography}
+? 
+! Undefined control sequence.
+l.107 \ccsdesc
+              [100]{Human-centered computing~Geographic visualization}
+? 
+! Undefined control sequence.
+l.108 \ccsdesc
+              [100]{Computer systems organization~Client-server architectures}
+? 
+! Undefined control sequence.
+l.109 \ccsdesc
+              [100]{Computer systems organization~Real-time system architect...
+
+? 
+! Undefined control sequence.
+l.110 \ccsdesc
+              [100]{Software and its engineering~Publish-subscribe / event-b...
+
+? 
+
+Overfull \hbox (4.16548pt too wide) in paragraph at lines 103--111
+\T1/aer/m/n/9 com-put-ing For-mat and no-ta-tion [100]Ap-plied com-put-ing Car-
+
+ []
+
+
+Overfull \hbox (5.51495pt too wide) in paragraph at lines 103--111
+\T1/aer/m/n/9 sys-tem ar-chi-tec-ture [100]Soft-ware and its en-gi-neer-ing Pub
+lish-
+ []
+
+
+Underfull \vbox (badness 4205) has occurred while \output is active []
+
+
+Overfull \hbox (7.85475pt too wide) in paragraph at lines 143--174
 \T1/aer/m/n/9 ero-ge-neos re-gard-ing to the strate-gies ap-plied. Dif-fer-ent 
 sources
  []
@@ -338,19 +385,22 @@ sources
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 177.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 187.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Overfull \hbox (12.43544pt too wide) in paragraph at lines 177--183
+Overfull \hbox (12.43544pt too wide) in paragraph at lines 187--193
 []\T1/aer/m/n/9 GeoJSON sup-ports the fol-low-ing ge-om-e-try prim-i-tives: \T1
 /aett/m/n/9 Point\T1/aer/m/n/9 ,
  []
 
-[2]
-Overfull \hbox (1.42838pt too wide) in paragraph at lines 277--279
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Overfull \hbox (1.42838pt too wide) in paragraph at lines 287--289
 []\T1/aer/m/n/9 Since LAR pro-vides a com-plete rep-re-sen-ta-tion of the topol
 -
  []
@@ -359,28 +409,28 @@ Overfull \hbox (1.42838pt too wide) in paragraph at lines 277--279
 File: images/minimum.pdf Graphic file (type pdf)
 
 <use images/minimum.pdf>
-Package pdftex.def Info: images/minimum.pdf used on input line 283.
+Package pdftex.def Info: images/minimum.pdf used on input line 293.
 (pdftex.def)             Requested size: 252.0pt x 148.08002pt.
 
 <images/boundary.pdf, id=20, 464.93701pt x 338.94629pt>
 File: images/boundary.pdf Graphic file (type pdf)
 
 <use images/boundary.pdf>
-Package pdftex.def Info: images/boundary.pdf used on input line 285.
+Package pdftex.def Info: images/boundary.pdf used on input line 295.
 (pdftex.def)             Requested size: 201.59692pt x 146.9698pt.
 
 <images/sogei-a.pdf, id=21, 708.24059pt x 670.38193pt>
 File: images/sogei-a.pdf Graphic file (type pdf)
 
 <use images/sogei-a.pdf>
-Package pdftex.def Info: images/sogei-a.pdf used on input line 303.
+Package pdftex.def Info: images/sogei-a.pdf used on input line 313.
 (pdftex.def)             Requested size: 115.19897pt x 109.03294pt.
 
 <images/sogei-b.pdf, id=22, 690.41667pt x 657.36282pt>
 File: images/sogei-b.pdf Graphic file (type pdf)
 
 <use images/sogei-b.pdf>
-Package pdftex.def Info: images/sogei-b.pdf used on input line 309.
+Package pdftex.def Info: images/sogei-b.pdf used on input line 319.
 (pdftex.def)             Requested size: 115.19897pt x 109.6839pt.
  [3 <./images/sogei-a.pdf> <./images/sogei-b.pdf>]
 [4 <./images/minimum.pdf> <./images/boundary.pdf>]
@@ -392,7 +442,7 @@ Package epstopdf Info: Source file: <images/pipeline.eps>
 (epstopdf)                    size: 390583 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/pipeline-eps-conver
 ted-to.pdf images/pipeline.eps>
-(epstopdf)             \includegraphics on input line 518.
+(epstopdf)             \includegraphics on input line 528.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/pipeline-eps-converted-to.pdf, id=72, 1027.84pt x 1027.84pt>
@@ -400,10 +450,10 @@ File: images/pipeline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/pipeline-eps-converted-to.pdf>
 Package pdftex.def Info: images/pipeline-eps-converted-to.pdf used on input lin
-e 518.
+e 528.
 (pdftex.def)             Requested size: 201.59642pt x 201.59692pt.
 
-Overfull \hbox (6.51636pt too wide) in paragraph at lines 552--563
+Overfull \hbox (6.51636pt too wide) in paragraph at lines 562--573
 []\T1/aett/m/it/9 graph paths gen-er-a-tion \T1/aer/m/n/9 - The fourth stage is
  in charge
  []
@@ -415,7 +465,7 @@ File: images/graph-generation/single/graph-generation-1.png Graphic file (type
 png)
  <use images/graph-generation/single/graph-generation-1.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-1.png 
-used on input line 640.
+used on input line 650.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
 <images/graph-generation/single/graph-generation-2.png, id=84, 513.92pt x 385.4
@@ -424,7 +474,7 @@ File: images/graph-generation/single/graph-generation-2.png Graphic file (type
 png)
  <use images/graph-generation/single/graph-generation-2.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-2.png 
-used on input line 646.
+used on input line 656.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
 <images/graph-generation/single/graph-generation-3.png, id=85, 513.92pt x 385.4
@@ -433,7 +483,7 @@ File: images/graph-generation/single/graph-generation-3.png Graphic file (type
 png)
  <use images/graph-generation/single/graph-generation-3.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-3.png 
-used on input line 652.
+used on input line 662.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
 <images/graph-generation/single/graph-generation-4.png, id=86, 513.92pt x 385.4
@@ -442,7 +492,7 @@ File: images/graph-generation/single/graph-generation-4.png Graphic file (type
 png)
  <use images/graph-generation/single/graph-generation-4.png>
 Package pdftex.def Info: images/graph-generation/single/graph-generation-4.png 
-used on input line 658.
+used on input line 668.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 Package epstopdf Info: Source file: <images/element-class-node.eps>
 (epstopdf)                    date: 2015-02-26 22:48:44
@@ -453,7 +503,7 @@ Package epstopdf Info: Source file: <images/element-class-node.eps>
 (epstopdf)                    size: 91144 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/element-class-node-
 eps-converted-to.pdf images/element-class-node.eps>
-(epstopdf)             \includegraphics on input line 682.
+(epstopdf)             \includegraphics on input line 692.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/element-class-node-eps-converted-to.pdf, id=87, 1027.84pt x 200.75pt>
@@ -461,16 +511,16 @@ File: images/element-class-node-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/element-class-node-eps-converted-to.pdf>
 Package pdftex.def Info: images/element-class-node-eps-converted-to.pdf used on
- input line 682.
+ input line 692.
 (pdftex.def)             Requested size: 221.76123pt x 43.3105pt.
 
-Overfull \hbox (5.52234pt too wide) in paragraph at lines 721--725
+Overfull \hbox (5.52234pt too wide) in paragraph at lines 731--735
 []\T1/aer/m/n/9 User's needs for new in-door el-e-ments, dif-fer-ent sen-sor eq
 uip-
  []
 
 
-Overfull \hbox (3.57864pt too wide) in paragraph at lines 740--745
+Overfull \hbox (3.57864pt too wide) in paragraph at lines 750--755
 []\T1/aer/m/n/9 Being sup-ported by the web as bear-ing plat-form, the frame-
  []
 
@@ -478,7 +528,7 @@ Overfull \hbox (3.57864pt too wide) in paragraph at lines 740--745
 File: images/web-framework.png Graphic file (type png)
 
 <use images/web-framework.png>
-Package pdftex.def Info: images/web-framework.png used on input line 756.
+Package pdftex.def Info: images/web-framework.png used on input line 766.
 (pdftex.def)             Requested size: 504.0pt x 316.85713pt.
  [6 <./images/element-class-node-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/architecture.eps>
@@ -489,7 +539,7 @@ Package epstopdf Info: Source file: <images/architecture.eps>
 (epstopdf)                    size: 167052 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/architecture-eps-co
 nverted-to.pdf images/architecture.eps>
-(epstopdf)             \includegraphics on input line 855.
+(epstopdf)             \includegraphics on input line 832.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/architecture-eps-converted-to.pdf, id=97, 833.1125pt x 230.8625pt>
@@ -497,20 +547,20 @@ File: images/architecture-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/architecture-eps-converted-to.pdf>
 Package pdftex.def Info: images/architecture-eps-converted-to.pdf used on input
- line 855.
+ line 832.
 (pdftex.def)             Requested size: 504.0pt x 139.66342pt.
 
-Overfull \hbox (1.29799pt too wide) in paragraph at lines 878--888
+Overfull \hbox (1.29799pt too wide) in paragraph at lines 855--865
 \T1/aer/m/n/9 NI-CAZIONE A LIV-ELLO API DEL BROWSER CON SEN-
  []
 
 
-Overfull \hbox (3.72096pt too wide) in paragraph at lines 878--888
+Overfull \hbox (3.72096pt too wide) in paragraph at lines 855--865
 \T1/aer/m/n/9 SORIS-TICA PER LA RIL-E-VAZIONE DELLA PO-SIZIONE. 
  []
 
 
-Overfull \hbox (3.40073pt too wide) in paragraph at lines 889--893
+Overfull \hbox (3.40073pt too wide) in paragraph at lines 866--870
 []\T1/aer/m/n/9 Every time the \T1/aett/m/n/9 sensor adapter \T1/aer/m/n/9 ob-s
 erve a per-cep-ti-ble mod-
  []
@@ -527,7 +577,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  4029 strings out of 495028
  58517 string characters out of 6181497
- 120356 words of memory out of 5000000
+ 121356 words of memory out of 5000000
  7133 multiletter control sequences out of 15000+600000
  55063 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -546,7 +596,7 @@ xlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on doceng2015.pdf (9 pages, 5560466 bytes).
+Output written on doceng2015.pdf (9 pages, 5555560 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream

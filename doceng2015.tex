@@ -60,38 +60,38 @@ Marco Virgadamo\\
        \affaddr{Dipartimento di Ingegneria}\\
        \affaddr{Universit\`a Roma Tre}\\
        \affaddr{Rome, Italy}\\
-       \email{dvr@dia.uniroma3.it}
+       \email{mar.virgadamo@stud.uniroma3.it}\\
 \alignauthor
 Marco Sportillo\\
        \affaddr{Dipartimento di Ingegneria}\\
        \affaddr{Universit\`a Roma Tre}\\
        \affaddr{Rome, Italy}\\
-       \email{dvr@dia.uniroma3.it}
+       \email{mar.sportillo@stud.uniroma3.it}\\
 \alignauthor 
 Federico Spini\\
        \affaddr{Dipartimento di Ingegneria}\\
        \affaddr{Universit\`a Roma Tre}\\
        \affaddr{Rome, Italy}\\
-       \email{dvr@dia.uniroma3.it}
+       \email{spini@dia.uniroma3.it}\\
 \and  % use '\and' if you need 'another row' of author names
 \alignauthor 
 Alberto Paoluzzi\\
        \affaddr{Dip. di Matematica e Fisica}\\
        \affaddr{Universit\`a Roma Tre}\\
        \affaddr{Rome, Italy}\\
-       \email{dvr@dia.uniroma3.it}
+       \email{paoluzzi@dia.uniroma3.it}\\
 \alignauthor 
 Enrico Marino\\
        \affaddr{Dipartimento di Ingegneria}\\
        \affaddr{Universit\`a Roma Tre}\\
        \affaddr{Rome, Italy}\\
-       \email{dvr@dia.uniroma3.it}
+       \email{marino@dia.uniroma3.it}
 \alignauthor 
 Antonio Bottaro\\
-       \affaddr{SOGEI S.p.a.}\\
+       \affaddr{SOGEI S.p.A.}\\
        \affaddr{Ricerca e Sviluppo}\\
        \affaddr{Rome, Italy}\\
-       \email{dvr@dia.uniroma3.it}
+       \email{abottaro@sogei.it}\\
 }
 
 \maketitle \begin{abstract} This paper introduces HIJSON, a novel indoor cartographic document format. A software framework is also presented, that relies on HIJSON documents and is entirely based on web technologies. With respect to current cartographic formats, HIJSON brings four major enhancements: (a) exposes a hierarchical structure, (b) may import external geometric models; (c) uses local metric  coordinate systems and (d) accepts semantic extensions. The HIJSON format is designed to describe any  geometry of the \emph{indoor space} of complex buildings, capturing their hierarchical structure, a complete representation of their topology, and all the objects (either smart or not) contained inside. The textual representation allows the software framework to offer a web environment in which the user is presented with either 2D or 3D models of the indoor ambient to navigate. Such virtually rebuilt environment, accessible via web browsers from any kind of device, can be regarded as the platform where several applications may coexist: IoT monitoring; realtime multi-person tracking; crossfloor user navigation, through an algorithm that automatically finds valid walkable routes, taking into account both architectural obstacles and furniture. The semantic extensions supported by the HIJSON framework architecture encapsulate the  details about communication protocols, rendering style, and exchanged and displayed information, allowing the HIJSON format to be extended with any sort of models of objects, sensors or behaviors. \end{abstract}
@@ -101,8 +101,19 @@ Antonio Bottaro\\
 %A category including the fourth, optional field follows...
 \category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
 
+% \ccsdesc[500]{Information systems~Web applications}
+% \ccsdesc[100]{Information systems~Web data description languages}
+% \ccsdesc[300]{Applied computing~Format and notation}
+% \ccsdesc[100]{Applied computing~Cartography}
+% \ccsdesc[100]{Human-centered computing~Geographic visualization}
+% \ccsdesc[100]{Computer systems organization~Client-server architectures}
+% \ccsdesc[100]{Computer systems organization~Real-time system architecture}
+% \ccsdesc[100]{Software and its engineering~Publish-subscribe / event-based architectures}
+
+% sceglierne i terms tra i seguenti: ALGORITHMS, MANAGEMENT, DESIGN, MEASUREMENT, DOCUMENTATION, PERFORMANCE, ECONOMICS, RELIABILITY, EXPERIMENTATION, SECURITY, HUMAN FACTORS,STANDARDIZATION, LANGUAGES, THEORY, LEGAL ASPECTS, VERIFICATION
 \terms{Theory}
 
+% devono essere in ordine alfabetico
 \keywords{Document format, indoor cartography, indoor navigation, IoT monitoring, multiperson-tracking}
 
 \section{Introduction}\label{introduction}
@@ -786,39 +797,6 @@ reasons, e.g. security or  logistics. The devices that equips the
 \emph{Explorers} can be used to track their position  in realtime, giving the
 \emph{Supervisors} the whole picture of the presences inside the  building in
 every moment.
-
---- da controllare cosa tenere rispetto a quanto già scritto dopo ---
-
-The system can be used for access monitoring. On 2D map will be a marker
-for each person in the building, whereas on the 3D model will be a 3D
-model of user. With an appropriate system of indoor localization, every
-person sends its position in real time. The 2D map and the 3D model is
-automatically refreshed. The user can ask for information about person,
-in function of the use of the system.
-
-The communication of the current position happens with the socket.io
-library. Every user sends an object like this:
-
-\begin{verbatim}
-currentPosition = {
-    coordinates: [x, y],
-    levelId: level-ID  
-}
-\end{verbatim}
-
-For every change of the coordinates or level, an \emph{emit} event will
-be generated, according to the socket.io library, which sends to the
-server the new current position. The server sends to the connected
-client the updated current position of the users connected. In the
-client-side, when the \emph{on} event of socket.io library is hit, there
-will be a refresh of the marker in 2D map and the 3D model in the 3D
-representation. With Observer pattern implemented in socket.io library,
-it is possibile to have a realtime multi-person tracking. This system
-permits to be indipendent from the tool that gets the position of the
-users: the only requisite is to send the position like the object
-described above.
-
---- fine controllo ---
 
 \subsubsection{Crossfloor user navigation}\label{crossfloor-user-navigation}
 
