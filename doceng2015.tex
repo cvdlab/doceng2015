@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{hyperref}
 
 \begin{document}
 %
@@ -360,8 +361,9 @@ a new HIJSON Element and a new HIJSON Class, as specified below.
 
 \section{HIJSON syntax}\label{hijson-syntax}
 
-Below there is an example of an input file ready to be processed by the HIJSON pipeline:
+In Figure~\ref{fig:HIJSON} it is shown a simplified example of an input file ready to be processed by the HIJSON pipeline.
 
+\begin{figure}[h]
 \begin{verbatim}
 {
   "config": {
@@ -384,6 +386,9 @@ Below there is an example of an input file ready to be processed by the HIJSON p
   ]
 }
 \end{verbatim}
+\caption{Example of HIJSON file.}
+\label{fig:HIJSON}
+\end{figure}
 
 The HIJSON document is composed of different parts:
 
@@ -405,8 +410,8 @@ The HIJSON document is composed of different parts:
   the main differences from a standard GeoJSON   Feature. 
 \end{itemize}
 
-Below there is an example of data collection, with the definition of an HIJSON Element:
 
+\begin{figure}[h]
 \begin{verbatim}
 {
   "id": "architecture",
@@ -437,6 +442,9 @@ Below there is an example of data collection, with the definition of an HIJSON E
   ]
 }
 \end{verbatim}
+\caption{Example of data collection, with the definition of an HIJSON Element.}
+\label{fig:dataCollection}
+\end{figure}
 
 \subsection{HIJSON Element description}
 
@@ -483,7 +491,8 @@ A \texttt{description} property can provide further information about
 the element.
 
 Additional optional fields can be added without restrictions, in order 
-to enrich and extend the expressvity of the representation.
+to enrich and extend the expressvity of the representation. An example of data collection is given in Figure~\ref{fig:dataCollection}.
+
 
 \section{HIJSON Toolkit}\label{hijson-toolkit}
 
@@ -587,6 +596,41 @@ paths generation}, \emph{2D layers generation}, \emph{marshalling}.
   served to any requiring client.
 \end{enumerate}
 
+\begin{figure*}[!htbp]
+  \centering
+  \begin{subfigure}[b]{0.235\textwidth}
+    \includegraphics[width=\textwidth]{images/graph-generation/single/graph-generation-1}
+    \caption{}
+    \label{fig:graph-generation-a}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[b]{0.235\textwidth}
+    \includegraphics[width=\textwidth]{images/graph-generation/single/graph-generation-2}
+    \caption{}
+    \label{fig:graph-generation-b}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[b]{0.235\textwidth}
+    \includegraphics[width=\textwidth]{images/graph-generation/single/graph-generation-3}
+    \caption{}
+    \label{fig:graph-generation-c}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[b]{0.235\textwidth}
+    \includegraphics[width=\textwidth]{images/graph-generation/single/graph-generation-4}
+    \caption{}
+    \label{fig:graph-generation-d}
+  \end{subfigure}
+  
+  \caption{Graph paths generation: 
+    (a) detection of obstacles and computation of walkable area; 
+    (b) triangulation of walkable area; 
+    (c) identification of graph nodes area; 
+    (d) junction of nodes.
+  }
+  \label{fig:graph-generation}
+\end{figure*}
+
 \subsubsection{Algorithmics: automatic generation of valid paths}\label{algorithmics-automatic-generation-of-valid-paths}
 
 The fourth stage of the processing pipeline is responsible for the
@@ -645,40 +689,6 @@ FIGURA), is composed by 4 phases:
   linked to the nearest node in the ambience (i.e.~room).
 \end{enumerate}
 
-\begin{figure*}[!htbp]
-  \centering
-  \begin{subfigure}[b]{0.235\textwidth}
-    \includegraphics[width=\textwidth]{images/graph-generation/single/graph-generation-1}
-    \caption{}
-    \label{fig:graph-generation-a}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[b]{0.235\textwidth}
-    \includegraphics[width=\textwidth]{images/graph-generation/single/graph-generation-2}
-    \caption{}
-    \label{fig:graph-generation-b}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[b]{0.235\textwidth}
-    \includegraphics[width=\textwidth]{images/graph-generation/single/graph-generation-3}
-    \caption{}
-    \label{fig:graph-generation-c}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[b]{0.235\textwidth}
-    \includegraphics[width=\textwidth]{images/graph-generation/single/graph-generation-4}
-    \caption{}
-    \label{fig:graph-generation-d}
-  \end{subfigure}
-  
-  \caption{Graph paths generation: 
-    (a) detection of obstacles and computation of walkable area; 
-    (b) triangulation of walkable area; 
-    (c) identification of graph nodes area; 
-    (d) junction of nodes.
-  }
-  \label{fig:graph-generation}
-\end{figure*}
 
 \subsection{HIJSON Class definition}\label{hijson-class-definition}
 
@@ -734,6 +744,14 @@ alternative representation on 2D or 3D viewport are accepted by the
 definition of new HIJSON Classes that allows in this way single point
 custom extension of the Toolkit capabilities.
 
+
+\begin{figure*}[htb]
+\centering
+\includegraphics[width=\textwidth]{images/web-framework.png}
+\caption{``HIJSON Web Framework UI''}
+\label{fig:web-framework-ui}
+\end{figure*}
+
 \section{HJSON Web Framework}\label{hjson-web-framework}
 
 The HJSON Web Framework responds to the needs of an extendable,
@@ -762,19 +780,20 @@ described in the following seciton.
 
 \subsection{Applications}\label{applications}
 
-\begin{figure*}[!hb]
-\centering
-\includegraphics[width=\textwidth]{images/web-framework.png}
-\caption{``HIJSON Web Framework UI''}
-\label{fig:web-framework-ui}
-\end{figure*}
-
 The Framework has been designed focus on two different possible kind of
 users: the \emph{Explorer} and the \emph{Supervisor}. They have
 different requirements and are likely equipped with different devices:
 while the \emph{Supervisor} monitors the indoor environment through a
 desktop workstation, the \emph{Explorer} has a smartphone available and
 needs to be routed across the building.
+
+\begin{figure*}[htb]
+\centering
+\epsfig{file=images/architecture.eps, width=\textwidth}
+\caption{``HIJSON Web Toolkit architecture''}
+\label{fig:pipeline}
+\end{figure*}
+
 
 \subsubsection{IoT monitoring}\label{iot-monitoring}
 
@@ -811,6 +830,8 @@ nodes of the graph.  Thanks to the crossfloor connections of nodes
 representing stairs or elevators, the paths  calculated can also start and end
 on different stories.
 
+
+
 \subsection{Architecture}\label{architecture}
 
 Like the vast majority of the web based application, the Framework exposes an
@@ -827,13 +848,6 @@ reporting user position to the server. The server will feed any connecting
 \emph{Supervisor} client with users positions, along with data from sensor-
 equipped things present in the environment, realizing the IoT monitoring and
 the realtime multi-person tracking.
-
-\begin{figure*}[t]
-\centering
-\epsfig{file=images/architecture.eps, width=\textwidth}
-\caption{``HIJSON Web Toolkit architecture''}
-\label{fig:pipeline}
-\end{figure*}
 
 \subsubsection{Server Architecture}\label{server-architecture}
 
