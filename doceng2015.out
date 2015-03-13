@@ -1,0 +1,26 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Related work}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{The GeoJSON format}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{The IndoorJSON format}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Advances on cartographic document formats}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Hierarchical structure}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Hyperlinked geometric models}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{Metric local coordinate system}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.4}{Semantic extensions}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{HIJSON syntax}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{HIJSON Element description}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{HIJSON Toolkit}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{Processing pipeline}{section.5}% 13
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Algorithmics: automatic generation of valid paths}{subsection.5.1}% 14
+\BOOKMARK [2][-]{subsection.5.2}{HIJSON Class definition}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{HJSON Web Framework}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Applications}{section.6}% 17
+\BOOKMARK [3][-]{subsubsection.6.1.1}{IoT monitoring}{subsection.6.1}% 18
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Realtime multi-person tracking}{subsection.6.1}% 19
+\BOOKMARK [3][-]{subsubsection.6.1.3}{Crossfloor user navigation}{subsection.6.1}% 20
+\BOOKMARK [2][-]{subsection.6.2}{Architecture}{section.6}% 21
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Server Architecture}{subsection.6.2}% 22
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Explorer client architecture}{subsection.6.2}% 23
+\BOOKMARK [3][-]{subsubsection.6.2.3}{Supervisor client architecture}{subsection.6.2}% 24
+\BOOKMARK [1][-]{section.7}{Conclusions}{}% 25
+\BOOKMARK [1][-]{section.8}{References}{}% 26
