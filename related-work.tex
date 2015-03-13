@@ -1,0 +1,101 @@
+\section{Related work}\label{related-work}
+
+Researches about the cartographic representation of indoor environments are
+numerous and at the same time heterogeneos regarding to the strategies
+applied. Different sources of information are used and accuracy of the
+produced solution depends on the adopted approach. In some cases the
+information is obtained with automatic or semi-automatic processing of files
+that describe the architectural structure of a building, such as BIM (Link a
+BIM) and/or IFC (Link a IFC) \cite{6816739}. Image processing is also used to
+extract topological information from floor plan images \cite{6878152}. In
+other works, building informations and descriptive parameters are redefined
+from scratch \cite{6418876}. This choice is driven by the unsuitableness of
+the current representive formats: images contain poor information and CAD
+files are not designed for this kind of use. A recurring topic among the use
+of carthograhic information is indoor navigation
+\cite{6878152,6418876,6816739}. The proposed approaches are very different in
+this case too, and based on several strategies with some basic elements in
+common. An often adopted solution is based on the representation of the
+routing information as a graph, having a node for each room and an edge for
+each couple of connected rooms. In some cases the edges are weighted in
+function of euclidean distance. The detail level of the graph and hence the
+effective practicalbility of the calculated paths, can vary depending on the
+technique and the design choices applied, but in general most of the proposed
+solutions retrieve information only from architectual structure. A topic
+related to the navigation is the location of users. All the considered works
+agree on the inadequacy of GNSS in indoors contexts, due to the segnificant
+reduction in signal quality. To locate the exact position of a user inside a
+building, the currently most used techniques are based on fingerprinting and
+triangulation of radio signals (WiFi, Bluetooth, etc.) flanked by more
+original solutions based on, for example, image recognition \cite{6815564}.
+User tracking issue is faced with solutions that range from the clever
+utilization of inertial tracking sensors embedded in many smartphones
+\cite{6815564} to the adoption of ad hoc devices \cite{6878152}.
+
+The actual ``de-facto'' standard in terms of geospatial data representation is
+the GeoJSON format, which can be easily used for any type of geographical
+annotation. In some cases it has been slightly adapted to be used in indoor
+environments (IndoorJSON).
+
+\subsection{The GeoJSON format}\label{the-geojson-format}
+
+GeoJSON is a geospatial data interchange format based on JSON, suitable for a
+geometrical encoding of various geographic data structures. As opposed to GIS
+format, GeoJSON is an open standard. Positions need to be expressed in
+geographical coordinates (usually WGS84).
+
+GeoJSON supports the following geometry primitives: \texttt{Point},
+\texttt{LineString}, \texttt{Polygon}, \texttt{MultiPoint},
+\texttt{MultiLineString}, and \texttt{MultiPolygon}. Lists of geometries are
+represented by a \texttt{GeometryCollection}. Geometries with additional
+properties are \texttt{Feature} objects. Lists of \texttt{Feature} are
+represented by a \texttt{FeatureCollection}.
+
+A single \texttt{Feature} is composed essentially by two mandatory fields:
+\texttt{geometry}, which describes the objects' geometry accordingly to the
+previously defined primitives, and \texttt{properties} which contains
+additional information about the \texttt{Feature}.
+
+It is possible to define complex shapes through the composition of simple
+GeoJSON objects. Mainly due to its semplicity, GeoJSON is widely used and
+deeply integrated in several applications and services.
+
+\subsection{The IndoorJSON format}\label{experiences-on-indoor-json}
+
+IndoorJSON is a GeoJSON variant defined and used by \emph{indoor.io}, a
+Finnish company devoted to indoor environment mapping. IndoorJSON is compliant
+with GeoJSON syntax, and it may consist of any number of \texttt{Features}
+and/or \texttt{FeatureCollections}. All \texttt{Features} are interpreted
+similarly regardless of their grouping into nested
+\texttt{FeatureCollections}. IndoorJSON supports all GeoJSON geometry types.
+
+Some particular properties are used to correctly define indoor elements:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+ \texttt{level}: described which level contains the feature;
+\item
+ \texttt{geomType}: identifies the object's
+ category, useful during the visualization
+ process.
+\end{itemize}
+
+There are some additional not mandatories properties useful for
+the indoor representation:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+ \texttt{accessible}: describes if an element is walkable or not;
+\item
+ \texttt{connector}: defines if the element is a connection between two
+ levels;
+\item
+ \texttt{direction}: describes the direction of the connection (both
+ ways, only up, only down);
+\end{itemize}
+
+A syntax validator is provided by \emph{indoor.io}, but the commercial nature
+of this project limits the number of tools available to deal with this
+format.
