@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  13 MAR 2015 15:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  18 MAR 2015 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -188,6 +188,14 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks36
+\inpenc@posthook=\toks37
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/applemac.def
+File: applemac.def 2008/03/30 v1.1d Input encoding file
+))
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
@@ -346,20 +354,20 @@ LaTeX Warning: Label `fig:pipeline' multiply defined.
 )
 \openout1 = `doceng2015.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count121
@@ -367,12 +375,12 @@ LaTeX Font Info:    ... okay on input line 8.
 \scratchbox=\box30
 \nofMPsegments=\count122
 \nofMParguments=\count123
-\everyMPshowfont=\toks36
+\everyMPshowfont=\toks38
 \MPscratchCnt=\count124
 \MPscratchDim=\dimen135
 \MPnumerator=\count125
 \makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks37
+\everyMPtoPDFconversion=\toks39
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -397,7 +405,7 @@ Package caption Info: End \AtBeginDocument code.
 Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-Package hyperref Info: Link coloring OFF on input line 8.
+Package hyperref Info: Link coloring OFF on input line 11.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -406,53 +414,38 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 8.
-LaTeX Info: Redefining \pageref on input line 8.
-LaTeX Info: Redefining \nameref on input line 8.
+LaTeX Info: Redefining \ref on input line 11.
+LaTeX Info: Redefining \pageref on input line 11.
+LaTeX Info: Redefining \nameref on input line 11.
 
 (./doceng2015.out) (./doceng2015.out)
 \@outlinefile=\write3
 \openout3 = `doceng2015.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 99.
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 99.
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 99.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 102.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) (./abstract.tex)
-Overfull \hbox (1.26794pt too wide) in paragraph at lines 105--106
+Overfull \hbox (1.26794pt too wide) in paragraph at lines 108--109
 \T1/aer/m/n/9 H.4 [\T1/aer/bx/n/9 Information Sys-tems Ap-pli-ca-tions\T1/aer/m
 /n/9 ]: Mis-cel-la-neous;
  []
 
 (./introduction.tex
-Overfull \hbox (15.65596pt too wide) in paragraph at lines 4--22
-\T1/aer/m/n/9 GNSS (Global Nav-i-ga-tion Satel-lite sys-tem), WI­FI, LTE(Long
- []
-
-
-Overfull \hbox (4.56161pt too wide) in paragraph at lines 4--22
-\T1/aer/m/n/9 charge of car-ry-ing out the‘tick-et­-main-te-nance’reach-
- []
-
-
-Overfull \hbox (9.42212pt too wide) in paragraph at lines 4--22
-\T1/aer/m/n/9 call them the ‘-main-te-nance man’. The-re-al­-timeaware-
- []
-
-
-Overfull \hbox (10.13747pt too wide) in paragraph at lines 4--22
-\T1/aer/m/n/9 ser-vices, that is, im-me-di-ately af-ter hav-ing-per-formed anou
-tright
+Overfull \hbox (2.68037pt too wide) in paragraph at lines 80--81
+[]\T1/aer/m/n/9 Both promis-ing and al-ready well ex-plored re-search-ing filed
+s
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
@@ -473,74 +466,76 @@ Overfull \hbox (12.43544pt too wide) in paragraph at lines 47--53
 /aett/m/n/9 Point\T1/aer/m/n/9 ,
  []
 
-) (./advances.texpdfTeX warning (ext4): destination with the same identifier (n
-ame{page.}) has been already used, duplicate ignored
+)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.16 
-      [2]
+l.128 
+       [2] (./advances.tex
 Overfull \hbox (1.42838pt too wide) in paragraph at lines 46--48
 []\T1/aer/m/n/9 Since LAR pro-vides a com-plete rep-re-sen-ta-tion of the topol
 -
  []
 
-<images/minimum-data.pdf, id=151, 1069.63641pt x 218.26564pt>
+<images/minimum-data.pdf, id=157, 1069.63641pt x 218.26564pt>
 File: images/minimum-data.pdf Graphic file (type pdf)
 
 <use images/minimum-data.pdf>
 Package pdftex.def Info: images/minimum-data.pdf used on input line 63.
 (pdftex.def)             Requested size: 240.0pt x 48.97108pt.
 
-<images/minimum-colors-a.pdf, id=152, 492.56363pt x 357.76216pt>
+<images/minimum-colors-a.pdf, id=158, 492.56363pt x 357.76216pt>
 File: images/minimum-colors-a.pdf Graphic file (type pdf)
 
 <use images/minimum-colors-a.pdf>
 Package pdftex.def Info: images/minimum-colors-a.pdf used on input line 67.
 (pdftex.def)             Requested size: 115.19897pt x 83.67015pt.
 
-<images/minimum-colors-b.pdf, id=153, 502.30229pt x 359.81236pt>
+<images/minimum-colors-b.pdf, id=159, 502.30229pt x 359.81236pt>
 File: images/minimum-colors-b.pdf Graphic file (type pdf)
 
 <use images/minimum-colors-b.pdf>
 Package pdftex.def Info: images/minimum-colors-b.pdf used on input line 73.
 (pdftex.def)             Requested size: 115.19897pt x 82.51901pt.
 
-<images/boundary.pdf, id=154, 464.93701pt x 338.94629pt>
+<images/boundary.pdf, id=160, 464.93701pt x 338.94629pt>
 File: images/boundary.pdf Graphic file (type pdf)
 
 <use images/boundary.pdf>
 Package pdftex.def Info: images/boundary.pdf used on input line 80.
 (pdftex.def)             Requested size: 144.00146pt x 104.97917pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<images/sogei-a.pdf, id=156, 708.24059pt x 670.38193pt>
+<images/sogei-a.pdf, id=162, 708.24059pt x 670.38193pt>
 File: images/sogei-a.pdf Graphic file (type pdf)
 
 <use images/sogei-a.pdf>
 Package pdftex.def Info: images/sogei-a.pdf used on input line 102.
 (pdftex.def)             Requested size: 115.19897pt x 109.03294pt.
 
-<images/sogei-b.pdf, id=157, 690.41667pt x 657.36282pt>
+<images/sogei-b.pdf, id=163, 690.41667pt x 657.36282pt>
 File: images/sogei-b.pdf Graphic file (type pdf)
 
 <use images/sogei-b.pdf>
 Package pdftex.def Info: images/sogei-b.pdf used on input line 108.
 (pdftex.def)             Requested size: 115.19897pt x 109.6839pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.128 
+l.137 
        [3 <./images/minimum-data.pdf> <./images/minimum-colors-a.pdf> <./images
-/minimum-colors-b.pdf> <./images/boundary.pdf> <./images/sogei-a.pdf> <./images
-/sogei-b.pdf>]) (./syntax.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{page.}) has been already used, duplicate ignored
+/minimum-colors-b.pdf> <./images/boundary.pdf>]) (./syntax.texpdfTeX warning (e
+xt4): destination with the same identifier (name{page.}) has been already used,
+ duplicate ignored
 <to be read again> 
                    \relax 
-l.123 
-       [4]) (./toolkit.tex
+l.104  \texttt
+              {class}: represent the element category, used to instantiate
+[4 <./images/sogei-a.pdf> <./images/sogei-b.pdf>]) (./toolkit.tex
 Package epstopdf Info: Source file: <images/pipeline.eps>
 (epstopdf)                    date: 2015-02-27 14:57:41
 (epstopdf)                    size: 922226 bytes
@@ -552,7 +547,7 @@ ted-to.pdf images/pipeline.eps>
 (epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/pipeline-eps-converted-to.pdf, id=240, 1027.84pt x 1027.84pt>
+<images/pipeline-eps-converted-to.pdf, id=246, 1027.84pt x 1027.84pt>
 File: images/pipeline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/pipeline-eps-converted-to.pdf>
@@ -569,10 +564,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.97  \textit
-             {\texttt{marshalling}} - The last stage is responsible of execute
-[5 <./images/pipeline-eps-converted-to.pdf>]
-<images/graph-generation/single/graph-generation-1.png, id=257, 513.92pt x 385.
+l.88  \textit
+             {\texttt{2D layers generation}} - The fifth stage is the [5 <./ima
+ges/pipeline-eps-converted-to.pdf>]
+<images/graph-generation/single/graph-generation-1.png, id=262, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-1.png Graphic file (type 
 png)
@@ -581,7 +576,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-1.png
 used on input line 165.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-2.png, id=259, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-2.png, id=264, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-2.png Graphic file (type 
 png)
@@ -590,7 +585,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-2.png
 used on input line 171.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-3.png, id=260, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-3.png, id=265, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-3.png Graphic file (type 
 png)
@@ -599,7 +594,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-3.png
 used on input line 177.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-4.png, id=261, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-4.png, id=266, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-4.png Graphic file (type 
 png)
@@ -619,7 +614,7 @@ eps-converted-to.pdf images/element-class-node.eps>
 (epstopdf)             \includegraphics on input line 207.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/element-class-node-eps-converted-to.pdf, id=262, 1027.84pt x 200.75pt>
+<images/element-class-node-eps-converted-to.pdf, id=267, 1027.84pt x 200.75pt>
 File: images/element-class-node-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/element-class-node-eps-converted-to.pdf>
@@ -632,23 +627,22 @@ Overfull \hbox (5.52234pt too wide) in paragraph at lines 246--250
 uip-
  []
 
-<images/web-framework.png, id=263, 1692.3225pt x 1063.975pt>
+<images/web-framework.png, id=268, 1692.3225pt x 1063.975pt>
 File: images/web-framework.png Graphic file (type png)
 
 <use images/web-framework.png>
 Package pdftex.def Info: images/web-framework.png used on input line 254.
 (pdftex.def)             Requested size: 504.0pt x 316.85713pt.
-) (./web-framework.tex
+) (./web-framework.texpdfTeX warning (ext4): destination with the same identifi
+er (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 
+      [6 <./images/element-class-node-eps-converted-to.pdf>]
 Overfull \hbox (3.57864pt too wide) in paragraph at lines 15--20
 []\T1/aer/m/n/9 Being sup-ported by the web as bear-ing plat-form, the frame-
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.20 
-      [6 <./images/element-class-node-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/architecture.eps>
 (epstopdf)                    date: 2015-03-03 09:48:43
 (epstopdf)                    size: 804097 bytes
@@ -659,15 +653,22 @@ Package epstopdf Info: Source file: <images/architecture.eps>
 nverted-to.pdf images/architecture.eps>
 (epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
-
-<images/architecture-eps-converted-to.pdf, id=282, 833.1125pt x 230.8625pt>
+<images/architecture-eps-converted-to.pdf, id=288, 833.1125pt x 230.8625pt>
 File: images/architecture-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/architecture-eps-converted-to.pdf>
 Package pdftex.def Info: images/architecture-eps-converted-to.pdf used on input
  line 38.
 (pdftex.def)             Requested size: 504.0pt x 139.66342pt.
-
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.113 
+       [7 <./images/graph-generation/single/graph-generation-1.png> <./images/g
+raph-generation/single/graph-generation-2.png> <./images/graph-generation/singl
+e/graph-generation-3.png> <./images/graph-generation/single/graph-generation-4.
+png>]
 Overfull \hbox (1.29799pt too wide) in paragraph at lines 116--126
 \T1/aer/m/n/9 NI-CAZIONE A LIV-ELLO API DEL BROWSER CON SEN-
  []
@@ -677,55 +678,50 @@ Overfull \hbox (3.72096pt too wide) in paragraph at lines 116--126
 \T1/aer/m/n/9 SORIS-TICA PER LA RIL-E-VAZIONE DELLA PO-SIZIONE. 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.126 
-       [7 <./images/graph-generation/single/graph-generation-1.png> <./images/g
-raph-generation/single/graph-generation-2.png> <./images/graph-generation/singl
-e/graph-generation-3.png> <./images/graph-generation/single/graph-generation-4.
-png>]
+
 Overfull \hbox (3.40073pt too wide) in paragraph at lines 127--131
 []\T1/aer/m/n/9 Every time the \T1/aett/m/n/9 sensor adapter \T1/aer/m/n/9 ob-s
 erve a per-cep-ti-ble mod-
  []
 
-) (./conclusions.texpdfTeX warning (ext4): destination with the same identifier
- (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5 T
-     he HIJSON format focuses on a hierarchical representation of the indoor...
-[8 <./images/web-framework.png>]) (./doceng2015.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
+)
+Underfull \vbox (badness 3657) has occurred while \output is active []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.150 \end{document}
+l.136 
+       [8 <./images/web-framework.png>] (./usecase.tex) (./conclusions.tex)
+(./doceng2015.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.155 \end{document}
                      [9 <./images/architecture-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
 
 (./doceng2015.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 150.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `doceng2015.out' has not changed.
-(rerunfilecheck)             Checksum: BB9CF5DB6482C0B76263556BF2E0CA50;1807.
+(rerunfilecheck)             Checksum: C2932166F1E8303A73D32AD280FE9C3B;1851.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 7621 strings out of 495028
- 113344 string characters out of 6181497
- 201323 words of memory out of 5000000
- 10611 multiletter control sequences out of 15000+600000
+ 7658 strings out of 495028
+ 114000 string characters out of 6181497
+ 202615 words of memory out of 5000000
+ 10637 multiletter control sequences out of 15000+600000
  57953 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,10n,38p,966b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,38p,946b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist
@@ -740,10 +736,10 @@ xlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on doceng2015.pdf (9 pages, 8082815 bytes).
+Output written on doceng2015.pdf (9 pages, 8085106 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 279 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 304 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 

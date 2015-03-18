@@ -1,91 +1,96 @@
 \section{Introduction}\label{introduction}
 
 
-Among the many activities of R\&D Sogei, we are now analyzing the
-computingofposition data during the transition between outdoor and
-indoorscenarios. In orderto achieve our purpose we are experimenting
-severaltechnologies, such asGNSS (Global Navigation Satellite system), WI­FI,
-LTE(Long Term Evolution),SDR(Software Defined Radio). 
+% VASTI AMBIENTI 
+
+
+
+% MOLTI SENSORI E SISTEMI DI RILEVAZIONE DELLA POSIZIONE DIFFERENTI
+
+% CONTINUOUS OUTDOOR-INDOOR NAVIGATION
+
+
+% MONITORAGGIO DI SCENARI UNIFICATI DI INTERVENTO UOMO-MACCHINA
+
+
+% PERSONALE TECNICO DEVE ESSERE GUIDATO 
+
+
+
+% IL PASSAGGIO DA SERVER A IOT È IMMEDIATO
+
+
+% MONITORAGGIO UNIFICATO DEGLI SMART OBJECTS IOT
+
+
+% un ambiente indoor virtuale è l'ambiente perfetto per andare a monitorare l'IoT.
+
+
+% In this paper we describe the design and the development of the new module VisProSL (Visual Programming Service Link) of the visual programming platform 
+
+
+% In particolare il presente lavoro
+
+% jointly developed by {\bf SoGeI} ({\bf So}cietà {\bf Ge}nerale d’{\bf I}nformatica), fully owned by the Ministry of Economy and Finance, and the {\bf CVDLAB} (Computational Visual Design Laboratory) of the Computer Science and Automation Department of “Roma Tre” University è ispirato dalle necessità di SoGeI stessa, 
+
+
+% AGGIUNGERE LE POSIZIONI DI BOTTARE RIVISITATE
+
+
+
+% SERVER REAL MACHINE (that can be assimialted to smart objects in the IoT context, since )
 
 
 
 
 
 
-We are now trying to
-verify the possibility to perform a realtime control over the maintenance
-workflow in a complex Data Center. 
+% DESCRIZIONE DELLE PROBLEMATICHE 
 
-
-Inparticular, wehave to support the process of those in charge of carrying out the ticket­maintenance reaching, as quick as possible and without error, the right sub­system
-(inside the rightrack among thousands). We will call them the ‘maintenance man’. The real­time awareness of the relative positions between the ‘maintenance man' andthe rack ­ containing
-the sub­system ­ will help us reducing intervention times and increasing safety.
-If you knew when the maintenance process starts, you couldautomatically
-move,in real time, services, that is virtual machines, to other systems,thus
-maintainingcontinuity of services and, in the same time, reducing the
-globalrisk factor. Whenmaintenance is over, and the technician moves away, you
-couldinstantly restore thepre­existing conditions of services, that is,
-immediately after havingperformed anoutright test.
-
-
-
-VASTI AMBIENTI 
-
-
-
-MOLTI SENSORI E SISTEMI DI RILEVAZIONE DELLA POSIZIONE DIFFERENTI
-
-CONTINUOUS OUTDOOR-INDOOR NAVIGATION
-
-
-MONITORAGGIO DI SCENARI UNIFICATI DI INTERVENTO UOMO MACCHINA
-
-
-PERSONALE TECNICO DEVE ESSERE GUIDATO 
-
-
-
-IL PASSAGGIO DA SERVER A IOT È IMMEDIATO
-
-
-MONITORAGGIO UNIFICATO DEGLI SMART OBJECTS IOT
+% TALI PROBLEMATICHE SONO TIPICHE DI SCENARI IN CUI SIA NECESSARIO IL CONTROLLO DEGLI ACCESSI
+% LA SUPERVISIONE, ...
 
 
 
 
 
 
-SERVER REAL MACHINE (that can be assimialted to smart objects in the IoT context, since )
+% IN QUESTO SCENARIO SI PONE IL LAVORO DESCRITTO IN QUESTO PAPER, 
+% IN CUI LE NECESSIT`A DESCRITTE VENGONO AFFRONTATE PARTENDO DALLE BASI,
+% OVVERO DEFINENDO UN FORMATO DI DOCUMENTO PER LA DESCRIZIONE ASTRATTA DI AMBIENTI INDOOR.
+% DESCRITTO L'AMBIENTE DEVE QUINDI ESSERE POSSIBILE RICOSTRUIRE VIRTUALMENTE L'AMBIENTE
+% RENDERLO LARGAMENTE ACCESSIBILE VIA WEB, E MONTARE SU QUESTA RAPPRESENTAZIONE VIRTUALE 
+% LA POSSIBILIT`A DI INTERAGIRE CON GLI OGGETTI ALL'INTERNO DELL'AMBIENTE. L'INTERAZIONE DEVE CONSISTERE DA UN LATO NALLA POSSIBILIT`A DI RICEVERE INFORMAZIONI DALL'OGGETTO, MA ANCHE DI INVIARE COMANDI ALL'OGGETTP.
+
+% SI REALIZZA IN QUESTO MODO UNO SCENARIO IN CUI UN SUPERVISORE INTERAGISCE CON L'AMBIENTE IN CUI SI MUOVE UN EXPLORER (O MANUTENTORE) POTENDO IL SUPERVISORE AVERE IMMEDIATA NOTIFICA DELLA POSIZIONE DEL MANUTENTORE, E AVENDO UN QUADRO COMPLETO FORNITO DAGLI OGGETTI SMART PRESENTI NELL'AMBIENTE REALE ASSIEME ALL'EXPLORER.
+
+% D'ALTRA PARTE PER GRANDI SPAZI ANCHE L'EXPLORER PUO ESSERE SUPPORTATO DAL SISTEMA CHE AVENDO COMPLETA CONOSCENZA DELLA TOPOLOGIA E DELLA GEOMETRIA DELL'AMBIENTE, NONCHE DEGLI OGGETTI IN ESSO CONTENUTI, POSSIEDE TUTTE LE INFORMAZIONI NECESSARIE PER GUIDARE L'EXPLORER ATTRAVERSO L'AMBIENTE.
+
+% NULLA IMPEDISCE DI MIXARE LE NECESSITÀ DI EXPLORER E SUPERVISOR, REALIZZANDO UN EXPLORER CHE NAVIGA NELL'AMBIENTE REALE ED IN ESSO RICEVE INFORMAZIONE E A CONTEMPO PUÒ INVIARE COMANDI AGLI SMART OBJECT INTORNO A SE.
 
 
 
+% -----------------------------------------------------------------------------
 
+An indoor environment interactive mapping consists of a virtual reconstruction of a real indoor space in which the user can move around and then interact with the objects which are found the same position they actually occupy in the real world.
+So an indoor interactive mapping, can be thought of a specialized and very evoluted user interface capable of giving a glimpse of a section of the real world that the user can handle in a natural and intuitive way. 
 
+Such a reconstructed virtual indoor environment is very interesting as it can be considered a general platform where many different applications can rely upon.
 
-DESCRIZIONE DELLE PROBLEMATICHE 
+Both promising and already well explored researching fileds find in virtual indoor mapping the perfect context to be integrated into.
 
-TALI PROBLEMATICHE SONO TIPICHE DI SCENARI IN CUI SIA NECESSARIO IL CONTROLLO DEGLI ACCESSI
-LA SUPERVISIONE, ...
+In particular, for ambineces which massive presence of sensor-equipped (or ``smart'') objects, which realize the so-called IoT, the indoor interactive mapping represents an ideal integrated interface for IoT monitoring system.
 
+It can be the container of indoor navigation systems, giving to the user that need to be routed across an indoor environment the possibility to interact with objects along the suggested paths.
 
+Futhermore, in conjunction with the advancements in the fields of user indoor location, it represents the most natural interface to perform realtime access monitoring and multiperson tracking.
 
+To enable such a interactive mapping platform, it is indispensable a descriptive representation of the indoor environment. This means entering in the field of indoor cartography, which as digital evolution of plain floor plans, is arrived to arouse the interest of big players like Google that has integrated into Google Maps indoor plans of specific locations of interest \cite{indoormaps}. In general, can be considered ``of interest'' (such to justify and motivate indoor cartographic applications) public or commercial places of vast dimensions, as for example airports, train stations, shopping mall, or alterantively private buildings subject to strict access control, like warehouse, logistics centers, datacenter. 
 
+Despite of the growing attention around indoor cartography, efforts to bring out definitions of open formats for indoor representation are few and partial, certainly not inteded to support interactive indoor mapping which is instead the main porpuse this paper. 
 
+The work, jointly developed by {\bf SoGeI} ({\bf So}ciet\`a {\bf Ge}nerale d'{\bf I}nformatica), a company fully owned by Italian  Ministry of Economy and Finance, and the {\bf CVDLAB} (Computational Visual Design Laboratory) of the Computer Science and Automation Department of ``Roma Tre'' University, is inspired by the necessities of SoGeI itself, which runs one of the largest data center of Italy, then requiring strict access control policies which have to be composed with indispensable human/machine coordinate maintenance scenarios. Support for these scenarios, where real time awarness of the maintainer position inside the data center helps to both reduce intervention and increase safety, has been adopted as the first use case of the interactive indoor mapping based on the indoor cartographical format proposed.
 
-IN QUESTO SCENARIO SI PONE IL LAVORO DESCRITTO IN QUESTO PAPER, 
-IN CUI LE NECESSIT`A DESCRITTE VENGONO AFFRONTATE PARTENDO DALLE BASI,
-OVVERO DEFINENDO UN FORMATO DI DOCUMENTO PER LA DESCRIZIONE ASTRATTA DI AMBIENTI INDOOR.
-DESCRITTO L'AMBIENTE DEVE QUINDI ESSERE POSSIBILE RICOSTRUIRE VIRTUALMENTE L'AMBIENTE
-RENDERLO LARGAMENTE ACCESSIBILE VIA WEB, E MONTARE SU QUESTA RAPPRESENTAZIONE VIRTUALE 
-LA POSSIBILIT`A DI INTERAGIRE CON GLI OGGETTI ALL'INTERNO DELL'AMBIENTE. L'INTERAZIONE DEVE CONSISTERE DA UN LATO NALLA POSSIBILIT`A DI RICEVERE INFORMAZIONI DALL'OGGETTO, MA ANCHE DI INVIARE COMANDI ALL'OGGETTP.
-
-SI REALIZZA IN QUESTO MODO UNO SCENARIO IN CUI UN SUPERVISORE INTERAGISCE CON L'AMBIENTE IN CUI SI MUOVE UN EXPLORER (O MANUTENTORE) POTENDO IL SUPERVISORE AVERE IMMEDIATA NOTIFICA DELLA POSIZIONE DEL MANUTENTORE, E AVENDO UN QUADRO COMPLETO FORNITO DAGLI OGGETTI SMART PRESENTI NELL'AMBIENTE REALE ASSIEME ALL'EXPLORER.
-
-D'ALTRA PARTE PER GRANDI SPAZI ANCHE L'EXPLORER PUO ESSERE SUPPORTATO DAL SISTEMA CHE AVENDO COMPLETA CONOSCENZA DELLA TOPOLOGIA E DELLA GEOMETRIA DELL'AMBIENTE, NONCHE DEGLI OGGETTI IN ESSO CONTENUTI, POSSIEDE TUTTE LE INFORMAZIONI NECESSARIE PER GUIDARE L'EXPLORER ATTRAVERSO L'AMBIENTE.
-
-NULLA IMPEDISCE DI MIXARE LE NECESSITÀ DI EXPLORER E SUPERVISOR, REALIZZANDO UN EXPLORER CHE NAVIGA NELL'AMBIENTE REALE ED IN ESSO RICEVE INFORMAZIONE E A CONTEMPO PUÒ INVIARE COMANDI AGLI SMART OBJECT INTORNO A SE.
-
-\ldots{}
 
 The remainder of this document is organized as follows. In Section II is
 provided an overview of the state of the art in the field of indoor document
