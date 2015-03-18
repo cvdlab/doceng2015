@@ -47,43 +47,43 @@ Since LAR provides a complete representation of the topology of the represented 
 the matrix $[\partial_d]$ of the boundary operator shall be used to compute the coordinate representation $[c]$ of the \emph{boundary} chain of \emph{any subset} $c$ of cells, though \emph{a single} operation of SpMV multiplication \cite{gemmexp} between the \texttt{CSR} (Compressed Sparse Row) representation of $[\partial]$ and the \texttt{CSC} (Compressed Sparse Column) representation of the $[c]$ chain, resulting in very efficient computations on modern hardware, even mobile.
 
 
-% \begin{figure*}[htbp] % figure placement: here, top, bottom, or page
-%  \centering
-%  \includegraphics[width=0.5\linewidth]{images/minimum} 
-%  \hfill
-%  \includegraphics[width=0.4\linewidth]{images/boundary} 
-%  \caption{A toy example of the LAR scheme: (a) the bare minimum of data with \emph{complete} information about topology; (b) the extracted boundary; (c) the extraction method $[e] = [\partial][f]$ giving the coordinate representation (in the discrete basis of the 1-cells) ofthe boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial]$ times the coordinate representation $[f]$ of the 2-cells (faces), in the discrete basis of the 2-cells.}
-%  \label{fig:minimum}
-% \end{figure*}
-
-
-\begin{figure}[!h]
+\begin{figure*}[htbp] % figure placement: here, top, bottom, or page
  \centering
- \begin{subfigure}[b]{\linewidth}
- \includegraphics[width=\textwidth]{images/minimum-data}
- \end{subfigure}
-\\
- \begin{subfigure}[b]{0.48\linewidth}
- \includegraphics[width=\textwidth]{images/minimum-colors-a}
- \caption{}
- \vspace*{4mm}
- \end{subfigure}
- ~
- \begin{subfigure}[b]{0.48\linewidth}
- \includegraphics[width=\textwidth]{images/minimum-colors-b}
- \caption{}
- \vspace*{4mm}
- \end{subfigure}
-\\
- \begin{subfigure}[b]{0.6\linewidth}
- \centering
- \includegraphics[width=\textwidth]{images/boundary}
- \caption{}
- \end{subfigure}
- 
+ \includegraphics[width=0.5\linewidth]{images/minimum} 
+ \hfill
+ \includegraphics[width=0.4\linewidth]{images/boundary} 
  \caption{A toy example of the LAR scheme: (a) the bare minimum of data with \emph{complete} information about topology; (b) the extracted boundary; (c) the extraction method $[e] = [\partial][f]$ giving the coordinate representation (in the discrete basis of the 1-cells) ofthe boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial]$ times the coordinate representation $[f]$ of the 2-cells (faces), in the discrete basis of the 2-cells.}
- \label{fig:minimum-data}
-\end{figure}
+ \label{fig:minimum}
+\end{figure*}
+
+
+% \begin{figure}[!h]
+%  \centering
+%  \begin{subfigure}[b]{\linewidth}
+%  \includegraphics[width=\textwidth]{images/minimum-data}
+%  \end{subfigure}
+% \\
+%  \begin{subfigure}[b]{0.48\linewidth}
+%  \includegraphics[width=\textwidth]{images/minimum-colors-a}
+%  \caption{}
+%  \vspace*{4mm}
+%  \end{subfigure}
+%  ~
+%  \begin{subfigure}[b]{0.48\linewidth}
+%  \includegraphics[width=\textwidth]{images/minimum-colors-b}
+%  \caption{}
+%  \vspace*{4mm}
+%  \end{subfigure}
+% \\
+%  \begin{subfigure}[b]{0.6\linewidth}
+%  \centering
+%  \includegraphics[width=\textwidth]{images/boundary}
+%  \caption{}
+%  \end{subfigure}
+ 
+%  \caption{A toy example of the LAR scheme: (a) the bare minimum of data with \emph{complete} information about topology; (b) the extracted boundary; (c) the extraction method $[e] = [\partial][f]$ giving the coordinate representation (in the discrete basis of the 1-cells) ofthe boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial]$ times the coordinate representation $[f]$ of the 2-cells (faces), in the discrete basis of the 2-cells.}
+%  \label{fig:minimum-data}
+% \end{figure}
 
 
 
