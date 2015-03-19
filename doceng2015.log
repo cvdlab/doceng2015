@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  19 MAR 2015 07:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  19 MAR 2015 08:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -631,12 +631,12 @@ Overfull \hbox (5.52234pt too wide) in paragraph at lines 246--250
 uip-
  []
 
-<images/web-framework.png, id=277, 1692.3225pt x 1063.975pt>
-File: images/web-framework.png Graphic file (type png)
+<images/web_framework_1.png, id=277, 2010.51125pt x 1145.27875pt>
+File: images/web_framework_1.png Graphic file (type png)
 
-<use images/web-framework.png>
-Package pdftex.def Info: images/web-framework.png used on input line 254.
-(pdftex.def)             Requested size: 504.0pt x 316.85713pt.
+<use images/web_framework_1.png>
+Package pdftex.def Info: images/web_framework_1.png used on input line 254.
+(pdftex.def)             Requested size: 504.0pt x 287.0879pt.
 ) (./web-framework.tex
 Overfull \hbox (3.57864pt too wide) in paragraph at lines 15--20
 []\T1/aer/m/n/9 Being sup-ported by the web as bear-ing plat-form, the frame-
@@ -688,7 +688,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.136 
-       [8 <./images/web-framework.png>] (./case-study.tex
+       [8 <./images/web_framework_1.png>] (./case-study.tex
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
@@ -710,7 +710,7 @@ po
 the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 
+l.35 
       [9 <./images/architecture-eps-converted-to.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
@@ -734,8 +734,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 8620 strings out of 493117
- 126662 string characters out of 6135432
+ 8621 strings out of 493117
+ 126685 string characters out of 6135432
  219140 words of memory out of 5000000
  11832 multiletter control sequences out of 15000+600000
  60106 words of font info for 83 fonts, out of 8000000 for 9000
@@ -757,10 +757,10 @@ t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on doceng2015.pdf (10 pages, 5578610 bytes).
+Output written on doceng2015.pdf (10 pages, 5654514 bytes).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 304 compressed objects within 4 object streams
+ 374 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
  70 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
