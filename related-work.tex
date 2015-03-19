@@ -2,17 +2,18 @@
 
 Researches about the cartographic representation of indoor environments are
 numerous and at the same time heterogeneos regarding to the strategies
-applied. Different sources of information are used and accuracy of the
+applied. Different information sources are used, and accuracy of the
 produced solution depends on the adopted approach. In some cases the
 information is obtained with automatic or semi-automatic processing of files
-that describe the architectural structure of a building, such as BIM (Link a
-BIM) and/or IFC (Link a IFC) \cite{6816739}. Image processing is also used to
+that describe the architectural structure of a building, such as BIM (Building Information Modeling)~\cite{Eastman:2008:BHG:1796500} and/or IFC (Industry Foundation Classes) that describe a building project \cite{6816739}. Image processing is also used to
 extract topological information from floor plan images \cite{6878152}. In
 other works, building informations and descriptive parameters are redefined
 from scratch \cite{6418876}. This choice is driven by the unsuitableness of
 the current representive formats: images contain poor information and CAD
-files are not designed for this kind of use. A recurring topic among the use
-of carthograhic information is indoor navigation
+files are not designed for this kind of use. 
+
+A recurring theme among the use
+of carthograhic information is \emph{indoor navigation}
 \cite{6878152,6418876,6816739}. The proposed approaches are very different in
 this case too, and based on several strategies with some basic elements in
 common. An often adopted solution is based on the representation of the
@@ -21,8 +22,9 @@ each couple of connected rooms. In some cases the edges are weighted in
 function of euclidean distance. The detail level of the graph and hence the
 effective practicalbility of the calculated paths, can vary depending on the
 technique and the design choices applied, but in general most of the proposed
-solutions retrieve information only from architectual structure. A topic
-related to the navigation is the location of users. All the considered works
+solutions retrieve information only from architectual structure. 
+
+A subject related to navigation is the \emph{location of users}. All the considered works
 agree on the inadequacy of GNSS in indoors contexts, due to the segnificant
 reduction in signal quality. To locate the exact position of a user inside a
 building, the currently most used techniques are based on fingerprinting and
@@ -44,8 +46,8 @@ geometrical encoding of various geographic data structures. As opposed to GIS
 format, GeoJSON is an open standard. Positions need to be expressed in
 geographical coordinates (usually WGS84).
 
-GeoJSON supports the following geometry primitives: \texttt{Point},
-\texttt{LineString}, \texttt{Polygon}, \texttt{MultiPoint},
+GeoJSON supports some geometric primitives, including: \texttt{Point},
+\texttt{Line\-String}, \texttt{Polygon}, \texttt{MultiPoint},
 \texttt{MultiLineString}, and \texttt{MultiPolygon}. Lists of geometries are
 represented by a \texttt{GeometryCollection}. Geometries with additional
 properties are \texttt{Feature} objects. Lists of \texttt{Feature} are

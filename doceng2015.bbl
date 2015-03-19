@@ -20,7 +20,7 @@ W.~Bian, Y.~Guo, and Q.~Qiu.
   pages 275--277, Nov 2014.
 
 \bibitem{6816739}
-M.~Boysen, C.~de~Haas, H.~Lu, X.~Xie, and A.~Pilvinyte.
+M.~Boysen, C.~De~Haas, H.~Lu, X.~Xie, and A.~Pilvinyte.
 \newblock Constructing indoor navigation systems from digital building
   information.
 \newblock In {\em Data Engineering (ICDE), 2014 IEEE 30th International
@@ -37,7 +37,7 @@ A.~Bulu\c{c} and J.~R. Gilbert.
 A.~DiCarlo, M.~Jirik, and A.~Paoluzzi.
 \newblock Cad models from medical images using the linear algebraic
   representation.
-\newblock In {\em CAD'15}, London, UK, June 22-25 2015.
+\newblock In {\em CAD'15}, London, {UK}, June 22-25 2015.
 \newblock Accepted for publication in Computer-Aided Design and Applications,
   Taylor \& Francis.
 
@@ -46,17 +46,17 @@ A.~Dicarlo, A.~Paoluzzi, and V.~Shapiro.
 \newblock Linear algebraic representation for topological structures.
 \newblock {\em Comput. Aided Des.}, 46:269--274, Jan. 2014.
 
+\bibitem{Eastman:2008:BHG:1796500}
+C.~Eastman, P.~Teicholz, R.~Sacks, and K.~Liston.
+\newblock {\em BIM Handbook: A Guide to Building Information Modeling for
+  Owners, Managers, Designers, Engineers and Contractors}.
+\newblock Wiley Publishing, 2008.
+
 \bibitem{6878152}
 L.~Faramondi, F.~Inderst, S.~Panzieri, and F.~Pascucci.
 \newblock Hybrid map building for personal indoor navigation systems.
 \newblock In {\em Advanced Intelligent Mechatronics (AIM), 2014 IEEE/ASME
   International Conference on}, pages 646--651, July 2014.
-
-\bibitem{indoormaps}
-{Google Inc.}
-\newblock Go inside with {Indoor Maps}.
-\newblock \url{https://www.google.com/maps/about/partners/indoormaps}, 2014.
-\newblock Accessed: 2015-03-18.
 
 \bibitem{6418876}
 D.~Gotlib, M.~Gnat, and J.~Marciniak.
@@ -64,6 +64,10 @@ D.~Gotlib, M.~Gnat, and J.~Marciniak.
   modeling for navigation applications.
 \newblock In {\em Indoor Positioning and Indoor Navigation (IPIN), 2012
   International Conference on}, pages 1--7, Nov 2012.
+
+\bibitem{indoormaps}
+G.~Inc.
+\newblock Go inside with {Indoor Maps}.
 
 \bibitem{paoluzziMS:2014}
 A.~Paoluzzi, E.~Marino, and F.~Spini.
