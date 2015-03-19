@@ -4,16 +4,16 @@
 
 The focus of this work is the definition of a novel format of cartographic
 documents along with the software ecosystem rooted on it. A simple but
-effective algorithm to find indoor valid routes is also provided. The
-{HIJSON} (\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}, this is
-the name chosen for the format) and the accompanying software framework aim
-to realize a mapping of indoor real spaces with a virtual interactive web
-environment. The HIJSON is based upon ideas and design principles collected
-from previous formats and identifies three critical improvements with respect
-to them: it exposes a \emph{hierarchical structure}, uses \emph{metric local
-coordinate system} and accepts \emph{semantic extensions}. Furthermore, geometrical 
-and topological data are conveniently imported and represented via LAR, an advanced 
-representation scheme, allowing to deal with \emph{hyperlinked geometric models}.
+effective algorithm to find indoor valid routes is also provided. The {HIJSON}
+(\textbf{H}ierarchical \textbf{I}ndoor \textbf{JSON}, this is the name chosen
+for the format) and the accompanying software framework aim to realize a
+mapping of indoor real spaces with a virtual interactive web environment. The
+HIJSON is based upon ideas and design principles collected from previous
+formats and identifies four critical improvements with respect to them: it
+exposes a \emph{hierarchical structure}, uses \emph{metric local coordinate
+system} \emph{imports external hyperlinked geometric models} and accepts \emph{semantic
+extensions}. 
+% Furthermore, geometrical  and topological data are conveniently imported and represented via LAR, an advanced  representation scheme, allowing to deal with \emph{hyperlinked geometric models}.
 
 \subsection{Hierarchical structure}\label{hierarchical-structure}
 
@@ -35,6 +35,22 @@ render algorithms of HIJSON documented environments.
 
 Furthermore the container-contained relation enables to use local reference system.
 
+\subsection{Metric local coordinate system}\label{metric-local-coordinate-system}
+
+Supported by the hierarchical underlying structure, the HJSON document format allows 
+for the use of local coordinate system. This means that the shape of all elements can 
+be convenient modelled using local coordinate and than placed in the right position 
+with respect to the position of the parent (or container) element applying a 
+translation and a rotation vector.
+
+Another substantial advantage is represented by the adoption of a metric reference, 
+consequently simplifying the compilation of the document, however it is, 
+manual or aided by software tools.
+
+The HIJSON document format is specially designed to guarantee the user to be routed seamlessly 
+from outdoor to indoor and vice versa. Even though indoor geometries are inputted in a metric 
+local continuous outdoor-indoor navigation is ensured via the definition of a processing pipeline
+detailed in the following.
 
 \subsection{Hyperlinked geometric models}\label{optional-lar}
 
@@ -119,27 +135,10 @@ The expansion of a LAR model, to be considered as a general-purpose graphic prim
  \label{fig:sogei}
 \end{figure}
 
-\subsection{Metric local coordinate system}\label{metric-local-coordinate-system}
-
-Supported by the hierarchical underlying structure, the HJSON document format allows 
-for the use of local coordinate system. This means that the shape of all elements can 
-be convenient modelled in local coordinate and than placed in the right position 
-with respect to the position of the parent (or container) element applying a 
-translation and a rotaction vector.
-
-Another substantial advantage is represented by the adoption of a metric reference, 
-consequently simplifying the compilation of the document, however it is, 
-manual or aided by software tools.
-
-The HIJSON document format is specially designed to guarantee the user to be routed seamlessly 
-from outdoor to indoor and vice versa. Even though indoor geometries are inputted in a metric 
-local continuous outdoor-indoor navigation is ensured via the definition of a processing pipeline
-detailed in the following.
-
 \subsection{Semantic extensions}\label{semantic-extensions}
 
 Semantic extensions make the HIJSON format extendible and customizable, that
-is, able to adequately respond to any object representation need. To define a
+is, able to adequately respond to any need of objects representation. To define a
 semantic extension means to allow the HIJSON document to model an object
 previously not covered, or even to modify the behaviour of a comprised one.
 Semantic extensions are to be defined both as HIJSON format syntyax and as

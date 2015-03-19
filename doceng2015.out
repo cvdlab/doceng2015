@@ -4,11 +4,11 @@
 \BOOKMARK [2][-]{subsection.2.2}{The IndoorJSON format}{section.2}% 4
 \BOOKMARK [1][-]{section.3}{Advances on cartographic document formats}{}% 5
 \BOOKMARK [2][-]{subsection.3.1}{Hierarchical structure}{section.3}% 6
-\BOOKMARK [2][-]{subsection.3.2}{Hyperlinked geometric models}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.3}{Metric local coordinate system}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Metric local coordinate system}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{Hyperlinked geometric models}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.4}{Semantic extensions}{section.3}% 9
 \BOOKMARK [1][-]{section.4}{HIJSON syntax}{}% 10
-\BOOKMARK [2][-]{subsection.4.1}{HIJSON Element description}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.1}{HIJSON Element}{section.4}% 11
 \BOOKMARK [1][-]{section.5}{HIJSON Toolkit}{}% 12
 \BOOKMARK [2][-]{subsection.5.1}{Processing pipeline}{section.5}% 13
 \BOOKMARK [3][-]{subsubsection.5.1.1}{Algorithmics: automatic generation of valid paths}{subsection.5.1}% 14

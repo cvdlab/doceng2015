@@ -1,28 +1,70 @@
 \section{Introduction}\label{introduction}
 
-An indoor environment interactive mapping consists of a virtual reconstruction of a real indoor space in which the user can move around and then interact with the objects which are found the same position they actually occupy in the real world. Such an indoor interactive mapping can be thought as a specialized and very evoluted user interface capable of giving a glimpse of a section of the real world that the user can handle in a natural and intuitive way. 
-Such a reconstructed virtual indoor environment can be considered a general platform where many different applications can rely upon.
-Both promising and already well explored ICT fields may find in \emph{virtual indoor mapping} the perfect context to be integrated into.
+An indoor environment interactive mapping consists of a virtual reconstruction
+of a real indoor space in which the user can move around and then interact
+with the objects which are found the same position they actually occupy in the
+real world. Such an indoor interactive mapping can be thought as a specialized
+and very evoluted user interface capable of giving a glimpse of a section of
+the real world that the user can handle in a natural and intuitive way.  Such
+a reconstructed virtual indoor environment can be considered a general
+platform where many different applications can rely upon. Both promising and
+already well explored ICT fields may find in \emph{virtual indoor mapping} the
+perfect context to be integrated into.
 
-In particular, for environments which massive presence of sensor-equipped (or ``smart'') objects, which realize the so-called \emph{IoT} (Internet of Things), the indoor interactive mapping represents an ideal integrated interface for IoT monitoring systems.
-In particular, it can be the container of indoor navigation systems, giving the user, to be routed across an indoor environment, the opportunity to interact with objects along the suggested paths.
-Futhermore, in conjunction with the advancements in the fields of user indoor location, achieved via a variety of positioning systems like GNSS (Global Navigation Satellite system), Wi-Fi, LTE (Long Term Evolution), SDR(Software Defined Radio), it represents the most natural interface to perform realtime access monitoring and multiperson tracking.
+In particular, for environments which massive presence of sensor-equipped (or
+``smart'') objects, which realize the so-called \emph{IoT} (Internet of
+Things), the indoor interactive mapping represents an ideal integrated
+interface for IoT monitoring systems. In particular, it can be the container
+of indoor navigation systems, giving the user, to be routed across an indoor
+environment, the opportunity to interact with objects along the suggested
+paths. Futhermore, in conjunction with the advancements in the fields of user
+indoor location, achieved via a variety of positioning systems like GNSS
+(Global Navigation Satellite system), Wi-Fi, LTE (Long Term Evolution),
+SDR(Software Defined Radio), it represents the most natural interface to
+perform realtime access monitoring and multiperson tracking.
 
-To enable such a interactive mapping platform it is of the utmost importance a descriptive representation of the indoor environment. This means entering in the field of indoor cartography, which as digital evolution of plain floor plans, is arrived to arouse the interest of big players like Google, that has integrated into Google Maps indoor plans of specific locations of interest \cite{indoormaps}. In general, can be considered ``of interest'' --- such to justify and motivate indoor cartographic applications --- both public or commercial places of vast dimensions, as for example airports, train stations, shopping malls, and also private buildings subject to strict access control, like warehouses, logistics centers, and datacenter. 
+To enable such a interactive mapping platform it is of the utmost importance a
+descriptive representation of the indoor environment. This means entering in
+the field of indoor cartography, which as digital evolution of plain floor
+plans, is arrived to arouse the interest of big players like Google, that has
+integrated into Google Maps indoor plans of specific locations of interest
+\cite{indoormaps}. In general, can be considered ``of interest'' --- such to
+justify and motivate indoor cartographic applications --- both public or
+commercial places of vast dimensions, as for example airports, train stations,
+shopping malls, and also private buildings subject to strict access control,
+like warehouses, logistics centers, and datacenter.
 
-Despite of the growing attention around indoor cartography, efforts to specify open formats for indoor representation are few and partial, certainly not intended to support the interactive indoor mapping, which is conversely the main purpose of this paper. 
+Despite of the growing attention around indoor cartography, efforts to specify
+open formats for indoor representation are few and partial, certainly not
+intended to support the interactive indoor mapping, which is conversely the
+main purpose of this paper.
 
-This work, jointly developed by {SoGeI} ({So}ciet\`a {Ge}nerale d'{I}nformatica), a company fully owned by Italian  Ministry of Economy and Finance, and the {CVDLAB} (Computational Visual Design Laboratory) of the ``Roma Tre'' University, is inspired by the necessities of SoGeI itself, which runs one of the largest data center of Italy, then requiring strict access control policies which have to be composed with indispensable human/machine coordinate maintenance scenarios. Support for these scenarios, where real time awarness of the maintainer position inside the data center helps to both reduce intervention and increase safety, has been adopted as the case study of the interactive indoor mapping based on the indoor cartographical format proposed.
+This work, jointly developed by {SoGeI} ({So}ciet\`a {Ge}nerale
+d'{I}nformatica), a company fully owned by Italian  Ministry of Economy and
+Finance, and the {CVDLAB} (Computational Visual Design Laboratory) of the
+``Roma Tre'' University, is inspired by the necessities of SoGeI itself, which
+runs one of the largest data center of Italy, then requiring strict access
+control policies which have to be composed with indispensable human/machine
+coordinate maintenance scenarios. Support for these scenarios, where real time
+awarness of the maintainer position inside the data center helps to both
+reduce intervention and increase safety, has been adopted as the case study of
+the interactive indoor mapping based on the indoor cartographical format
+proposed.
 
 
-The remainder of this document is organized as follows. In Section~\ref{introduction} we
-provide an overview of the state of the art in the field of indoor document
-standards and related applications. Section~\ref{advances} is devoted to describe the
-advances introduced by the novel cartographic document proposed, while section~\ref{hijson-syntax} presents the document syntax. Section~\ref{hijson-toolkit} reports about the toolkit
-specifically developed to handle the new document format. In Section~\ref{hjson-web-framework} it is
-depicted the overall architecture and the implementation of the web based
-application framework, which is in turn used to achieve the objectives stated above. Section~\ref{use-case} presents a case-study application of the document format discussed in this paper.
-Finally, Section~\ref{conclusions} proposes some conclusive remarks and future developments.
+The remainder of this document is organized as follows. In
+Section~\ref{introduction} we provide an overview of the state of the art in
+the field of indoor document standards and related applications.
+Section~\ref{advances} is devoted to describe the advances introduced by the
+novel cartographic document proposed, while section~\ref{hijson-syntax}
+presents the document syntax. Section~\ref{hijson-toolkit} reports about the
+toolkit specifically developed to handle the new document format. In
+Section~\ref{hjson-web-framework} it is depicted the overall architecture and
+the implementation of the web based application framework, which is in turn
+used to achieve the objectives stated above. Section~\ref{case-study} presents
+a case-study application of the document format discussed in this paper.
+Finally, Section~\ref{conclusions} proposes some conclusive remarks and future
+developments.
 
 % -----------------------------------------------------------------------------
 

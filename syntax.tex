@@ -1,92 +1,74 @@
 
-\section{HIJSON syntax}\label{hijson-syntax}
+\section{HIJSON structure and syntax}\label{hijson-syntax}
 
-In Figure~\ref{fig:HIJSON} it is shown a simplified example of an input file ready to be processed by the HIJSON pipeline.
+In listing~\ref{lst:hijson-example} it is shown a simplified HIJSON document, devoid of puctual datails, to make clear to the reader the defined structure.
 
-\begin{figure}[h]
-\begin{verbatim}
+\begin{lstlisting}[language=json, label={lst:hijson-example}, captionpos=b, caption=Example of HIJSON document.]
 {
   "config": {
-  ...
+    // ...
   },
- "data": 
- [
- ...
- {
- "id": "architecture",
- "type": "FeatureCollection",
- "features": [...] 
- },
- {
- "id": "furniture_1",
- "type": "FeatureCollection",
- "features": [...] 
- },
- ...
- ]
+  "data": [
+    ...
+    {
+      "id": "architecture",
+      "type": "FeatureCollection",
+      "features": [
+        // ...
+      ] 
+    },
+    {
+      "id": "furniture_1",
+      "type": "FeatureCollection",
+      "features": [
+        // ...
+      ] 
+    },
+    // ...
+  ]
 }
-\end{verbatim}
-\caption{Example of HIJSON file.}
-\label{fig:HIJSON}
-\end{figure}
-
-The HIJSON document is composed of different parts:
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item 
- configuration: a JSON object containing parameters and settings useful
- for the building representation. In particular three points of the local
- reference system are mapped to three couples of geographical coordinates.
- This information allows the computation of the transformation matrix used to
- translate the local coordinates to global ones.
-\item
- one or more data collections: each of these lists is given in the form of
- a GeoJSON FeatureCollection, containing a number of HIJSON Elements. Since
- HIJSON Elements adhere to the GeoJSON format, each collection can be
- accepted by a GeoJSON validator. HIJSON introduces some additional rules
- that allow the adoption of this format for indoor representation. In the
- next paragraph is given a sample of HIJSON Element, with the description of
- the main differences from a standard GeoJSON Feature. 
-\end{itemize}
+\end{lstlisting}
 
 
-\begin{figure}[h]
-\begin{verbatim}
+The HIJSON document is composed of a configuration section, followed by one or more {\tt DataCollections}, containing the actual data.
+
+The configuration includes parameters and settings needed for building representation in the form of a JSON Object. One of the core information in this section is defined by the correspondence between three points of the local coordinate system and three point of the real world, expressed in geographical coordinates. This is needed to ensure a seamlessly passage from local to geographical coordinate system and vice versa.
+
+After the configuration part, goes a {\tt DataCollection} list. Each element of the list is given in the form of a GeoJSON {\tt FeatureCollection}, containing an arbitrary 
+number of {\emph HIJSON Elements}. Since  HIJSON Elements adhere to the GeoJSON
+format, each DataCollection results compliant with GeoJSON syntax and then accepted by any GeoJSON validator. An example of {\tt DataCollection} is given in listing~\ref{lst:data-collection-example}. HIJSON format introduces some additional rules that allow the adoption of this
+format for indoor representation, detailed below.
+
+\begin{lstlisting}[language=json, label={lst:data-collection-example}, captionpos=b, caption=Example of data collection, with the definition of a HIJSON Element.]
 {
- "id": "architecture",
- "type": "FeatureCollection",
- "features": 
- [
- ...
- {
- "type": "Feature",
- "id": "room_0.1",
- "geometry": 
- {
- "type": "Polygon",
- "coordinates": 
- [ 
- [ [0, 0], [11, 0], [11, 19], [0, 19] ]
- ]
- },
- "properties": 
- {
- "class": "room",
- "parent": "level_0",
- "description": "Office of Mr. Smith",
- "tVector": [10, 20, 0],
- "rVector": [0, 0, 90]
- },
- ...
- ]
+  "id": "architecture",
+  "type": "FeatureCollection",
+  "features": [
+    // ...
+    {
+      "type": "Feature",
+      "id": "room_0.1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [ 
+          [ [0, 0], [11, 0], [11, 19], [0, 19] ]
+        ]
+    },
+    "properties": {
+      "class": "room",
+      "parent": "level_0",
+      "description": "Office of Mr. Smith",
+      "tVector": [10, 20, 0],
+      "rVector": [0, 0, 90]
+    },
+    // ...
+  ]
 }
-\end{verbatim}
-\caption{Example of data collection, with the definition of an HIJSON Element.}
-\label{fig:dataCollection}
-\end{figure}
+\end{lstlisting}
 
-\subsection{HIJSON Element description}
+\subsection{HIJSON Element}
+
+An HIJSON Element describes an architectural ...
 
 The first additional requisite above the GeoJSON format rules is the
 necessity of a unique ID, necessary for the referencing by possible
@@ -130,6 +112,5 @@ third dimension, the property \texttt{height} can be used.
 A \texttt{description} property can provide further information about
 the element.
 
-Additional optional fields can be added without restrictions, in order 
-to enrich and extend the expressvity of the representation. An example of data collection is given in Figure~\ref{fig:dataCollection}.
-
+Additional optional fields can be added without restrictions, in order  to
+enrich and extend the expressvity of the representation.
