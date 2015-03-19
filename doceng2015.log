@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  19 MAR 2015 06:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  19 MAR 2015 07:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -461,19 +461,14 @@ Overfull \hbox (1.26794pt too wide) in paragraph at lines 108--109
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-(./introduction.tex
-Overfull \hbox (2.68037pt too wide) in paragraph at lines 8--9
-[]\T1/aer/m/n/9 Both promis-ing and al-ready well ex-plored re-search-ing filed
-s
- []
-
-[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(./introduction.tex [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updma
+p/pdftex.map}
 
 
-])
-(./related-work.tex
+]) (./related-work.tex
 LaTeX Font Info:    Try loading font information for T1+aett on input line 49.
- (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 Overfull \hbox (3.50189pt too wide) in paragraph at lines 49--55
@@ -486,8 +481,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.81  \texttt
-             {geomType}: identifies the object's [2]) (./advances.tex
+l.88 
+      [2]) (./advances.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 2.
@@ -498,28 +493,28 @@ Overfull \hbox (1.42838pt too wide) in paragraph at lines 47--49
 -
  []
 
-<images/minimum.pdf, id=168, 1071.00125pt x 629.35126pt>
+<images/minimum.pdf, id=169, 1071.00125pt x 629.35126pt>
 File: images/minimum.pdf Graphic file (type pdf)
 
 <use images/minimum.pdf>
 Package pdftex.def Info: images/minimum.pdf used on input line 53.
 (pdftex.def)             Requested size: 252.0pt x 148.08002pt.
 
-<images/boundary.pdf, id=169, 464.93701pt x 338.94629pt>
+<images/boundary.pdf, id=170, 464.93701pt x 338.94629pt>
 File: images/boundary.pdf Graphic file (type pdf)
 
 <use images/boundary.pdf>
 Package pdftex.def Info: images/boundary.pdf used on input line 55.
 (pdftex.def)             Requested size: 201.59692pt x 146.9698pt.
 
-<images/sogei-a.pdf, id=171, 708.24059pt x 670.38193pt>
+<images/sogei-a.pdf, id=172, 708.24059pt x 670.38193pt>
 File: images/sogei-a.pdf Graphic file (type pdf)
 
 <use images/sogei-a.pdf>
 Package pdftex.def Info: images/sogei-a.pdf used on input line 103.
 (pdftex.def)             Requested size: 115.19897pt x 109.03294pt.
 
-<images/sogei-b.pdf, id=172, 690.41667pt x 657.36282pt>
+<images/sogei-b.pdf, id=173, 690.41667pt x 657.36282pt>
 File: images/sogei-b.pdf Graphic file (type pdf)
 
 <use images/sogei-b.pdf>
@@ -538,9 +533,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 O
-       ptional fields can be added to improve the precision of the [4 <./images
-/minimum.pdf> <./images/boundary.pdf>]) (./toolkit.tex
+l.129 
+       [4 <./images/minimum.pdf> <./images/boundary.pdf>]) (./toolkit.tex
 Package epstopdf Info: Source file: <images/pipeline.eps>
 (epstopdf)                    date: 2015-03-12 05:25:29
 (epstopdf)                    size: 922226 bytes
@@ -563,8 +557,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70  \textit
-             {\texttt{parsing}} - The parsing stage, takes the validated and
+l.77  \textit
+             {\texttt{graph paths generation}} - The fourth stage is in charge
 [5 <./images/pipeline-eps-converted-to.pdf>]
 Overfull \hbox (6.51636pt too wide) in paragraph at lines 77--88
 []\T1/aett/m/it/9 graph paths gen-er-a-tion \T1/aer/m/n/9 - The fourth stage is
@@ -630,9 +624,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.241  \texttt
-              {getProxy}: a method that returns server side proxy which
-[6 <./images/element-class-node-eps-converted-to.pdf>]
+l.244 \end{itemize}
+                    [6 <./images/element-class-node-eps-converted-to.pdf>]
 Overfull \hbox (5.52234pt too wide) in paragraph at lines 246--250
 []\T1/aer/m/n/9 User's needs for new in-door el-e-ments, dif-fer-ent sen-sor eq
 uip-
@@ -670,11 +663,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.97 
-      [7 <./images/graph-generation/single/graph-generation-1.png> <./images/gr
-aph-generation/single/graph-generation-2.png> <./images/graph-generation/single
-/graph-generation-3.png> <./images/graph-generation/single/graph-generation-4.p
-ng>]
+l.98 \subsubsection{Server Architecture}
+                                        \label{server-architecture} [7 <./image
+s/graph-generation/single/graph-generation-1.png> <./images/graph-generation/si
+ngle/graph-generation-2.png> <./images/graph-generation/single/graph-generation
+-3.png> <./images/graph-generation/single/graph-generation-4.png>]
 Overfull \hbox (1.29799pt too wide) in paragraph at lines 116--126
 \T1/aer/m/n/9 NI-CAZIONE A LIV-ELLO API DEL BROWSER CON SEN-
  []
@@ -717,7 +710,7 @@ po
 the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.21 
+l.28 
       [9 <./images/architecture-eps-converted-to.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
@@ -764,7 +757,7 @@ t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on doceng2015.pdf (10 pages, 5579711 bytes).
+Output written on doceng2015.pdf (10 pages, 5578610 bytes).
 PDF statistics:
  372 PDF objects out of 1000 (max. 8388607)
  304 compressed objects within 4 object streams
