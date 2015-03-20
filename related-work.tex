@@ -46,17 +46,17 @@ geometrical encoding of various geographic data structures. As opposed to GIS
 format, GeoJSON is an open standard. Positions need to be expressed in
 geographical coordinates (usually WGS84).
 
-GeoJSON supports some geometric primitives, including: \texttt{Point},
-\texttt{Line\-String}, \texttt{Polygon}, \texttt{MultiPoint},
-\texttt{MultiLineString}, and \texttt{MultiPolygon}. Lists of geometries are
-represented by a \texttt{GeometryCollection}. Geometries with additional
-properties are \texttt{Feature} objects. Lists of \texttt{Feature} are
-represented by a \texttt{FeatureCollection}.
+GeoJSON supports some geometric primitives, including: {\tt Point},
+{\tt Line\-String}, {\tt Polygon}, {\tt MultiPoint},
+{\tt MultiLineString}, and {\tt MultiPolygon}. Lists of geometries are
+represented by a {\tt GeometryCollection}. Geometries with additional
+properties are {\tt Feature} objects. Lists of {\tt Feature} are
+represented by a {\tt FeatureCollection}.
 
-A single \texttt{Feature} is composed essentially by two mandatory fields:
-\texttt{geometry}, which describes the objects' geometry accordingly to the
-previously defined primitives, and \texttt{properties} which contains
-additional information about the \texttt{Feature}.
+A single {\tt Feature} is composed essentially by two mandatory fields:
+{\tt geometry}, which describes the objects' geometry accordingly to the
+previously defined primitives, and {\tt properties} which contains
+additional information about the {\tt Feature}.
 
 It is possible to define complex shapes through the composition of simple
 GeoJSON objects. Mainly due to its semplicity, GeoJSON is widely used and
@@ -66,19 +66,19 @@ deeply integrated in several applications and services.
 
 IndoorJSON is a GeoJSON variant defined and used by \emph{indoor.io}, a
 Finnish company devoted to indoor environment mapping. IndoorJSON is compliant
-with GeoJSON syntax, and it may consist of any number of \texttt{Features}
-and/or \texttt{FeatureCollections}. All \texttt{Features} are interpreted
+with GeoJSON syntax, and it may consist of any number of {\tt Features}
+and/or {\tt FeatureCollections}. All {\tt Features} are interpreted
 similarly regardless of their grouping into nested
-\texttt{FeatureCollections}. IndoorJSON supports all GeoJSON geometry types.
+{\tt FeatureCollections}. IndoorJSON supports all GeoJSON geometry types.
 
 Some particular properties are used to correctly define indoor elements:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
- \texttt{level}: described which level contains the feature;
+ {\tt level}: described which level contains the feature;
 \item
- \texttt{geomType}: identifies the object's
+ {\tt geomType}: identifies the object's
  category, useful during the visualization
  process.
 \end{itemize}
@@ -89,12 +89,12 @@ the indoor representation:
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
- \texttt{accessible}: describes if an element is walkable or not;
+ {\tt accessible}: describes if an element is walkable or not;
 \item
- \texttt{connector}: defines if the element is a connection between two
+ {\tt connector}: defines if the element is a connection between two
  levels;
 \item
- \texttt{direction}: describes the direction of the connection (both
+ {\tt direction}: describes the direction of the connection (both
  ways, only up, only down);
 \end{itemize}
 
