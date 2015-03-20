@@ -13,24 +13,22 @@ user interfaces'' by Facebook, and \emph{Three.js} a framework to deal
 with \emph{WebGL} tecnologies.
 
 The Toolkit realizes the instantiation and extension logic of a HIJSON
-document, as described in the ``HIJSON Class definition'' section, and
-realize a multistage transformation pipeline that, as required, can be
-used entirely or only in part.
+document, and realize a multistage transformation pipeline that, as required,
+can be used entirely or only in part.
 
 \subsection{Processing pipeline}\label{hijson-processing-pipeline}
 
 The HIJSON processing pipeline relizes the sequence of preliminary
 transformations that have to be applied to a HIJSON document before any
 futher operation. It is not strictly required to complete each stage of
-the pipeline: exit stage dipends on the specific use case.
+the pipeline: the exit stage dipends on the specific use case.
 
-The application of the transformation pipeline has a double aim. The
-first one consists in generating the graph of valid paths between all
-the interesting HIJSON elements. The second aim is the generation of one
-\emph{GeoJSON} document for each story of the building described by the
-HIJSON document. In this way a bidimensional plant for each level of the
-building can be provided and visualized through any compliant GeoJSON
-viewer.
+The application of the transformation pipeline has a double aim. The first one
+consists in generating the graph of valid paths between all the interesting
+HIJSON elements. The second objective is the generation of one \emph{GeoJSON}
+document for each storey of the building described by the HIJSON document. In
+this way a bidimensional plant for each level of the building can be provided
+and visualized through any compliant GeoJSON viewer.
 
 HIJSON processing pipeline (as pictured in figure AGGIUNGERE
 RIFERIMENTO) is composed by 6 elaboration stages. In the following are
@@ -41,7 +39,7 @@ paths generation}, \emph{2D layers generation}, \emph{marshalling}.
 \begin{figure}[!htbp]
 \centering
 \epsfig{file=images/pipeline.eps, height=0.4\textwidth}
-\caption{``HIJSON processing pipeline''}
+\caption{HIJSON processing pipeline}
 \label{fig:pipeline}
 \end{figure}
 
@@ -50,12 +48,12 @@ paths generation}, \emph{2D layers generation}, \emph{marshalling}.
 \itemsep1pt\parskip0pt\parsep0pt
 \item
  \textit{\texttt{validation}} - The first one is the validation stage. In
- order to begin with the effective transformations the input HIJSON
- document must be compliant with the rules defined in (AGGIUNGERE REF
- TO PARAGRAFO REGOLE DI VALIDITA'). In the case the validation stage
- fails, processing aborts and do not continue to following stages. If
- the stage success, the output for the next stage is a validated
- HIJSON.
+  order to begin with the effective transformations the input HIJSON  document
+  must be compliant with the format syntax and structure requirements.   In the
+  case the validation stage fails, processing aborts and do not continue to
+  following stages. If  the stage success, the output for the next stage is a
+  validated  HIJSON.
+
 \item
  \textit{\texttt{georeferencing}} - In the second stage, in order to allow
  for continuous outdoor/indoor navigation, the system needs to compute
@@ -75,24 +73,23 @@ paths generation}, \emph{2D layers generation}, \emph{marshalling}.
  by the HIJSON document.
 \item
  \textit{\texttt{graph paths generation}} - The fourth stage is in charge
- of the generation of the graph paths. This aim is accomplished
- according to the algorithm described in (AGGIUNGERE RIFERIMENTO A
- \#\#\#\# Automatic generation of valid paths). The graph paths will be
- useful afterwards to coumpute valid paths from couple of point of
+ of the generation of the graph paths. The algorithm to achieve such a 
+ goal is introduced below. The graph paths will be
+ useful afterwards to compute valid paths from couple of point of
  interest on the graph. Once the graph paths has been computed, the
  input HIJSON Tree is augmented with paths information, becoming what
  has been called an HTAP (HIJSON Tree Augmented with Paths).
  Augmentation always takes place as leaf nodes added as children of a
- specific (e.g. ``room'') level.
+ specific level (e.g. ``room'').
 \item
  \textit{\texttt{2D layers generation}} - The fifth stage is the
- generation of GeoJSON layer. For each level, the system generates one
- geoJSON layer that will be use for the creation of 2D map. Each layer
- contains the children of `level' node in the HIJSON Tree. Every class
- contains a boolean value that is used to choose which class will be a
- part of geoJSON layer. Every element has a geographical coordinates
+ generation of GeoJSON layers. For each storey of the building, the Toolkit generates one
+ geoJSON layer that will be use for the creation of a 2D map. Each layer
+ contains only the children of a `level' node of the HIJSON Tree. 
+ The presence of a specific element inside the layer can be finely tuned 
+ by means of a boolean value. Every element has geographical coordinates
  calculated by the transformation matrix with regard to the local
- coordinates of the HIJSON element.
+ coordinates of the HIJSON Element.
 \item
  \textit{\texttt{marshalling}} - The last stage is responsible of execute
  a serialization of the the transformed data. Tasks like breaking
@@ -125,7 +122,7 @@ distances and each node represents alternatively:
  his presence in the graph), typically an endpoint of a path;
 \end{enumerate}
 
-Such a graph allows for directions calculations between any two given
+Such a graph allows for calculations of directions between any two given
 nodes. Although different approaches have been explored \cite{6999103}, 
 a very classical solution has been selected in this case, so directions 
 are actually computed clientside applying the Dijkstra's shortes route 
@@ -137,8 +134,8 @@ paths generation is splitted in several sub-problems which consist in
 the computation of the sub-graphs relative to each room, or more
 generally ambience. The sub-graphs are then linked together through the
 connection nodes (which in most cases represents doors). The resolution
-of each sub-problem (as depicted in figure METTERE RIFERIMENTO ALLA
-FIGURA), is composed by 4 phases:
+of each sub-problem (as depicted in figure \ref{fig:graph-generation}), 
+is composed by 4 phases:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -205,14 +202,14 @@ interface for these behaviours is the HIJSON Class.
 \begin{figure}[!h]
 \centering
 \epsfig{file=images/element-class-node.eps, width=0.44\textwidth}
-\caption{``HIJSON Element/Class/Node relashionship''}
+\caption{HIJSON Element/Class/Node relashionship}
 \label{fig:elem-class-node-rel}
 \end{figure}
 
 Each HIJSON Element of the HJSON document given as input, has a dynamic
 counterpart, a running instance called HIJSON Node, instantiated
 according to the corresponding HIJSON Class via relfection methods (see
-picture XXXXX).
+figure \ref{fig:elem-class-node-rel}).
 
 To specify a new HIJSON Class means to extend the Toolkit to deal with a
 new class of HIJSON Element.
@@ -226,14 +223,15 @@ properties and methods:
  \texttt{in\_graph}: a boolean value to express if the element is an
  approachable point in the graph paths;
 \item
- \texttt{in\_2D\_map}: a boolean value to express if the element is
- wanted in the 2D map;
+ \texttt{in\_2D\_map}: a boolean value to express if the element has 
+ to be showd in the 2D map;
 \item
  \texttt{get2DStyle}: a method that returns the 2D map appearence of
  the element, essentially HTML and CSS code;
 \item
  \texttt{get3DModel}: a method that returns the 3D model appearence of
- the element, a \emph{THREE.js Object3D};
+ the element, an instance of {\tt THREE.Object3D} of \emph{THREE.js} 
+ framework;
 \item
  \texttt{getWidget}: a method that returns the information widget, a
  \emph{React} component;
@@ -251,8 +249,8 @@ custom extension of the Toolkit capabilities.
 
 \begin{figure*}[htb]
 \centering
-\includegraphics[width=\textwidth]{images/web_framework_1.png}
-%\includegraphics[width=0.485\textwidth]{images/web_framework_2.png}
-\caption{``HIJSON Web Framework UI''}
+% \includegraphics[width=\textwidth]{images/web_framework_1.png}
+\includegraphics[width=\textwidth]{images/web_framework_2.png}
+\caption{HIJSON Web Framework UI}
 \label{fig:web-framework-ui}
 \end{figure*}

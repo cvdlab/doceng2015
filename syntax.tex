@@ -1,7 +1,7 @@
 
 \section{HIJSON structure and syntax}\label{hijson-syntax}
 
-In listing~\ref{lst:hijson-example} it is shown a simplified HIJSON document, devoid of puctual datails, to make clear to the reader the overall structure.
+Listing~\ref{lst:hijson-example} shows a simplified HIJSON document, devoid of puctual datails, to make clear to the reader the overall document structure.
 
 \begin{lstlisting}[language=json, label={lst:hijson-example}, captionpos=b, caption=Example of HIJSON document.]
 {
@@ -34,15 +34,9 @@ The HIJSON document is composed of a configuration section, followed by one or m
 
 The configuration includes parameters and settings needed for building representation in the form of a JSON Object. One of the core information in this section is defined by the correspondence between three points of the local coordinate system and three point of the real world, expressed in geographical coordinates. This is needed to ensure a seamlessly passage from local to geographical coordinate system and vice versa.
 
-After the configuration part, goes a {\tt DataCollection} list. Each element
-of the list is given in the form of a GeoJSON {\tt FeatureCollection},
-containing an arbitrary  number of \emph{HIJSON Elements}. Each {\tt
-DataCollection} imposes a logical relationship that can be exploited to group
-together related HIJSON Elements. Since  HIJSON Elements adhere to the GeoJSON
-format, each {\tt DataCollectio}n results compliant with GeoJSON syntax and
-then accepted by any GeoJSON validator.
+After the configuration part, goes a list of {\tt DataCollection}. An example
+of {\tt DataCollection} is given in listing~\ref{lst:data-collection-example}.
 
-An example of {\tt DataCollection} is given in listing~\ref{lst:data-collection-example}. HIJSON format introduces some additional rules that allow the adoption of this format for indoor representation, detailed below.
 
 \begin{lstlisting}[language=json, label={lst:data-collection-example}, captionpos=b,  caption=Example of {\tt DataCollection}.]
 {
@@ -71,6 +65,16 @@ An example of {\tt DataCollection} is given in listing~\ref{lst:data-collection-
 }
 \end{lstlisting}
 
+Each element of the list is given in the form of a GeoJSON {\tt
+FeatureCollection}, containing an arbitrary  number of \emph{HIJSON Elements}.
+Each {\tt DataCollection} imposes a logical relationship that can be exploited
+to group together related HIJSON Elements. Since  HIJSON Elements adhere to
+the GeoJSON format, each {\tt DataCollectio}n results compliant with GeoJSON
+syntax and then accepted by any GeoJSON validator. As detailed below, the
+HIJSON format  introduces some additional rules that allow the adoption of
+this format for indoor representation.
+
+
 \subsection{HIJSON Element}
 
 Dealing with indoor environments, there are essentially two classes of object
@@ -87,7 +91,6 @@ can be applied, for example grouping by storey or even by room can be imposed.
 Alternatively, since the furnishings are more likely to change than the
 architectural components of a building, these two different kind of elements
 can be isolated in different {\tt Data Collections}.
-
 
 The hirarchical structure of the document is embodied by the possibility of the HIJSON Elements to have childern elements, so a unique ID is mandatory for each HIJSON Element. 
 
