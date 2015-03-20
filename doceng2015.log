@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  19 MAR 2015 19:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  19 MAR 2015 21:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -571,19 +571,23 @@ l.147
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 6.
 
-Overfull \hbox (4.68604pt too wide) in paragraph at lines 53--54
+Overfull \hbox (4.68604pt too wide) in paragraph at lines 59--60
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][] 
  []
 
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.73 
-      [4 <./images/minimum.pdf> <./images/boundary.pdf>]) (./toolkit.tex
+l.81 
+      [4 <./images/minimum.pdf> <./images/boundary.pdf>]
+Overfull \hbox (5.6864pt too wide) in paragraph at lines 120--126
+\T1/aer/m/n/9 other prop-er-ties. For eex-am-ple the two classes \T1/aett/m/n/9
+ in-ter-nal_wall
+ []
+
+) (./toolkit.tex
 Package epstopdf Info: Source file: <images/pipeline.eps>
 (epstopdf)                    date: 2015-02-27 14:57:41
 (epstopdf)                    size: 922226 bytes
@@ -606,8 +610,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77  \textit
-             {\texttt{graph paths generation}} - The fourth stage is in charge
+l.70  \textit
+             {\texttt{parsing}} - The parsing stage, takes the validated and
 [5 <./images/pipeline-eps-converted-to.pdf>]
 Overfull \hbox (6.51636pt too wide) in paragraph at lines 77--88
 []\T1/aett/m/it/9 graph paths gen-er-a-tion \T1/aer/m/n/9 - The fourth stage is
@@ -673,8 +677,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.244 \end{itemize}
-                    [6 <./images/element-class-node-eps-converted-to.pdf>]
+l.235  \texttt
+              {get3DModel}: a method that returns the 3D model appearence of
+[6 <./images/element-class-node-eps-converted-to.pdf>]
 Overfull \hbox (5.52234pt too wide) in paragraph at lines 246--250
 []\T1/aer/m/n/9 User's needs for new in-door el-e-ments, dif-fer-ent sen-sor eq
 uip-
@@ -712,11 +717,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 \subsubsection{Server Architecture}
-                                        \label{server-architecture} [7 <./image
-s/graph-generation/single/graph-generation-1.png> <./images/graph-generation/si
-ngle/graph-generation-2.png> <./images/graph-generation/single/graph-generation
--3.png> <./images/graph-generation/single/graph-generation-4.png>]
+l.97 
+      [7 <./images/graph-generation/single/graph-generation-1.png> <./images/gr
+aph-generation/single/graph-generation-2.png> <./images/graph-generation/single
+/graph-generation-3.png> <./images/graph-generation/single/graph-generation-4.p
+ng>]
 Overfull \hbox (1.29799pt too wide) in paragraph at lines 116--126
 \T1/aer/m/n/9 NI-CAZIONE A LIV-ELLO API DEL BROWSER CON SEN-
  []
@@ -738,6 +743,9 @@ been already used, duplicate ignored
                    \relax 
 l.173 
        [8 <./images/web_framework_1.png>] (./case-study.tex
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
@@ -756,8 +764,8 @@ po
 the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 
-      [9 <./images/architecture-eps-converted-to.pdf>])
+l.22 \bibitem{6816739}
+                       [9 <./images/architecture-eps-converted-to.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
@@ -802,7 +810,7 @@ ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on doceng2015.pdf (10 pages, 5665592 bytes).
+Output written on doceng2015.pdf (10 pages, 5665728 bytes).
 PDF statistics:
  435 PDF objects out of 1000 (max. 8388607)
  366 compressed objects within 4 object streams

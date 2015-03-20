@@ -36,7 +36,7 @@ The configuration includes parameters and settings needed for building represent
 
 After the configuration part, goes a {\tt DataCollection} list. Each element
 of the list is given in the form of a GeoJSON {\tt FeatureCollection},
-containing an arbitrary  number of {\emph HIJSON Elements}. Each {\tt
+containing an arbitrary  number of \emph{HIJSON Elements}. Each {\tt
 DataCollection} imposes a logical relationship that can be exploited to group
 together related HIJSON Elements. Since  HIJSON Elements adhere to the GeoJSON
 format, each {\tt DataCollectio}n results compliant with GeoJSON syntax and
@@ -108,15 +108,17 @@ attributes are mandatories:
  {\tt class}: represent the element category, used to instantiate
  the appropriate {\emph HIJSON Class};
 \item
- {\tt parent}: contains parent's ID of the element.;
+ {\tt parent}: contains parent's ID of the element;
 \item
- {\tt tVector} and {\tt rVector}: represent the translation and
- rotation relative to the parent element. The measure unit for
- translation is meter and for rotation is grades.
+ {\tt tVector}: represents the translation relative to 
+ the parent element, expres in meters;
+\item
+ {\tt rVector}: represents the rotarion relative to 
+ the parent element, expressed in  degrees.
 \end{itemize}
 
 Specific classes may require the mandatory presence of other properties. For
-eexample the two classes {\tt internal_wall} and {\tt external_wall} that
+eexample the two classes {\tt internal\_wall} and {\tt external\_wall} that
 define internal and external walls respectively, require a {\tt connections}
 array, containing the IDs of the adiacent elements. This information is used
 by the connector children of the element (e.g. like doors) to identify the
