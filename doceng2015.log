@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  20 MAR 2015 17:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  20 MAR 2015 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -505,18 +505,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<images/minimum.pdf, id=141, 1071.00125pt x 629.35126pt>
-File: images/minimum.pdf Graphic file (type pdf)
+<images/minimum-colors-test.pdf, id=141, 1071.04144pt x 629.4717pt>
+File: images/minimum-colors-test.pdf Graphic file (type pdf)
 
-<use images/minimum.pdf>
-Package pdftex.def Info: images/minimum.pdf used on input line 71.
-(pdftex.def)             Requested size: 252.0pt x 148.08002pt.
+<use images/minimum-colors-test.pdf>
+Package pdftex.def Info: images/minimum-colors-test.pdf used on input line 72.
+(pdftex.def)             Requested size: 252.0pt x 148.09875pt.
 
 <images/boundary.pdf, id=142, 464.93701pt x 338.94629pt>
 File: images/boundary.pdf Graphic file (type pdf)
 
 <use images/boundary.pdf>
-Package pdftex.def Info: images/boundary.pdf used on input line 73.
+Package pdftex.def Info: images/boundary.pdf used on input line 74.
 (pdftex.def)             Requested size: 201.59692pt x 146.9698pt.
 ) (./related-work.tex
 LaTeX Font Info:    Try loading font information for T1+aett on input line 49.
@@ -551,15 +551,15 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.65 
-      [3 <./images/minimum.pdf> <./images/boundary.pdf>]
-<images/sogei-a.pdf, id=206, 708.24059pt x 670.38193pt>
+      [3 <./images/minimum-colors-test.pdf> <./images/boundary.pdf>]
+<images/sogei-a.pdf, id=208, 708.24059pt x 670.38193pt>
 File: images/sogei-a.pdf Graphic file (type pdf)
 
 <use images/sogei-a.pdf>
 Package pdftex.def Info: images/sogei-a.pdf used on input line 78.
 (pdftex.def)             Requested size: 115.19897pt x 109.03294pt.
 
-<images/sogei-b.pdf, id=207, 690.41667pt x 657.36282pt>
+<images/sogei-b.pdf, id=209, 690.41667pt x 657.36282pt>
 File: images/sogei-b.pdf Graphic file (type pdf)
 
 <use images/sogei-b.pdf>
@@ -597,7 +597,7 @@ ted-to.pdf images/pipeline.eps>
 (epstopdf)             \includegraphics on input line 41.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/pipeline-eps-converted-to.pdf, id=284, 803.0pt x 1027.84pt>
+<images/pipeline-eps-converted-to.pdf, id=286, 803.0pt x 1027.84pt>
 File: images/pipeline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/pipeline-eps-converted-to.pdf>
@@ -617,7 +617,7 @@ Overfull \hbox (6.51636pt too wide) in paragraph at lines 75--85
  []
 
 
-<images/graph-generation/single/graph-generation-1.png, id=299, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-1.png, id=301, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-1.png Graphic file (type 
 png)
@@ -626,7 +626,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-1.png
 used on input line 162.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-2.png, id=301, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-2.png, id=303, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-2.png Graphic file (type 
 png)
@@ -635,7 +635,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-2.png
 used on input line 168.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-3.png, id=302, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-3.png, id=304, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-3.png Graphic file (type 
 png)
@@ -644,7 +644,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-3.png
 used on input line 174.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-4.png, id=303, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-4.png, id=305, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-4.png Graphic file (type 
 png)
@@ -664,7 +664,7 @@ eps-converted-to.pdf images/element-class-node.eps>
 (epstopdf)             \includegraphics on input line 204.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/element-class-node-eps-converted-to.pdf, id=304, 1027.84pt x 200.75pt>
+<images/element-class-node-eps-converted-to.pdf, id=306, 1027.84pt x 200.75pt>
 File: images/element-class-node-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/element-class-node-eps-converted-to.pdf>
@@ -689,12 +689,12 @@ Overfull \hbox (5.52234pt too wide) in paragraph at lines 244--248
 uip-
  []
 
-<images/web_framework_2.png, id=329, 1846.9pt x 1246.6575pt>
+<images/web_framework_2.png, id=331, 1845.89626pt x 1246.6575pt>
 File: images/web_framework_2.png Graphic file (type png)
 
 <use images/web_framework_2.png>
 Package pdftex.def Info: images/web_framework_2.png used on input line 253.
-(pdftex.def)             Requested size: 504.0pt x 340.19727pt.
+(pdftex.def)             Requested size: 504.0pt x 340.38748pt.
 ) (./web-framework.tex
 Overfull \hbox (3.57864pt too wide) in paragraph at lines 15--20
 []\T1/aer/m/n/9 Being sup-ported by the web as bear-ing plat-form, the frame-
@@ -710,7 +710,7 @@ Package epstopdf Info: Source file: <images/architecture.eps>
 nverted-to.pdf images/architecture.eps>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
-<images/architecture-eps-converted-to.pdf, id=330, 833.1125pt x 230.8625pt>
+<images/architecture-eps-converted-to.pdf, id=332, 833.1125pt x 230.8625pt>
 File: images/architecture-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/architecture-eps-converted-to.pdf>
@@ -782,16 +782,12 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 192.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `doceng2015.out' has not changed.
 (rerunfilecheck)             Checksum: C12AF9A896BBE86B708422D7D19C18EC;1857.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
  10720 strings out of 495028
- 152772 string characters out of 6181497
- 264709 words of memory out of 5000000
+ 152832 string characters out of 6181497
+ 263693 words of memory out of 5000000
  13610 multiletter control sequences out of 15000+600000
  60954 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -811,10 +807,10 @@ ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on doceng2015.pdf (10 pages, 5647711 bytes).
+Output written on doceng2015.pdf (10 pages, 6384888 bytes).
 PDF statistics:
- 438 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
+ 440 PDF objects out of 1000 (max. 8388607)
+ 371 compressed objects within 4 object streams
  117 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

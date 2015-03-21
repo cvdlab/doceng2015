@@ -2,7 +2,7 @@
 
 An indoor environment interactive mapping consists of a virtual reconstruction
 of a real indoor space in which the user can move around and then interact
-with the objects which are found the same position they actually occupy in the
+with the objects which are found in the same position they actually occupy in the
 real world. Such an indoor interactive mapping can be thought as a specialized
 and very evoluted user interface capable of giving a glimpse of a section of
 the real world that the user can handle in a natural and intuitive way.  Such
@@ -11,16 +11,16 @@ platform where many different applications can rely upon. Both promising and
 already well explored ICT fields may find in \emph{virtual indoor mapping} the
 perfect context to be integrated into.
 
-In particular, for environments which massive presence of sensor-equipped (or
+In particular, for environments with massive presence of sensor-equipped (or
 ``smart'') objects, which realize the so-called \emph{IoT} (Internet of
 Things), the indoor interactive mapping represents an ideal integrated
 interface for IoT monitoring systems. In particular, it can be the container
 of indoor navigation systems, giving the user, to be routed across an indoor
 environment, the opportunity to interact with objects along the suggested
 paths. Futhermore, in conjunction with the advancements in the fields of user
-indoor location, achieved via a variety of positioning systems like GNSS
+indoor location, achieved through a variety of positioning systems like GNSS
 (Global Navigation Satellite system), Wi-Fi, LTE (Long Term Evolution),
-SDR(Software Defined Radio), it represents the most natural interface to
+SDR (Software Defined Radio), it represents the most natural interface to
 perform realtime access monitoring and multiperson tracking.
 
 To enable such a interactive mapping platform it is of the utmost importance a
@@ -39,8 +39,8 @@ open formats for indoor representation are few and partial, certainly not
 intended to support the interactive indoor mapping, which is conversely the
 main purpose of this paper.
 
-This work, jointly developed by {Sogei S.p.A.}, a company fully owned by
-Italian  Ministry of Economy and Finance, and the {CVDLAB} (Computational
+This work, jointly developed by Sogei S.p.A., a company fully owned by
+Italian  Ministry of Economy and Finance, and the CVDLAB (Computational
 Visual Design Laboratory) of the ``Roma Tre'' University, is inspired by the
 necessities of SoGeI itself, which runs one of the largest data center of
 Italy, then requiring strict access control policies which have to be composed
@@ -52,7 +52,7 @@ indoor cartographical format proposed.
 
 
 The remainder of this document is organized as follows. In
-Section~\ref{introduction} we provide an overview of the state of the art in
+Section~\ref{related-work} we provide an overview of the state of the art in
 the field of indoor document standards and related applications.
 Section~\ref{advances} is devoted to describe the advances introduced by the
 novel cartographic document proposed, while section~\ref{hijson-syntax}
@@ -68,7 +68,8 @@ developments.
 
 \begin{figure*}[!htbp] % figure placement: here, top, bottom, or page
  \centering
- \includegraphics[width=0.5\linewidth]{images/minimum} 
+ % \includegraphics[width=0.5\linewidth]{images/minimum} 
+ \includegraphics[width=0.5\linewidth]{images/minimum-colors-test} 
  \hfill
  \includegraphics[width=0.4\linewidth]{images/boundary} 
  \caption{A toy example of the LAR scheme: (a) the bare minimum of data with \emph{complete} information about topology; (b) the extracted boundary; (c) the extraction method $[e] = [\partial][f]$ giving the coordinate representation (in the discrete basis of the 1-cells) ofthe boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial]$ times the coordinate representation $[f]$ of the 2-cells (faces), in the discrete basis of the 2-cells.}
