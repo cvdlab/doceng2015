@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  20 MAR 2015 21:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  21 MAR 2015 02:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -207,19 +207,23 @@ File: uni-global.def 2013/05/13 UCS: Unicode global data
 \uc@combtoksb=\toks39
 \uc@temptokena=\toks40
 )
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/balance.sty
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen123
+)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen123
-\captionmargin@=\dimen124
-\captionwidth=\dimen125
-\caption@tempdima=\dimen126
-\caption@indent=\dimen127
-\caption@parindent=\dimen128
-\caption@hangindent=\dimen129
+\captionmargin=\dimen124
+\captionmargin@=\dimen125
+\captionwidth=\dimen126
+\caption@tempdima=\dimen127
+\caption@indent=\dimen128
+\caption@parindent=\dimen129
+\caption@hangindent=\dimen130
 \abovecaptionskip=\skip44
 \belowcaptionskip=\skip45
 Package caption Info: Unknown document class (or package),
@@ -296,7 +300,7 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen130
+\@linkdim=\dimen131
 \Hy@linkcounter=\count113
 \Hy@pagecounter=\count114
 
@@ -322,10 +326,10 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen131
+\XeTeXLinkMargin=\dimen132
 \Fld@menulength=\count117
-\Field@Width=\dimen132
-\Fld@charsize=\dimen133
+\Field@Width=\dimen133
+\Fld@charsize=\dimen134
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -363,14 +367,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \lst@gtempboxa=\box30
 \lst@token=\toks41
 \lst@length=\count123
-\lst@currlwidth=\dimen134
+\lst@currlwidth=\dimen135
 \lst@column=\count124
 \lst@pos=\count125
-\lst@lostspace=\dimen135
-\lst@width=\dimen136
+\lst@lostspace=\dimen136
+\lst@width=\dimen137
 \lst@newlines=\count126
 \lst@lineno=\count127
-\lst@maxwidth=\dimen137
+\lst@maxwidth=\dimen138
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
@@ -403,31 +407,31 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 (./doceng2015.aux)
 \openout1 = `doceng2015.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count130
-\scratchdimen=\dimen138
+\scratchdimen=\dimen139
 \scratchbox=\box32
 \nofMPsegments=\count131
 \nofMParguments=\count132
 \everyMPshowfont=\toks42
 \MPscratchCnt=\count133
-\MPscratchDim=\dimen139
+\MPscratchDim=\dimen140
 \MPnumerator=\count134
 \makeMPintoPDFobject=\count135
 \everyMPtoPDFconversion=\toks43
@@ -459,7 +463,7 @@ Package caption Info: End \AtBeginDocument code.
 Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-Package hyperref Info: Link coloring OFF on input line 48.
+Package hyperref Info: Link coloring OFF on input line 51.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -468,31 +472,31 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count136
 )
-LaTeX Info: Redefining \ref on input line 48.
-LaTeX Info: Redefining \pageref on input line 48.
-LaTeX Info: Redefining \nameref on input line 48.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
 
 (./doceng2015.out) (./doceng2015.out)
 \@outlinefile=\write3
 \openout3 = `doceng2015.out'.
 
 \c@lstlisting=\count137
-LaTeX Font Info:    Try loading font information for U+msa on input line 139.
+LaTeX Font Info:    Try loading font information for U+msa on input line 142.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 139.
+LaTeX Font Info:    Try loading font information for U+msb on input line 142.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 139.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 142.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) (./abstract.tex)
-Overfull \hbox (1.26794pt too wide) in paragraph at lines 145--146
+Overfull \hbox (1.26794pt too wide) in paragraph at lines 148--149
 \T1/aer/m/n/9 H.4 [\T1/aer/bx/n/9 Information Sys-tems Ap-pli-ca-tions\T1/aer/m
 /n/9 ]: Mis-cel-la-neous;
  []
@@ -716,55 +720,73 @@ File: images/architecture-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: images/architecture-eps-converted-to.pdf used on input
  line 42.
 (pdftex.def)             Requested size: 504.0pt x 139.66342pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.101 
-       [7 <./images/graph-generation/single/graph-generation-1.png> <./images/g
-raph-generation/single/graph-generation-2.png> <./images/graph-generation/singl
-e/graph-generation-3.png> <./images/graph-generation/single/graph-generation-4.
-png>]
-Overfull \hbox (3.40073pt too wide) in paragraph at lines 128--132
-[]\T1/aer/m/n/9 Every time the \T1/aett/m/n/9 sen-sor adapter \T1/aer/m/n/9 ob-
-serve a per-cep-ti-ble mod-
+
+Overfull \hbox (1.03249pt too wide) in paragraph at lines 50--51
+[]\T1/aer/m/n/9 L'IoT mon-i-tor-ing ap-pli-ca-tion con-siste of an in-ter-face 
+show-
  []
+
+
+Overfull \hbox (3.91402pt too wide) in paragraph at lines 65--73
+[]\T1/aer/m/n/9 Realtime multi-person track-ing al-lows a \T1/aer/m/it/9 Su-per
+-vi-sor \T1/aer/m/n/9 to mon-
+ []
+
+
+Underfull \vbox (badness 1412) has occurred while \output is active []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.150 
-       [8 <./images/web_framework_2.png>]) (./case-study.tex
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+l.74 \subsubsection{Cross-storey user navigation}
+                                                 \label{cross-storey-user-na...
+[7 <./images/graph-generation/single/graph-generation-1.png> <./images/graph-ge
+neration/single/graph-generation-2.png> <./images/graph-generation/single/graph
+-generation-3.png> <./images/graph-generation/single/graph-generation-4.png>]pd
+fTeX warning (ext4): destination with the same identifier (name{page.}) has bee
+n already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.128 
+       [8 <./images/web_framework_2.png>]
+Overfull \hbox (3.40073pt too wide) in paragraph at lines 129--133
+[]\T1/aer/m/n/9 Every time the \T1/aett/m/n/9 sen-sor adapter \T1/aer/m/n/9 ob-
+serve a per-cep-ti-ble mod-
+ []
+
+) (./case-study.tex (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-))
-(./conclusions.tex)pdfTeX warning (ext4): destination with the same identifier 
-(name{page.}) has been already used, duplicate ignored
+)) (./conclusions.texpdfTeX warning (ext4): destination with the same identifie
+r (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.177 
-       [9 <./images/architecture-eps-converted-to.pdf>] (./doceng2015.bbl)pdfTe
-X warning (ext4): destination with the same identifier (name{page.}) has been a
-lready used, duplicate ignored
+l.1 \section
+            {Conclusions}\label{conclusions} [9 <./images/architecture-eps-conv
+erted-to.pdf>]) (./doceng2015.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+
+Overfull \vbox (0.59393pt too high) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.191 \balancecolumns
-                      [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
+l.196 \end{document}
+                     [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
  (./doceng2015.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 196.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
 Package rerunfilecheck Info: File `doceng2015.out' has not changed.
 (rerunfilecheck)             Checksum: C12AF9A896BBE86B708422D7D19C18EC;1857.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
  ) 
 Here is how much of TeX's memory you used:
- 10468 strings out of 495028
- 149969 string characters out of 6181497
- 263693 words of memory out of 5000000
- 13361 multiletter control sequences out of 15000+600000
+ 10486 strings out of 495028
+ 150321 string characters out of 6181497
+ 264079 words of memory out of 5000000
+ 13375 multiletter control sequences out of 15000+600000
  60954 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,11n,38p,609b,1541s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -783,7 +805,7 @@ ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on doceng2015.pdf (10 pages, 6384989 bytes).
+Output written on doceng2015.pdf (10 pages, 6386047 bytes).
 PDF statistics:
  440 PDF objects out of 1000 (max. 8388607)
  371 compressed objects within 4 object streams
