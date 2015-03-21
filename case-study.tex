@@ -1,20 +1,15 @@
 \section{Case study}\label{case-study}
 
-As the first case study has been taken into account the need of Sogei S.p.A. to support its data center maintaince, which is subject to strict access control policies. 
-Lo scenario considerato consiste nell'intervanto di manutenzione da parte di un operatore che deve muoversi nell'ambiente e localizzare all'interno di un datacenter dalle enormi dimensioni la macchina su cui operare, individuandolo tra migliaia di rack di aspetto simile. Tale operatore sarà quindi equipaggiato con un client explorer. Il client explorer guiderà l'operatore fino al sottosistema su cui intervenire, notificandone al contempo la posizione ad ogni istante.
+As the first case study has been taken into account the need of Sogei S.p.A. to support its data center maintaince workflow. The data center, it is simple to imagine, is subject to strict access control policies. 
 
-Le figure responsabili, attraverso il supervisor client possono monitorare la situazione degli smart object, che in questo caso spaziano dalle webcam ai sistemi di allarme antincendio ma comprendono anche le macchine fische, sicchè sia possibile monitorarne lo stato di funzionamento, temperatura di esercizio e carico di lavoro...
+The overal state of the data center can be monitored through the \emph{Supervisor} client. In this case are considered smart objects a range of different devices: from webcam, that provide on request the captured video stream, by way of alarm and antifire system, till servers, that can be monitored along several dimensions (operating temperature, workload, etc.). 
 
+The most common maintenance scenario consists of an intervention by an operator that have to move across the environment,
+locate within a huge data center the machine on which operate. This could be a not trivial task due to the presence in a data center of thousands of similar-looking machine racks. Thus the operator will be equipped with an \emph{Explorer} client, which will drive the operator to the target machine on which operate, while continuously notifying his position obtained by interacting with indoor positiong system.
 
-The real­time awareness of the relative positions between
-the ‘maintenance man' andthe rack ­ containing the machine­ will help us
-increasing safety and reducing intervention times.
-Infatti, le figure responsabili, con diritti di accesso al client supervisor, avranno quindi modo di monitorare le posizione degli operatori attivi all'interno del datacenter verificando che essi non devino su percorsi non autorizzati.
+The real­time awareness of the relative positions between the technician in charge of the maintenance and the rack ­containing the machine­ on which to perform the operation will help increasing safety and reducing intervention times. The mantainance workflow supervisor, using the \emph{Supervisor} client is able to monitor operator position within the data center, verifying that he does not deviate on unauthorized paths, triggering the alarm if this happens.
 
-In particolare tali supervisori, nello scenario di manutenzione in analisi, tracciando l'intervento dell'operatore in tempo reale possono scaricare il sistema target della manutenzione da tutti i servizi che offre, migrando le corrsipondenti macchine virtuali e distribuendole su altri sistemi, garantendo così continuità di servizio e diminuendo il global risk factor. Terminato l'intervento tecnico, lo stato precedente può essere ripristinato. 
-
-
-
+In particualr, supervisor by tracking operator position in real time, can unload the taget machine by the time the operator reach the machine. The unload proces consists of migrate all the virtual machines run by the system that need maintainance to different phisycal servers. Once the maintanance process is done, previous state can be restored. In this way continuity of service is ensured and the global risk factor is decreased.
 
 %----------------------------------------------------------------------------
 
