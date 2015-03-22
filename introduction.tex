@@ -1,56 +1,56 @@
 \section{Introduction}\label{introduction}
 
-An indoor environment interactive mapping consists of a virtual reconstruction
-of a real indoor space in which the user can move around and then interact
-with the objects which are found in the same position they actually occupy in the
-real world. Such an indoor interactive mapping can be thought as a specialized
-and very evoluted user interface capable of giving a glimpse of a section of
+An \emph{interactive indoor mapping} environment consists of a virtual reconstruction
+of a physical indoor space, in which the user can move around and interact
+with virtual objects, that are found in the same position they actually occupy in the
+real world. Such an interactive indoor mapping can be thought as a specialized
+and very evoluted \emph{user interface} capable of giving a glimpse of a section of
 the real world that the user can handle in a natural and intuitive way.  Such
 a reconstructed virtual indoor environment can be considered a general
 platform where many different applications can rely upon. Both promising and
-already well explored ICT fields may find in \emph{virtual indoor mapping} the
+already well explored ICT applications may find in \emph{virtual indoor mapping} the
 perfect context to be integrated into.
 
 In particular, for environments with massive presence of sensor-equipped (or
 ``smart'') objects, which realize the so-called \emph{IoT} (Internet of
-Things), the indoor interactive mapping represents an ideal integrated
-interface for IoT monitoring systems. In particular, it can be the container
+Things), the interactive indoor mapping represents an ideal integrated
+interface for IoT monitoring systems. To be specific, it can be the container
 of indoor navigation systems, giving the user, to be routed across an indoor
 environment, the opportunity to interact with objects along the suggested
 paths. Futhermore, in conjunction with the advancements in the field of user
 indoor location, whose efforts are nowdays focused to realize an integration
-of positioning systems like GNSS (Global Navigation Satellite system), Wi- Fi,
+of positioning systems like GNSS (Global Navigation Satellite system), Wi-Fi, and 
 LTE (Long Term Evolution), to support continuos outdoor/indoor navigation by
 means of integration tecnology like for example SDR (Software Defined Radio),
 it represents the most natural interface to perform realtime access monitoring
 and multiperson tracking.
 
-To enable such a interactive mapping platform it is of the utmost importance a
-descriptive representation of the indoor environment. This means entering in
+To enable such a interactive mapping platform it is of the utmost importance to set up  a
+descriptive representation of the indoor environment. This description belongs to 
 the field of indoor cartography, which as digital evolution of plain floor
 plans, is arrived to arouse the interest of big players like Google, that has
-integrated into Google Maps indoor plans of specific locations of interest
-\cite{indoormaps}. In general, can be considered ``of interest'' --- such to
+integrated indoor plans of specific locations of interest
+\cite{indoormaps}  into Google Maps. In general, can be considered ``of interest'' --- such to
 justify and motivate indoor cartographic applications --- both public or
 commercial places of vast dimensions, as for example airports, train stations,
-shopping malls, and also private buildings subject to strict access control,
-like warehouses, logistics centers, and datacenter.
+shopping malls, and also private buildings subject to strict access protocols,
+like warehouses, logistics centers, datacenters, etc.
 
-Despite of the growing attention around indoor cartography, efforts to specify
-open formats for indoor representation are few and partial, certainly not
+Despite of the growing attention regarding indoor cartography, efforts to specify
+open formats for indoor representation are few and partial, and certainly not
 intended to support the interactive indoor mapping, which is conversely the
 main purpose of this paper.
 
-This work, jointly developed by Sogei S.p.A., a company fully owned by
+This work, jointly developed by Sogei S.p.A., an ICT company fully owned by
 Italian  Ministry of Economy and Finance, and the CVDLAB (Computational
 Visual Design Laboratory) of the ``Roma Tre'' University, is inspired by the
-necessities of SoGeI itself, which runs one of the largest data center of
-Italy, then requiring strict access control policies which have to be composed
-with indispensable human/machine coordinate maintenance scenarios. Support for
-these scenarios, where real time awarness of the maintainer position inside
-the data center helps to both reduce intervention and increase safety, has
-been adopted as the case study of the interactive indoor mapping based on the
-indoor cartographical format proposed.
+necessities of Sogei itself, which runs one of the largest data center of
+Italy, so requiring strict access control policies, which include the recording and 
+the real-time interaction with man/machine maintenance scenarios. Support for
+tis interactive framework, where real-time awarness of the maintainer position inside
+the data center helps to reduce intervention times and to increase safety and security, has
+been chosen as case study of interactive indoor mapping, based on the proposed
+indoor cartographic format.
 
 
 The remainder of this document is organized as follows. In
@@ -74,7 +74,7 @@ developments.
  \includegraphics[width=0.5\linewidth]{images/minimum-colors-test} 
  \hfill
  \includegraphics[width=0.4\linewidth]{images/boundary} 
- \caption{A toy example of the LAR scheme: (a) the bare minimum of data with \emph{complete} information about topology; (b) the extracted boundary; (c) the extraction method $[e] = [\partial][f]$ giving the coordinate representation (in the discrete basis of the 1-cells) ofthe boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial]$ times the coordinate representation $[f]$ of the 2-cells (faces), in the discrete basis of the 2-cells.}
+ \caption{A toy example of the LAR scheme: (a) the bare minimum of data with \emph{complete} information about topology; (b) the extracted boundary; (c) the extraction method $[e] = [\partial][f]$ giving the coordinate representation (in the discrete basis of the 1-cells) of the boundary edges $[e]$ by product of the sparse boundary operator matrix $[\partial]$ times the coordinate representation $[f]$ of the 2-cells (faces), in the discrete basis of the 2-cells.}
  \label{fig:minimum}
 \end{figure*}
 

@@ -11,7 +11,7 @@
 \BOOKMARK [2][-]{subsection.4.1}{HIJSON Element}{section.4}% 11
 \BOOKMARK [1][-]{section.5}{HIJSON Toolkit}{}% 12
 \BOOKMARK [2][-]{subsection.5.1}{Processing pipeline}{section.5}% 13
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Algorithmics: automatic generation of valid paths}{subsection.5.1}% 14
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Automatic generation of valid paths}{subsection.5.1}% 14
 \BOOKMARK [2][-]{subsection.5.2}{HIJSON Class definition}{section.5}% 15
 \BOOKMARK [1][-]{section.6}{HJSON Web Framework}{}% 16
 \BOOKMARK [2][-]{subsection.6.1}{Applications}{section.6}% 17

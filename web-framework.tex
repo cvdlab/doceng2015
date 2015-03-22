@@ -2,31 +2,31 @@
 
 The HIJSON Web Framework responds to the needs of an extendable,
 customizable, and scalable web framework which provides at the same time IoT
-monitoring, realtime multi-person tracking and crossfloor user
+monitoring, realtime multi-person tracking and cross-floor user
 navigation.
 
-Expandability and customizability derives from both design choises and
-HIJSON inherent characteristics, the possibility of semantic extensions.
+Expandability and customizability derive from both design choises and
+HIJSON inherent characteristics, i.e.~the possibility of semantic extensions.
 Scalablility is directly borrowed from technologies used for the
 software development: \emph{JavaScript} language, using \emph{Node.js},
 in particular \emph{Express.js} as backend framework, exploiting the
 power of WebSocket protocol through the \emph{Socket.io} library.
 
-Being supported by the web as bearing platform, the framework exposes
-also an highly availability: it is so simple to use as to visit a
+Being supported by the \emph{web-as-a-platform}, the framework exposes
+also an high availability: it is so simple to use as to visit a
 website, both from desktop or mobile devices, without explicit
-requirements to install any software from proprietary stores (access to
-which is often denied from business devices).
+requirements to install any software package from proprietary stores---access to
+which is often denied from business devices.
 
-The HIJSON Web Framework deeply relies on HIJSON Toolkit and offers the
-overal client/server architecture and a convinient, highly intractive
+The HIJSON Web Framework deeply relies on HIJSON Toolkit and offers an
+all-inclusive client/server architecture and a convenient and highly interactive
 user interface, leaving aside the specific indoor positioning system and
-the IoT sensors, to deal with a robust interface is provided and
-described in the following seciton.
+the IoT sensors to deal with. A robust application interface is provided and
+described in the following section.
 
 \subsection{Applications}\label{applications}
 
-The Framework has been designed focus on two different possible kind of
+The Framework has been designed with focus on two different kind of
 users: the \emph{Explorer} and the \emph{Supervisor}. They have
 different requirements and are likely equipped with different devices:
 while the \emph{Supervisor} monitors the indoor environment through a
@@ -47,88 +47,84 @@ that encourage employees to use personal devices.
 
 \subsubsection{IoT monitoring}\label{iot-monitoring}
 
-L'IoT monitoring application consiste of an interface showing to the user in single, integrated and centralized way information collected from all the smart objects modelled in the HIJSON document.
+An \emph{IoT monitoring application} consists of an interface showing the user, in a single, integrated and centralized way, the information collected from all the smart objects modelled in the HIJSON document.
+It is proper of IoT monitors to provide bidirectional communication, since the interface lets the user have information coming from smart objects, but also allows him to send commands to them. 
 
-It is proper of IoT to have bidirectional communication between user and smart objects, in fact the interface lets the user have information coming from smart object but also allows him to send commands to them. 
+As the name itself may suggest, it is an activity specifically performed by a \emph{Supervisor} user, but it can be also suitable to be deployed for the \emph{Explorer} user, since she can take advantage of the interactive information coming from the surroundings objects while she moves across the indoor environment.
 
-As the name itself may suggest, it is an activity specifically performed by a \emph{Supervisor} user, but it can be also suitable to be deployed for the \emph{Explorer} user, since he can take advantage of the interactive information coming from the surroundings objects while he moves across the indoor environment.
+Monitoring different smart objects may require different ways to visualize and/or send data and commands.
+Modularity and extendibility of the application respond superbly to these requirements, by providing for each class of objects a different interface of visualization and interaction, as a result of the information hiding and incapsulation principles introduced by the HIJSON Class.
+In particular, the user interface is characterized by a dual-display mode, that allows the user to see at the same time a 2D map that gives an overall glance in a simplified plan, and a 3D virtual environment to navigate into, as shown in Figure~\ref{fig:web-framework-ui}.
 
-Monitoring different smart objects may require different ways to visualize or send data and command.
-Modularity and extendibility of the application perfectly respond to these requirements providing for each class of object a differnt interface of visualization and interaction, thanks to information hiding and incapsulation principles introduces by the HIJSON Class.
-
-The user interface is characterized by a dual display mode, that allows to the user to have at the same time a 2D map that gives an overall glance in simplified plan and a 3D virtual environment to navigate into.
-
-Alongside tipical smart objects suitable to deal with (like thermostats: the user can read the temperature in the room and can turn on/off the heating) also object that are not proper considered ``smart'' can be integrated into this environment: it is the case for example of fire estinguisher that can show the date of the last check stored in a database.
+Alongside with typical smart objects, suitable to deal with like thermostats, where the user can read the room  temperature and turn the heating on/off, other kinds of objects that are not properly considered ``smart'' can be integrated into the HIJSON environment. It is the case, for example, of fire estinguishers, that are able to show the date of their last check, stored in a database.
 
 \subsubsection{Realtime multi-person tracking}\label{realtime-multi-person-tracking}
 
-Realtime multi-person tracking allows a \emph{Supervisor} to monitor the current
+Real=time multi-person tracking allows a \emph{Supervisor} to monitor the current
 real position of people inside the building. This kind of task can be useful for
-various reasons, e.g. security, logistics or to supervise composite operative
-workflows. Each device equipped to a \emph{Explorer} is in charge to locate
-itself, interacting with the indoor positiong saystem, and to notify the current
-position continuosly. Evidence of the people position is given to the
-\emph{Supervisor} both in a 2D map and in an immersive 3D recostructed
-environment.
+several reasons, including security, logistics or to supervise composite operative
+workflows. Each device equipped with the \emph{Explorer} application is in charge of locating
+itself, interacting with the indoor positiong saystem, and notifying the current
+position in continuos mode. Evidence of the people position is given to the
+\emph{Supervisor} both into a 2D map and an immersive 3D virtual environment (see Figure~\ref{fig:web-framework-ui}).
 
 \subsubsection{Cross-storey user navigation}\label{cross-storey-user-navigation}
 
-The Framework also shows off the capability to give directions to
-\emph{Explorer} users that have to move across the indoor environment. The
+The HIJSON Framework also provides the capability to give directions to
+\emph{Explorer} users that must move across the indoor environment. The
 user specifies a starting and an ending point and the system provides him with
-a valid path to reach the ending point being in the starting one. This feature
-strongly rely on the graph paths generated by the Toolkit, so startig and
-ending points must be nodes of the graph. Connection nodes are introduced to
+a valid and optimal connection path. This feature
+strongly rely on the graph of paths generated by the Toolkit, so starting and
+ending points must be nodes of the graph. \emph{Connection nodes} are introduced to
 represent stairs or elevators, enabling cross-storey paths to be computed.
-Since paths can span on more than one storey, the most effective way
-to present them to the user is to show them merged in the 2D map.
+Since paths can span more than one storey, the most effective way
+to display them to the user is to show the connection nodes merged in more than one 2D map.
 
 \subsection{Architecture}\label{architecture}
 
-Like the vast majority of the web based application, the Framework exposes an
+Like the vast majority of the web based applications, the Framework exposes an
 overall architecture that is inherently \emph{client/server}. In particular,
-two different type of possible client are identifiable, one for each different 
+two different types of possible client are identifiable, one for each different 
 kind of users: the \emph{Supervisor} client and the \emph{Explorer} client. 
 Both of them connect to the same server.
 
-The indoor space described by the HIJSON document passed as input is
-processed by the server via the processing pipeline. After that any connecting
-\emph{Explorer} client, presumably through a mobile device, will be provided
+The indoor space described by the input HIJSON document is
+processed by the server via the processing pipeline. After that, any connecting
+\emph{Explorer} client, presumably via a mobile device, will be provided
 with the information to perform cross-storey navigation of the building, while
-reporting user position to the server. The server will feed any connecting
+reporting the user position to the server. The server will feed any connecting
 \emph{Supervisor} client with users positions, along with data from sensor-
-equipped objects present in the environment, realizing the IoT monitoring and
-the realtime multi-person tracking.
+equipped objects present in the environment, achieving both IoT monitoring and 
+realtime multi-person tracking.
 
 \subsubsection{Server Architecture}\label{server-architecture}
 
-The complete architectural scheme of the framework is provided in figure
-\ref{fig:architecture}. A web server module is responsible for listenning to
+An architectural scheme of the framework is provided in Figure~\ref{fig:architecture}. A web server module is responsible for listening to
 connecting clients. Each client connection is handled by the web server module
-providing all the required resources and opening one websocket channel,
-through which will flow \emph{Explorer} and/or \emph{Supervisor} communication
-protocol data. In particular, {\tt multi-person\ tracking} module receives
+providing all the required resources by opening a websocket channel, in order to
+have both \emph{Explorer} and/or \emph{Supervisor} communication
+protocol data flow within. In particular, the \texttt{multi-person\ tracking} module receives
 position data from \emph{Explorer} clients. It aggregates and sends these
 information to connected \emph{Supervisor} clients through the websocket
-channel, using a simple but realible protocol described later. Indipendence
-from particular IoT sensor equipment communication protocol is achieved
-introducing one {\tt smart\ object\ proxy} module (defined in the HIJSON Class
-and obtained with {\tt getProxy} method previously described) for each smart
-object modelled.
+channel, using a simple but reliable protocol described later. Indipendence
+from particular IoT sensor equipment communication protocols is achieved
+introducing a \texttt{smart\ object\ proxy} module. This one is defined in the HIJSON Class
+and is obtained via the {\tt getProxy()} method for each smart
+object modelled as previously described).
 
 \subsubsection{Explorer client architecture}\label{explorer-client-architecture}
 
 The \emph{Explorer} client architecture is generally deployed on a mobile
 device, which is usually supplied to a user who needs to be routed across the
-environment described by HIJSON document. The {\tt sensor\ adapter} module
+environment described by the HIJSON document. The {\tt sensor\ adapter} module
 encapsulates the communication logic with the indoor positioning system. The
-presence of this module ensures indipendece from particularly tecnology
-allowing client \emph{Explorer} to rely on different indoor positioning
+presence of this module ensures indipendece from particular tecnologies, so
+allowing the \emph{Explorer} client to rely on different indoor positioning
 systems (WiFi, LTE, etc.).
 
-Every time the {\tt sensor\ adapter} observe a perceptible
-modification in user position sends the new position information to the
-server through the single opened websocket, using the a message with the
+Every time a {\tt sensor\ adapter} observes a perceptible
+modification in user position, sends the new position information to the
+server through the single opened websocket, spawning a simple message with the
 following syntax:
 
 \begin{verbatim}
@@ -145,33 +141,31 @@ It is to remark that, when not outflanked by the introduction of an external
 server, the problem of communication between positioning system and the low
 level APIs of the browser is left to positioning system itself or to whom is
 in charge of specific deployments of the HIJSON Web Framework.
-
-The {\tt smart\ object\ widget} module, being in common with the
-client \emph{Supervisor}, has been treated in the next section.
+The \texttt{smart\ object\ widget} module, being in common with the
+client \emph{Supervisor}, will be discussed in the next section.
 
 \subsubsection{Supervisor client architecture}\label{supervisor-client-architecture}
 
-The Client \emph{Supervisor} architecture shows two modules. The first
-one, the {\tt multi-person\ tracking} module, is responsible to
+The architecture of \emph{Supervisor} client includes two modules. The first
+one, named {\tt multi-person\ tracking} module, is responsible to
 receive through the websocket, from the server information about
-explorers of the environment, showing them in the user interface. The
-second module, the {\tt smart\ object\ widget} communicates with the
-server to propose to the user realtime information about sensor-equipped
+\emph{explorers} of the environment, showing them in the user interface. The
+second module, named {\tt smart\ object\ widget}, communicates with the
+server to propose the user realtime information about sensor-equip\-ped
 objects in the environment. Data passes through the single websocket
-opened between the server and every \emph{Supervisor} Client. Rely on a
+opened between the server and every \emph{Supervisor} Client. Relying on a
 naive but effective communication protocol, each {\tt smart object widget}
-exchange data only with respective {\tt smart pbject proxy} on the server. To
-ensure the the data is sent only when the user requires the information
-relative to a specific smart object, a widget lifecycle protocol is
-implemented: it is based on the 4 events {\tt on\_before\_show},
-{\tt on\_show}, {\tt on\_before\_hide}, {\tt on\_hide}
-triggered, as suggested by their names when a widget is shown or hidden.
+exchanges data only with its corresponding {\tt smart object proxy} on the server. To
+ensure the data are posted only when the user requires the information
+relative to a specific smart object, a \emph{widget lifecycle protocol} is
+implemented. This one is based on 4 event triggers {\tt on\_before\_show},
+{\tt on\_show}, {\tt on\_before\_hide}, {\tt on\_hide}, as suggested by their names.
 When the user requires information about a smart object, its widget has
-to be rendered, but {\tt on\_before\_show} the server is notified to
+to be rendered, and {\tt on\_before\_show} the server is notified to
 connect via relative proxy to the sensor. Once connected, the server
-begin to send data via webscocket. Received data is shown through the
-wodget to the user. When done, that is the {\tt on\_before\_hide} event of the
+begin to send data via websocket. Received data are shown through the
+widget to the user. When done, the {\tt on\_before\_hide} event of the
 widget is triggered, a notification is sent to the server announcing to stop sending
-data and the proxy close the connection to the sensor. Widget lifecycle
-protocol ensures that only requiring data is sent from th eserver to the
+data, and the proxy closes the connection to the sensor. Widget lifecycle
+protocol ensures that only required data are sent from the server to the
 client.
