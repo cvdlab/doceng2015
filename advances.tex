@@ -20,31 +20,31 @@ extensions}.
 The HIJSON format allows for hierarchical description of indoor spaces. The
 introduction of a hierarchical structure establishes a parent-child relation
 between entities of the model, reflecting a container-contained relationship.
-This direclty implies a neater representation than the plain linear structure
+This direclty implies a neater representation then the plain linear structure
 adopted by GeoJSON, being a perfect analogy of objects contained (i.e.
 placed) into spaces.
 
 Therefore, a  organized arrangement of spaces is allowed by HIJSON, via logical (or even
 physical) grouping: concepts like building wings, sections, stories,
-departmens, etc.~can be directly introduced, in order to reflect into the document structure
-the actual logical or physical divisions, categories or relashionships among the modeled spaces.
+departments, etc.~can be directly introduced, in order to reflect into the document structure
+the actual logical or physical divisions, categories or relationships among the modeled spaces.
 
 Hierarchical structures are common in computer graphics, where they are used as
-scene graphs. This accordance of underlying structures really simplify 3D
+scene graphs. This accordance of underlying structures really simplifies 3D
 rendering algorithms of HIJSON documented environments.
 Furthermore, the container-contained relation enables a recurring use of local reference frames.
 
 \subsection{Metric local coordinate system}\label{metric-local-coordinate-system}
 
 Supported by the hierarchical underlying structure, the HJSON document format allows 
-for the use of local coordinate systems. Hence the shape of all elements can 
+the use of local coordinate systems. Hence the shape of all elements can 
 be convenient modelled using local coordinates, and then placed in the right position 
 with respect to the position of the parent (or container) element applying a rotation, followed by a
 translation transformation.
 
 Another substantial advantage is represented by the adoption of a metric reference frame, 
 consequently simplifying the compilation of the document, either manually generated or produced by software tools.
-Just remember that the geojson coordinates are geographical, i.e. pairs of (absolute) latitude and longitude angles, like the ones provided by GPS systems. This kind of coordinates  are certainly not particularly user friendly, when positioning a smart device or a furniture element within a specific building room.
+Just remember that the geojson coordinates are geographical, i.e. pairs of (absolute) latitude and longitude angles, like the ones provided by GNSS systems. This kind of coordinates  are certainly not particularly user friendly, when positioning a smart device or a furniture element within a specific building room.
 
 The HIJSON document format is specially designed to guarantee the user to be routed seamlessly 
 from outdoor to indoor and vice versa. Even if indoor geometries are entered in a local metric 
@@ -100,6 +100,6 @@ is, able to adequately respond to any need of objects representation. To define 
 semantic extension means to allow the HIJSON document to model an object
 previously not covered, or even to modify the behaviour of a comprised one.
 Semantic extensions are to be defined both as HIJSON format syntyax and as
-HIJSON Toolk source code. In particular it is necessary to define respectively
+HIJSON Toolkit source code. In particular it is necessary to define respectively
 a new HIJSON Element and a new HIJSON Class, as specified below.
 
