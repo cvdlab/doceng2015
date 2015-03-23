@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  22 MAR 2015 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  23 MAR 2015 10:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -476,6 +476,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 51.
 LaTeX Info: Redefining \pageref on input line 51.
 LaTeX Info: Redefining \nameref on input line 51.
+
+(./doceng2015.out) (./doceng2015.out)
 \@outlinefile=\write3
 \openout3 = `doceng2015.out'.
 
@@ -501,7 +503,7 @@ Overfull \hbox (1.26794pt too wide) in paragraph at lines 148--149
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4328) has occurred while \output is active []
 
 
 (./introduction.tex [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updma
@@ -509,33 +511,33 @@ p/pdftex.map}
 
 
 ]
-<images/minimum-colors-test.pdf, id=34, 1071.04144pt x 629.4717pt>
+<images/minimum-colors-test.pdf, id=141, 1071.04144pt x 629.4717pt>
 File: images/minimum-colors-test.pdf Graphic file (type pdf)
 
 <use images/minimum-colors-test.pdf>
 Package pdftex.def Info: images/minimum-colors-test.pdf used on input line 74.
 (pdftex.def)             Requested size: 252.0pt x 148.09875pt.
 
-<images/boundary.pdf, id=35, 464.93701pt x 338.94629pt>
+<images/boundary.pdf, id=142, 464.93701pt x 338.94629pt>
 File: images/boundary.pdf Graphic file (type pdf)
 
 <use images/boundary.pdf>
 Package pdftex.def Info: images/boundary.pdf used on input line 76.
 (pdftex.def)             Requested size: 201.59692pt x 146.9698pt.
 ) (./related-work.tex
-LaTeX Font Info:    Try loading font information for T1+aett on input line 49.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 47.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Overfull \hbox (3.50189pt too wide) in paragraph at lines 49--55
+Overfull \hbox (3.50189pt too wide) in paragraph at lines 47--53
 \T1/aett/m/n/9 Point\T1/aer/m/n/9 , \T1/aett/m/n/9 Line-String\T1/aer/m/n/9 , \
 T1/aett/m/n/9 Poly-gon\T1/aer/m/n/9 , \T1/aett/m/n/9 Mul-ti-Point\T1/aer/m/n/9 
 , \T1/aett/m/n/9 Mul-ti-LineString\T1/aer/m/n/9 ,
  []
 
 
-Overfull \hbox (3.23721pt too wide) in paragraph at lines 61--64
+Overfull \hbox (3.23721pt too wide) in paragraph at lines 59--62
 []\T1/aer/m/n/9 In Geo-J-SON it is pos-si-ble to de-fine com-plex shapes throug
 h
  []
@@ -544,8 +546,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.84 \end{itemize}
-                   [2]) (./advances.tex
+l.86 
+      [2]) (./advances.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 2.
@@ -554,21 +556,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.58 
+l.61 
       [3 <./images/minimum-colors-test.pdf> <./images/boundary.pdf>]
 Overfull \hbox (1.42838pt too wide) in paragraph at lines 62--64
 []\T1/aer/m/n/9 Since LAR pro-vides a com-plete rep-re-sen-ta-tion of the topol
 -
  []
 
-<images/sogei-a.pdf, id=107, 708.24059pt x 670.38193pt>
+<images/sogei-a.pdf, id=204, 708.24059pt x 670.38193pt>
 File: images/sogei-a.pdf Graphic file (type pdf)
 
 <use images/sogei-a.pdf>
 Package pdftex.def Info: images/sogei-a.pdf used on input line 77.
 (pdftex.def)             Requested size: 115.19897pt x 109.03294pt.
 
-<images/sogei-b.pdf, id=108, 690.41667pt x 657.36282pt>
+<images/sogei-b.pdf, id=205, 690.41667pt x 657.36282pt>
 File: images/sogei-b.pdf Graphic file (type pdf)
 
 <use images/sogei-b.pdf>
@@ -587,8 +589,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77 
-      [4 <./images/sogei-a.pdf> <./images/sogei-b.pdf>]) (./toolkit.tex
+l.79 \subsection{HIJSON Element}
+                                 [4 <./images/sogei-a.pdf> <./images/sogei-b.pd
+f>]) (./toolkit.tex
 Package epstopdf Info: Source file: <images/pipeline.eps>
 (epstopdf)                    date: 2015-03-21 20:08:46
 (epstopdf)                    size: 876630 bytes
@@ -600,7 +603,7 @@ ted-to.pdf images/pipeline.eps>
 (epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/pipeline-eps-converted-to.pdf, id=194, 803.0pt x 1027.84pt>
+<images/pipeline-eps-converted-to.pdf, id=287, 803.0pt x 1027.84pt>
 File: images/pipeline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/pipeline-eps-converted-to.pdf>
@@ -613,7 +616,7 @@ een already used, duplicate ignored
                    \relax 
 l.53 
       [5 <./images/pipeline-eps-converted-to.pdf>]
-<images/graph-generation/single/graph-generation-1.png, id=211, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-1.png, id=302, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-1.png Graphic file (type 
 png)
@@ -622,7 +625,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-1.png
 used on input line 156.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-2.png, id=213, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-2.png, id=304, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-2.png Graphic file (type 
 png)
@@ -631,7 +634,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-2.png
 used on input line 162.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-3.png, id=214, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-3.png, id=305, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-3.png Graphic file (type 
 png)
@@ -640,7 +643,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-3.png
 used on input line 168.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-4.png, id=215, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-4.png, id=306, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-4.png Graphic file (type 
 png)
@@ -660,7 +663,7 @@ eps-converted-to.pdf images/element-class-node.eps>
 (epstopdf)             \includegraphics on input line 198.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/element-class-node-eps-converted-to.pdf, id=216, 1027.84pt x 200.75pt>
+<images/element-class-node-eps-converted-to.pdf, id=307, 1027.84pt x 200.75pt>
 File: images/element-class-node-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/element-class-node-eps-converted-to.pdf>
@@ -671,10 +674,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.219  \texttt
-              {in\_2D\_map}: a Boolean value to express if the element must
+l.222  \texttt
+              {get2DStyle()}: a method that returns the 2D map appearence of
 [6 <./images/element-class-node-eps-converted-to.pdf>]
-<images/web_framework_2.png, id=243, 1845.89626pt x 1246.6575pt>
+<images/web_framework_2.png, id=333, 1845.89626pt x 1246.6575pt>
 File: images/web_framework_2.png Graphic file (type png)
 
 <use images/web_framework_2.png>
@@ -692,7 +695,7 @@ nverted-to.pdf images/architecture.eps>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/architecture-eps-converted-to.pdf, id=244, 833.1125pt x 230.8625pt>
+<images/architecture-eps-converted-to.pdf, id=334, 833.1125pt x 230.8625pt>
 File: images/architecture-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/architecture-eps-converted-to.pdf>
@@ -712,15 +715,18 @@ as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.114 
-       [8 <./images/web_framework_2.png>]) (./case-study.tex
-(/usr/local/texlive/2014/texmf-dist/tex/latex/ucs/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
-been already used, duplicate ignored
+       [8 <./images/web_framework_2.png>]) (./case-study.texpdfTeX warning (ext
+4): destination with the same identifier (name{page.}) has been already used, d
+uplicate ignored
 <to be read again> 
                    \relax 
-l.10 
+l.11 
       [9 <./images/architecture-eps-converted-to.pdf>]) (./conclusions.tex)
+Overfull \hbox (4.5853pt too wide) in paragraph at lines 18--180
+\T1/aer/m/n/9 IoT mon-i-tor-ing, realtime-multiperson track-ing and user cross-
+
+ []
+
 (./doceng2015.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
@@ -733,25 +739,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
  (./doceng2015.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 196.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
-
-
-Package rerunfilecheck Warning: File `doceng2015.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `doceng2015.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3341E115C07F6099EF9E2FAF9E554CD1;1843.
+Package rerunfilecheck Info: File `doceng2015.out' has not changed.
+(rerunfilecheck)             Checksum: 3341E115C07F6099EF9E2FAF9E554CD1;1843.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
  ) 
 Here is how much of TeX's memory you used:
- 10456 strings out of 493117
- 150542 string characters out of 6135432
+ 9998 strings out of 493117
+ 145934 string characters out of 6135432
  268961 words of memory out of 5000000
- 13602 multiletter control sequences out of 15000+600000
+ 13143 multiletter control sequences out of 15000+600000
  60954 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,38p,635b,1541s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,38p,934b,1541s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/tex
@@ -769,10 +768,10 @@ ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on doceng2015.pdf (10 pages, 6383978 bytes).
+Output written on doceng2015.pdf (10 pages, 6386297 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
+ 444 PDF objects out of 1000 (max. 8388607)
+ 375 compressed objects within 4 object streams
  117 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
