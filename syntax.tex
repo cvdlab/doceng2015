@@ -1,7 +1,7 @@
 
 \section{HIJSON structure and syntax}\label{hijson-syntax}
 
-The HIJSON document is composed of a configuration section, followed by one or more {\tt DataCollections}, containing the actual data.
+The HIJSON document is composed of a configuration section, followed by one or more {\tt FeatureCollections}, containing the actual data.
 
 Listing~\ref{lst:hijson-example} shows a simplified HIJSON document, devoid of punctual details, to make clear to the reader the overall document structure.
 
@@ -35,11 +35,11 @@ Listing~\ref{lst:hijson-example} shows a simplified HIJSON document, devoid of p
 
 The configuration includes parameters and settings needed for building representation in the form of a JSON Object. One of the core information in this section is defined by the correspondence between three points of the local coordinate system and three points of the real world, expressed in geographical coordinates. This is needed to ensure a seamlessly passage from local to geographical coordinate system and vice versa.
 
-After the configuration part, the document includes a list of {\tt DataCollection}. An example
-of {\tt DataCollection} is given in listing~\ref{lst:data-collection-example}.
+After the configuration part, the document includes a list of {\tt FeatureCollection}. An example
+of {\tt FeatureCollection} is given in listing~\ref{lst:feature-collection-example}.
 
 
-\begin{lstlisting}[language=json, label={lst:data-collection-example}, captionpos=b,  caption=Example of {\tt DataCollection}.]
+\begin{lstlisting}[language=json, label={lst:feature-collection-example}, captionpos=b,  caption=Example of {\tt FeatureCollection}.]
 {
   "id": "architecture",
   "type": "FeatureCollection",
@@ -50,7 +50,9 @@ of {\tt DataCollection} is given in listing~\ref{lst:data-collection-example}.
       "id": "room_0.1",
       "geometry": {
         "type": "Polygon",
-        "coordinates": [[ [0, 0], [11, 0], [11, 19], [0, 19] ]]
+        "coordinates": [
+          [ [0, 0], [11, 0], [11, 19], [0, 19] ]
+        ]
       },
       "properties": {
         "class": "room",
@@ -67,9 +69,9 @@ of {\tt DataCollection} is given in listing~\ref{lst:data-collection-example}.
 
 Each element of the list is given in the form of a GeoJSON {\tt
 FeatureCollection}, that contains an arbitrary  number of \emph{HIJSON Elements}.
-Each {\tt DataCollection} imposes a logical relationship that can be used
+Each {\tt FeatureCollection} imposes a logical relationship that can be used
 to group together related HIJSON Elements. Since  HIJSON Elements adhere to
-the GeoJSON format, each {\tt DataCollectio}n results compliant with GeoJSON
+the GeoJSON format, each {\tt FeatureCollectio}n results compliant with GeoJSON
 syntax and then accepted by any GeoJSON validator. As detailed below, the
 HIJSON format  introduces some additional rules that allow the adoption of
 this format for indoor representation.
@@ -86,19 +88,19 @@ like an IP-cam or a thermostat.
 An HIJSON Element defines a syntax to describe both geometry and properties of
 an object, represents the atomic component of an HIJSON document, and is compliant with GeoJSON syntax. 
 It would be a best practice to group
-together related JSON Element using {\tt Data Collection}: several classification strategies
-can be applied, i.e.~by grouping the elements by storey or even by room.
+together related JSON Element using {\tt FeatureCollections}: several classification strategies
+can be applied, i.e. by grouping the elements by storey or even by room.
 Alternatively, since the furnishings are more likely to change than the
 architectural components of a building, these two different kinds of elements
-can be isolated in different {\tt Data Collections}.
+can be isolated in different {\tt FeatureCollections}.
 
 The hierarchical structure of the document gives visible form to the capability of HIJSON Elements to have children elements. A unique ID is mandatory for every HIJSON Element. 
 
-Three Geometry types can be used here: {\tt LineString},
-{\tt Point}, and {\tt Polygon}. The choice of the Geometry type to be associated to
-a HIJSON Element implicitly defines the category of the element: {\tt
-LineString} is used for walls and doors, {\tt Point} for furnishings, while {\tt
-Polygon} may describe levels and rooms.
+Three Geometry types can be used here: {\tt Point}, {\tt LineString}  and {\tt
+Polygon}. The choice of the Geometry type to be associated to a HIJSON Element
+implicitly defines the category of the element: {\tt Point} is used for
+furnishings, {\tt LineString} for walls and doors, while {\tt Polygon} may
+describe levels and rooms.
 
 The Geometry coordinates are expressed in metres, by convention starting
 at the bottom-left of the element, whose position is used to set-up the origin of a local coordinate frame. Unlike GeoJSON, where all properties
