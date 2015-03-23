@@ -10,7 +10,7 @@ web environment, the Toolkit benefits of the ``fertility'' commonly concerning t
 software development in this field: for example, it takes advantage of libraries and
 frameworks such as \emph{React}, ``the JavaScript library for building
 user interfaces'' by Facebook, and as \emph{Three.js}, the current de-facto standard to deal
-with \emph{WebGL} tecnologies.
+with \emph{WebGL} technologies.
 
 The Toolkit executes the instantiation and extension logic of a HIJSON
 document, and provides a multistage transformation pipeline that, according to the requirements,
@@ -59,13 +59,13 @@ paths generation}, \emph{2D layers generation}, \emph{marshalling}. The pipeline
  system---latitude and longitude angles) and viceversa. This task is
  accomplished by solving a linear system obtained from information
  contained in HIJSON configuration part and precisely from the
- correnspondance of three real word points to three points included
+ correspondence of three real word points to three points included
  into the HIJSON document.
 \item
  \textit{\texttt{parsing}} - The parsing stage takes the validated and
  georeferenced HIJSON as its input, that as illustrated before can be
- thought of as a list of HIJSON Elments, parses them and produces an
- istance of the HIJSON Tree. The HIJSON Tree is an object in memory
+ thought of as a list of HIJSON Elements, parses them and produces an
+ instance of the HIJSON Tree. The HIJSON Tree is an object in memory
  representing the hierarchical structure of the building described
  by the HIJSON document.
 \item
@@ -101,7 +101,7 @@ generation of a graph of valid paths through the entire model
 represented by the input HIJSON document. The graph generated according
 to the algorithm described in the following, although non optimal,
 ensures a complete coverage of the surface while limiting the number of
-generated nodes. The resulting graph is weigthed on the edges with nodes
+generated nodes. The resulting graph is weighted on the edges with nodes
 distances. Each graph node may represent either:
 
 \begin{enumerate}
@@ -112,7 +112,7 @@ distances. Each graph node may represent either:
  path;
 \item
  a \emph{connection node}, used as subproblem composing element in the divide et
- impera approch adopted (as described below).
+ impera approach adopted (as described below).
 \item
 an \emph{element node} i.e.~HIJSON Element (whose HIJSON Class explicitly grants
  his presence in the graph), typically an endpoint of a path;
@@ -125,7 +125,7 @@ are actually computed client-side by applying the Dijkstra algorithm to the grap
 
 Taking advantage of the hierarchical structure of the HIJSON document,
 and according to the divide et impera approach, the problem of 
-paths generation is splitted in several sub-problems, which consist in
+paths generation is split in several sub-problems, which consist in
 the computation of the sub-graphs relative to each individual space, more generally a single room. The sub-graphs are then linked together through the
 connection nodes (which in most cases represent doors). The resolution
 of each sub-problem (as depicted in Figure~\ref{fig:graph-generation}), 
@@ -137,7 +137,7 @@ is composed by 4 steps:
 \item
  Computation of the walkable area of the space: this task is
  accomplished by subtracting the shape of the obstacles from the area
- of the space; the result is tipically a surface with holes;
+ of the space; the result is typically a surface with holes;
 \item
  Triangulation of the walkable area: the computed surface is
  triangulated taking into account the presence of holes;
@@ -188,10 +188,10 @@ is composed by 4 steps:
 \subsection{HIJSON Class definition}\label{hijson-class-definition}
 
 To make better use of the possibilities offered by the HIJSON Toolkit and by the
-HIJSON document format, some custom dynamic behaviours can be described. These
-behaviours encapsulate the specificities relative to communication
+HIJSON document format, some custom dynamic behaviors can be described. These
+behaviors encapsulate the specificities relative to communication
 protocols with the sensors, as well as to features of user interaction. The
-interface for such behaviours is the HIJSON Class.
+interface for such behavior is the HIJSON Class.
 
 \begin{figure}[!h]
 \centering
@@ -200,7 +200,7 @@ interface for such behaviours is the HIJSON Class.
 \label{fig:elem-class-node-rel}
 \end{figure}
 
-Evary HIJSON Element of the input HJSON document has a dynamic
+Every HIJSON Element of the input HJSON document has a dynamic
 counterpart, a running instance called \emph{HIJSON Node}, instantiated
 according to the corresponding HIJSON Class via reflection methods (see
 Figure~\ref{fig:elem-class-node-rel}).
@@ -219,10 +219,10 @@ properties and methods:
  \texttt{in\_2D\_map}: a Boolean value to express if the element must 
  be shown in the 2D map;
 \item
- \texttt{get2DStyle()}: a method that returns the 2D map appearence of
+ \texttt{get2DStyle()}: a method that returns the 2D map appearance of
  the element, essentially HTML and CSS code;
 \item
- \texttt{get3DModel()}: a method that returns the 3D model appearence of
+ \texttt{get3DModel()}: a method that returns the 3D model appearance of
  the element, i.e.~an instance of \texttt{Obj\-ect\-3D} of the \emph{THREE.js} 
  framework;
 \item

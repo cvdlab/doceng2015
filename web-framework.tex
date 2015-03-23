@@ -5,7 +5,7 @@ customizable, and scalable web framework which provides at the same time IoT
 monitoring, realtime multi-person tracking and cross-floor user
 navigation.
 
-Expandability and customizability derive from both design choises and
+Expandability and customizability derive from both design choices and
 HIJSON inherent characteristics, i.e.~the possibility of semantic extensions.
 Scalability is directly borrowed from technologies used for the
 software development: \emph{JavaScript} language, using \emph{Node.js},
@@ -64,7 +64,7 @@ Monitoring different smart objects may require different ways to visualize
 and/or send data and commands. Modularity and extendibility of the application
 respond superbly to these requirements, by providing for each class of objects
 a different interface of visualization and interaction, as a result of the
-information hiding and incapsulation principles introduced by the HIJSON
+information hiding and encapsulation principles introduced by the HIJSON
 Class. In particular, the user interface is characterized by a dual-display
 mode, that allows the user to see at the same time a 2D map that gives an
 overall glance in a simplified plan, and a 3D virtual environment to navigate
@@ -74,7 +74,7 @@ Alongside with typical smart objects, suitable to deal with like thermostats,
 where the user can read the room  temperature and turn the heating on/off,
 other kinds of objects that are not properly considered ``smart'' can be
 integrated into the HIJSON environment. It is the case, for example, of fire
-estinguishers, that are able to show the date of their last check, stored in a
+extinguishers, that are able to show the date of their last check, stored in a
 database.
 
 \subsubsection{Realtime multi-person tracking}\label{realtime-multi-person-tracking}
@@ -83,7 +83,7 @@ Realtime multi-person tracking allows a \emph{Supervisor} to monitor the current
 real position of people inside the building. This kind of task can be useful for
 several reasons, including security, logistics or to supervise composite operative
 workflows. Each device equipped with the \emph{Explorer} application is in charge of locating
-itself, interacting with the indoor positiong saystem, and notifying the current
+itself, interacting with the indoor positioning system, and notifying the current
 position in continuos mode. Evidence of the people position is given to the
 \emph{Supervisor} both into a 2D map and an immersive 3D virtual environment (see Figure~\ref{fig:web-framework-ui}).
 
@@ -120,12 +120,12 @@ realtime multi-person tracking.
 
 An architectural scheme of the framework is provided in Figure~\ref{fig:architecture}. A web server module is responsible for listening to
 connecting clients. Each client connection is handled by the web server module
-providing all the required resources by opening a websocket channel, in order to
+providing all the required resources by opening a WebSocket channel, in order to
 have both \emph{Explorer} and/or \emph{Supervisor} communication
 protocol data flow within. In particular, the \texttt{multi-person\ tracking} module receives
 position data from \emph{Explorer} clients. It aggregates and sends these
-information to connected \emph{Supervisor} clients through the websocket
-channel, using a simple but reliable protocol described later. Indipendence
+information to connected \emph{Supervisor} clients through the WebSocket
+channel, using a simple but reliable protocol described later. Independence
 from particular IoT sensor equipment communication protocols is achieved
 introducing a \texttt{smart\ object\ proxy} module. This one is defined in the HIJSON Class
 and is obtained via the {\tt getProxy()} method for each smart
@@ -137,13 +137,13 @@ The \emph{Explorer} client architecture is generally deployed on a mobile
 device, which is usually supplied to a user who needs to be routed across the
 environment described by the HIJSON document. The {\tt sensor\ adapter} module
 encapsulates the communication logic with the indoor positioning system. The
-presence of this module ensures indipendece from particular tecnologies, so
+presence of this module ensures independence from particular technologies, so
 allowing the \emph{Explorer} client to rely on different indoor positioning
 systems (Wi-Fi, Bluetooth, LTE, etc.).
 
 Every time a {\tt sensor\ adapter} observes a perceptible
 modification in user position, sends the new position information to the
-server through the single opened websocket, spawning a simple message with the
+server through the single opened WebSocket, spawning a simple message with the
 following syntax:
 
 \begin{verbatim}
@@ -167,11 +167,11 @@ client \emph{Supervisor}, will be discussed in the next section.
 
 The architecture of \emph{Supervisor} client includes two modules. The first
 one, named {\tt multi-person\ tracking} module, is responsible to
-receive through the websocket, from the server information about
+receive through the WebSocket, from the server information about
 \emph{explorers} of the environment, showing them in the user interface. The
 second module, named {\tt smart\ object\ widget}, communicates with the
 server to propose the user realtime information about sensor-equip\-ped
-objects in the environment. Data passes through the single websocket
+objects in the environment. Data passes through the single WebSocket
 opened between the server and every \emph{Supervisor} Client. Relying on a
 naive but effective communication protocol, each {\tt smart object widget}
 exchanges data only with its corresponding {\tt smart object proxy} on the server. To
@@ -182,7 +182,7 @@ implemented. This one is based on 4 event triggers {\tt on\_before\_show},
 When the user requires information about a smart object, its widget has
 to be rendered, and {\tt on\_before\_show} the server is notified to
 connect via relative proxy to the sensor. Once connected, the server
-begin to send data via websocket. Received data are shown through the
+begin to send data via WebSocket. Received data are shown through the
 widget to the user. When done, the {\tt on\_before\_hide} event of the
 widget is triggered, a notification is sent to the server announcing to stop sending
 data, and the proxy closes the connection to the sensor. Widget lifecycle

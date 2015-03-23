@@ -20,7 +20,7 @@ extensions}.
 The HIJSON format allows for hierarchical description of indoor spaces. The
 introduction of a hierarchical structure establishes a parent-child relation
 between entities of the model, reflecting a container-contained relationship.
-This direclty implies a neater representation then the plain linear structure
+This directly implies a neater representation then the plain linear structure
 adopted by GeoJSON, being a perfect analogy of objects contained (i.e.
 placed) into spaces.
 
@@ -47,7 +47,7 @@ translation transformation.
 Another substantial advantage is represented by the adoption of a metric
 reference frame,  consequently simplifying the compilation of the document,
 either manually generated or produced by software tools. Just remember that
-the geojson coordinates are geographical, i.e. pairs of (absolute) latitude
+the GeoJSON coordinates are geographical, i.e. pairs of (absolute) latitude
 and longitude angles, like the ones provided by GNSS systems. This kind of
 coordinates  are certainly not particularly user friendly, when positioning a
 smart device or a furniture element within a specific building room.
@@ -104,8 +104,8 @@ The expansion of a LAR model, to be considered as a general-purpose graphic prim
 Semantic extensions make the HIJSON format extendible and customizable, that
 is, able to adequately respond to any need of objects representation. To define a
 semantic extension means to allow the HIJSON document to model an object
-previously not covered, or even to modify the behaviour of a comprised one.
-Semantic extensions are to be defined both as HIJSON format syntyax and as
+previously not covered, or even to modify the behavior of a comprised one.
+Semantic extensions are to be defined both as HIJSON format syntax and as
 HIJSON Toolkit source code. In particular it is necessary to define respectively
 a new HIJSON Element and a new HIJSON Class, as specified below.
 

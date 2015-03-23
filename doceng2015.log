@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  23 MAR 2015 12:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.17)  23 MAR 2015 13:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -763,16 +763,21 @@ as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.133 
-       [8 <./images/web_framework_2.png>]) (./case-study.texpdfTeX warning (ext
-4): destination with the same identifier (name{page.}) has been already used, d
-uplicate ignored
+       [8 <./images/web_framework_2.png>])
+Overfull \hbox (9.36726pt too wide) in paragraph at lines 168--240
+\T1/aer/m/n/9 only with its cor-re-spond-ing \T1/aett/m/n/9 smart object proxy 
+\T1/aer/m/n/9 on the server.
+ []
+
+(./case-study.texpdfTeX warning (ext4): destination with the same identifier (n
+ame{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.11 
       [9 <./images/architecture-eps-converted-to.pdf>]) (./conclusions.tex)
-Overfull \hbox (4.5853pt too wide) in paragraph at lines 20--244
-\T1/aer/m/n/9 IoT mon-i-tor-ing, realtime-multiperson track-ing and user cross-
-
+Overfull \hbox (6.63728pt too wide) in paragraph at lines 20--244
+\T1/aer/m/n/9 IoT mon-i-tor-ing, re-al-time multi-person track-ing and user cro
+ss-
  []
 
 (./doceng2015.bbl)
@@ -794,7 +799,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 261.
 Here is how much of TeX's memory you used:
  10355 strings out of 495028
  150441 string characters out of 6181497
- 277478 words of memory out of 5000000
+ 276478 words of memory out of 5000000
  13221 multiletter control sequences out of 15000+600000
  63335 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -815,7 +820,7 @@ f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on doceng2015.pdf (10 pages, 6400134 bytes).
+Output written on doceng2015.pdf (10 pages, 6400125 bytes).
 PDF statistics:
  452 PDF objects out of 1000 (max. 8388607)
  382 compressed objects within 4 object streams
