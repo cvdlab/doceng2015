@@ -59,13 +59,13 @@ L.~Faramondi, F.~Inderst, S.~Panzieri, and F.~Pascucci.
 \bibitem{geojson}
 {GeoJSON contributors}.
 \newblock Geojson.
-\newblock 2015.
+\newblock \url{http://geojson.org/}, 2015.
 \newblock Accessed: 2015-03-23.
 
 \bibitem{indoormaps}
 {Google, Inc.}
 \newblock Go inside with {Indoor Maps}.
-\newblock 2014.
+\newblock \url{https://www.google.com/maps/about/partners/indoormaps}, 2014.
 \newblock Accessed: 2015-03-23.
 
 \bibitem{6418876}
@@ -78,7 +78,7 @@ D.~Gotlib, M.~Gnat, and J.~Marciniak.
 \bibitem{indoorjson}
 {indoor.io}.
 \newblock Indoorjson specification and validator.
-\newblock 2013.
+\newblock \url{https://github.com/asaarinen/indoor-json}, 2013.
 \newblock Accessed: 2015-03-23.
 
 \bibitem{paoluzziMS:2014}

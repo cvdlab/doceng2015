@@ -2,52 +2,49 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: doceng2015.aux
 The style file: abbrv.bst
-Database file #1: doceng2015.bib.bib
+Database file #1: doceng2015.bib
 Warning--empty title in Dicarlo:2014:TNL:2543138.2543294
 Warning--empty journal in Dicarlo:2014:TNL:2543138.2543294
 Warning--empty year in Dicarlo:2014:TNL:2543138.2543294
-Warning--empty journal in geojson
-Warning--empty journal in indoormaps
-Warning--empty journal in indoorjson
 You've used 15 entries,
             2118 wiz_defined-function locations,
-            590 strings with 6575 characters,
-and the built_in function-call counts, 5333 in all, are:
-= -- 501
+            592 strings with 6691 characters,
+and the built_in function-call counts, 5348 in all, are:
+= -- 504
 > -- 249
 < -- 5
 + -- 98
 - -- 82
-* -- 357
-:= -- 866
+* -- 351
+:= -- 857
 add.period$ -- 49
 call.type$ -- 15
 change.case$ -- 82
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 227
-empty$ -- 431
+cite$ -- 18
+duplicate$ -- 218
+empty$ -- 446
 format.name$ -- 82
-if$ -- 1147
+if$ -- 1165
 int.to.chr$ -- 0
 int.to.str$ -- 15
-missing$ -- 16
+missing$ -- 13
 newline$ -- 81
 num.names$ -- 32
-pop$ -- 110
+pop$ -- 119
 preamble$ -- 1
 purify$ -- 69
 quote$ -- 0
-skip$ -- 161
+skip$ -- 158
 stack$ -- 0
 substring$ -- 281
-swap$ -- 59
+swap$ -- 62
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 58
-warning$ -- 6
+warning$ -- 3
 while$ -- 45
 width$ -- 17
-write$ -- 165
-(There were 6 warnings)
+write$ -- 168
+(There were 3 warnings)
