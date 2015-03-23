@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  23 MAR 2015 10:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  23 MAR 2015 11:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -722,7 +722,7 @@ uplicate ignored
                    \relax 
 l.11 
       [9 <./images/architecture-eps-converted-to.pdf>]) (./conclusions.tex)
-Overfull \hbox (4.5853pt too wide) in paragraph at lines 18--180
+Overfull \hbox (4.5853pt too wide) in paragraph at lines 20--180
 \T1/aer/m/n/9 IoT mon-i-tor-ing, realtime-multiperson track-ing and user cross-
 
  []
@@ -768,10 +768,10 @@ ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on doceng2015.pdf (10 pages, 6386297 bytes).
+Output written on doceng2015.pdf (10 pages, 6386701 bytes).
 PDF statistics:
- 444 PDF objects out of 1000 (max. 8388607)
- 375 compressed objects within 4 object streams
+ 447 PDF objects out of 1000 (max. 8388607)
+ 378 compressed objects within 4 object streams
  117 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
