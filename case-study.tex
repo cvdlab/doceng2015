@@ -1,20 +1,22 @@
 \section{Case study}\label{case-study}
 
-As case study of the discussed approach, we have taken into account the need of Sogei S.p.A. to support its data center maintaince workflow. Of course the data center, one of biggest data center of Italy, is subject to very strict access control policies. 
+As case study of the discussed approach, we have taken into account the need of Sogei S.p.A. to support its maintenance service  workflow, since the data center, one of biggest data centers in Europe, is subject to very strict access control policies. 
 
-The overal state of the data center can be monitored through the \emph{Supervisor} client. In this case the considered smart objects belong to a range of different devices, going from webcams, that provide on request the captured video streams, by way of alarm and antifire systems, till to individual servers, that can be monitored along several dimensions (operating temperature, workload, etc.). 
+The overal state of the data center can be monitored through the \emph{Supervisor} client. In this case the considered smart objects belong to a range of different devices, going from webcams, that provide on request the captured video streams, by way of alarm and antifire systems, till to individual servers, that can be monitored along several dimensions, including operating temperature, workload, etc. 
 
-The most common maintenance scenario consists of a intervention by a technician that have to move across the environment, and locate within a huge data center the machine on which operate. This could be a not trivial task due to the presence in a data center of thousands of similar-looking machine racks. Thus the operator will be equipped with an \emph{Explorer} client, which will drive the operator to the target machine on which operate, while continuously notifying to a security \emph{Supervisor} his position, obtained by interacting with the indoor positiong system.
+The most common maintenance scenario consists of a intervention by a technician that have to move across the environment, and locate within a huge data center the machine on which to operate, a not trivial task due to the presence of thousands of similar-looking machine racks. Thus the operator will be equipped with an \emph{Explorer} client, which will drive him to the target machine on which operate, while continuously notifying to a security \emph{Supervisor} his position, obtained by interacting with the indoor positioning system.
+The mantainance workflow supervisor, using the \emph{Supervisor} client, is able to monitor the operator position within the data center, verifying that he does not deviate on unauthorized paths, triggering some console alarm if this happens.
 
-The real­time awareness of the relative positions between the technician in charge of the maintenance and the rack ­containing the machine­ on which to perform the operation will help increasing safety and security and reducing intervention times. The mantainance workflow supervisor, using the \emph{Supervisor} client is able to monitor the operator position within the data center, verifying that he does not deviate on unauthorized paths, triggering some console alarm if this happens.
+The purpose is to support  the process of those in charge of carrying out the ``ticket-maintenance'' activities, as quickly  as possible and without error. The ``maintenance man'' will be guided to the right sub-system among thousands of racks. The real-time awareness of the relative positions between the 'maintenance man' and the rack ---containing the sub-system---will help us to reduce intervention times and to increase safety. By  knowing when the maintenance process starts, the system  can automatically move, in real time, services, which are hosted on virtual machines, to other systems, thus maintaining the continuity of services and, at the same time,  reducing  the global risk factor. When the ``ticket-maint\-enan\-ce'' is over, and the technician goes away, it is possible to immediately  restore  the pre-existing conditions of services after a complete test has been performed.
 
-In particular the supervisor, by tracking the operator position in real time, can unload the target server by the time the operator reaches the machine. The unload process consists of migrating all the virtual machines run by the system that need maintainance to different physical servers. Once the maintanance process is complete, the previous state can be restored. In this way the continuity of service is ensured, and the global risk factor is decreased.
+
+
 
 %----------------------------------------------------------------------------
 
 % right sub­system (inside the rightrack among thousands). We will call them the
-% ‘maintenance man’. The real­time awareness of the relative positions between
-% the ‘maintenance man' andthe rack ­ containing the sub­system ­ will help us
+% ``maintenance man''. The real­time awareness of the relative positions between
+% the ``maintenance man' andthe rack ­ containing the sub­system ­ will help us
 % reducing intervention times and increasing safety. If you knew when the
 % maintenance process starts, you couldautomatically move,in real time,
 % services, that is virtual machines, to other systems,thus
@@ -30,8 +32,8 @@ In particular the supervisor, by tracking the operator position in real time, ca
 % Inparticular, wehave to support the process of those in charge of carrying out
 % the ticket­maintenance reaching, as quick as possible and without error, the
 % right sub­system (inside the rightrack among thousands). We will call them the
-% ‘maintenance man’. The real­time awareness of the relative positions between
-% the ‘maintenance man' andthe rack ­ containing the sub­system ­ will help us
+% ``maintenance man''. The real­time awareness of the relative positions between
+% the ``maintenance man' andthe rack ­ containing the sub­system ­ will help us
 % reducing intervention times and increasing safety. If you knew when the
 % maintenance process starts, you couldautomatically move,in real time,
 % services, that is virtual machines, to other systems,thus
