@@ -8,7 +8,7 @@ environment. It is \emph{modular} and entirely \emph{isomorphic},
 i.e.~can run on the server as well as on every client. Working in the
 web environment, the Toolkit benefits of the ``fertility'' commonly concerning the
 software development in this field: for example, it takes advantage of libraries and
-frameworks such as \emph{Ract}, ``the JavaScript library for building
+frameworks such as \emph{React}, ``the JavaScript library for building
 user interfaces'' by Facebook, and as \emph{Three.js}, the current de-facto standard to deal
 with \emph{WebGL} tecnologies.
 
@@ -24,7 +24,7 @@ further operation. It is not strictly required to complete each stage of
 the pipeline: the exit stage depends on the specific use case.
 
 The application of the transformation pipeline has a double aim. The first one
-consists in generating the graph of valid paths between all the interesting
+consists in generating the graph of valid paths among all the interesting
 HIJSON elements. The second objective is the generation of one \emph{GeoJSON}
 document for each storey of the building described by the HIJSON document. In
 this way a bidimensional layout  can be provided for every level of the building, 
@@ -48,7 +48,7 @@ paths generation}, \emph{2D layers generation}, \emph{marshalling}. The pipeline
   order to begin with the effective transformations the input HIJSON  document
   must be compliant with both the syntax format and the structural requirements.   In the
   case the validation stage fails, processing aborts and does not continue to
-  following stages. If  this stage successes, then the output for the next stage is a
+  following stages. If this stage successes, then the output for the next stage is a
   validated  HIJSON.
 
 \item

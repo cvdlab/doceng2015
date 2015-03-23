@@ -33,7 +33,7 @@ Listing~\ref{lst:hijson-example} shows a simplified HIJSON document, devoid of p
 \end{lstlisting}
 
 
-The configuration includes parameters and settings needed for building representation in the form of a JSON Object. One of the core information in this section is defined by the correspondence between three points of the local coordinate system and three point of the real world, expressed in geographical coordinates. This is needed to ensure a seamlessly passage from local to geographical coordinate system and vice versa.
+The configuration includes parameters and settings needed for building representation in the form of a JSON Object. One of the core information in this section is defined by the correspondence between three points of the local coordinate system and three points of the real world, expressed in geographical coordinates. This is needed to ensure a seamlessly passage from local to geographical coordinate system and vice versa.
 
 After the configuration part, the document includes a list of {\tt DataCollection}. An example
 of {\tt DataCollection} is given in listing~\ref{lst:data-collection-example}.
@@ -50,16 +50,15 @@ of {\tt DataCollection} is given in listing~\ref{lst:data-collection-example}.
       "id": "room_0.1",
       "geometry": {
         "type": "Polygon",
-        "coordinates": [ 
-          [ [0, 0], [11, 0], [11, 19], [0, 19] ]
-        ]
-    },
-    "properties": {
-      "class": "room",
-      "parent": "level_0",
-      "description": "Office of Mr. Smith",
-      "tVector": [10, 20, 0],
-      "rVector": [0, 0, 90]
+        "coordinates": [[ [0, 0], [11, 0], [11, 19], [0, 19] ]]
+      },
+      "properties": {
+        "class": "room",
+        "parent": "level_0",
+        "description": "Office of Mr. Smith",
+        "tVector": [10, 20, 0],
+        "rVector": [0, 0, 90]
+      }
     },
     // ...
   ]
@@ -90,7 +89,7 @@ It would be a best practice to group
 together related JSON Element using {\tt Data Collection}: several classification strategies
 can be applied, i.e.~by grouping the elements by storey or even by room.
 Alternatively, since the furnishings are more likely to change than the
-architectural components of a building, these two different kind of elements
+architectural components of a building, these two different kinds of elements
 can be isolated in different {\tt Data Collections}.
 
 The hierarchical structure of the document gives visible form to the capability of HIJSON Elements to have children elements. A unique ID is mandatory for every HIJSON Element. 
@@ -98,7 +97,7 @@ The hierarchical structure of the document gives visible form to the capability 
 Three Geometry types can be used here: {\tt LineString},
 {\tt Point}, and {\tt Polygon}. The choice of the Geometry type to be associated to
 a HIJSON Element implicitly defines the category of the element: {\tt
-LineString} are used for walls and doors, {\tt Point} for furnishings, while {\tt
+LineString} is used for walls and doors, {\tt Point} for furnishings, while {\tt
 Polygon} may describe levels and rooms.
 
 The Geometry coordinates are expressed in metres, by convention starting
@@ -109,7 +108,7 @@ attributes are mandatories:
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
- {\tt class}: represent the element category, used to instantiate
+ {\tt class}: represents the element category, used to instantiate
  the appropriate \emph{HIJSON Class};
 \item
  {\tt parent}: contains the parent's ID of the element;
@@ -125,13 +124,13 @@ Specific classes may require the mandatory presence of other properties. For
 example, the classes {\tt internal\_wall} and {\tt external\_wall} that
 define the internal partitions and the external envelope, respectively, require a {\tt connections}
 array, containing the IDs of the adiacent elements. This information is used
-by the connector children of the element (e.g. like doors) to identify the
+by the connector children of the element (e.g. doors) to identify the
 areas linked together.
 
-Given the nature of the GeoJSON format from which HIJSON
-derives, the elements are represented by their 2D shape, like on a
-planimetry. The property {\tt height} was introduced to assign a value to the height of the object, intended as
-a third dimension.
+Given the nature of the GeoJSON format from which HIJSON derives, the elements
+are represented by their 2D shape, like on a planimetry. The property {\tt
+height} was introduced to assign a value to the height of the object, intended
+as a third dimension.
 
 A {\tt description} property can provide further information about
 the element.

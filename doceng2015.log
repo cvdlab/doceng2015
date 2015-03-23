@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  23 MAR 2015 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  23 MAR 2015 11:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -580,16 +580,15 @@ Package pdftex.def Info: images/sogei-b.pdf used on input line 83.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 9.
 
-Overfull \hbox (4.68604pt too wide) in paragraph at lines 54--55
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][] 
+Overfull \hbox (4.68604pt too wide) in paragraph at lines 53--54
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.79 \subsection{HIJSON Element}
+l.78 \subsection{HIJSON Element}
                                  [4 <./images/sogei-a.pdf> <./images/sogei-b.pd
 f>]) (./toolkit.tex
 Package epstopdf Info: Source file: <images/pipeline.eps>
@@ -603,7 +602,7 @@ ted-to.pdf images/pipeline.eps>
 (epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/pipeline-eps-converted-to.pdf, id=287, 803.0pt x 1027.84pt>
+<images/pipeline-eps-converted-to.pdf, id=286, 803.0pt x 1027.84pt>
 File: images/pipeline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/pipeline-eps-converted-to.pdf>
@@ -616,7 +615,7 @@ een already used, duplicate ignored
                    \relax 
 l.53 
       [5 <./images/pipeline-eps-converted-to.pdf>]
-<images/graph-generation/single/graph-generation-1.png, id=302, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-1.png, id=301, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-1.png Graphic file (type 
 png)
@@ -625,7 +624,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-1.png
 used on input line 156.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-2.png, id=304, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-2.png, id=303, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-2.png Graphic file (type 
 png)
@@ -634,7 +633,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-2.png
 used on input line 162.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-3.png, id=305, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-3.png, id=304, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-3.png Graphic file (type 
 png)
@@ -643,7 +642,7 @@ Package pdftex.def Info: images/graph-generation/single/graph-generation-3.png
 used on input line 168.
 (pdftex.def)             Requested size: 118.4403pt x 88.82578pt.
 
-<images/graph-generation/single/graph-generation-4.png, id=306, 513.92pt x 385.
+<images/graph-generation/single/graph-generation-4.png, id=305, 513.92pt x 385.
 44pt>
 File: images/graph-generation/single/graph-generation-4.png Graphic file (type 
 png)
@@ -663,7 +662,7 @@ eps-converted-to.pdf images/element-class-node.eps>
 (epstopdf)             \includegraphics on input line 198.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/element-class-node-eps-converted-to.pdf, id=307, 1027.84pt x 200.75pt>
+<images/element-class-node-eps-converted-to.pdf, id=306, 1027.84pt x 200.75pt>
 File: images/element-class-node-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/element-class-node-eps-converted-to.pdf>
@@ -677,7 +676,7 @@ een already used, duplicate ignored
 l.222  \texttt
               {get2DStyle()}: a method that returns the 2D map appearence of
 [6 <./images/element-class-node-eps-converted-to.pdf>]
-<images/web_framework_2.png, id=333, 1845.89626pt x 1246.6575pt>
+<images/web_framework_2.png, id=332, 1845.89626pt x 1246.6575pt>
 File: images/web_framework_2.png Graphic file (type png)
 
 <use images/web_framework_2.png>
@@ -695,7 +694,7 @@ nverted-to.pdf images/architecture.eps>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/architecture-eps-converted-to.pdf, id=334, 833.1125pt x 230.8625pt>
+<images/architecture-eps-converted-to.pdf, id=333, 833.1125pt x 230.8625pt>
 File: images/architecture-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/architecture-eps-converted-to.pdf>
@@ -744,8 +743,8 @@ Package rerunfilecheck Info: File `doceng2015.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
  ) 
 Here is how much of TeX's memory you used:
- 9998 strings out of 493117
- 145934 string characters out of 6135432
+ 9997 strings out of 493117
+ 145920 string characters out of 6135432
  268961 words of memory out of 5000000
  13143 multiletter control sequences out of 15000+600000
  60954 words of font info for 86 fonts, out of 8000000 for 9000
@@ -768,10 +767,10 @@ ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on doceng2015.pdf (10 pages, 6386701 bytes).
+Output written on doceng2015.pdf (10 pages, 6386696 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 378 compressed objects within 4 object streams
- 117 named destinations out of 1000 (max. 500000)
+ 446 PDF objects out of 1000 (max. 8388607)
+ 377 compressed objects within 4 object streams
+ 116 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
