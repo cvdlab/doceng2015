@@ -25,13 +25,16 @@ the pipeline: the exit stage depends on the specific use case.
 
 The application of the transformation pipeline has a double aim. The first one
 consists in generating the graph of valid paths among all the interesting
-HIJSON elements. The second objective is the generation of one \emph{GeoJSON}
+elements. The second objective is the generation of one \emph{GeoJSON}
 document for each storey of the building described by the HIJSON document. In
 this way a bidimensional layout  can be provided for every level of the building, 
 and visualized through any compliant GeoJSON viewer.
 
-The HIJSON processing pipeline is composed by 6 elaboration stages, denoted as \emph{validation}, \emph{georeferencing}, \emph{parsing}, \emph{graph
-paths generation}, \emph{2D layers generation}, \emph{marshalling}. The pipeline of transformations and the output of each stage are shown in Figure~\ref{fig:pipeline}.
+The HIJSON processing pipeline is composed by six elaboration stages, denoted
+as \emph{validation}, \emph{georeferencing}, \emph{parsing}, \emph{graph paths
+generation}, \emph{2D layers generation}, \emph{marshalling}. The pipeline of
+transformations and the output of each stage are shown in
+Figure~\ref{fig:pipeline}.
 
 \begin{figure}[!htbp]
 \centering
@@ -48,18 +51,18 @@ paths generation}, \emph{2D layers generation}, \emph{marshalling}. The pipeline
   order to begin with the effective transformations the input HIJSON  document
   must be compliant with both the syntax format and the structural requirements.   In the
   case the validation stage fails, processing aborts and does not continue to
-  following stages. If this stage successes, then the output for the next stage is a
+  following stages; intead if this stage successes, then the output for the next stage is a
   validated  HIJSON.
 
 \item
  \textit{\texttt{georeferencing}} - In the second stage, in order to allow
  for continuous outdoor/indoor navigation, the system needs to compute
- the georeference matrix, a linear operator able to transform local
+ the georeferencing matrix, a linear operator able to transform local
  coordinates into global coordinates (world coordinate
- system---latitude and longitude angles) and viceversa. This task is
+ system --- latitude and longitude angles) and vice versa. This task is
  accomplished by solving a linear system obtained from information
  contained in HIJSON configuration part and precisely from the
- correspondence of three real word points to three points included
+ correspondence of three real world points to three points included
  into the HIJSON document.
 \item
  \textit{\texttt{parsing}} - The parsing stage takes the validated and
@@ -75,21 +78,21 @@ paths generation}, \emph{2D layers generation}, \emph{marshalling}. The pipeline
  interest inside the building model. Once the graph of paths has been computed, the
  input HIJSON Tree is augmented with paths information, becoming what
  has been called an HTAP (HIJSON Tree Augmented with Paths).
- Augmentation always takes place when leaf nodes added as children of a
- specific level (e.g. ``room'').
+ Augmentation always takes place in the form of an addition of leaf nodes as children of a
+ specific element (e.g. ``room'').
 \item
  \textit{\texttt{2D layers generation}} - The fifth stage concerns the
  generation of GeoJSON \emph{layers}. For each storey of the building, the Toolkit generates a
  GeoJSON layer that can be used for the creation of a 2D map. Each layer
  contains only the children of a `level' node of the HIJSON Tree. 
  The presence of a specific element inside the layer can be finely tuned 
- by means of a Boolean value. Every element has geographical coordinates, 
- calculated by multiplication times the current transformation matrix associated during the tree traversal to the local
- coordinates of the HIJSON Element.
+ by means of a Boolean value. The geographical coordinates of every elements
+ are calculated by a series of multiplications between transformation matrixes obtained 
+ during the tree traversal to the local coordinates.
 \item
- \textit{\texttt{marshalling}} - The last stage is responsible of executing
- a serialization of the the transformed data. Tasks like breaking
- dependency-loops and stringification are performed. This stage is
+ \textit{\texttt{marshalling}} - The last stage is responsible for executing
+ a serialization of the the transformed data. This stage, in which are performed tasks like breaking
+ dependency-loops and stringification, is
  mainly useful  server-side, as the output is there stored ready to be
  served to any requiring client.
 \end{enumerate}
@@ -112,10 +115,10 @@ distances. Each graph node may represent either:
  path;
 \item
  a \emph{connection node}, used as subproblem composing element in the divide et
- impera approach adopted (as described below).
+ impera approach adopted;
 \item
 an \emph{element node} i.e.~HIJSON Element (whose HIJSON Class explicitly grants
- his presence in the graph), typically an endpoint of a path;
+ his presence in the graph), typically an endpoint of a path.
 \end{enumerate}
 
 The graph of paths allows for calculations of directions between any two given
@@ -129,7 +132,7 @@ paths generation is split in several sub-problems, which consist in
 the computation of the sub-graphs relative to each individual space, more generally a single room. The sub-graphs are then linked together through the
 connection nodes (which in most cases represent doors). The resolution
 of each sub-problem (as depicted in Figure~\ref{fig:graph-generation}), 
-is composed by 4 steps:
+is composed by four steps, as detailed below.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -137,13 +140,13 @@ is composed by 4 steps:
 \item
  Computation of the walkable area of the space: this task is
  accomplished by subtracting the shape of the obstacles from the area
- of the space; the result is typically a surface with holes;
+ of the space; the result is typically a surface with holes.
 \item
  Triangulation of the walkable area: the computed surface is
- triangulated taking into account the presence of holes;
+ triangulated taking into account the presence of holes.
 \item
  Identification of graph nodes: for each triangle side completely
- internal to the area, its midpoint is selected as standard path node;
+ internal to the area, its midpoint is selected as standard path node.
 \item
  Junction of nodes: nodes relative to the same triangle are then linked
  pairwise; both element nodes and connection nodes (i.e.~doors) are
@@ -179,7 +182,7 @@ is composed by 4 steps:
  \caption{graph of paths generation: 
  (a) detection of obstacles and computation of walkable area; 
  (b) triangulation of walkable area; 
- (c) identification of graph nodes area; 
+ (c) identification of graph nodes; 
  (d) junction of nodes.
  }
  \label{fig:graph-generation}
@@ -200,7 +203,7 @@ interface for such behavior is the HIJSON Class.
 \label{fig:elem-class-node-rel}
 \end{figure}
 
-Every HIJSON Element of the input HJSON document has a dynamic
+Every HIJSON Element of the input HIJSON document has a dynamic
 counterpart, a running instance called \emph{HIJSON Node}, instantiated
 according to the corresponding HIJSON Class via reflection methods (see
 Figure~\ref{fig:elem-class-node-rel}).

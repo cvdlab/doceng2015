@@ -1,10 +1,11 @@
 
 \section{HIJSON structure and syntax}\label{hijson-syntax}
 
-The HIJSON document is composed of a configuration section, followed by one or more {\tt FeatureCollections}, containing the actual data.
+The HIJSON document is composed by a configuration section, followed by one or more {\tt FeatureCollections}, containing the actual data.
 
 Listing~\ref{lst:hijson-example} shows a simplified HIJSON document, devoid of punctual details, to make clear to the reader the overall document structure.
 
+\vfill
 
 \begin{lstlisting}[language=json, label={lst:hijson-example}, captionpos=b, caption=Example of HIJSON document.]
 {
@@ -12,7 +13,7 @@ Listing~\ref{lst:hijson-example} shows a simplified HIJSON document, devoid of p
     // ...
   },
   "data": [
-    ...
+    // ...
     {
       "id": "architecture",
       "type": "FeatureCollection",
@@ -68,7 +69,7 @@ of {\tt FeatureCollection} is given in listing~\ref{lst:feature-collection-examp
 \end{lstlisting}
 
 Each element of the list is given in the form of a GeoJSON {\tt
-FeatureCollection}, that contains an arbitrary  number of \emph{HIJSON Elements}.
+FeatureCollection}, that contains an arbitrary  number of HIJSON Elements.
 Each {\tt FeatureCollection} imposes a logical relationship that can be used
 to group together related HIJSON Elements. Since  HIJSON Elements adhere to
 the GeoJSON format, each {\tt FeatureCollectio}n results compliant with GeoJSON
@@ -83,13 +84,13 @@ Dealing with indoor environments, there are essentially two classes of objects
 that is necessary to represent. They are (a) architectural elements, like a
 room, a corridor, a wall, etc. and (b) furnishings, intended in a broad sense,
 such as to contain both furniture, like a desk or a chair, and/or ``smart objects'',
-like an IP-cam or a thermostat.
+like an IP-cam or a connected thermostat.
 
-An HIJSON Element defines a syntax to describe both geometry and properties of
-an object, represents the atomic component of an HIJSON document, and is compliant with GeoJSON syntax. 
+A HIJSON Element defines a GeoJSON compliant syntax to describe both geometry and properties of
+an object. It represents the atomic component of a HIJSON document. 
 It would be a best practice to group
 together related JSON Element using {\tt FeatureCollections}: several classification strategies
-can be applied, i.e. by grouping the elements by storey or even by room.
+can be applied, for example by grouping the elements by storey or even by room.
 Alternatively, since the furnishings are more likely to change than the
 architectural components of a building, these two different kinds of elements
 can be isolated in different {\tt FeatureCollections}.
@@ -102,10 +103,11 @@ implicitly defines the category of the element: {\tt Point} is used for
 furnishings, {\tt LineString} for walls and doors, while {\tt Polygon} may
 describe levels and rooms.
 
-The Geometry coordinates are expressed in metres, by convention starting
-at the bottom-left of the element, whose position is used to set-up the origin of a local coordinate frame. Unlike GeoJSON, where all properties
-are optional, in HIJSON some strict requirements are imposed, and some
-attributes are mandatories:
+The Geometry coordinates are expressed in metres, by convention starting at
+the bottom-left corner of the element, whose position is used to set-up the
+origin of a local coordinate frame. Unlike GeoJSON, where all properties are
+optional, in HIJSON some strict requirements are imposed, and some attributes
+are mandatories:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
@@ -113,7 +115,7 @@ attributes are mandatories:
  {\tt class}: represents the element category, used to instantiate
  the appropriate \emph{HIJSON Class};
 \item
- {\tt parent}: contains the parent's ID of the element;
+ {\tt parent}: contains the ID of the parent of the element;
 \item
  {\tt tVector}: represents the translation relative to 
  the parent element, expressed in metres;

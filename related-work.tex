@@ -19,7 +19,7 @@ this case too, and based on several strategies with some basic elements in
 common. An often adopted solution is based on the representation of the
 routing information as a graph, having a node for each room and an edge for
 each pair of connected rooms. In some cases the edges are weighted in
-function of euclidean distance. The detail level of the graph, and hence the
+function of Euclidean distance. The detail level of the graph, and hence the
 effective usefulness of the calculated paths, can vary depending on the
 technique and the design choices applied, but in general most of the proposed
 solutions retrieve information only from architectural structure. 
@@ -33,9 +33,9 @@ utilization of inertial tracking sensors embedded in many smartphones
 \cite{6815564} to the adoption of ad hoc devices \cite{6878152}.
 
 The actual ``de-facto'' standard in terms of geospatial data representation is
-the \emph{GeoJSON} format, which can be easily used for any type of geographical
+the \emph{GeoJSON} format \cite{geojson}, which can be easily used for any type of geographical
 annotation. In some cases it has been slightly adapted to be used in indoor
-environments: it is the case of the \emph{IndoorJSON} format.
+environments: it is the case of the \emph{IndoorJSON} format \cite{indoorjson}.
 
 \subsection{The GeoJSON format}\label{the-geojson-format}
 
@@ -58,7 +58,7 @@ additional information about the {\tt Feature}.
 
 In GeoJSON it is possible to define complex shapes through the composition of simpler
  objects. Mainly due to its simplicity, GeoJSON is widely used and
-deeply integrated in several applications and services.
+deeply integrated into several applications and services.
 
 \subsection{The IndoorJSON format}\label{experiences-on-indoor-json}
 
@@ -74,10 +74,9 @@ Some particular properties are used to correctly define the indoor elements:
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
- {\tt level}: describes which level contains the feature;
+ {\tt level}: describes which storey contains the feature;
 \item
- {\tt geomType}: identifies the object's
- category, useful during the visualization
+ {\tt geomType}: identifies the category of the object, useful during the visualization
  process.
 \end{itemize}
 
@@ -90,7 +89,7 @@ the indoor representation:
  {\tt accessible}: describes if an element is walkable or not;
 \item
  {\tt connector}: defines if the element is a connection between two
- levels;
+ storeys;
 \item
  {\tt direction}: describes the direction of the connection (both
  ways, only up, only down);

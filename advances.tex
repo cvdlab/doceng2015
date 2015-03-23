@@ -4,14 +4,14 @@
 
 The focus of this work is the definition of a novel format of cartographic
 documents along with the software ecosystem rooted on it. A simple but
-effective algorithm to find indoor valid routes is also provided.  {HIJSON}
-({H}ierarchical {I}ndoor {JSON}),  is the name chosen
-for the format and the accompanying software framework, aiming to realize a
+effective algorithm to find indoor valid routes is also provided. HIJSON
+(Hierarchical Indoor JSON) is the name chosen for the new document format; 
+it the accompanying software framework, aim to realize a
 mapping of real indoor spaces with a virtual interactive web environment.
 HIJSON is based upon ideas and design principles collected from previous
 formats and identifies four critical improvements with respect to them: it
 exposes a \emph{hierarchical structure}, uses \emph{metric local coordinate
-systems}, may import \emph{external geometric models} and accepts \emph{semantic
+system}, may import \emph{external geometric models} and accepts \emph{semantic
 extensions}. 
 % Furthermore, geometrical  and topological data are conveniently imported and represented via LAR, an advanced  representation scheme, allowing to deal with \emph{hyperlinked geometric models}.
 
@@ -24,11 +24,11 @@ This directly implies a neater representation then the plain linear structure
 adopted by GeoJSON, being a perfect analogy of objects contained (i.e.
 placed) into spaces.
 
-Therefore, a  organized arrangement of spaces is allowed by HIJSON, via
+Therefore, an organized arrangement of spaces is allowed by HIJSON, via
 logical (or even physical) grouping: concepts like building wings, sections,
-stories, departments, etc.~can be directly introduced, in order to reflect
+storeys, departments, etc.~can be directly introduced, in order to reflect
 into the document structure the actual logical or physical divisions,
-categories or relationships among the modeled spaces.
+categories or relationships among the modelled spaces.
 
 Hierarchical structures are common in computer graphics, where they are used
 as scene graphs. This accordance of underlying structures really simplifies 3D
@@ -38,16 +38,16 @@ frames.
 
 \subsection{Metric local coordinate system}\label{metric-local-coordinate-system}
 
-Supported by the hierarchical underlying structure, the HJSON document format allows 
+Supported by the hierarchical underlying structure, the HIJSON document format allows 
 the use of local coordinate systems. Hence the shape of all elements can 
-be convenient modelled using local coordinates, and then placed in the right position 
+be conveniently modelled using local coordinates, and then placed in the right position 
 with respect to the position of the parent (or container) element applying a rotation, followed by a
 translation transformation.
 
 Another substantial advantage is represented by the adoption of a metric
 reference frame,  consequently simplifying the compilation of the document,
 either manually generated or produced by software tools. Just remember that
-the GeoJSON coordinates are geographical, i.e. pairs of (absolute) latitude
+the GeoJSON coordinates are geographical, a pairs of (absolute) latitude
 and longitude angles, like the ones provided by GNSS systems. This kind of
 coordinates  are certainly not particularly user friendly, when positioning a
 smart device or a furniture element within a specific building room.
@@ -59,8 +59,8 @@ detailed below.
 
 \subsection{Hyperlinked geometric models}\label{optional-lar}
 
-The HIJSON document may further import external geometric models---either of the buildings itself or the interior furniture or devices---that are topologically complete (in the sense of solid modeling~\cite{Requicha:1980:RRS:356827.356833}) and very compact. 
-Such models coming from a source outside the document are acquired by hyperlinking JSON files that contain a Linear Algebraic Representation (LAR) of topology and geometry, to be expanded for visualization or interaction at any useful level of detail. 
+The HIJSON document may further import external geometric models --- either of the buildings themselves or the interior furniture or devices --- that are topologically complete (in the sense of solid modeling~\cite{Requicha:1980:RRS:356827.356833}) and very compact. 
+Such models, coming from a source outside the document, are acquired by hyperlinking JSON files that contain a Linear Algebraic Representation (LAR) of topology and geometry, to be expanded for visualization or interaction at any useful level of detail. 
 
 The LAR scheme~\cite{Dicarlo:2014:TNL:2543138.2543294} is characterised by a very large domain, including architecture, building and construction~\cite{paoluzziMS:2014}, 2D and 3D engineering meshes, non-manifold geometric and solid models and meshes, and high-resolution 3D images~\cite{cadanda:2015}. This scheme uses the set of \emph{Combinatorial Cellular Complexes} (CCC) as mathematical domain
 \cite{Basak:2010}, and various compressed representations of \emph{sparse matrices} \cite{gemmexp} as codomain. 
@@ -102,7 +102,7 @@ The expansion of a LAR model, to be considered as a general-purpose graphic prim
 \subsection{Semantic extensions}\label{semantic-extensions}
 
 Semantic extensions make the HIJSON format extendible and customizable, that
-is, able to adequately respond to any need of objects representation. To define a
+is able to adequately respond to any need of objects representation. To define a
 semantic extension means to allow the HIJSON document to model an object
 previously not covered, or even to modify the behavior of a comprised one.
 Semantic extensions are to be defined both as HIJSON format syntax and as
