@@ -26,10 +26,13 @@ A.~Paoluzzi, A.~DiCarlo, F.~Furiani, and M.~Jirik.
 
 \bibitem{paoluzziMS:2014}
 A.~Paoluzzi, E.~Marino, and F.~Spini.
-\newblock Lar-abc, a representation of architectural geometry from concept of
-  spaces, to design of building fabric, to construction simulation.
-\newblock In P.~Block, J.~Knippers, N.~J. Mitra, and W.~Wang, editors, {\em
-  Advances in Architectural Geometry 2014}, pages 353--372. Springer
-  International Publishing, 2015.
+\newblock Lar-abc, a representation of architectural geometry.
+\newblock In {\em
+  Advances in Architectural Geometry 2014}, pages 353--372. Springer, 2015.
+
+\bibitem{webOfThings:2015}
+V.~S. Pendyala, S.~S. Shim, and C.~Bussler.
+\newblock The web that extends beyond the world.
+\newblock {\em IEEE Computer}, May 2015.
 
 \end{thebibliography}

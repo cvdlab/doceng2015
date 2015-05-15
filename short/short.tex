@@ -185,10 +185,40 @@ Despite of the growing attention regarding indoor cartography, efforts to specif
 Research on the cartographic representation of indoor environments is extensive and heterogeneous with respect to the strategies applied~\cite{6418876}. Different information sources are used, and accuracy of the produced solution depends on the adopted approach. In some cases the information is obtained with automatic or semi-automatic processing of files that describe the architectural structure of a building, such as BIM (Building Information Modeling)~\cite{Eastman:2008:BHG:1796500} and/or IFC (Industry Foundation Classes) that describe a building project [4]. 
 The actual ``de-facto" standard in terms of geospatial data representation is the GeoJSON format, which can be easily used for any type of geographical annotation. In some cases it has been slightly adapted to be used in indoor environments: it is the case of the IndoorJSON format.
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\linewidth]{../images/webOfThings}
+\caption{Web of Things (2010--2020?).  Image from~\cite{webOfThings:2015}.}
+\label{fig:pipeline}
+\end{figure}
+
 
 \section{Our contribution}
 
 The focus of this work is the definition of a novel format of cartographic documents along with the software ecosystem rooted on it. HiJson (Hierarchical Indoor JSON) is the name chosen for the new document format; with the accompanying software framework, aims to realize a mapping between the real indoor spaces and a virtual interactive web environment. A simple but effective algorithm to find indoor valid routes is also provided. 
+
+
+\begin{figure*}[tbh]
+ \centering
+ ~
+ \begin{subfigure}[b]{0.22\linewidth}
+ \includegraphics[width=\textwidth]{../images/sogei-a} 
+ \end{subfigure}
+\hfill
+ \begin{subfigure}[b]{0.27\linewidth}
+ \includegraphics[width=\textwidth]{../images/building} 
+ \end{subfigure}
+\hfill
+ \begin{subfigure}[b]{0.22\linewidth}
+ \includegraphics[width=\textwidth]{../images/sogei-b}
+ \end{subfigure}
+ \caption{Office building: 
+ (a) the schematic plan---made of SVG primitives: lines, rects, polygons---possibly obtained via a client UI loading engineering design in background;
+ (b) the automatically generated LAR cellular complex, transformed server-side into HiJson; 
+ (c)~the mock-up for the automatically generated 3D HiJson.
+ }
+ \label{fig:sogei}
+\end{figure*}
 
 \paragraph{Hierarchical structure}
 
@@ -209,28 +239,6 @@ The expansion of a LAR model, to be considered as a general-purpose graphic prim
 
 \paragraph{Semantic extensions}
 Semantic extensions make the HiJson format extendible and customizable, that is able to adequately respond to any need of objects representation. To define a semantic extension means to allow the HiJson document to model an object previously not covered, or even to modify the behavior of a comprised one. Semantic extensions are to be defined both as HiJson format syntax and as HiJson Toolkit source code. In particular it is necessary to define respectively a new HiJson Element and a new HiJson Class.
-
-\begin{figure*}[tbh]
- \centering
- ~
- \begin{subfigure}[b]{0.27\linewidth}
- \includegraphics[width=\textwidth]{../images/sogei-a} 
- \end{subfigure}
-\hfill
- \begin{subfigure}[b]{0.33\linewidth}
- \includegraphics[width=\textwidth]{../images/building} 
- \end{subfigure}
-\hfill
- \begin{subfigure}[b]{0.27\linewidth}
- \includegraphics[width=\textwidth]{../images/sogei-b}
- \end{subfigure}
- \caption{Office building: 
- (a) the schematic plan---made of SVG primitives: lines, rects, polygons---possibly obtained via a client UI loading engineering design in background;
- (b) the automatically generated LAR cellular complex, transformed server-side into HiJson; 
- (c)~the mock-up for the automatically generated 3D HiJson.
- }
- \label{fig:sogei}
-\end{figure*}
 
 
 \begin{figure}[tbp]
@@ -275,7 +283,6 @@ Each element of the list is given in the form of a GeoJSON FeatureCollection, th
 
 Dealing with indoor environments, there are essentially two classes of objects that is necessary to represent. They are (a) architectural elements, like a room, a corridor, a wall, etc. and (b) furnishings, intended in a broad sense, such as to contain both furniture, like a desk or a chair, and/or ``smart objects", like an IP-cam or a connected thermostat.
 
-The hierarchical structure of the document gives visible form to the capability of HiJson Elements to have children elements. A unique ID is mandatory for every HiJson Element.
 Three Geometry types can be used here: Point, LineString and Polygon. The choice of the Geometry type to be associated to a HiJson Element implicitly defines the category of the element: Point is used for furnishings, LineString for walls and doors, while Polygon may describe levels and rooms.
 The Geometry coordinates are expressed in metres, by convention starting at the bottom-left corner of the element, whose position is used to set-up the origin of a local coordinate frame. 
 
@@ -290,14 +297,11 @@ The application of the transformation pipeline has a double aim. The first one c
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=.8\linewidth]{../images/pipeline-2}
+\includegraphics[width=.7\linewidth]{../images/pipeline-2}
 \caption{HiJson processing pipeline}
 \label{fig:pipeline}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=.8\linewidth]{../images/element-class-node}
+\includegraphics[width=.7\linewidth]{../images/element-class-node}
+\vspace{-2mm}
 \caption{HIJSON Element/Class/Node relashionship}
 \label{fig:elem-class-node-rel}
 \end{figure}
@@ -330,7 +334,6 @@ Being supported by the web-as-a-platform, the framework exposes also an high ava
 \paragraph{Applications}
 
 The Framework has been designed with focus on two different kind of users: the Explorer and the Supervisor. They have different requirements and are likely equipped with different devices: while the Supervisor monitors the indoor environment through a desktop workstation, the Explorer has a smartphone available and needs to be routed across the building.
-
 In both cases, the web platform ensures a perfect alignment with the BYOD (Bring Your Own Device) approach, nowadays often supported by companies that encourage employees to use personal devices.
 
 

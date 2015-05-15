@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  15 MAY 2015 10:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.17)  15 MAY 2015 20:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -421,7 +421,11 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(./short.aux)
+(./short.aux
+
+LaTeX Warning: Label `fig:pipeline' multiply defined.
+
+)
 \openout1 = `short.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
@@ -438,8 +442,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
 LaTeX Font Info:    ... okay on input line 99.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
 LaTeX Font Info:    ... okay on input line 99.
-
-(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count131
 \scratchdimen=\dimen139
@@ -531,81 +534,90 @@ Overfull \hbox (3.11237pt too wide) in paragraph at lines 180--181
 []\T1/aer/m/n/9 For en-vi-ron-ments with mas-sive pres-ence of sensor-equipped
  []
 
-[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+<../images/webOfThings.pdf, id=40, 361.35pt x 345.79187pt>
+File: ../images/webOfThings.pdf Graphic file (type pdf)
+
+<use ../images/webOfThings.pdf>
+Package pdftex.def Info: ../images/webOfThings.pdf used on input line 190.
+(pdftex.def)             Requested size: 144.00146pt x 137.80247pt.
+ [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-<../images/sogei-a.pdf, id=63, 708.24059pt x 670.38193pt>
+ <../images/webOfThings.pdf>]
+<../images/sogei-a.pdf, id=74, 708.24059pt x 670.38193pt>
 File: ../images/sogei-a.pdf Graphic file (type pdf)
 
 <use ../images/sogei-a.pdf>
-Package pdftex.def Info: ../images/sogei-a.pdf used on input line 217.
-(pdftex.def)             Requested size: 136.08215pt x 128.80597pt.
+Package pdftex.def Info: ../images/sogei-a.pdf used on input line 205.
+(pdftex.def)             Requested size: 110.88062pt x 104.95149pt.
 
-<../images/building.pdf, id=64, 983.675pt x 735.74875pt>
+<../images/building.pdf, id=75, 983.675pt x 735.74875pt>
 File: ../images/building.pdf Graphic file (type pdf)
 
 <use ../images/building.pdf>
-Package pdftex.def Info: ../images/building.pdf used on input line 221.
-(pdftex.def)             Requested size: 166.32092pt x 124.39081pt.
+Package pdftex.def Info: ../images/building.pdf used on input line 209.
+(pdftex.def)             Requested size: 136.08215pt x 101.78041pt.
 
-<../images/sogei-b.pdf, id=65, 690.41667pt x 657.36282pt>
+<../images/sogei-b.pdf, id=76, 690.41667pt x 657.36282pt>
 File: ../images/sogei-b.pdf Graphic file (type pdf)
 
 <use ../images/sogei-b.pdf>
-Package pdftex.def Info: ../images/sogei-b.pdf used on input line 225.
-(pdftex.def)             Requested size: 136.08215pt x 129.56442pt.
+Package pdftex.def Info: ../images/sogei-b.pdf used on input line 213.
+(pdftex.def)             Requested size: 110.88062pt x 105.57138pt.
 
-<../images/graph-new-1.pdf, id=66, 383.4325pt x 304.13625pt>
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+
+<../images/graph-new-1.pdf, id=80, 383.4325pt x 304.13625pt>
 File: ../images/graph-new-1.pdf Graphic file (type pdf)
 
 <use ../images/graph-new-1.pdf>
-Package pdftex.def Info: ../images/graph-new-1.pdf used on input line 239.
+Package pdftex.def Info: ../images/graph-new-1.pdf used on input line 247.
 (pdftex.def)             Requested size: 50.40308pt x 39.97533pt.
 
-<../images/graph-new-2.pdf, id=67, 382.42876pt x 307.1475pt>
+<../images/graph-new-2.pdf, id=81, 382.42876pt x 307.1475pt>
 File: ../images/graph-new-2.pdf Graphic file (type pdf)
 
 <use ../images/graph-new-2.pdf>
-Package pdftex.def Info: ../images/graph-new-2.pdf used on input line 243.
+Package pdftex.def Info: ../images/graph-new-2.pdf used on input line 251.
 (pdftex.def)             Requested size: 50.40308pt x 40.47891pt.
 
-<../images/graph-new-3.pdf, id=68, 382.42876pt x 308.15125pt>
+<../images/graph-new-3.pdf, id=82, 382.42876pt x 308.15125pt>
 File: ../images/graph-new-3.pdf Graphic file (type pdf)
 
 <use ../images/graph-new-3.pdf>
-Package pdftex.def Info: ../images/graph-new-3.pdf used on input line 247.
+Package pdftex.def Info: ../images/graph-new-3.pdf used on input line 255.
 (pdftex.def)             Requested size: 50.40308pt x 40.61119pt.
 
-<../images/graph-new-4.pdf, id=69, 380.42125pt x 306.14375pt>
+<../images/graph-new-4.pdf, id=83, 380.42125pt x 306.14375pt>
 File: ../images/graph-new-4.pdf Graphic file (type pdf)
 
 <use ../images/graph-new-4.pdf>
-Package pdftex.def Info: ../images/graph-new-4.pdf used on input line 251.
+Package pdftex.def Info: ../images/graph-new-4.pdf used on input line 259.
 (pdftex.def)             Requested size: 50.40308pt x 40.56151pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.288 
+l.292 
        [2 <../images/graph-new-1.pdf> <../images/graph-new-2.pdf> <../images/gr
 aph-new-3.pdf> <../images/graph-new-4.pdf>]
-<../images/pipeline-2.pdf, id=122, 1017.8025pt x 510.90875pt>
+<../images/pipeline-2.pdf, id=136, 1017.8025pt x 510.90875pt>
 File: ../images/pipeline-2.pdf Graphic file (type pdf)
 
 <use ../images/pipeline-2.pdf>
-Package pdftex.def Info: ../images/pipeline-2.pdf used on input line 293.
-(pdftex.def)             Requested size: 192.00073pt x 96.37204pt.
+Package pdftex.def Info: ../images/pipeline-2.pdf used on input line 300.
+(pdftex.def)             Requested size: 167.99927pt x 84.32748pt.
 
-<../images/element-class-node.png, id=123, 1027.84pt x 200.75pt>
+<../images/element-class-node.png, id=137, 1027.84pt x 200.75pt>
 File: ../images/element-class-node.png Graphic file (type png)
 
 <use ../images/element-class-node.png>
 Package pdftex.def Info: ../images/element-class-node.png used on input line 30
-0.
-(pdftex.def)             Requested size: 192.00073pt x 37.49962pt.
+3.
+(pdftex.def)             Requested size: 167.99927pt x 32.80986pt.
 
-Overfull \hbox (7.83713pt too wide) in paragraph at lines 320--321
+Overfull \hbox (7.83713pt too wide) in paragraph at lines 324--325
 \T1/aer/m/n/9 view-ports are ac-cepted by the def-i-ni-tion of new Hi-J-son Cla
 sses,
  []
@@ -614,47 +626,46 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.334 I
-       n both cases, the web platform ensures a perfect alignment with the B...
-[3 <../images/sogei-a.pdf> <../images/building.pdf> <../images/sogei-b.pdf> <..
-/images/pipeline-2.pdf> <../images/element-class-node.png>]
-<../images/2D-3D.pdf, id=174, 1261.71375pt x 468.75125pt>
+l.338 
+       [3 <../images/sogei-a.pdf> <../images/building.pdf> <../images/sogei-b.p
+df> <../images/pipeline-2.pdf> <../images/element-class-node.png>]
+<../images/2D-3D.pdf, id=188, 1261.71375pt x 468.75125pt>
 File: ../images/2D-3D.pdf Graphic file (type pdf)
 
 <use ../images/2D-3D.pdf>
-Package pdftex.def Info: ../images/2D-3D.pdf used on input line 339.
+Package pdftex.def Info: ../images/2D-3D.pdf used on input line 342.
 (pdftex.def)             Requested size: 240.0pt x 89.16379pt.
 
-Overfull \hbox (3.67058pt too wide) in paragraph at lines 355--356
+Overfull \hbox (3.67058pt too wide) in paragraph at lines 358--359
 []\T1/aer/m/n/9 Realtime multi-person track-ing al-lows a Su-per-vi-sor to mon-
 
  []
 
 (./short.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 370.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.370 \end{document}
+l.373 \end{document}
                      [4 <../images/2D-3D.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 370.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
  (./short.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 370.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 370.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 373.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 373.
 Package rerunfilecheck Info: File `short.out' has not changed.
 (rerunfilecheck)             Checksum: CEF9A70618F273687B691943E77E6C4F;436.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 370.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 373.
  ) 
 Here is how much of TeX's memory you used:
- 9826 strings out of 493117
- 144357 string characters out of 6135432
- 258754 words of memory out of 5000000
- 13078 multiletter control sequences out of 15000+600000
+ 9833 strings out of 493117
+ 144530 string characters out of 6135432
+ 258831 words of memory out of 5000000
+ 13083 multiletter control sequences out of 15000+600000
  58003 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,11n,92p,905b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -670,10 +681,10 @@ mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist
 type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on short.pdf (4 pages, 3991816 bytes).
+Output written on short.pdf (4 pages, 4140354 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 183 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 252 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
