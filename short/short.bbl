@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+
+\bibitem{Dicarlo:2014:TNL:2543138.2543294}
+A.~Dicarlo, A.~Paoluzzi, and V.~Shapiro.
+\newblock Linear algebraic representation for topological structures.
+\newblock {\em Comput. Aided Des.}, 46:269--274, Jan. 2014.
+
+\bibitem{Eastman:2008:BHG:1796500}
+C.~Eastman, P.~Teicholz, R.~Sacks, and K.~Liston.
+\newblock {\em BIM Handbook: A Guide to Building Information Modeling for
+  Owners, Managers, Designers, Engineers and Contractors}.
+\newblock Wiley Publishing, 2008.
+
+\bibitem{6418876}
+D.~Gotlib, M.~Gnat, and J.~Marciniak.
+\newblock The research on cartographical indoor presentation and indoor route
+  modeling for navigation applications.
+\newblock In {\em Indoor Positioning and Indoor Navigation (IPIN), 2012
+  International Conference on}, pages 1--7, Nov 2012.
+
+\bibitem{cadanda:2015}
+A.~Paoluzzi, A.~DiCarlo, F.~Furiani, and M.~Jirik.
+\newblock {CAD} models from medical images using {LAR}.
+\newblock {\em Computer-Aided Design and Applications}, 13, 2015.
+\newblock To appear.
+
+\bibitem{paoluzziMS:2014}
+A.~Paoluzzi, E.~Marino, and F.~Spini.
+\newblock Lar-abc, a representation of architectural geometry from concept of
+  spaces, to design of building fabric, to construction simulation.
+\newblock In P.~Block, J.~Knippers, N.~J. Mitra, and W.~Wang, editors, {\em
+  Advances in Architectural Geometry 2014}, pages 353--372. Springer
+  International Publishing, 2015.
+
+\end{thebibliography}
