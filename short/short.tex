@@ -182,7 +182,7 @@ For environments with massive presence of sensor-equipped (or ``smart") objects,
 An interactive mapping platform allows the representation of the indoor environment of  both public or commercial places of vast dimensions, as for example airports, train stations, shopping malls, and also private buildings subject to strict access protocols, like warehouses, logistic centers, data centers, etc.
 Despite of the growing attention regarding indoor cartography, efforts to specify open formats for indoor representation are few and partial, and certainly not intended to support the interactive indoor mapping, which is conversely the main purpose of this paper.
 
-Research on the cartographic representation of indoor environments is extensive and heterogeneous with respect to the strategies applied~\cite{6418876}. Different information sources are used, and accuracy of the produced solution depends on the adopted approach. In some cases the information is obtained with automatic or semi-automatic processing of files that describe the architectural structure of a building, such as BIM (Building Information Modeling)~\cite{Eastman:2008:BHG:1796500} and/or IFC (Industry Foundation Classes) that describe a building project [4]. 
+Research on the cartographic representation of indoor environments is extensive and heterogeneous with respect to the strategies applied~\cite{6418876}. Different information sources are used, and accuracy of the produced solution depends on the adopted approach. In some cases the information is obtained with automatic or semi-automatic processing of files that describe the architectural structure of a building, such as BIM (Building Information Modeling)~\cite{Eastman:2008:BHG:1796500} and/or IFC (Industry Foundation Classes) that describe a building project. 
 The actual ``de-facto" standard in terms of geospatial data representation is the GeoJSON format, which can be easily used for any type of geographical annotation. In some cases it has been slightly adapted to be used in indoor environments: it is the case of the IndoorJSON format.
 
 \begin{figure}[htbp]
@@ -233,9 +233,9 @@ Another substantial advantage is represented by the adoption of a metric referen
 
 \paragraph{Hyperlinked geometric models}
 
-The HiJson document may further import external geometric models | either of the buildings themselves or the interior furniture or devices | that are topologically complete (in the sense of solid modeling [15]) and very compact. Such models, coming from a source outside the document, are acquired by hyperlinking JSON files that contain a Linear Algebraic Representation (LAR) of topology and geometry, to be expanded for visualization or interaction at any useful level of detail.
+The HiJson document may further import external geometric models --- either of the buildings themselves or the interior furniture or devices --- that are topologically complete (in the sense of solid modeling~\cite{Dicarlo:2014:TNL:2543138.2543294}) and very compact. Such models, coming from a source outside the document, are acquired by hyperlinking JSON files that contain a Linear Algebraic Representation (LAR) of topology and geometry, to be expanded for visualization or interaction at any useful level of detail.
 The LAR scheme~\cite{Dicarlo:2014:TNL:2543138.2543294} is characterised by a very large domain, including architecture, building and construction~\cite{paoluzziMS:2014}, 2D and 3D engineering meshes, non-manifold geometric and solid models and meshes, and high-resolution 3D images~\cite{cadanda:2015}. 
-The expansion of a LAR model, to be considered as a general-purpose graphic primitive, may be executed on either the server or the supervisor client of the HiJson Web Toolkit architecture (see Section 6.2.1), or even on the Explorer client.
+The expansion of a LAR model, to be considered as a general-purpose graphic primitive, may be executed on either the server or the supervisor client of the HiJson Web Toolkit architecture, or even on the Explorer client.
 
 \paragraph{Semantic extensions}
 Semantic extensions make the HiJson format extendible and customizable, that is able to adequately respond to any need of objects representation. To define a semantic extension means to allow the HiJson document to model an object previously not covered, or even to modify the behavior of a comprised one. Semantic extensions are to be defined both as HiJson format syntax and as HiJson Toolkit source code. In particular it is necessary to define respectively a new HiJson Element and a new HiJson Class.
@@ -311,7 +311,7 @@ The application of the transformation pipeline has a double aim. The first one c
 
 The graph generated, although non optimal, ensures a complete coverage of the surface while limiting the number of generated nodes. The resulting graph is weighted on the edges with nodes distances. 
 
-The graph of paths allows for calculations of directions between any two given nodes. Although different approaches have been explored [3], a very classical solution has been selected in this case, so directions are actually computed client-side by applying the Dijkstra algorithm to the graph.
+The graph of paths allows for calculations of directions between any two given nodes. Although different approaches have been explored, a very classical solution has been selected in this case, so directions are actually computed client-side by applying the Dijkstra algorithm to the graph.
 
 Taking advantage of the hierarchical structure of the HiJson document, and according to the divide et impera approach, the problem of paths generation is split in several sub-problems, which consist in the computation of the sub-graphs relative to each individual space, more generally a single room. 
 
@@ -329,7 +329,7 @@ The HiJson Web Framework responds to the needs of an extendable, customizable, a
 
 Expandability and customizability derive from both design choices and HiJson inherent characteristics, i.e. the possibility of semantic extensions. Scalability is directly borrowed from technologies used for software development: JavaScript language, using Node.js, in particular Express.js as backend framework, exploiting the power of WebSocket protocol through the Socket.io library.
 
-Being supported by the web-as-a-platform, the framework exposes also an high availability: it is so simple to use as to visit a website, both from desktop or mobile devices, without explicit requirements to install any software package from proprietary stores|access to which is often denied from business devices.
+Being supported by the web-as-a-platform, the framework exposes also an high availability: it is so simple to use as to visit a website, both from desktop or mobile devices, without explicit requirements to install any software package from proprietary stores---access to which is often denied from business devices.
 
 \paragraph{Applications}
 
@@ -363,7 +363,7 @@ The HiJson Framework also provides the capability to give directions to Explorer
 
 \section{Conclusions}
 
-In this paper a novel document format, named HiJson, for indoor cartographical descriptions has been introduced. Utilization of local metric coordinate system, avoiding the manipulation of global geographical coordinates, really inconvenient when dealing with indoor spaces and objects, greatly enhances the modeling and rendering of the document content. Currently, we produce the HiJson document from a python script using two libraries for geometric computing (pyplasm and larcc [7, 14, 6]). The modeling process can be further improved by implementing a LAR-based graphical editor to assist the user during the description of the indoor space. The realization of such an editor is already in our plans.
+In this paper a novel document format, named HiJson, for indoor cartographical descriptions has been introduced. Utilization of local metric coordinate system, avoiding the manipulation of global geographical coordinates, really inconvenient when dealing with indoor spaces and objects, greatly enhances the modeling and rendering of the document content. Currently, we produce the HiJson document from a python script using two libraries for geometric computing (pyplasm and lar-cc~\cite{Dicarlo:2014:TNL:2543138.2543294,cadanda:2015}). The modeling process can be further improved by implementing a LAR-based graphical editor to assist the user during the description of the indoor space. The realization of such an editor is already in our plans.
 On the basis of this representation a virtual web environment can be rebuilt working as a unifying platform to run a bunch of different applications. The reference architecture of such a platform has been also implemented and described in this work.
 The architecture supports a whole range of applications: IoT monitoring, realtime multi-person tracking and user crossstorey navigation are already implemented and described. A very convenient way to extend the representation capabilities of smart objects is also mentioned as semantic extensions. These extensions, which affects both document format and its web framework, might be easily collected in a public repository. Community could both use public available extensions or contribute by mapping new (smart) objects inside the HiJson document format.
 
